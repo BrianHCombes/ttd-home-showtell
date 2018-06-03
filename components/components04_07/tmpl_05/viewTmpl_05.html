@@ -1,0 +1,76 @@
+<style>
+#divA
+{
+/*background-image: url("rockbuster-rocks-bkgnd-3200x1200-gradient-adj1.png");*/
+/*background-color: lightgray;*/
+font-size:1em;
+
+}    
+    
+</style>
+
+<div id="divA">
+    <h1>View Nav 05</h1> 
+    <h2 style="color:#00ff00; background-color:black;">This is root View 05 which shows this html template file.</h2>
+    <div id="testTD1" style="color:blue;">   
+        1)  The RockBuster Ground and Tent Stake is a very robust and sturdy ground peg.<br> 
+        2)  Made from a high impact polypropylene and at 12 inches long, they are designed for 
+        that extra-strong hold. Each stake comes with it's own extraction rope to 
+        make it easier to pull it from the ground. The RockBuster is ideal for use 
+        as a tent peg or to hold almost anything in the ground. 
+
+        
+    <br>
+    </div>
+    <div >
+        <table>
+            <tr>
+                <td id="testTD3" style="width:50%;">
+                    <img id="testTD4" src="DSCN4494.JPG" alt="RB Presentation"  style="object-fit:cover; border:2px solid black; background-color:white; border-radius:10px;">
+                </td>
+                <td id="testTD2" style="width:50%; line-height:110%; background-color:white; padding:0px 5px; border-radius:5px;">
+                    Notice the Turnaround Post which makes it so easy to tie off the rope. 
+                    It is a beefy ground and tent stake with several unique high technology design features. 
+                    The RockBuster has a nice wide point so it won't curl when pounding in the stake. 
+                    This stake will last longer than the typical plastic stake! 
+                    Each stake comes with an extraction rope to help pull it from the ground. 
+                    Sold at $1.75 each for any quantity they are a great value.
+                </td>
+            </tr>
+        </table>    
+    </div>
+   
+    
+    
+</div>
+
+<script>
+    
+    var vpWidth = window.innerWidth; // use when testing with zoom.
+    // alert("In the template: " + vpWidth);
+    if(vpWidth >= 1170){
+        vpWidth=1170;
+    };
+    
+    // alert((0.01605)*(vpWidth) + 5.22222 + "px");
+    
+    document.getElementById("testTD1").style.fontSize = (0.01605)*(vpWidth) + 5.22222 + "px";       // 1170:24px - 360:11px
+    document.getElementById("testTD2").style.fontSize = (0.01481)*(vpWidth) + 6.66667 + "px";       // 1170:24px - 360:12px
+    document.getElementById("testTD2").style.lineHeight = (0.02469)*(vpWidth) + 101.11111 + "%";       // 1170:24px - 360:12px
+    
+    
+    // document.getElementById("testTD2").style.fontSize = (0.01852)*(vpWidth) + 2.33333 + "px";    // 1170:24px - 360:9px
+    
+    document.getElementById("testTD3").style.width = (0.02778)*(vpWidth) + 17.50000 + "%";       // 1170:50% - 360:27.5%
+    document.getElementById("testTD2").style.width = (-0.02778)*(vpWidth) + 82.50000 + "%";       // 1170:50% - 360:72.5%
+    
+    document.getElementById("testTD4").style.width = (0.57407)*(vpWidth) + -116.66667 + "px";       // 1170:555px - 360:90px
+    //document.getElementById("testTD4").style.width = "285px";       // 1170:585px - 360:99px%
+    document.getElementById("testTD4").style.height = (0.15432)*(vpWidth) + 69.44444 + "px";       // 1170:250px - 360:125px
+    
+    document.getElementById("testTD1").style.borderRadius = "25px";
+    
+    
+    // https://stackoverflow.com/questions/15167545/how-to-crop-a-rectangular-image-into-a-square-with-css
+    
+</script>

@@ -1,0 +1,26 @@
+<style>
+h4
+{
+color:blue;    
+width:500px;    
+
+}
+
+#divA 
+{
+text-decoration:underline; 
+color:#ff00bf;
+}
+
+    
+</style>
+<div style="background-color:white;">
+    <h3>This is component12 The beginnings of a new browsing concept</h3><h4>{{$ctrl.display}}</h4>
+    <button ng-click="$ctrl.viewBtn(0)">Call function test</button>
+    <div>And the verdict is: {{$ctrl.btnAction01}}</div>
+    <div id="divA">And from the service: {{$ctrl.testVar2}}</div>
+    <div ng-repeat="array in $ctrl.assocArray">
+        <!--<div>{{array.a0N}} {{array.b0N}} {{array.c0N}} {{array.d0N}}</div>-->
+        <div>{{array.picColA}}&nbsp;&nbsp;&nbsp;{{array.picColB}}&nbsp;&nbsp;&nbsp;{{array.picColC}}&nbsp;&nbsp;&nbsp;{{array.picColD}}</div>
+    </div>
+</div>
