@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>TTD View Navigation Framwork</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    
+    <link rel="SHORTCUT ICON" href="http://www.tarptiedown.com/ttd-website/ttd-website-pics-videos/ttd-website-icon-ttd-256x256.ico"> 
+    <link rel="stylesheet" type="text/css" href="css/vn-css.css">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-sanitize.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>  
+    
+    <script src="view-config.js"></script>
+    <script src="controller-client.js"></script>
+    
+    <script src="components/components00_03/components00_03.js"></script>
+    <script src="components/components04_07/components04_07.js"></script>
+    <script src="components/components08_11/components08_11.js"></script>
+    <script src="components/components12_15/components12_15.js"></script>
+    <script src="components/components16_19/components16_19.js"></script>
+    <script src="components/components20_23/components20_23.js"></script>
+    <script src="components/components24_27/components24_27.js"></script>
+    <script src="components/components28_31/components28_31.js"></script>
+    <script src="components/components32_35/components32_35.js"></script>
+    <script src="components/components36_39/components36_39.js"></script>
+    <script src="components/components40_43/components40_43.js"></script>
+    <script src="components/components44_47/components44_47.js"></script>
+    <script src="components/top_menu/top_menu.js"></script>
+    
+<style>
+</style>
+
+</head> 
+
+<body  ng-app="viewNav">
+
+    <div ng-controller="VNCtrl as vnCTRL" class="maxWidth" style="position:relative; margin-left:auto; margin-right:auto;">
+
+<!-- Top Menu Section. This is menu selection along the top -->
+    <div style="text-align:center; {{vnCTRL.response.height01}};">
+        <a  ui-sref="{{menuBar.menuItem}}"
+            class="menuBtns shadow cursorstyle1" 
+            ng-repeat="menuBar in vnCTRL.menuBar1" 
+            ng-bind-html="menuBar.menuItemName" 
+            style=" text-decoration:none; 
+                    vertical-align:text-top;
+                    {{vnCTRL.response.fontsize04}}; 
+                    {{vnCTRL.response.padding06}};">
+        </a><br>
+    </div>
+<!--************************************************************************************************************************************************-->
+<!--*****************************************************Begin Section screen1 and screen2 *********************************************************-->
+<!--************************************************************************************************************************************************-->
+<!-- Template View Section for screen1 and screen2. This is where the primary view takes place -->
+    <div ng-show="vnCTRL.screen1 || vnCTRL.screen2" class="maxWidth" style="margin-top:2px;">
+        <div style="width:inherit; background:white; padding:0px; border:2px solid black; border-radius:7px;">
+                <div style="{{vnCTRL.response.height02}}; overflow:auto;">
+                    <div style="padding:5px 5px 5px 5px;" ui-view="rootView">This is where the named root ui-view should show</div>
+                </div>
+        </div>
+    </div>
+<!--************************************************************************************************************************************************-->
+<!--View History Menu Section screen1 and screen2-->
+    <div ng-show="vnCTRL.screen1 || vnCTRL.screen2" class="maxWidth" style="margin-top:2px; {{vnCTRL.response.fontsize01}};">
+        <table style="width:100%; {{vnCTRL.response.height05}};;">
+            <tr>
+                <td style=" 
+                            {{vnCTRL.response.width04}};
+                            text-align:left;">
+                    <button 
+                        class="historyBtn"
+                        style="  
+                                width:95%;
+                                {{vnCTRL.response.padding04}};
+                                font-size:1em;
+                                border-radius:4px;
+                                border:1px solid #808080;" 
+                        ng-click="vnCTRL.clearHistory()">
+                        Clear
+                    </button>
+                </td>
+
+                <td style=" width:1.0%; 
+                            color:black;
+                            text-shadow:1px 1px 5px white, 1px -1px 5px white, -1px 1px 5px white, -1px -1px 5px white;
+                            padding:0px 0px 0px 0px;
+                            border-radius:2px;
+                            ">
+                    <b>:</b>
+                </td>
+                <td style="">
+                    <div style="">                            
+                        <button ng-click="vnCTRL.stateHistory(viewHistory)"
+                                ng-show="viewHistory.btnShow"
+                                class="historyBtn" 
+                                style=" {{vnCTRL.response.width01}}; 
+                                        {{vnCTRL.response.padding04}};
+                                        font-size:1em;
+                                        background-color:{{vnCTRL.bkColor[$index]}};
+                                        border-radius:4px;
+                                        border:1px solid #808080; " 
+                                ng-repeat="viewHistory in vnCTRL.currentView">
+                                {{viewHistory.btnText}} 
+                        </button>
+                    </div>    
+                </td>
+
+                <td style=" {{vnCTRL.response.width03}}; 
+                            text-align:right; 
+                            {{vnCTRL.response.padding05}};
+                            ">
+                    <button ng-click="vnCTRL.historyBtnOp('left')" style="  {{vnCTRL.response.fontsize05}};  
+                                                                            background:linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                                                            border-radius:4px;
+                                                                            border:1px solid #808080;
+                                                                            margin-right:2%;
+                                                                            color:{{vnCTRL.leftArrowBtnMode}};">
+                    &#9664;
+                    </button>&nbsp;
+                    <button ng-click="vnCTRL.historyBtnOp('right')" style=" {{vnCTRL.response.fontsize05}};
+                                                                            background:linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                                                            border-radius:4px;
+                                                                            border:1px solid #808080;
+                                                                            margin-left:2%;
+                                                                            color:{{vnCTRL.rightArrowBtnMode}}">
+                    &#9654;
+                    </button>
+                </td>
+            </tr>  
+        </table>
+    </div>
+<!--************************************************************************************************************************************************-->
+<!-- Both tables below are for displaying the hyper menu and thumbnails where one table is for viewports above 900px and the other below 900px. -->
+    <div class="maxWidth" style="margin-top:0px;">
+        
+<!-- Hyper index and view thumbnails for viewport width of 900px and above to 1170px-->        
+    <table ng-show="vnCTRL.screen1" style="{{vnCTRL.response.height04}}; width:100%; border-spacing:0px;">
+            <tr>   
+                <td class="menuBtns" style="width:7.8%; 
+                                            padding-top:2px;
+                                            padding-right:10px;">   
+                    <div class="shadow cursorstyle1" 
+                         ng-mouseover="vnCTRL.arrayIndex($index)" 
+                         style="border-radius:4px;"  
+                         ng-repeat="picMenuA in vnCTRL.picMenu1" >
+                            <div style="width:100%; 
+                                        margin:3px 0px;
+                                        {{vnCTRL.response.padding07}}; 
+                                        font-size:16px;
+                                        background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                        border-radius:4px;
+                                        border:1px solid #808080;
+                                        box-shadow:{{picMenuA.boxshadow}};
+                                        color:{{picMenuA.highlight}}; 
+                                        text-shadow:{{picMenuA.shadow}};
+                                        cursor:crosshair;
+                                        text-align:center;
+                                        ">
+                                        {{picMenuA.label}}
+                            </div>
+                    </div>        
+                </td>
+                
+                <td style=" width:84.4%;
+                            padding-top:5px;">
+                    <table style="width:100%; border-spacing:0px; background-color:#d9d9d9; border:2px solid black; margin-top:0px; padding-top:0px; border-radius:7px;">
+                        <tr ng-repeat="stateNames in vnCTRL.stateNAMES" ng-show="stateNames.showView" style="">
+
+                            <td style="width:25%; padding:0px 2px 0px 4px;">
+                                <div style="text-align:center; color:{{vnCTRL.checkMarkColor}}; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;" ng-bind-html="vnCTRL.showCheckA"></div>    
+                                    <div style="margin-bottom:5px; {{vnCTRL.response.height03}};">
+                                            <a ui-sref="{{stateNames.stateNameColA}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                                <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColA}}" 
+                                                     alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Shed Site" 
+                                                     class="imageshadow "
+                                                     style="width:100%; border:1px solid #8c8c8c; border-top-left-radius:3px; border-top-right-radius:3px;">
+                                            </a>
+                                    </div>
+                            </td>
+
+                            <td style="width:25%; padding:0px 2px 0px 2px;">
+                                <div style="text-align:center; color:{{vnCTRL.checkMarkColor}}; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;" ng-bind-html="vnCTRL.showCheckB"></div>    
+                                    <div style="margin-bottom:5px; {{vnCTRL.response.height03}};">
+                                        <a ui-sref="{{stateNames.stateNameColB}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                            <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColB}}" 
+                                                 alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Roof A\Raw Images" 
+                                                 class="imageshadow"
+                                                 style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
+                                        </a>
+                                </div>
+                            </td>
+
+                            <td style="width:25%; padding:0px 2px 0px 2px;">
+                                <div style="text-align:center; color:{{vnCTRL.checkMarkColor}}; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;" ng-bind-html="vnCTRL.showCheckC"></div>    
+                                    <div style="margin-bottom:5px; {{vnCTRL.response.height03}};">
+                                        <a ui-sref="{{stateNames.stateNameColC}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                            <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColC}}" 
+                                                 alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                                 class="imageshadow"
+                                                 style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
+                                        </a>
+                                    </div>
+                            </td>
+
+                            <td style="width:25%; padding:0px 4px 0px 2px;">
+                                <div style="text-align:center; color:{{vnCTRL.checkMarkColor}}; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;" ng-bind-html="vnCTRL.showCheckD"></div>    
+                                    <div style="margin-bottom:5px; {{vnCTRL.response.height03}};">
+                                        <a ui-sref="{{stateNames.stateNameColD}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                            <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColD}}" 
+                                                 alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                                 class="imageshadow"
+                                                 style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
+                                        </a>
+                                    </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>   
+                <td class="menuBtns" style="width:7.8%; 
+                                            padding-top:2px;
+                                            padding-left:10px;
+                                            vertical-align:middle;">
+                    <div class="shadow cursorstyle1" 
+                         ng-mouseover="vnCTRL.arrayIndex($index+6)" 
+                         style="border-radius:4px;"   
+                         ng-repeat="picMenuB in vnCTRL.picMenu2" >         
+                            <div style="width:100%;
+                                        margin:3px 0px;
+                                        {{vnCTRL.response.padding07}}; 
+                                        font-size:16px;
+                                        background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                        border-radius:4px;
+                                        border:1px solid #808080;
+                                        box-shadow:{{picMenuB.boxshadow}};
+                                        color:{{picMenuB.highlight}}; 
+                                        text-shadow:{{picMenuB.shadow}};
+                                        cursor:crosshair;
+                                        text-align:center;">
+                                        {{picMenuB.label}}
+                           </div>
+                    </div>
+                </td>
+            </tr>   
+        </table>   
+<!--************************************************************************************************************************************************-->
+<!-- Hyper index and view thumbnails for viewport width of 899px and below-->
+    <table ng-show="vnCTRL.screen2"
+           style="  width:{{vnCTRL.width1}}; 
+                    {{vnCTRL.response.height06}};
+                    border-spacing:0px; 
+                    background-color:#d9d9d9; 
+                    border:2px solid black; 
+                    margin-top:0px; 
+                    margin-left:auto;
+                    margin-right:auto;
+                    padding-top:0px; 
+                    border-radius:7px;">
+        <tr style="">
+            <td>
+                <table style="border-spacing:0px;">
+                <tr ng-repeat="stateNames in vnCTRL.stateNAMES" ng-show="stateNames.showView">
+                    <td style=" width:{{vnCTRL.width2}};
+                                vertical-align:top;">
+                        <div class="" style="position:relative; margin:1.4% 0% 0% 1.4%;">
+                                <div style="position:absolute; 
+                                            text-align:left;
+                                            top:3.4%;
+                                            text-indent:3.4%;
+                                            font-size:12px;
+                                            color:cyan; 
+                                            text-shadow: 1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black, 1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black, 0px 1px 1px black, 0px 2px 2px black, 0px 3px 3px black, -1px 1px 1px black, -2px 2px 2px black, -3px 3px 3px black, -1px 0px 1px black, -2px 0px 2px black, -3px 0px 3px black, -1px -1px 1px black, -2px -2px 2px black, -3px -3px 3px black, 0px -1px 1px black,  0px -2px 2px black,  0px -3px 3px black, 1px -1px 1px black,  2px -2px 2px black,  3px -3px 3px black;" 
+                                     ng-bind-html="vnCTRL.showCheckA">
+                                </div>
+                                <a ui-sref="{{stateNames.stateNameColA}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                    <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColA}}"
+                                         alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Shed Site" 
+                                         class="imageshadow "
+                                         style="width:100%; 
+                                                border:1px solid #8c8c8c; 
+                                                border-top-left-radius:3px; 
+                                                border-top-right-radius:3px;">
+                                </a>
+                        </div>
+                        <div class="" style="position:relative; margin:1.4% 0% 1.4% 1.4%;">
+                                <div style="position:absolute;
+                                            text-align:left;
+                                            top:3.4%;
+                                            text-indent:3.4%;
+                                            font-size:12px;
+                                            color:cyan; 
+                                            text-shadow: 1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black, 1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black, 0px 1px 1px black, 0px 2px 2px black, 0px 3px 3px black, -1px 1px 1px black, -2px 2px 2px black, -3px 3px 3px black, -1px 0px 1px black, -2px 0px 2px black, -3px 0px 3px black, -1px -1px 1px black, -2px -2px 2px black, -3px -3px 3px black, 0px -1px 1px black,  0px -2px 2px black,  0px -3px 3px black, 1px -1px 1px black,  2px -2px 2px black,  3px -3px 3px black;" 
+                                     ng-bind-html="vnCTRL.showCheckC">
+                        </div> 
+                                <a ui-sref="{{stateNames.stateNameColC}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                    <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColC}}"
+                                         alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                         class="imageshadow"
+                                         style="width:100%; 
+                                                border:1px solid #8c8c8c; 
+                                                border-radius:3px;">
+                                </a>
+                        </div>
+                    </td>
+
+                    <td style=" width:{{vnCTRL.width3}}; 
+                                vertical-align:top;">
+                            <div class="" style="position:relative; margin:1.4% 1.4% 0% 1.4%;">
+                                <div style="position:absolute;
+                                            text-align:left; 
+                                            top:3.4%;
+                                            text-indent:3.4%;
+                                            font-size:12px;
+                                            color:cyan; 
+                                            text-shadow: 1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black, 1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black, 0px 1px 1px black, 0px 2px 2px black, 0px 3px 3px black, -1px 1px 1px black, -2px 2px 2px black, -3px 3px 3px black, -1px 0px 1px black, -2px 0px 2px black, -3px 0px 3px black, -1px -1px 1px black, -2px -2px 2px black, -3px -3px 3px black, 0px -1px 1px black,  0px -2px 2px black,  0px -3px 3px black, 1px -1px 1px black,  2px -2px 2px black,  3px -3px 3px black;"  
+                                     ng-bind-html="vnCTRL.showCheckB">
+                                </div>   
+                                <a ui-sref="{{stateNames.stateNameColB}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                    <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColB}}" 
+                                         alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Roof A\Raw Images" 
+                                         class="imageshadow"
+                                         style="width:100%; 
+                                                border:1px solid #8c8c8c; 
+                                                border-radius:3px; ">
+                                </a>
+                        </div>
+
+                        <div class="" style="position:relative; margin:1.4% 1.4% 1.4% 1.4%;">
+                                <div style="position:absolute;
+                                            text-align:left;
+                                            top:3.4%;
+                                            text-indent:3.4%;
+                                            font-size:12px;
+                                            color:cyan; 
+                                            text-shadow: 1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black, 1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black, 0px 1px 1px black, 0px 2px 2px black, 0px 3px 3px black, -1px 1px 1px black, -2px 2px 2px black, -3px 3px 3px black, -1px 0px 1px black, -2px 0px 2px black, -3px 0px 3px black, -1px -1px 1px black, -2px -2px 2px black, -3px -3px 3px black, 0px -1px 1px black,  0px -2px 2px black,  0px -3px 3px black, 1px -1px 1px black,  2px -2px 2px black,  3px -3px 3px black;"  
+                                            ng-bind-html="vnCTRL.showCheckD">
+                                </div>    
+                                <a ui-sref="{{stateNames.stateNameColD}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                    <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColD}}" 
+                                         alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                         class="imageshadow"
+                                         style="width:100%; 
+                                                border:1px solid #8c8c8c; 
+                                                border-radius:3px; ">
+                                </a>
+                        </div>
+                    </td>
+                </tr>  
+                </table>
+            </td>
+
+            <td class="menuBtns" style="width:{{vnCTRL.width4}};
+                                        border:none; 
+                                        padding:5px 5px 5px 7px; 
+                                        background-color:black;">   
+                <div class=" shadow cursorstyle1" 
+                     ng-click="vnCTRL.arrayIndexPre($index)"
+                     style="width:85%; 
+                            margin-bottom:{{vnCTRL.margin1}};
+                            margin-left:3%;" 
+                     ng-repeat="picMenuA in vnCTRL.picMenu1">
+
+                    <div style="width:100%;
+                                padding:{{vnCTRL.padding1}} 0px;  
+                                background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                border-radius:4px;
+                                border:1px solid #808080;
+                                box-shadow:{{picMenuA.boxshadow}};
+                                color:{{picMenuA.highlight}}; 
+                                text-shadow:{{picMenuA.shadow}};
+                                text-align:center;
+                                font-size:{{vnCTRL.btnFontSize}};
+                                font-family:arial;" 
+                            >{{picMenuA.label*2-1}}
+                    </div>        
+                </div>
+            </td>
+            <td class="menuBtns" style="width:{{vnCTRL.width5}}; 
+                                        border:none; 
+                                        padding:5px 7px 5px 5px; 
+                                        background-color:black;">
+                <div class="shadow cursorstyle1"
+                     ng-click="vnCTRL.arrayIndexPre($index+6)"
+                     style="width:85%; 
+                            margin-top:{{vnCTRL.margin1}}; 
+                            margin-left:3%;" 
+                     ng-repeat="picMenuB in vnCTRL.picMenu2" >         
+                        <div class="" 
+                            style=" width:100%;
+                                    padding:{{vnCTRL.padding1}} 0px;
+                                    background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                    border-radius:4px;
+                                    border:1px solid #808080;
+                                    box-shadow:{{picMenuB.boxshadow}};
+                                    color:{{picMenuB.highlight}}; 
+                                    text-shadow:{{picMenuB.shadow}};
+                                    text-align:center;
+                                    font-size:{{vnCTRL.btnFontSize}};
+                                    font-family:arial;">
+                            {{picMenuB.label*2-12}}
+                        </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+<!--************************************************************************************************************************************************-->
+<!--*****************************************************End Section screen1 and screen2 ***********************************************************-->
+<!--************************************************************************************************************************************************-->
+
+
+<!--************************************************************************************************************************************************-->
+<!--*****************************************************Begin Section screen3 *********************************************************************-->
+<!--************************************************************************************************************************************************-->
+<!-- Template View Section for screen3 which is for viewports of which innerheight/outerwidth < 0.75. This is where the primary view takes place -->
+    <table ng-show="vnCTRL.screen3" class="maxWidth" style="width:100%;">
+        <tr>    
+            <td style="{{vnCTRL.response.width06}}; vertical-align:top;">  
+                <div style="width:inherit; background:white; padding:0px; border:2px solid black; border-radius:7px;">
+                        <div style="{{vnCTRL.response.height08}}; overflow:auto;">
+                            <div style="padding:5px 5px 5px 5px;" ui-view="rootView">This is where the named root ui-view should show</div>
+                        </div>
+                </div>
+            </td>
+<!--************************************************************************************************************************************************-->
+<!-- View History Menu Section for screen3 which is for viewports of which innerheight/outerwidth < 0.75 -->            
+            <td style="vertical-align:top;">
+
+                <div style="margin-top:2px; {{vnCTRL.response.fontsize01}};">
+                    <table style="width:100%;">
+                        <tr>
+                            <td style="position:relative; {{vnCTRL.response.height07}}; vertical-align:top;">
+                                <div style="">
+                                        <button 
+                                            class="historyBtn"
+                                            style=" width:100%;
+                                                    {{vnCTRL.response.padding04}};
+                                                    font-size:1em;
+                                                    border-radius:4px;
+                                                    border:1px solid #808080;" 
+                                            ng-click="vnCTRL.clearHistory()">
+                                            Clear
+                                        </button>
+                                </div>
+
+                                <div style="">                            
+                                    <div ng-click="vnCTRL.stateHistory(viewHistory)"
+                                            ng-show="viewHistory.btnShow"
+                                            class="historyBtn" 
+                                            style=" width:100%;
+                                                    margin:5px 0px;                                
+                                                    padding:5px 0px;
+                                                    font-size:1em;
+                                                    background-color:{{vnCTRL.bkColor[$index]}};
+                                                    border-radius:4px;
+                                                    border:1px solid #808080;
+                                                    text-align:center;
+                                                    margin-top:3px;" 
+                                            ng-repeat="viewHistory in vnCTRL.currentView">
+                                        {{viewHistory.btnText}}
+                                    </div>
+                                </div>    
+
+                                <div style=" 
+                                            position:absolute;
+                                            {{vnCTRL.response.top01}};
+                                            width:98%;
+                                            height:70px;
+                                            text-align:center; 
+                                            margin-top:3px;">
+                                    <button ng-click="vnCTRL.historyBtnOp('left')" 
+                                            style=" {{vnCTRL.response.fontsize05}};  
+                                                    width:85%;
+                                                    background:linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                                    border-radius:4px;
+                                                    border:1px solid #808080;
+                                                    margin:5px 0px 5px 0px;
+                                                    color:{{vnCTRL.leftArrowBtnMode}};">
+                                    &#9650;
+                                    </button><br>
+                                    <button ng-click="vnCTRL.historyBtnOp('right')" 
+                                            style=" {{vnCTRL.response.fontsize05}};
+                                                    width:85%;
+                                                    background:linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                                    border-radius:4px;
+                                                    border:1px solid #808080;
+                                                    margin:5px 0px 5px 0px;
+                                                    color:{{vnCTRL.rightArrowBtnMode}}">
+                                    &#9660;
+                                    </button>
+                                </div>
+                            </td>    
+                        </tr>  
+                    </table>
+                </div>
+            </td>        
+<!-- Thumbnail Images screen3 -->
+<!--************************************************************************************************************************************************-->
+            <td style="{{vnCTRL.response.width05}}; vertical-align:top;">
+                <table style="width:100%; border-spacing:0px; background-color:#d9d9d9; border:2px solid black; border-radius:7px;">
+                    <tr ng-repeat="stateNames in vnCTRL.stateNAMES" ng-show="stateNames.showView" style="">
+
+                        <td style="padding:2px 4px 2px 2px;">
+                                <div style="position:relative; margin-bottom:2px;">
+                                    <div style="position:absolute; top:5px; left:2px; text-align:center; color:{{vnCTRL.checkMarkColor}}; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;" ng-bind-html="vnCTRL.showCheckA"></div>    
+                                        <a ui-sref="{{stateNames.stateNameColA}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                            <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColA}}" 
+                                                 alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Shed Site" 
+                                                 class="imageshadow "
+                                                 style="width:100%; border:1px solid #8c8c8c; border-top-left-radius:3px; border-top-right-radius:3px;">
+                                        </a>
+                                </div>
+
+                                <div style="position:relative; margin-bottom:2px;">
+                                    <div style="position:absolute; top:5px; left:2px; text-align:center; color:{{vnCTRL.checkMarkColor}}; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;" ng-bind-html="vnCTRL.showCheckB"></div>    
+                                    <a ui-sref="{{stateNames.stateNameColB}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                        <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColB}}" 
+                                             alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Roof A\Raw Images" 
+                                             class="imageshadow"
+                                             style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
+                                    </a>
+                                </div>
+
+                                <div style="position:relative; margin-bottom:2px;">
+                                    <div style="position:absolute; top:5px; left:2px; text-align:center; color:{{vnCTRL.checkMarkColor}}; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;" ng-bind-html="vnCTRL.showCheckC"></div>    
+                                    <a ui-sref="{{stateNames.stateNameColC}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                        <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColC}}" 
+                                             alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                             class="imageshadow"
+                                             style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
+                                    </a>
+                                </div>
+
+                                <div style="position:relative;">
+                                    <div style="position:absolute; top:5px; left:2px; text-align:center; color:{{vnCTRL.checkMarkColor}}; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;" ng-bind-html="vnCTRL.showCheckD"></div>    
+                                    <a ui-sref="{{stateNames.stateNameColD}}" ui-sref-active="active" style="text-decoration:none; color:black;">
+                                        <!--<img ng-src="templates/tmpl_03/DSCN4494.JPG" alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" style="width:100%;">-->
+                                        <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColD}}" 
+                                             alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                             class="imageshadow"
+                                             style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
+                                    </a>
+                                </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>     
+<!-- Hyper Menu Buttons screen3 -->
+<!--************************************************************************************************************************************************-->
+            <td class="menuBtns" style="vertical-align:top;
+                                        width:70px; 
+                                        padding-top:2px;
+                                        padding-right:10px;">   
+                <div class="shadow cursorstyle1" 
+                     ng-mouseover="vnCTRL.arrayIndex($index)" 
+                     style="border-radius:4px;"  
+                     ng-repeat="picMenuA in vnCTRL.picMenu1" >
+                        <div style="width:100%; 
+                                    margin:7px 0px 0px 0px;
+                                    {{vnCTRL.response.padding08}};
+                                    font-size:16px;
+                                    background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                    border-radius:4px;
+                                    border:1px solid #808080;
+                                    box-shadow:{{picMenuA.boxshadow}};
+                                    color:{{picMenuA.highlight}}; 
+                                    text-shadow:{{picMenuA.shadow}};
+                                    cursor:crosshair;
+                                    text-align:center;">
+                                    {{picMenuA.label}}
+                        </div>
+                </div>        
+
+                <div class="shadow cursorstyle1" 
+                     ng-mouseover="vnCTRL.arrayIndex($index+6)" 
+                     style="border-radius:4px;"  
+                     ng-repeat="picMenuB in vnCTRL.picMenu2" >         
+                        <div style="width:100%;
+                                    margin:7px 0px 0px 0px;
+                                    {{vnCTRL.response.padding08}};
+                                    font-size:16px;
+                                    background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                    border-radius:4px;
+                                    border:1px solid #808080;
+                                    box-shadow:{{picMenuB.boxshadow}};
+                                    color:{{picMenuB.highlight}}; 
+                                    text-shadow:{{picMenuB.shadow}};
+                                    cursor:crosshair;
+                                    text-align:center;">
+                                    {{picMenuB.label}}
+                       </div>
+                </div>
+            </td>
+        </tr>   
+    </table> 
+<!--************************************************************************************************************************************************-->
+<!--*****************************************************************End Section screen3 ***********************************************************-->
+<!--************************************************************************************************************************************************-->
+
+
+
+
+
+
+    <!-- Company Info and Policy Section -->	
+<!--      
+    <div class="maxWidth" style="margin:10px 0px;">
+        <table style="width:100%;">
+            <tr style="width:100%;">
+                <td style="width:16%"></td>
+                <td style="width:17%; text-align:center;">
+                   <a href="http://www.tarptiedown.com/ttd-website/ttd-website-policy-page/ttd-website-home-page-privacy-policy.htm" target="_blank" 
+                   style="font-size:20px; text-decoration:none; color:white;  ">Privacy Policy</a>
+                </td>
+                <td style="width:17%; text-align:center;">
+                   <a href="http://www.tarptiedown.com/ttd-website/ttd-website-policy-page/ttd-website-contact-info.htm" target="_blank"  
+                   style="text-align:center; font-size:20px; text-decoration:none; color:white;  ">Contact US</a>
+                </td>
+                <td style="width:17%; text-align:center;">
+                   <a href="http://www.tarptiedown.com/ttd-website/ttd-website-policy-page/ttd-website-home-page-return-policy.htm" target="_blank" 
+                   style="text-align:center; font-size:20px; text-decoration:none; color:white;  ">Return Policy</a>
+                </td>
+                <td style="width:17%; text-align:center;">
+                   <a href="http://www.tarptiedown.com/ttd-website/ttd-website-policy-page/ttd-website-home-page-ship-policy.htm" target="_blank" 
+                   style="text-align:center; font-size:20px; text-decoration:none; color:white;  ">Shipping Policy</a>
+                </td>
+                <td style="width:16%"></td>
+            </tr>    
+        </table>    
+    </div>
+-->
+<!-- 
+    <div class="maxWidth" style="margin:10px 0px; height:135px; padding:5px 5px;">
+        <table style="width:100%; background-color:lightgray; border-radius:7px;">
+            <tr style="width:100%;">
+
+                        <td style="width:23%; text-align:right;">
+                            <img src="http://www.tarptiedown.com/TTD-Store/storefront/view/default/image/payment_VISA_MC_0.75W.png" alt="VISA and MasterCard icons">
+                        </td>
+
+                        <td style="width:23%; text-align:center;">
+                            <span style="float:right; margin-top:6px; margin-right:10px; text-align:center;">Copyright © 2017<br>Tarp Tie Down Company LLC.<br>All rights reserved.</span>
+                        </td>
+
+                        <td style="width:18%; text-align:center;">
+                                 <script type="text/javascript" language="javascript">var ANS_customer_id="34f3366f-7153-40d1-b98d-57bbd3613155";</script>
+                                 <script type="text/javascript" language="javascript" src="//verify.authorize.net/anetseal/seal.js" ></script>
+                        </td>
+
+                        <td id="siteseal" style="width:18%; padding-top:23px; text-align:center;">
+                                    <script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=ugbvCfl2gBet7beHFaBArgQhyX24N88uKpdi7htFa46LZOBmMjpXqIjk8va2"></script>
+                        </td>
+
+                        <td id="trustwaveSeal" style="width:18%; padding-top:12px; text-align:center;">
+                                <script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?code=6ee8e6c740d6477aba73eed9a57b6cd3"></script>
+                        </td>    
+             
+            </tr>    
+        </table>
+    </div> 
+-->
+<!--****************************************************************************************************************************************-->
+    </div> 
+</body>
+</html>
