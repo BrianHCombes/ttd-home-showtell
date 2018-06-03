@@ -1,0 +1,96 @@
+/* 
+    Created on : Aug 9, 2017, 10:06:11 PM
+    Author     : bcomb
+*/
+body 
+{ 
+background-image: url("rockbuster-rocks-bkgnd-3200x1200-gradient-adj1.png");
+background-size: 100%;
+background-repeat: no-repeat;
+background-color:black;
+}
+
+a:hover
+{
+cursor:pointer;    
+}
+
+.maxWidth
+{
+max-width:1170px;    
+}
+
+.menuBtns
+{
+font-size:1.50em;
+color:white;
+font-family: Futura, "Trebuchet MS", arial, sans-serif;
+
+}
+
+.historyBtn:hover
+{
+cursor:pointer;    
+}
+
+.cursorstyle1
+{
+cursor:default;    
+}
+
+.shadow
+{
+text-shadow:    1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black, 
+                1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black,
+                0px 1px 1px black, 0px 2px 2px black, 0px 3px 3px black,
+
+                -1px 1px 1px black, -2px 2px 2px black, -3px 3px 3px black,
+                -1px 0px 1px black, -2px 0px 2px black, -3px 0px 3px black,
+                
+                -1px -1px 1px black, -2px -2px 2px black, -3px -3px 3px black,
+                 0px -1px 1px black,  0px -2px 2px black,  0px -3px 3px black,
+                 1px -1px 1px black,  2px -2px 2px black,  3px -3px 3px black;
+}
+
+.shadow:hover
+{
+text-shadow:    1px 0px 1px black, 2px 0px 2px black, 3px 0px 13px #ffffcc,  
+                1px 1px 1px black, 2px 2px 2px black, 3px 3px 13px #ffffcc, 
+                0px 1px 1px black, 0px 2px 2px black, 0px 3px 13px #ffffcc, 
+
+                -1px 1px 1px black, -2px 2px 2px black, -3px 3px 13px #ffffcc, 
+                -1px 0px 1px black, -2px 0px 2px black, -3px 0px 13px #ffffcc, 
+                
+                -1px -1px 1px black, -2px -2px 2px black, -3px -3px 13px #ffffcc, 
+                 0px -1px 1px black,  0px -2px 2px black,  0px -3px 13px #ffffcc, 
+                 1px -1px 1px black,  2px -2px 2px black,  3px -3px 13px #ffffcc;
+}
+
+.footer-text-shadow
+{
+text-shadow:    1px 0px 1px white, 2px 0px 2px white, 3px 0px 3px white, 
+                1px 1px 1px white, 2px 2px 2px white, 3px 3px 3px white,
+                0px 1px 1px white, 0px 2px 2px white, 0px 3px 3px white,
+
+                -1px 1px 1px white, -2px 2px 2px white, -3px 3px 3px white,
+                -1px 0px 1px white, -2px 0px 2px white, -3px 0px 3px white,
+                
+                -1px -1px 1px white, -2px -2px 2px white, -3px -3px 3px white,
+                 0px -1px 1px white,  0px -2px 2px white,  0px -3px 3px white,
+                 1px -1px 1px white,  2px -2px 2px white,  3px -3px 3px white;
+}    
+
+.imageshadow:hover
+{
+box-shadow:5px 5px 25px;    
+}
+
+.sizing
+{
+height:185px;    
+}
+
+.hilite
+{
+color:red;    
+}
