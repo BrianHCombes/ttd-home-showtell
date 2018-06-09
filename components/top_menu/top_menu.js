@@ -1,21 +1,27 @@
 angular.module("viewNav")
 
-    .component('howto', {
+    .component('intro', {
         
-        template: "<h1>This is the How To template",
+        //template: "<h1>This is the How To template",
 
-        //templateUrl: 'components/components00_03/tmpl_03/viewTmpl_03.html',
+        templateUrl: 'components/top_menu/intro/intro.html',
        
-        controller: [ function(){
+        controller: ['GetSet', function(GetSet){
+            var introSelf = this;
+            
+            var vWidth = GetSet.getViewWidth();
+            
+            introSelf.test = "This is a controller Test and the view width is: " + vWidth + "px";
+            
             
         }]
     })
     
     .component('buyprice', {
         
-        template: "<h1>This is the Buy/Price template",
+        //template: "<h1>This is the Buy/Price template",
 
-        //templateUrl: 'components/components00_03/tmpl_03/viewTmpl_03.html',
+        templateUrl: 'components/top_menu/buy_price/buy_price.html',
        
         controller: [ function(){
             
@@ -46,9 +52,9 @@ angular.module("viewNav")
     
     .component('policy', {
         
-        template: "<h1>This is the Policy template",
+        //template: "<h1>This is the Policy template",
 
-        //templateUrl: 'components/components00_03/tmpl_03/viewTmpl_03.html',
+        templateUrl: 'components/top_menu/policy_tmpl/policy.html',
        
         controller: [ function(){
             

@@ -21,9 +21,9 @@ angular.module('viewNav', ['ui.router', 'ngSanitize'])
         
         // configure states for top menu items
         state = {
-                    name:"howto",
-                    url:"/howto",
-                    views:{"rootView":{"component":"howto"}}
+                    name:"intro",
+                    url:"/intro",
+                    views:{"rootView":{"component":"intro"}}
                 };    
         $stateProvider.state(state);
         
