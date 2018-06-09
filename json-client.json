@@ -1,10 +1,10 @@
 {
     "menuBar1": [
-                    {"menuItemName":"How to ",      "menuItem":"howto"},
-                    {"menuItemName":"Policy ",      "menuItem":"buyprice"},
-                    {"menuItemName":"Buy/Price ",   "menuItem":"products"},
-                    {"menuItemName":"Products ",    "menuItem":"reviews"},
-                    {"menuItemName":"Reviews ",     "menuItem":"policy"}
+                    {"menuItemName":"Intro",       "menuItem":"intro"},
+                    {"menuItemName":"Buy/Price ",  "menuItem":"buyprice"},
+                    {"menuItemName":"Products ",   "menuItem":"products"},
+                    {"menuItemName":"Reviews ",    "menuItem":"reviews"},
+                    {"menuItemName":"Policy ",     "menuItem":"policy"}
                 ],
     
     "showView": [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false ],

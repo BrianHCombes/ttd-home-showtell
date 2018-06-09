@@ -206,7 +206,7 @@ angular.module('viewNav')
 
 //***********************************************************************************************************************************************************            
 // $state.go('view00') loads view00 as the default view upon load          
-        $state.go('view00');
+        $state.go('intro');
         
 //***********************************************************************************************************************************************************    
 //  Responsive section for the Hyper Menu and Thumbnail section     
@@ -286,7 +286,7 @@ angular.module('viewNav')
                                 width03:    "width:" + ((-0.01605)*(vpWidth) + 27.77778)+"%",
                                 width04:    "width:" + ((-0.00494)*(vpWidth) + 13.77778)+"%",
                                 width05:    "width:" + ((0.31769)*(vpHeight) + -8.61372)+"px",              // 204 at 600, 270 at 877 // <td> width for thumbnail column for screen3
-                                width06:    "width:" + ((-0.31769)*(vpHeight) + 991.61372)+"px",            // 713 at 877, 801 at 600 // <td> width of view template
+                                width06:    "width:" + ((-0.31769)*(vpHeight) + 991.61372)+"px",            // 713 at 877, 801 at 600 // <td> width of view template as a function of height // used in screen 3
 
                                 height01:   "height:" + ((0.01852)*(vpWidth) + 6.33333)+"px",               // 28 at 1170, 13 at 360  // Top Menu
                                 height02:   "height:" + (function(){        
@@ -373,21 +373,25 @@ angular.module('viewNav')
         var btnCount = 0;
         RBData.menuConfig(styleCallback, "menus");
         var screenMode = "screen1";
-        
+        var viewWidth;
         var vpWidth = window.screen.availWidth;
         var vpHeight = window.innerHeight;
+        
         if(vpWidth > 1170) vpWidth = 1170;
         
         if(vpWidth >= 900 && (vpHeight/vpWidth >= 0.75)){
             screenMode = "screen1";
+            viewWidth = vpWidth;
         }
         else if(vpWidth < 900) {
             screenMode = "screen2";
+            viewWidth = vpWidth;
         }
         else if(vpWidth >= 900 && (vpHeight/vpWidth < 0.75)) {
             screenMode = "screen3";
+            viewWidth = ((-0.31769)*(vpHeight) + 991.61372);                        // In coordination with the other elements per screen3 - see screenResponse(); 
         }
-
+        
         return  {
 
             downMarker: function(){return markerDownTriangle;},                        
@@ -427,17 +431,14 @@ angular.module('viewNav')
             setHyperThumbClick: function(value){currentViewHyperIndexFromThumbClick = value;},
             
             getBtnCount: function(){return btnCount;},
-            setBtnCount: function(value){
-                            btnCount = value;
-                         },   
+            setBtnCount: function(value){btnCount = value;},   
             
             getScreenMode:  function(){return screenMode;},
-            setScreenMode:  function(value){
-                                screenMode = value;
-                            },
+            setScreenMode:  function(value){screenMode = value;},
                             
             getVpWidth:     function(){return vpWidth;},
-            getVpHeight:    function(){return vpHeight;}
+            getVpHeight:    function(){return vpHeight;},
+            getViewWidth:   function(){return viewWidth;}
         };
 
 
