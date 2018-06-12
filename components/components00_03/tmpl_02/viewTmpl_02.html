@@ -1,13 +1,22 @@
 <style>
-#divA
+.textStyle1
 {
-text-decoration:underline;
-color:blue;
-}    
+font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
+color:red;
+text-align:center; 
+}
 
 </style>
 
-<h1>VIEW NAV 02</h1>
-<div id="divA" style="font-weight:bold; font-size:3em">This is a test to show HTML template <br>viewTmpl_02 is working as part of view02</div>
 
-<div style="color:red;">This is from the service in the other component file: {{$ctrl.display}}</div>
+<div class="textStyle1" style="{{$ctrl.fontsize1}};">
+    Mount Tarps! 
+</div>
+
+<div style="text-align:center;">    
+    <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-mount-1600x1200.jpg" 
+         alt="EZ Grabbit Tarp Tie Down Official Logo" 
+         title="EZ Grabbit Logo with Device" 
+         style=" width:95%; border:2px solid black; border-radius:7px; margin-top:10px;"> 
+</div> 
+

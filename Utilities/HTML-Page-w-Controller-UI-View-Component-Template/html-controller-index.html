@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app='ControllerTemplate'>
+<head>
+    <title>Angular Frameworks-Templates</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="SHORTCUT ICON" href=http://www.tarptiedown.com/ttd-website/ttd-website-pics-videos/instruction-images/teacherIcon.png>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs@1.0.5/release/angular-ui-router.js"></script>
+    <script src="config-component.js"></script>
+</head>
+<body>
+    
+    <div ng-controller="CtrlTemplate as ctrltmpl" style="text-align:center; font-size:25px;">
+        <div>{{ctrltmpl.msg}}</div>
+        
+        <ui-view></ui-view>
+        
+    </div>
+    
+<script>
+
+var app = angular.module('ControllerTemplate');
+
+    app.controller('CtrlTemplate', [ '$state', function($state){
+
+            var ctrlTemplate = this;
+
+            ctrlTemplate.msg = "This is from the main controller";
+            
+            $state.go('myView');
+
+    }]);
+
+    
+</script>    
+</body>
+</html>

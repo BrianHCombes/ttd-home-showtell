@@ -2,19 +2,43 @@
 
 div
 {
+font-size:16px;    
 font-family: Futura, "Trebuchet MS", Arial, sans-serif;    
 }
 
 </style>
 
-<div style="text-align:center;"><br>
-     <div style="font-size:3em; line-height:150%;">Welcome to</div> 
-    <!--<a href="http://www.tarptiedown.com/ttd-website/ttd-website-policy-page/ttd-website-mission-statement.htm" target="_blank">-->
-    <!--<img src=" http://www.tarptiedown.com/ttd-website/ttd-website-pics-videos/ttd-website-logo-long-banner-ttd-1200x200.jpg" -->
+<div style="text-align:center;">
+   
     <img src="components/top_menu/intro/TTD-Logo-1200x225-08-07-2017.png" 
          alt="Tarp Tie Down Company Official Logo"  
          title="EZ Grabbit: When a tarp clip just won't do" 
-         style="width:80%; border-radius:5px;"/>
-    <div style="font-size:3em;">Home of the EZ Grabbit Tarp Tie Down</div>
+         style="width:80%; border-radius:5px; margin-top:5px;">
+    <div style="{{$ctrl.fontsize2}};">Home of the EZ Grabbit Tarp Tie Down</div>
 </div>
-<div style="font-size:2em;">You are on the intro page and {{$ctrl.test}}</div>
+<div style="text-align:center;">
+    <button ng-click="$ctrl.newWindow();" 
+            style=" font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+                    {{$ctrl.fontsize4}}; 
+                    color:#0099ff; 
+                    margin:10px 0px;">Navigate this site - learn how in 15 secs.
+    </button>
+</div>
+
+<table style="{{$ctrl.fontsize3}};">
+    <tr>
+        <td style="{{$ctrl.width1}};">
+            The EZ Grabbit Tarp Tie Down is our most popular product.
+            <br>
+            <span style="color:blue;">Click or mouse on button 1 then click a thumbnail image. Likewise for the other numbered buttons.</span>
+        </td>
+        <td ng-show="1" style="{{$ctrl.width2}}">
+            <img src="https://www.tarptiedown.com/resources/ttd-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%">
+        </td>
+     </tr>
+        <tr ng-show="0">
+            <td>
+                <img src="https://www.tarptiedown.com/resources/ttd-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%">
+            </td>
+        </tr>
+</table>

@@ -1,5 +1,5 @@
 angular.module('viewNav')
-    .controller("VNCtrl", ['$scope', '$state', 'RBData', 'compFactory', 'GetSet', function($scope, $state, RBData, compFactory, GetSet){
+    .controller("VNCtrl", ['$scope', '$state', 'VnData', 'compFactory', 'GetSet', function($scope, $state, VnData, compFactory, GetSet){
 
         var vn = this;
         vn.hyperIndex;
@@ -13,7 +13,7 @@ angular.module('viewNav')
             vn.picMenu2 = data.picMenu2;        // is array of hyper menu items
             vn.stateNAMES = data.stateNames;    // is array
         };
-        RBData.menuConfig(menuCallback, "menus");
+        VnData.menuConfig(menuCallback, "menus");
 
 //***********************************************************************************************************************************************************
 // arrayIndexPre is called from the button mouseovers/clicks on the hyper menu presentation for viewport widths below 900px. 
@@ -118,7 +118,7 @@ angular.module('viewNav')
         var receiveData =   function(data){
                                 $scope.$apply(function(){vn.showPicObj = data; vn.hyperIndex = 0;});
                             };
-        RBData.rbGetPicsAjax(receiveData);
+        VnData.rbGetPicsAjax(receiveData);
         
 // **********************************************************************************************************************************************************
 // getView serves as a callback function and manages the history list.
@@ -332,7 +332,7 @@ angular.module('viewNav')
 //***********************************************************************************************************************************************************
 // GetSet is designed as a closure function. See AA - ReadMe.txt 11/26/2017 for discussion
 // "C:\xampp\htdocs\Project-TTD-Website-Rock-Buster-LAMP\AA - ReadMe.txt"
-.factory('GetSet', ['RBData', function(RBData){
+.factory('GetSet', ['VnData', function(VnData){
         
         var markerDownTriangle = "";
         var markerLeftTriangle = "";
@@ -371,7 +371,7 @@ angular.module('viewNav')
         };
         
         var btnCount = 0;
-        RBData.menuConfig(styleCallback, "menus");
+        VnData.menuConfig(styleCallback, "menus");
         var screenMode = "screen1";
         var viewWidth;
         var vpWidth = window.screen.availWidth;
@@ -445,8 +445,8 @@ angular.module('viewNav')
 }])
 
 //***********************************************************************************************************************************************************
-// The factory service RBData retrieves menu configuration data from a local JSON file and image file names from MySQL DB
-.factory('RBData', ['$http', function($http){
+// The factory service VnData retrieves menu configuration data from a local JSON file and image file names from MySQL DB
+.factory('VnData', ['$http', function($http){
    
             return  {
           
@@ -461,8 +461,8 @@ angular.module('viewNav')
                                                 if(picArray.length <= 2)
                                                     alert("Query unsucessful");
                                                 picArray = JSON.parse(picArray);
-                                                var rbData = picArray;
-                                                receiveData(rbData);
+                                                var vnData = picArray;
+                                                receiveData(vnData);
                                             }
                                         };
                                         xhttp.open("GET", "server.php?q=queryTest", true);

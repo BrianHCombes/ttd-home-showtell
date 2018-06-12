@@ -6,45 +6,20 @@ angular.module('viewNav')
         templateUrl: 'components/components00_03/tmpl_00/viewTmpl_00.html',
         
         controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+                var vpWidth = GetSet.getViewWidth();
                 
-                var self = this; 
-/*                 
-                var vpWidth = window.innerWidth; 
-                // alert("In the template: " + vpWidth);
-                if(vpWidth >= 1170){
-                    vpWidth=1170;
-                }; 
-*/
-                var vpWidth = "1170px";
-                var vpWidthTest = GetSet.getVpWidth();
+                var self00 = this; 
                 
-                self.reportedWidth = vpWidthTest + "px";
-                self.style2 = "color:blue";
-         
+                self00.fontsize1 = "font-size:" + ((0.00235)*(vpWidth) + 0.24706) + "em";
+                self00.fontsize2 = "font-size:" + ((0.00182)*(vpWidth) + 0.11647) + "em";
+                self00.fontsize3 = "font-size:" + ((0.00165)*(vpWidth) + 0.07294) + "em";
                 
-                self.color1 = "color:red";
+                self00.width1 = "width:" + ((0.00353)*(vpWidth) + -1.12941) + "%";
+                self00.width2 = "width:" + ((-0.00941)*(vpWidth) + 58.01176) + "%";
+                self00.width3 = "width:" + ((0.00588)*(vpWidth) + -1.88235) + "%";
+                // self00.width4 = "width:" +  + "%";
                 
-                self.fontsize1 = "font-size:" + ((0.01605)*(vpWidth) + 5.22222) + "px";
-                //document.getElementById("testTD1").style.fontSize = (0.01605)*(vpWidth) + 5.22222 + "px";       // 1170:24px - 360:11px
                 
-                self.fontsize2 = "font-size:" + ((0.01481)*(vpWidth) + 6.66667) + "px";
-                //document.getElementById("testTD2").style.fontSize = (0.01481)*(vpWidth) + 6.66667 + "px";       // 1170:24px - 360:12px
-                
-                self.lineheight1 = "line-height:" + ((0.02469)*(vpWidth) + 101.11111) + "%";
-                //document.getElementById("testTD2").style.lineHeight = (0.02469)*(vpWidth) + 101.11111 + "%";    // 1170:24px - 360:12px
-                
-                self.width1 = "width:" + ((0.02778)*(vpWidth) + 17.50000) + "%";
-                //document.getElementById("testTD3").style.width = (0.02778)*(vpWidth) + 17.50000 + "%";          // 1170:50% - 360:27.5%
-                self.width2 = "width:" + ((-0.02778)*(vpWidth) + 82.50000) + "%";
-                //document.getElementById("testTD2").style.width = (-0.02778)*(vpWidth) + 82.50000 + "%";         // 1170:50% - 360:72.5%
-                self.width3 = "width:" + ((0.57407)*(vpWidth) + -116.66667) + "px";
-                //document.getElementById("testTD4").style.width = (0.57407)*(vpWidth) + -116.66667 + "px";       // 1170:555px - 360:90px
-                
-                self.height1 = "height:" + ((0.15432)*(vpWidth) + 69.44444) + "px";
-                //document.getElementById("testTD4").style.height = (0.15432)*(vpWidth) + 69.44444 + "px";        // 1170:250px - 360:125px
-                
-                self.borderradius1 = "border-radius:25px";
-                //document.getElementById("testTD1").style.borderRadius = "25px";
 
             compFactory.logView(00);
         }]
@@ -56,7 +31,13 @@ angular.module('viewNav')
         
         templateUrl: 'components/components00_03/tmpl_01/viewTmpl_01.html',
        
-        controller: ['compFactory', function(compFactory){
+        controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+            var vpWidth = GetSet.getViewWidth();
+
+            var self01 = this; 
+
+            self01.fontsize1 = "font-size:" + ((0.00247)*(vpWidth) + 1.11111) + "em";
+            self01.fontsize2 = "font-size:" + ((0.00123)*(vpWidth) + 0.80556) + "em";
             
             compFactory.logView(01);
         }]
@@ -68,7 +49,12 @@ angular.module('viewNav')
         
         templateUrl: 'components/components00_03/tmpl_02/viewTmpl_02.html',
 
-        controller: ['compFactory', function(compFactory){
+         controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+            var vpWidth = GetSet.getViewWidth();
+
+            var self02 = this; 
+            
+            self02.fontsize1 = "font-size:" + ((0.00247)*(vpWidth) + 1.11111) + "em";
             
             compFactory.logView(02);
         }]    
@@ -79,7 +65,12 @@ angular.module('viewNav')
         
         templateUrl: 'components/components00_03/tmpl_03/viewTmpl_03.html',
        
-        controller: ['compFactory', function(compFactory){
+        controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+            var vpWidth = GetSet.getViewWidth();
+
+            var self03 = this; 
+            
+            self03.fontsize1 = "font-size:" + ((0.00247)*(vpWidth) + 1.11111) + "em";
             
             compFactory.logView(03);
         }]
