@@ -89,12 +89,12 @@
                 </td>
 
                 <td style=" width:1.0%; 
-                            color:black;
+                            color:white;
                             text-shadow:1px 1px 5px white, 1px -1px 5px white, -1px 1px 5px white, -1px -1px 5px white;
                             padding:0px 0px 0px 0px;
                             border-radius:2px;
                             ">
-                    <b>:</b>
+                    <b>|</b>
                 </td>
                 <td style="">
                     <div style="">                            
@@ -148,7 +148,7 @@
                                             padding-top:2px;
                                             padding-right:10px;">   
                     <div class="shadow cursorstyle1" 
-                         ng-mouseover="vnCTRL.arrayIndex($index)" 
+                         ng-click="vnCTRL.arrayIndex($index)" 
                          style="border-radius:4px;"  
                          ng-repeat="picMenuA in vnCTRL.picMenu1" >
                             <div style="width:100%; 
@@ -229,7 +229,7 @@
                                             padding-left:10px;
                                             vertical-align:middle;">
                     <div class="shadow cursorstyle1" 
-                         ng-mouseover="vnCTRL.arrayIndex($index+6)" 
+                         ng-click="vnCTRL.arrayIndex($index+6)" 
                          style="border-radius:4px;"   
                          ng-repeat="picMenuB in vnCTRL.picMenu2" >         
                             <div style="width:100%;
@@ -587,7 +587,7 @@
                                         padding-top:2px;
                                         padding-right:10px;">   
                 <div class="shadow cursorstyle1" 
-                     ng-mouseover="vnCTRL.arrayIndex($index)" 
+                     ng-click="vnCTRL.arrayIndex($index)" 
                      style="border-radius:4px;"  
                      ng-repeat="picMenuA in vnCTRL.picMenu1" >
                         <div style="width:100%; 
@@ -607,7 +607,7 @@
                 </div>        
 
                 <div class="shadow cursorstyle1" 
-                     ng-mouseover="vnCTRL.arrayIndex($index+6)" 
+                     ng-click="vnCTRL.arrayIndex($index+6)" 
                      style="border-radius:4px;"  
                      ng-repeat="picMenuB in vnCTRL.picMenu2" >         
                         <div style="width:100%;

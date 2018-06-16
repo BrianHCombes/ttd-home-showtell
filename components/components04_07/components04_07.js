@@ -4,7 +4,15 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_04/viewTmpl_04.html',
        
-        controller: ['compFactory', function(compFactory){
+         controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+            var vpWidth = GetSet.getViewWidth();
+
+            var self04 = this; 
+            
+            self04.fontsize1 = "font-size:" + ((0.00247)*(vpWidth) + 1.11111) + "em";
+            self04.fontsize2 = "font-size:" + ((0.00160)*(vpWidth) + 0.12222) + "em";
+            
+            
             
             compFactory.logView(04);
         }]

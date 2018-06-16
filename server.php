@@ -31,15 +31,14 @@ $imageArray = array(    array("picColA"=>"DSCN3181.jpg", "picColB"=>"DSCN3469.jp
                         array("picColA"=>"DSCN2049.jpg", "picColB"=>"DSCN2453.jpg", "picColC"=>"DSCN3181.jpg", "picColD"=>"DSCN3469.jpg")
                     );
 
-
-
+/* 
+    // $servername = "localhost"; // When located on GoDaddy cloud server use this line instead
     $servername = "23.229.167.12";
     $username = "BrianHCombes";
     $password = "fullStack0109";
     $dbname = "ttd_view_nav_db";
-    
+*/
 
-/*
 //    Local connection used for development    
 $servername = "127.0.0.1";
 $username = "root";
@@ -48,7 +47,6 @@ $username = "root";
 $password = "algoResponse811";      // (new password as of 04/16/2018)
 //$dbname = "ttd_product_rb_db";
 $dbname = "ttd_view_nav_db";
-*/
 
 // Create connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);
