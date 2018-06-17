@@ -24,7 +24,16 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_05/viewTmpl_05.html',
        
-        controller: ['compFactory', function(compFactory){
+        controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+            var vpWidth = GetSet.getViewWidth();
+            
+            var self05 = this;
+            
+            self05.testView = function(){
+                alert("The Test");
+                //$state.go('view15');
+            };
+                
             
             compFactory.logView(05);
         }]
