@@ -146,8 +146,10 @@
             <tr>   
                 <td class="menuBtns" style="width:7.8%; 
                                             padding-top:2px;
-                                            padding-right:10px;">   
-                    <div class="shadow cursorstyle1" 
+                                            padding-right:10px;
+                                            vertical-align:top;">   
+                    <div class="shadow cursorstyle1"
+                         ng-show="picMenuA.showBtn"
                          ng-click="vnCTRL.arrayIndex($index)" 
                          style="border-radius:4px;"  
                          ng-repeat="picMenuA in vnCTRL.picMenu1" >
@@ -227,8 +229,9 @@
                 <td class="menuBtns" style="width:7.8%; 
                                             padding-top:2px;
                                             padding-left:10px;
-                                            vertical-align:middle;">
+                                            vertical-align:top;">
                     <div class="shadow cursorstyle1" 
+                         ng-show="picMenuB.showBtn"
                          ng-click="vnCTRL.arrayIndex($index+6)" 
                          style="border-radius:4px;"   
                          ng-repeat="picMenuB in vnCTRL.picMenu2" >         
