@@ -1,6 +1,69 @@
 <style>
+#divA
+{
+font-size:1em;
+}    
+
+.textStyle1
+{
+font-family:arial; 
+font-weight:bold; 
+color:black;
+}
+
+.textStyle2
+{
+font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
+color:red;
+}
+
+.textStyle3
+{
+font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;    
+}
+    
 </style>
 
-<div style="position:relative;">
-    <img src="resources/images/Open_Space_ViewTemplate_B.jpg" alt="Open Space Template" style="width:100%;">
-</div>    
+<div id="divA">
+    <!--<div>The innerWidth reported is: {{$ctrl.reportedWidth}}</div>-->
+    <!--<a href="http://www.tarptiedown.com">TTD link</a>-->
+    <!--<a ui-sref="view13" ui-sref-active="active">view13</a>-->
+    
+    <div style="text-align:center;">
+        <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-logo-w-device-1500x400.png" 
+                         alt="EZ Grabbit Tarp Tie Down Official Logo" 
+                         title="EZ Grabbit Logo with Device" 
+                         style=" width:90%;"> 
+    </div> 
+    <!--<br>-->
+    <div class="textStyle1" style="{{$ctrl.fontsize1}}; text-align:center;">Superior Performance and Versatility</div>
+    <!--<br>-->
+        
+    <table style="width:100%; border-spacing:0px;">
+        <tr>
+            <td style="{{$ctrl.width1}};">
+            </td>
+            <td style="{{$ctrl.width2}}; {{$ctrl.fontsize2}};">
+                <div class="textStyle2" style="">&#10004; Mount Tarps to Structures</div>
+                <div class="textStyle2" style="">&#10004; Fasten Tarps Together</div>
+                <div class="textStyle2" style="">&#10004; Grab Tarps Anywhere</div>
+                <div class="textStyle2" style="">&#10004; Far Superior To Grommets</div>
+            </td>    
+            <td style="width:45%;">
+                <div class="textStyle3" style="{{$ctrl.fontsize3}}; background-color:yellow; border:2px solid black; border-radius:5px; padding:10px 10px; margin-top:10px;">
+                    WRAP THE TARP AROUND THE DOG BONE AND SLIDE THE SLEEVE INTO PLACE.<br> <span style="font-size:1.25em; text-align:center;"><b>IT'S THAT EASY!</b></span>
+                    
+                </div>
+            </td>
+            <td style="{{$ctrl.width3}};">
+            </td>
+        </tr>
+    </table>
+    
+    <div style="text-align:center;">
+        <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-1400x1400.jpg" 
+                         alt="EZ Grabbit Tarp Tie Down Official Logo" 
+                         title="EZ Grabbit Logo with Device" 
+                         style=" width:95%; border:2px solid black; border-radius:7px; margin-top:10px;"> 
+    </div>     
+</div>
