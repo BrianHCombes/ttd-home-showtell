@@ -149,7 +149,7 @@
                                             padding-right:10px;
                                             vertical-align:top;">   
                     <div class="shadow cursorstyle1"
-                         ng-show="picMenuA.showBtn"
+                         ng-show="picMenuA.showBtnA"
                          ng-click="vnCTRL.arrayIndex($index)" 
                          style="border-radius:4px;"  
                          ng-repeat="picMenuA in vnCTRL.picMenu1" >
@@ -166,7 +166,7 @@
                                         cursor:crosshair;
                                         text-align:center;
                                         ">
-                                        {{picMenuA.label}}
+                                        {{picMenuA.labelA}}
                             </div>
                     </div>        
                 </td>
@@ -231,7 +231,7 @@
                                             padding-left:10px;
                                             vertical-align:top;">
                     <div class="shadow cursorstyle1" 
-                         ng-show="picMenuB.showBtn"
+                         ng-show="picMenuB.showBtnA"
                          ng-click="vnCTRL.arrayIndex($index+6)" 
                          style="border-radius:4px;"   
                          ng-repeat="picMenuB in vnCTRL.picMenu2" >         
@@ -247,14 +247,14 @@
                                         text-shadow:{{picMenuB.shadow}};
                                         cursor:crosshair;
                                         text-align:center;">
-                                        {{picMenuB.label}}
+                                        {{picMenuB.labelA}}
                            </div>
                     </div>
                 </td>
             </tr>   
         </table>   
 <!--************************************************************************************************************************************************-->
-<!-- Hyper index and view thumbnails for viewport width of 899px and below-->
+<!-- Hyper index and view thumbnails for viewport width of 899px and below - This is screen2-->
     <table ng-show="vnCTRL.screen2"
            style="  width:{{vnCTRL.width1}}; 
                     {{vnCTRL.response.height06}};
@@ -362,8 +362,10 @@
             <td class="menuBtns" style="width:{{vnCTRL.width4}};
                                         border:none; 
                                         padding:5px 5px 5px 7px; 
-                                        background-color:black;">   
+                                        background-color:black;
+                                        vertical-align:top;">   
                 <div class=" shadow cursorstyle1" 
+                     ng-show="picMenuA.showBtnB" 
                      ng-click="vnCTRL.arrayIndexPre($index)"
                      style="width:85%; 
                             margin-bottom:{{vnCTRL.margin1}};
@@ -380,35 +382,36 @@
                                 text-shadow:{{picMenuA.shadow}};
                                 text-align:center;
                                 font-size:{{vnCTRL.btnFontSize}};
-                                font-family:arial;" 
-                            >{{picMenuA.label*2-1}}
+                                font-family:arial;">
+                        {{picMenuA.labelB}}
                     </div>        
                 </div>
             </td>
             <td class="menuBtns" style="width:{{vnCTRL.width5}}; 
                                         border:none; 
                                         padding:5px 7px 5px 5px; 
-                                        background-color:black;">
+                                        background-color:black;
+                                        vertical-align:top;">
                 <div class="shadow cursorstyle1"
+                     ng-show="picMenuB.showBtnB" 
                      ng-click="vnCTRL.arrayIndexPre($index+6)"
                      style="width:85%; 
                             margin-top:{{vnCTRL.margin1}}; 
-                            margin-left:3%;" 
+                            margin-left:3%;"
                      ng-repeat="picMenuB in vnCTRL.picMenu2" >         
-                        <div class="" 
-                            style=" width:100%;
-                                    padding:{{vnCTRL.padding1}} 0px;
-                                    background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
-                                    border-radius:4px;
-                                    border:1px solid #808080;
-                                    box-shadow:{{picMenuB.boxshadow}};
-                                    color:{{picMenuB.highlight}}; 
-                                    text-shadow:{{picMenuB.shadow}};
-                                    text-align:center;
-                                    font-size:{{vnCTRL.btnFontSize}};
-                                    font-family:arial;">
-                            {{picMenuB.label*2-12}}
-                        </div>
+                    <div style="width:100%;
+                                padding:{{vnCTRL.padding1}} 0px;
+                                background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                border-radius:4px;
+                                border:1px solid #808080;
+                                box-shadow:{{picMenuB.boxshadow}};
+                                color:{{picMenuB.highlight}}; 
+                                text-shadow:{{picMenuB.shadow}};
+                                text-align:center;
+                                font-size:{{vnCTRL.btnFontSize}};
+                                font-family:arial;">
+                        {{picMenuB.labelB}}
+                    </div>
                 </div>
             </td>
         </tr>
@@ -589,7 +592,8 @@
                                         width:70px; 
                                         padding-top:2px;
                                         padding-right:10px;">   
-                <div class="shadow cursorstyle1" 
+                <div class="shadow cursorstyle1"
+                     ng-show="picMenuA.showBtnA"
                      ng-click="vnCTRL.arrayIndex($index)" 
                      style="border-radius:4px;"  
                      ng-repeat="picMenuA in vnCTRL.picMenu1" >
@@ -605,11 +609,12 @@
                                     text-shadow:{{picMenuA.shadow}};
                                     cursor:crosshair;
                                     text-align:center;">
-                                    {{picMenuA.label}}
+                                    {{picMenuA.labelA}}
                         </div>
                 </div>        
 
                 <div class="shadow cursorstyle1" 
+                     ng-show="picMenuB.showBtnA"
                      ng-click="vnCTRL.arrayIndex($index+6)" 
                      style="border-radius:4px;"  
                      ng-repeat="picMenuB in vnCTRL.picMenu2" >         
@@ -625,7 +630,7 @@
                                     text-shadow:{{picMenuB.shadow}};
                                     cursor:crosshair;
                                     text-align:center;">
-                                    {{picMenuB.label}}
+                                    {{picMenuB.labelA}}
                        </div>
                 </div>
             </td>
