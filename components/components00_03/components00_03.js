@@ -94,11 +94,24 @@ angular.module('viewNav')
         templateUrl: 'components/components00_03/tmpl_03/viewTmpl_03.html',
        
         controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
-            var vpWidth = GetSet.getViewWidth();
+            var viewWidth = GetSet.getViewWidth();
 
             var self03 = this; 
             
-            self03.fontsize1 = "font-size:" + ((0.00247)*(vpWidth) + 1.11111) + "em";
+            self03.width3 = "width:" + ((0.02963)*(viewWidth)+15.33333) + "px";
+             
+            self03.margintop1 = "margin-top:" + ((0.01235)*(viewWidth)-4.44444) + "px";
+            self03.margintop2 = "margin-top:" + ((0.01235)*(viewWidth)+0.55556) + "px";
+            
+            self03.positiontop1 = "top:" + ((0.04938)*(viewWidth)-7.77778) + "px";
+            
+
+            self03.fontsize1 = "font-size:" + ((0.00241)*(viewWidth)-0.06667) + "em";
+            self03.fontsize2 = "font-size:" + ((0.00265)*(viewWidth)-0.10556) + "em";
+            self03.fontsize4 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";
+            
+          
+            self03.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.02099)*(viewWidth)+0.44444) + "px";
             
             compFactory.logView(03);
         }]
