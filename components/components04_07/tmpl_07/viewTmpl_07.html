@@ -1,15 +1,145 @@
 <style>
-#divA
+.textStyle1
 {
-text-decoration:underline;
-color:blue;
-}    
+font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
+color:white;
+text-shadow:    1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black, 
+                1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black,
+                0px 1px 1px black, 0px 2px 2px black, 0px 3px 3px black,
+
+                -1px 1px 1px black, -2px 2px 2px black, -3px 3px 3px black,
+                -1px 0px 1px black, -2px 0px 2px black, -3px 0px 3px black,
+                
+                -1px -1px 1px black, -2px -2px 2px black, -3px -3px 3px black,
+                 0px -1px 1px black,  0px -2px 2px black,  0px -3px 3px black,
+                 1px -1px 1px black,  2px -2px 2px black,  3px -3px 3px black;
+}
+
+.fontFam
+{
+font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;     
+}
 
 </style>
 
-<div style="position:relative;">
-    <img src="resources/images/Open_Space_ViewTemplate_B.jpg" alt="Open Space Template" style="width:100%;">
-</div>    
-<!--<div id="divA" style="font-weight:bold; font-size:3em">This is a test to show HTML template <br>viewTmpl_02 is working as part of view02</div>-->
+<div style="text-align:center;">    
+   
+    <table style="width:100%">
+        <tr>
+            <td style="{{$ctrl.width1}}; vertical-align:top;">
+                <div    class="fontFam"
+                        style=" width:100%;
+                                {{$ctrl.fontsize3}};
+                                ">
+                    <span style="font-size:1.75em">CARRY BAG</span><br>
+                    <div style="position:relative; 
+                                left:7.5%; 
+                                width:85%; 
+                                background-color:#EFEFEF; 
+                                border:1px solid black;
+                                border-radius:6px;
+                                padding:5px 0px;
+                                ">
+                                general purpose
+                    </div>
+                </div>    
+                <div    id="div1" 
+                        style="font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; 
+                               {{$ctrl.fontsize1}}; 
+                               /*font-size:.75em;*/
+                               color:black; 
+                               /*line-height:.95em;*/
+                               text-align:left;
+                               width:85%;
+                               position:relative;
+                               left:7.5%;
+                               /*text-indent:5%; */
+                               //text-shadow:1px 1px 1px black;
+                               //background-color:#EEEEEE;
+                               ">
+                    <br>We have a large but limited inventory of these rugged carry bags. Designed for carrying heavy camping gear, not to mention your entire Grabbit assortment.
 
-<!--<div style="color:red;">This is from the service in the other component file: {{$ctrl.display}}</div>-->
+                </div>
+            </td>
+            <td style="{{$ctrl.width2}};">
+                <img    src="components/components04_07/tmpl_07/ttd-vn-cb-presentation1-1450x550.jpg" 
+                        alt="Carry Bag" 
+                        title="Carry Bag" 
+                        style=" width:100%; 
+                                {{$ctrl.margintop1}};"> 
+            </td>
+        </tr>
+    </table>
+   
+<!--************************************************************************************************************************************************--> 
+    <div id="div2" 
+         style="font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif; 
+                {{$ctrl.fontsize2}};
+                /*font-size:.75em;*/
+                display:inline-block;
+                margin-top:7px;
+                color:black;
+                background-color:yellow;
+                padding:5px 8px;
+                border:2px solid black;
+                border-radius:5px;
+                ">
+        CARRY YOUR HEAVY STUFF IN THESE CARRY BAGS
+    </div>
+<!--************************************************************************************************************************************************-->
+    <br><br>
+    <div style="position:relative;">
+        
+        <table style="  position:absolute; 
+                        {{$ctrl.positiontop1}}; 
+                        /*top:10px; */
+                        {{$ctrl.positionleft1}}; 
+                        /*left:80%; */
+                        z-index:2;">
+            <tr>
+                <td style="text-align:right; vertical-align:top;">
+                    <a href="https://www.tarptiedown.com"> 
+                        <img src="components/components04_07/tmpl_07/ttd-vn-button2-600x600.png" alt="button" style="{{$ctrl.width3}};">
+                    </a>
+                </td>
+                <td class="fontFam"
+                    style=" vertical-align:middle; 
+                            text-align:left; 
+                            ">
+                    <div style="background-color:yellow;
+                                border:1px solid black;
+                                padding:5px 7px; 
+                                {{$ctrl.fontsize4}}; 
+                                /*font-size:.75em;*/
+                                border-radius:7px;
+                                margin-bottom:0px;
+                                box-shadow:3px 3px 13px black;
+                                z-index:2;">
+                        &#9668; All things<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Carry Bag
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- 
+        <div id="div4" 
+             class="textStyle1" 
+             style="position:absolute; 
+                    {{$ctrl.positiontop2}}; 
+                    /*top:150px;*/
+                    left:5%; 
+                    {{$ctrl.fontsize5}}; 
+                    /*font-size:1.0em;*/
+                    text-align:left; 
+                    z-index:2;">
+            Bags of:<br>Fertilizer, Potting Soil, Pet Food,<br>Bird Seed, Ice Melt, and More!
+        </div>
+        -->
+        
+        <img    src="components/components04_07/tmpl_07/ttd-vn-cb-presentation1-1450x550.jpg" 
+                alt="Keeper Application" 
+                title="Keeper Application" 
+                style="position:absolute; top:0px; left:0px; width:100%;"> 
+    </div>
+
+</div> 
+

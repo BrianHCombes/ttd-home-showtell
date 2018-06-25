@@ -6,20 +6,17 @@ angular.module('viewNav')
         templateUrl: 'components/components00_03/tmpl_00/viewTmpl_00.html',
         
         controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
-                var vpWidth = GetSet.getViewWidth();
-                
-                var self00 = this; 
-                
-                self00.fontsize1 = "font-size:" + ((0.00235)*(vpWidth) + 0.24706) + "em";
-                self00.fontsize2 = "font-size:" + ((0.00182)*(vpWidth) + 0.11647) + "em";
-                self00.fontsize3 = "font-size:" + ((0.00165)*(vpWidth) + 0.07294) + "em";
-                
-                self00.width1 = "width:" + ((0.00353)*(vpWidth) + -1.12941) + "%";
-                self00.width2 = "width:" + ((-0.00941)*(vpWidth) + 58.01176) + "%";
-                self00.width3 = "width:" + ((0.00588)*(vpWidth) + -1.88235) + "%";
-                // self00.width4 = "width:" +  + "%";
-                
-                
+            var viewWidth = GetSet.getViewWidth();
+
+            var self00 = this; 
+
+            self00.fontsize1 = "font-size:" + ((0.00235)*(viewWidth) + 0.24706) + "em";
+            self00.fontsize2 = "font-size:" + ((0.00182)*(viewWidth) + 0.11647) + "em";
+            self00.fontsize3 = "font-size:" + ((0.00165)*(viewWidth) + 0.07294) + "em";
+
+            self00.width1 = "width:" + ((0.00353)*(viewWidth) + -1.12941) + "%";
+            self00.width2 = "width:" + ((-0.00941)*(viewWidth) + 58.01176) + "%";
+            self00.width3 = "width:" + ((0.00588)*(viewWidth) + -1.88235) + "%";
 
             compFactory.logView(00);
         }]
@@ -103,13 +100,14 @@ angular.module('viewNav')
             self03.margintop1 = "margin-top:" + ((0.01235)*(viewWidth)-4.44444) + "px";
             self03.margintop2 = "margin-top:" + ((0.01235)*(viewWidth)+0.55556) + "px";
             
-            self03.positiontop1 = "top:" + ((0.04938)*(viewWidth)-7.77778) + "px";
+            self03.positiontop1 = "top:" + ((0.04938)*(viewWidth)+2.22222) + "px";
             
 
             self03.fontsize1 = "font-size:" + ((0.00241)*(viewWidth)-0.06667) + "em";
             self03.fontsize2 = "font-size:" + ((0.00265)*(viewWidth)-0.10556) + "em";
             self03.fontsize4 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";
             
+            self03.positionleft1 = "left:" + ((0.04321)*(viewWidth)+19.44444) + "%";
           
             self03.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.02099)*(viewWidth)+0.44444) + "px";
             
