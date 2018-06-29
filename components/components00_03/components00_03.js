@@ -10,14 +10,23 @@ angular.module('viewNav')
 
             var self00 = this; 
 
-            self00.fontsize1 = "font-size:" + ((0.00235)*(viewWidth) + 0.24706) + "em";
-            self00.fontsize2 = "font-size:" + ((0.00182)*(viewWidth) + 0.11647) + "em";
-            self00.fontsize3 = "font-size:" + ((0.00165)*(viewWidth) + 0.07294) + "em";
+            // Response Section 1
+            self00.rs1fontsize1 = "font-size:" + ((0.00235)*(viewWidth) + 0.24706) + "em";
 
-            self00.width1 = "width:" + ((0.00353)*(viewWidth) + -1.12941) + "%";
-            self00.width2 = "width:" + ((-0.00941)*(viewWidth) + 58.01176) + "%";
-            self00.width3 = "width:" + ((0.00588)*(viewWidth) + -1.88235) + "%";
-
+            // Response Section 2
+            self00.rs2margintop1 = "margin-top:" + ((0.03086)*(viewWidth)-11.11111) + "px";
+            self00.rs2marginbottom1 = "margin-bottom:" + ((0.03704)*(viewWidth)-13.33333) + "px";
+            
+            self00.rs2width1 = "width:" + ((0.00353)*(viewWidth) + -1.12941) + "%";
+            self00.rs2width2 = "width:" + ((-0.00941)*(viewWidth) + 58.01176) + "%";
+            self00.rs2fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+0.19444) + "em";
+            self00.rs2fontsize3 = "font-size:" + ((0.00165)*(viewWidth) + 0.07294) + "em";
+            
+            // Response Section 3
+            self00.rs3positiontop1 = "top:" + ((0.03704)*(viewWidth)+6.66667) + "px";
+            self00.rs3positionleft1 = "left:" + ((0.01235)*(viewWidth)+65.55556) + "%";
+            self00.rs3width1 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px";
+            
             compFactory.logView(00);
         }]
     })

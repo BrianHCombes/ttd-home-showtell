@@ -1,69 +1,142 @@
 <style>
-#divA
-{
-font-size:1em;
-}    
-
 .textStyle1
 {
-font-family:arial; 
-font-weight:bold; 
-color:black;
-}
-
-.textStyle2
-{
 font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
-color:red;
+color:white;
+text-shadow:    1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black, 
+                1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black,
+                0px 1px 1px black, 0px 2px 2px black, 0px 3px 3px black,
+
+                -1px 1px 1px black, -2px 2px 2px black, -3px 3px 3px black,
+                -1px 0px 1px black, -2px 0px 2px black, -3px 0px 3px black,
+                
+                -1px -1px 1px black, -2px -2px 2px black, -3px -3px 3px black,
+                 0px -1px 1px black,  0px -2px 2px black,  0px -3px 3px black,
+                 1px -1px 1px black,  2px -2px 2px black,  3px -3px 3px black;
 }
 
-.textStyle3
+.fontFam
 {
-font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;    
+font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;     
 }
-    
+
 </style>
 
-<div id="divA">
-    <!--<div>The innerWidth reported is: {{$ctrl.reportedWidth}}</div>-->
-    <!--<a href="http://www.tarptiedown.com">TTD link</a>-->
-    <!--<a ui-sref="view13" ui-sref-active="active">view13</a>-->
-    
-    <div style="text-align:center;">
-        <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-logo-w-device-1500x400.png" 
-                         alt="EZ Grabbit Tarp Tie Down Official Logo" 
-                         title="EZ Grabbit Logo with Device" 
-                         style=" width:90%;"> 
-    </div> 
-    <!--<br>-->
-    <div class="textStyle1" style="{{$ctrl.fontsize1}}; text-align:center;">Superior Performance and Versatility</div>
-    <!--<br>-->
-        
-    <table style="width:100%; border-spacing:0px;">
+<div style="text-align:center;">    
+
+<!-- Response Section 1 ************************************************************************************************************************************************-->
+    <table style="width:100%">
         <tr>
-            <td style="{{$ctrl.width1}};">
-            </td>
-            <td style="{{$ctrl.width2}}; {{$ctrl.fontsize2}};">
-                <div class="textStyle2" style="">&#10004; Mount Tarps to Structures</div>
-                <div class="textStyle2" style="">&#10004; Fasten Tarps Together</div>
-                <div class="textStyle2" style="">&#10004; Grab Tarps Anywhere</div>
-                <div class="textStyle2" style="">&#10004; Far Superior To Grommets</div>
-            </td>    
-            <td style="width:45%;">
-                <div class="textStyle3" style="{{$ctrl.fontsize3}}; background-color:yellow; border:2px solid black; border-radius:5px; padding:10px 10px; margin-top:10px;">
-                    WRAP THE TARP AROUND THE DOG BONE AND SLIDE THE SLEEVE INTO PLACE.<br> <span style="font-size:1.25em; text-align:center;"><b>IT'S THAT EASY!</b></span>
-                    
+            <td style=" {{$ctrl.rs1width1}};            /* AR_50_60 */
+                        vertical-align:top;">
+                <div    class="fontFam"
+                        style=" width:100%;
+                                {{$ctrl.rs1fontsize3}}; /* AR_3_0.8 */
+                                ">
+                    <span style="font-size:1.75em">TENT POLES</span><br>
+                    <div style="position:relative; 
+                                left:7.5%; 
+                                width:85%; 
+                                margin-top:0px; 
+                                background-color:#EFEFEF; 
+                                border:1px solid black;
+                                border-radius:6px;
+                                padding:5px 0px;
+                                ">
+                                general purpose
+                    </div>
+                </div>    
+                <div    id="div1" 
+                        style=" position:relative;
+                                font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; 
+                                {{$ctrl.rs1fontsize1}}; /* AR_1.25_0.75 */
+                                //font-size:.70em;
+                                color:black;
+                                {{$ctrl.rs1margintop2}}; /* AR_25_5 */
+                                /*margin-top:5px;     /* AR_25_5 */
+                                text-align:left;
+                                {{$ctrl.rs1width3}};     /* AR 85 - 95*/
+                                /*width:95%;       /* AR 85 - 95*/
+                                {{$ctrl.rs1positionleft1}}; /* AR 7.5 - 2.5*/
+                                /*left:2.5%;       /* AR 7.5 - 2.5*/
+                                ">
+                    We have a large but limited inventory of these 8mm tent poles. They are great tent pole replacements but have additional uses when used in conjunction with our RockBuster ground stake.
+
                 </div>
             </td>
-            <td style="{{$ctrl.width3}};">
+            <td style="{{$ctrl.rs1width2}};">           <!-- AR_50_40 -->
+                <img    src="components/components08_11/tmpl_08/ttd-vn-tp-presentation3-1200x690.jpg" 
+                        alt="Carry Bag" 
+                        title="Carry Bag" 
+                        style=" width:100%; 
+                                {{$ctrl.rs1margintop1}};"> 
             </td>
         </tr>
     </table>
+   
+<!-- Response Section 2 ************************************************************************************************************************************************--> 
     
-    <div style="text-align:center;">
-        <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-1400x1400.jpg" 
-                         alt="EZ Grabbit Tarp Tie Down Official Logo" 
-                         title="EZ Grabbit Logo with Device" 
-                         style=" width:95%; border:2px solid black; border-radius:7px; margin-top:10px;"> 
-    </div>     
-</div>
+    <div id="div2" 
+         style="font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif; 
+                {{$ctrl.rs2fontsize2}};        /* AR_2_0.75 */
+                display:inline-block;
+                margin-top:5px;            
+                {{$ctrl.rs2marginbottom1}};  /* AR_80_30 */
+                color:black;
+                background-color:yellow;
+                padding:5px 8px;
+                border:2px solid black;
+                border-radius:5px;
+                ">
+        POLES FOR YOUR TENT AND OTHER POSSIBILITIES
+    </div>
+<!-- Response Section 3 ************************************************************************************************************************************************-->
+
+    <div style="position:relative; 
+                {{$ctrl.rs3height1}}; /* AR_200_65*/
+                ">
+        
+        <table style="  position:absolute; 
+                        {{$ctrl.rs3positiontop1}};         /* AR_-50_-25 */
+                        /*top:-50px; */
+                        {{$ctrl.rs3positionleft1}};         /* AR_85_75*/
+                        z-index:2;">
+            <tr>
+                <td style="text-align:right; vertical-align:top;">
+                    <a href="https://www.tarptiedown.com"> 
+                        <img src="https:/tarptiedown.com/resources/ttd-vn-button3-200x120.jpg"
+                             alt="button" 
+                             title="Tent pole sizes, uses, elastic cord, prices, etc."
+                             style="{{$ctrl.rs3width3}};">  <!-- AR_150_70 -->
+                    </a>
+                </td>
+            </tr>
+        </table>
+        
+        <img    src="components/components08_11/tmpl_08/ttd-vn-tp-presentation5-2540x375.jpg" 
+                alt="Tent Pole" 
+                title="Tent Pole" 
+                style="margin-left:auto; margin-right:auto; width:90%;"> 
+    </div>
+    <table style="margin-left:auto; margin-right:auto;">
+        <tr>
+             
+            <td style="width:43.6%">
+                <img    src="components/components08_11/tmpl_08/ttd-vn-tp-presentation2-425x295.jpg" 
+                        alt="Tent Pole End" 
+                        title="Tent Pole End" 
+                        style="width:100%; border:2px solid black;"> 
+            </td>
+            <td style="width:56.4%">
+                <img    src="components/components08_11/tmpl_08/ttd-vn-tp-presentation6-550x295.jpg" 
+                        alt="Tent Pole Connector End" 
+                        title="Tent Pole Connector End" 
+                        style="width:100%; border:2px solid black;"> 
+            </td>
+          
+            </td>
+        </tr>
+    </table>
+
+</div> 
+
