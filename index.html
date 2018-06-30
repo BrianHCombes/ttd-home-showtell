@@ -107,8 +107,8 @@
                                         background-color:{{vnCTRL.bkColor[$index]}};
                                         border-radius:4px;
                                         border:1px solid #808080; " 
+                                ng-bind-html="viewHistory.btnText"
                                 ng-repeat="viewHistory in vnCTRL.currentView">
-                                {{viewHistory.btnText}} 
                         </button>
                     </div>    
                 </td>
@@ -469,8 +469,8 @@
                                                     border:1px solid #808080;
                                                     text-align:center;
                                                     margin-top:3px;" 
+                                            ng-bind-html="viewHistory.btnText"
                                             ng-repeat="viewHistory in vnCTRL.currentView">
-                                        {{viewHistory.btnText}}
                                     </div>
                                 </div>    
 
