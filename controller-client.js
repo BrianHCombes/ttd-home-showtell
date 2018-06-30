@@ -206,7 +206,7 @@ angular.module('viewNav')
 
 //***********************************************************************************************************************************************************            
 // $state.go('some-view') loads the desired view as the default view upon load          
-        $state.go('view00');
+        $state.go('view01');
         
 //***********************************************************************************************************************************************************    
 //  Responsive section for the Hyper Menu and Thumbnail section     
@@ -542,7 +542,9 @@ angular.module('viewNav')
 
                                 var groupNum = Math.floor((viewData/4)+1); // Calcualtes what group the view came from. < viewData >  is the component number and is the view number by assocaition.
                                 var groupThumb = viewData%4;
-                                var textForHistoryBtn = groupNum + "-" + (groupThumb+1);
+                                
+                                var groupNumConvertToASCII = "&#" + (groupNum + 64);
+                                var textForHistoryBtn = groupNumConvertToASCII + "-" + (groupThumb+1);
                                
                                 if(viewData <= 9){
                                     viewData = "view0" + viewData;
