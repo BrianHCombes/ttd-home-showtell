@@ -10,38 +10,42 @@ text-align:center;
 
 <div style="text-align:center;">    
    
+<!-- Response Section 1 ************************************************************************************************************************************************-->
     <table style="width:100%">
         <tr>
-            <td style="{{$ctrl.width1}}; vertical-align:top;">
+            <td style="{{$ctrl.rs1width1}}; vertical-align:top;">
                 <img    src="components/components00_03/tmpl_01/ttd-vn-lg-logo-825x375.jpg"
                         alt="Long Grabbit Logo"
                         title="Long Grabbit Logo"
                         style=" width:100%;
-                                {{$ctrl.margintop2}};">
+                                {{$ctrl.rs1margintop2}};">
             </td>
-            <td style="{{$ctrl.width2}};">
+            <td style="{{$ctrl.rs1width2}};">
                 <img    src="components/components00_03/tmpl_01/ttd-vn-lg-device-od-1200x525.jpg" 
                         alt="EZ Grabbit Tarp Tie Down Official Logo" 
                         title="Long Grabbit Device" 
                         style=" width:100%; 
-                                {{$ctrl.margintop1}};"> 
+                                {{$ctrl.rs1margintop1}};"> 
             </td>
         </tr>
     </table>
-    <div id="div1" 
-         style="font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif; 
-                {{$ctrl.fontsize1}}; 
+    
+<!-- Response Section 2 ************************************************************************************************************************************************-->
+    <div style="font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif; 
+                {{$ctrl.rs2fontsize1}}; 
                 /*font-size:3em;*/
                 color:red; 
                 text-shadow:1px 1px 1px black;
                 ">
         500mm of pure holding power!
     </div>
-    <div id="div2" 
-         style="font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif; 
-                {{$ctrl.fontsize2}};  
+    <div style="font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif; 
+                {{$ctrl.rs2fontsize2}}; 
+                {{$ctrl.rs2margintop1}};        /* AR_20px_5px */
+                /*margin-top:5px;*/
+                {{$ctrl.rs2marginbottom1}};     /* AR_20px_7px */
+                /*margin-bottom:7px;*/
                 display:inline-block;
-                margin-top:7px;
                 color:black;
                 background-color:yellow;
                 padding:5px 8px;
@@ -51,18 +55,38 @@ text-align:center;
         VERSATILE, REUSABLE, SUPERIOR HOLD!
     </div>
     
-    <div id="div3" style="  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-                padding:10px 5px 5px 0px; 
-                {{$ctrl.fontsize3}}; 
+    <div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+                /*padding:10px 5px 5px 0px; */
+                {{$ctrl.rs2fontsize3}}; 
                 
              "> 
         The Long Grabbit's super-strong hold and long gripping edge is ideal
         for securing large spans of tarp for big shelters, tarp walls, and windbreaks.
     </div>
-    <img    src="components/components00_03/tmpl_01/ttd-vn-lg-presentation1-od-1175x975.jpg" 
-                        alt="EZ Grabbit Tarp Tie Down Presentation" 
-                        title="Long Grabbit Presentation" 
-                        style=" width:100%;"> 
+
+
+<!-- Response Section 3 ************************************************************************************************************************************************-->
+
+    <div style="position:relative;">
+        <img    src="components/components00_03/tmpl_01/ttd-vn-lg-presentation1-od-1175x975.jpg" 
+                alt="EZ Grabbit Tarp Tie Down Presentation" 
+                title="Long Grabbit Presentation" 
+                style=" width:100%;"> 
+        
+        <div style="position:absolute; 
+                    {{$ctrl.rs3positiontop1}};       /* AR_50px_15px */
+                    /*top:15px; */
+                    left:5%; 
+                    z-index:2">
+             <a href="https://www.tarptiedown.com"> 
+                <img src="https:/tarptiedown.com/resources/ttd-vn-button3-300x120.png"
+                     alt="button" 
+                     title="EZ Grabbit applications, specs, prices, videos, etc."
+                     style="{{$ctrl.rs3width1}};     /* AR_150_70 */
+                            ">  
+            </a>
+        </div>
+    </div>
 
 </div> 
 
