@@ -22,14 +22,15 @@ font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic',
 
 </style>
 
+<!-- AR Response Section 1 ************************************************************************************************************************************************-->
 <div style="text-align:center;">    
    
     <table style="width:100%">
         <tr>
-            <td style="{{$ctrl.width1}}; vertical-align:top;">
+            <td style="{{$ctrl.rs1width1}}; vertical-align:top;">
                 <div    class="fontFam"
                         style=" width:100%;
-                                {{$ctrl.fontsize3}};
+                                {{$ctrl.rs1fontsize3}};
                                 ">
                     <span style="font-size:1.75em">CARRY BAG</span><br>
                     <div style="position:relative; 
@@ -45,7 +46,7 @@ font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic',
                 </div>    
                 <div    id="div1" 
                         style="font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; 
-                               {{$ctrl.fontsize1}}; 
+                               {{$ctrl.rs1fontsize1}}; 
                                /*font-size:.75em;*/
                                color:black; 
                                /*line-height:.95em;*/
@@ -61,23 +62,26 @@ font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic',
 
                 </div>
             </td>
-            <td style="{{$ctrl.width2}};">
+            <td style="{{$ctrl.rs1width2}};">
                 <img    src="components/components04_07/tmpl_07/ttd-vn-cb-presentation1-1450x550.jpg" 
                         alt="Carry Bag" 
                         title="Carry Bag" 
                         style=" width:100%; 
-                                {{$ctrl.margintop1}};"> 
+                                {{$ctrl.rs1margintop1}};"> 
             </td>
         </tr>
     </table>
    
-<!--************************************************************************************************************************************************--> 
+<!-- AR Response Section 2 ************************************************************************************************************************************************-->
     <div id="div2" 
          style="font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif; 
-                {{$ctrl.fontsize2}};
+                {{$ctrl.rs2fontsize2}};
                 /*font-size:.75em;*/
                 display:inline-block;
-                margin-top:7px;
+                {{$ctrl.rs2margintop1}};     /* AR_20_8 */
+                /*margin-top:8px;  */
+                {{$ctrl.rs2marginbottom1}};     /* AR_20_8 */
+                /*margin-bottom:8px;     */
                 color:black;
                 background-color:yellow;
                 padding:5px 8px;
@@ -86,55 +90,22 @@ font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic',
                 ">
         CARRY YOUR HEAVY STUFF IN THESE CARRY BAGS
     </div>
-<!--************************************************************************************************************************************************-->
-    <br><br>
+    
+    
+<!-- AR Response Section 3 ************************************************************************************************************************************************-->
     <div style="position:relative;">
         
-        <table style="  position:absolute; 
-                        {{$ctrl.positiontop1}}; 
+        <div style="  position:absolute; 
+                        {{$ctrl.rs3positiontop1}}; 
                         /*top:10px; */
-                        {{$ctrl.positionleft1}}; 
+                        {{$ctrl.rs3positionleft1}}; 
                         /*left:80%; */
                         z-index:2;">
-            <tr>
-                <td style="text-align:right; vertical-align:top;">
                     <a href="https://www.tarptiedown.com"> 
-                        <img src="https:/tarptiedown.com/resources/ttd-vn-button2-600x600.png" alt="button" style="{{$ctrl.width3}};">
+                        <img src="https:/tarptiedown.com/resources/ttd-vn-button3-300x120.png" alt="button" style="{{$ctrl.rs3width3}};">
                     </a>
-                </td>
-                <td class="fontFam"
-                    style=" vertical-align:middle; 
-                            text-align:left; 
-                            ">
-                    <div style="background-color:yellow;
-                                border:1px solid black;
-                                padding:5px 7px; 
-                                {{$ctrl.fontsize4}}; 
-                                /*font-size:.75em;*/
-                                border-radius:7px;
-                                margin-bottom:0px;
-                                box-shadow:3px 3px 13px black;
-                                z-index:2;">
-                        &#9668; All things<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Carry Bag
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <!-- 
-        <div id="div4" 
-             class="textStyle1" 
-             style="position:absolute; 
-                    {{$ctrl.positiontop2}}; 
-                    /*top:150px;*/
-                    left:5%; 
-                    {{$ctrl.fontsize5}}; 
-                    /*font-size:1.0em;*/
-                    text-align:left; 
-                    z-index:2;">
-            Bags of:<br>Fertilizer, Potting Soil, Pet Food,<br>Bird Seed, Ice Melt, and More!
         </div>
-        -->
-        
+       
         <img    src="components/components04_07/tmpl_07/ttd-vn-cb-presentation1-1450x550.jpg" 
                 alt="Keeper Application" 
                 title="Keeper Application" 
