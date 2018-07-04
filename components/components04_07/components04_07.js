@@ -9,23 +9,21 @@ angular.module('viewNav')
 
             var self04 = this; 
             
-            self04.width3 = "width:" + ((0.02963)*(viewWidth)+15.33333) + "px";
-             
-            self04.margintop1 = "margin-top:" + ((0.01235)*(viewWidth)-4.44444) + "px";
-            self04.margintop2 = "margin-top:" + ((0.01235)*(viewWidth)+0.55556) + "px";
+            // AR Response Section 1 
+            self04.rs1margintop1 = "margin-top:" + ((0.01235)*(viewWidth)-4.44444) + "px";  // AR_10_0
+            self04.rs1margintop2 = "margin-top:" + ((0.01235)*(viewWidth)+0.55556) + "px";  // AR_15_5
             
-            self04.positiontop1 = "top:" + ((0.04938)*(viewWidth)+2.22222) + "px";
-            self04.positiontop2 = "top:" + ((0.43210)*(viewWidth)-5.55556) + "px";          //div4
-
-            //self04.fontsize1 = "font-size:" + ((0.00241)*(viewWidth)-0.06667) + "em";
-            self04.fontsize2 = "font-size:" + ((0.00265)*(viewWidth)-0.10556) + "em";
-            self04.fontsize4 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";
-            self04.fontsize5 = "font-size:" + ((0.00370)*(viewWidth)-0.33333) + "em";
             
-            self04.positionleft1 = "left:" + ((0.04321)*(viewWidth)+19.44444) + "%";
+            // AR Response Section 2
+            self04.rs2fontsize2 = "font-size:" + ((0.00265)*(viewWidth)-0.10556) + "em";    //AR_3_0.85
             
-            //self04.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.02099)*(viewWidth)+0.44444) + "px";
             
+            // AR Response Section 3
+            self04.rs3positiontop1 = "top:" + ((0.09259)*(viewWidth)-8.33333) + "px";       // AR_100_25
+            self04.rs3positionleft1 = "left:" + ((0.01235)*(viewWidth)+65.55556) + "%";     // AR_70_35
+            self04.rs3width3 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px";          // AR_150_70         
+            self04.rs3positiontop2 = "top:" + ((0.38272)*(viewWidth)+2.22222) + "px";       // AR_450_140      
+            self04.rs3fontsize5 = "font-size:" + ((0.00370)*(viewWidth)-0.33333) + "em";    // AR_4_1
             
             compFactory.logView(04);
         }]
