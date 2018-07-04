@@ -20,7 +20,7 @@ angular.module('viewNav')
             
             // AR Response Section 3
             self04.rs3positiontop1 = "top:" + ((0.09259)*(viewWidth)-8.33333) + "px";       // AR_100_25
-            self04.rs3positionleft1 = "left:" + ((0.01235)*(viewWidth)+65.55556) + "%";     // AR_70_35
+            self04.rs3positionleft1 = "left:" + ((0.01235)*(viewWidth)+65.55556) + "%";     // AR_80_70
             self04.rs3width3 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px";          // AR_150_70         
             self04.rs3positiontop2 = "top:" + ((0.38272)*(viewWidth)+2.22222) + "px";       // AR_450_140      
             self04.rs3fontsize5 = "font-size:" + ((0.00370)*(viewWidth)-0.33333) + "em";    // AR_4_1
@@ -40,22 +40,20 @@ angular.module('viewNav')
 
             var self05 = this; 
             
-            self05.width3 = "width:" + ((0.02963)*(viewWidth)+15.33333) + "px";
-             
-            self05.margintop1 = "margin-top:" + ((0.01235)*(viewWidth)-4.44444) + "px";
-            self05.margintop2 = "margin-top:" + ((0.01235)*(viewWidth)+0.55556) + "px";
+            // AR Response Section 1 
+            self05.rs1margintop1 = "margin-top:" + ((0.01235)*(viewWidth)-4.44444) + "px";
+            self05.rs1margintop2 = "margin-top:" + ((0.01235)*(viewWidth)+0.55556) + "px";
+            self05.rs1fontsize1 = "font-size:" + ((0.00241)*(viewWidth)-0.06667) + "em";
             
-            self05.positiontop1 = "top:" + ((0.04938)*(viewWidth)+2.22222) + "px";
-            self05.positiontop2 = "top:" + ((0.43210)*(viewWidth)-5.55556) + "px";          //div4
-
-            self05.fontsize1 = "font-size:" + ((0.00241)*(viewWidth)-0.06667) + "em";
-            self05.fontsize2 = "font-size:" + ((0.00265)*(viewWidth)-0.10556) + "em";
-            self05.fontsize4 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";
-            self05.fontsize5 = "font-size:" + ((0.00370)*(viewWidth)-0.33333) + "em";
+            // AR Response Section 2 
+            self05.rs2fontsize2 = "font-size:" + ((0.00265)*(viewWidth)-0.10556) + "em";
             
-            self05.positionleft1 = "left:" + ((0.02840)*(viewWidth)+46.77778)    + "%";
-            
-            //self05.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.02099)*(viewWidth)+0.44444) + "px";
+            // AR Response Section 3 
+            self05.rs3positiontop1 = "top:" + ((0.04938)*(viewWidth)+2.22222) + "px";
+            self05.rs3positiontop2 = "top:" + ((0.43210)*(viewWidth)-5.55556) + "px";         
+            self05.rs3positionleft1 = "left:" + ((0.01235)*(viewWidth)+70.55556)    + "%";
+            self05.rs3width3 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px";          // AR_150_70 
+            self05.rs3fontsize5 = "font-size:" + ((0.00370)*(viewWidth)-0.33333) + "em"; 
             
             compFactory.logView(05);
         }]
@@ -72,26 +70,22 @@ angular.module('viewNav')
 
             var self06 = this; 
             
-            self06.width1 = "width:" + ((-0.01235)*(viewWidth)+64.44444) + "%";
-            self06.width2 = "width:" + ((0.01235)*(viewWidth)+35.55556) + "%";
-            self06.width3 = "width:" + ((0.02963)*(viewWidth)+15.33333) + "px";
+            // AR Response Section 1
+            self06.rs1width1 = "width:" + ((-0.01235)*(viewWidth)+64.44444) + "%";
+            self06.rs1fontsize1 = "font-size:" + ((0.00062)*(viewWidth)+0.52778) + "em";
+            self06.rs1fontsize3 = "font-size:" + ((0.00272)*(viewWidth)-0.17778) + "em";
+            self06.rs1width2 = "width:" + ((0.01235)*(viewWidth)+35.55556) + "%";
+            self06.rs1margintop1 = "margin-top:" + ((0.01235)*(viewWidth)-4.44444) + "px";
+            
+            // AR Response Section 2
+            self06.rs2fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+0.19444) + "em";
+            
+            // AR Response Section 3
+            self06.rs3positiontop1 = "top:" + ((0.04938)*(viewWidth)-7.77778) + "px";
+            self06.rs3positionleft1 = "left:" + ((0.01235)*(viewWidth)+70.55556)    + "%";  // AR_85_75
+            self06.rs3width3 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px";          // AR_150_70
+            self06.rs3fontsize4 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";
              
-            self06.margintop1 = "margin-top:" + ((0.01235)*(viewWidth)-4.44444) + "px";
-            self06.margintop2 = "margin-top:" + ((0.01235)*(viewWidth)+0.55556) + "px";
-            
-            self06.positiontop1 = "top:" + ((0.04938)*(viewWidth)-7.77778) + "px";
-            self06.positiontop2 = "top:" + ((0.43210)*(viewWidth)-5.55556) + "px";          //div4
-
-            self06.fontsize1 = "font-size:" + ((0.00062)*(viewWidth)+0.52778) + "em";
-            self06.fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+0.19444) + "em";
-            self06.fontsize3 = "font-size:" + ((0.00272)*(viewWidth)-0.17778) + "em";
-            
-            
-            self06.fontsize4 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";
-            self06.fontsize5 = "font-size:" + ((0.00370)*(viewWidth)-0.33333) + "em";
-            
-            self06.positionleft1 = "left:" + ((0.02469)*(viewWidth)+51.11111)    + "%";
-            
             compFactory.logView(06);
         }]
     })
