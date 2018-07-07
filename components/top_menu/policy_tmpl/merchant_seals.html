@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TTD Merchant Seals</title>
+<link rel="SHORTCUT ICON" href="https://www.tarptiedown.com/resources/ttd-vn-icon-ttd-256x256.ico"> 
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+.maxWidth
+{
+max-width:1170px;     
+}
+
+
+</style>    
+    
+    
 </head>
 <body>
-    <div style="width:100%; text-align:center">We are a verified merchant of Authorize.net! Click this seal to confirm<br>
+<div class="maxWidth" style="margin-left:auto; margin-right:auto;">
+    
+    <div style="text-align:center;">
+   
+    <img src="TTD-Logo-1200x225-08-07-2017.png" 
+         alt="Tarp Tie Down Company Official Logo"  
+         title="EZ Grabbit: When a tarp clip just won't do" 
+         style="width:80%; border-radius:5px; margin-top:5px;">
+    </div>
+
+    <table style="width:100%;"> 
+        <tr>
+            <td id="tableCol_1" 
+                style=" /* width: AR_20_0 */ 
+                      ">
+            </td>
+            <td id="tableCol_2"
+                style=" color:blue; 
+                        /* font-size: AR_1.5_0.75 */
+                        
+                       ">
+                <ul style="padding:0px 15px;">
+                    <li style="padding:10px 0px;">
+                        We are a verified merchant of Authorize.net.
+                    </li>
+                    <li style="padding:10px 0px;">
+                        We are a secure website via GoDaddy's certification process.
+                    </li>
+                    <li style="padding:10px 0px 0px 0px;">
+                        We are a trusted commerce site via Trust Wave and in compliance with the Payment Card Industry Data Security Standard (PCI DSS).
+                    </li>
+                </ul>
+            </td>
+            <td id="tableCol_3"
+                style="/* width: AR_20_0 */  
+                      ">
+            </td>
+        </tr>
+    </table>
+    
+    <div id="confirmHeaderText"
+         style="/* font-size: AR_2.5_1.5 */
+                color:red; 
+                text-align:center;
+               ">Select a seal to confirm
+    </div>
+    <div style="width:100%; text-align:center;">
         <script type="text/javascript">var ANS_customer_id="34f3366f-7153-40d1-b98d-57bbd3613155";</script>    
         <script type="text/javascript" src="//verify.authorize.net/anetseal/seal.js"></script>
     </div><br>
@@ -16,6 +76,19 @@
     
     <div id="trustwaveSeal" style="width:100%; padding-top:12px; text-align:center;">
         <script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?code=6ee8e6c740d6477aba73eed9a57b6cd3"></script>
-    </div>    
+    </div> 
+</div> 
+    
+<script>
+
+var vpWidth = window.screen.availWidth;
+if(vpWidth > 1170) vpWidth = 1170;
+
+document.getElementById("tableCol_1").style.width = ((0.02469)*(vpWidth)-8.88889) + "%";                /* AR_20.00_-0.00 */
+document.getElementById("tableCol_2").style.fontSize = ((0.00093)*(vpWidth)+0.41667) + "em";            /* AR_1.50_0.75 */
+document.getElementById("tableCol_3").style.width = ((0.02469)*(vpWidth)-8.88889) + "%";                /* AR_20.00_-0.00 */
+document.getElementById("confirmHeaderText").style.fontSize = ((0.00123)*(vpWidth)+1.05556) + "em";     /* AR_2.49_1.50 */
+
+</script>    
 </body>
 </html>
