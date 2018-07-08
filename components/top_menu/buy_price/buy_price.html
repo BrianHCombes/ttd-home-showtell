@@ -9,38 +9,78 @@ background:-o-linear-gradient(#CCEDF2, #EAE2BB);           // Opera
 background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
 }
 
+.style2
+{
+font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;    
+}
+
+.style3
+{
+font-family: Futura, "Trebuchet MS", arial, sans-serif;    
+}
+
+tr:hover
+{
+cursor:pointer;    
+}
 
 </style>
 
 
-    <div style="width:100%; text-align:center;">
-        <span style=font-size:20px;><b>Pricing and Ordering:</b></span><br>
-        <br> 
-        Our best sellers are our bulk buy EZ Grabbits.<br> 
-        <br> 
-        Pricing for classic EZ Grabbits (non mountable) are a great deal.<br> 
-        <br> 
-        New model EZ Grabbits (mountable) are also a great deal.  
-        You can buy from 4 to 48 and save as you buy more.<br> 
-        <br> 
-        <b>Pricing:</b><br>Click and mouse over the item  
-        list and see the great deals you get.<br><br> 
-        <b>Ordering:</b><br> 
-        Click the item button to order from our store.;
+    <div style="width:100%; 
+                text-align:center; 
+                {{$ctrl.fontsize2}};
+                /*font-size:1.0em;*/
+                ">
+        <div class="style3"
+             style="font-size:3.0em;
+                    margin:5px 0px;
+                    "><b>PRICING AND ORDERING</b>
+        </div>
+        
+        <div style="font-size:2.0em">Select the TTD store button</div>
+        <button onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php', '_blank')" 
+                type="button" 
+                style=" margin:10px 0px;
+                        font-size:2.0em;
+                        color:blue;
+                        border:1px solid black;
+                        border-radius:5px;
+                ">TTD Store
+        </button>
+        <div style="font-size:2.00em">OR</div>
+       
+        <div style="margin:5px 0px;
+                    padding:10px 5px 10px 5px;
+                    font-size:2.0em;
+                    color:blue;
+                    background-color:yellow;
+                    border:1px solid black;
+                    border-radius:5px;
+                    ">Select any item below to go directly<br>to that store item for the price details.</div> 
+        <br>
+        
+        
     </div>
 
-    <table style="border:1px solid black; font-size:1.0em;">
+    <table style="  border:1px solid black; 
+                    {{$ctrl.fontsize1}};         /* AR_1.00_0.65 */
+                    /*font-size:0.65em;*/
+                 ">
 <!-- EZ Grabbit Yellow ************************************************************************************************************************************************-->
-        <tr>
-            <td style="width:40%; border:1px solid black;">
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_8&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+            <td style=" {{$ctrl.width1}};        /* AR_40.00_50.00 */
+                        width:50%;        
+                        border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-yellow-device-dbns-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
             <td class="style1">
                 <div class="" 
+                     
                      style="text-align:center;
                             width:100%;
-                            font-size:1.13em;"> 
-                                <!--<b>Standard EZ Grabbit</b><br> -->
+                            font-size:1.13em;
+                            padding:3px 0px;"> 
                                 <b>STANDARD EZ GRABBIT</b><br>
                     <span style="font-size:0.90em; color:blue;"><b>(mountable)</b></span><br>
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br>
@@ -53,15 +93,16 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
             </td>
         </tr>
 <!-- EZ Grabbit Black ************************************************************************************************************************************************-->
-        <tr>
-            <td style="width:40%; border:1px solid black;">
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_16&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+            <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-black-device-dbns-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
             <td class="style1">
                 <div class="" 
                      style="text-align:center;
                             width:100%;
-                            font-size:1.13em;"> 
+                            font-size:1.13em;
+                            padding:3px 0px;"> 
                                 <b>STANDARD EZ GRABBIT</b><br>
                     <span style="font-size:0.90em; color:blue;"><b>(mountable)</b></span><br>
                     <span style="font-size:1.00em;"><b>GLOSS&nbsp; BLACK</b><br>
@@ -74,7 +115,7 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
             </td>
         </tr>
 <!-- EZ Grabbit Green ************************************************************************************************************************************************-->
-        <tr>
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_7&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
             <td style="border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-green-device-dbns-750x350.jpg" alt="ezg hivis image" style="width:100%">
             </td>
@@ -91,16 +132,37 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
                </div>
             </td>
         </tr>
+<!-- Long Grabbit ************************************************************************************************************************************************-->
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_15&session_id=6j7rvh11bja994asmiaq72uj26','_blank')">
+            <td style=" border:1px solid black;">
+                <img src="components/top_menu/buy_price/ttd-vn-lg-device-750x350.jpg" alt="ezg image" style="width:100%;">
+            </td>
+            <td class="style1">
+                <div class="" 
+                     style="text-align:center;
+                            width:100%;
+                            font-size:1.13em;
+                            padding:3px 0px;"> 
+                                <b>LONG LONG GRABBIT</b><br>
+                    <span style="font-size:1.00em;"><b>OLIVE&nbsp; DRAB</b><br></span>
+                    4pk for $8.08 <b><u>thru</u></b><br>
+                    48pk for $66.72<br>
+                    <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
+                    <b><u>More than 12 for<br>$4.12 per device</u></b>
+               </div>
+            </td>
+        </tr>
 <!-- Mini Grabbit ************************************************************************************************************************************************-->
-        <tr>
-            <td style="width:40%; border:1px solid black;">
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_3&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+            <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-mg-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
             <td class="style1">
                 <div class="" 
                      style="text-align:center;
                             width:100%;
-                            font-size:1.13em;"> 
+                            font-size:1.13em;
+                            padding:3px 0px;"> 
                                 <b>MINI GRABBIT</b><br>
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br></span>
                     4pk for $8.08 <b><u>thru</u></b><br>
@@ -111,15 +173,16 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
             </td>
         </tr>
 <!-- EZ Adjust ************************************************************************************************************************************************-->
-        <tr>
-            <td style="width:40%; border:1px solid black;">
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=10&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+            <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-eza-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
             <td class="style1">
                 <div class="" 
                      style="text-align:center;
                             width:100%;
-                            font-size:1.13em;"> 
+                            font-size:1.13em;
+                            padding:3px 0px;"> 
                                 <b>EZ ADJUST</b><br>
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br></span>
                     4pk for $2.92 <b><u>thru</u></b><br>
@@ -130,8 +193,8 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
             </td>
         </tr>
 <!-- RockBuster ************************************************************************************************************************************************-->
-        <tr>
-            <td style="width:40%; border:1px solid black;">
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=9&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+            <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-rb-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
             <td class="style1">
@@ -147,8 +210,8 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
             </td>
         </tr>
 <!-- Bag Grabbit ************************************************************************************************************************************************-->
-        <tr>
-            <td style="width:40%; border:1px solid black;">
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=11&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+            <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-bg-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
             <td class="style1">
@@ -165,8 +228,8 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
             </td>
         </tr>
 <!-- Keeper ************************************************************************************************************************************************-->
-        <tr>
-            <td style="width:40%; border:1px solid black;">
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_12&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+            <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-kpr-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
             <td class="style1">
@@ -183,8 +246,8 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
             </td>
         </tr>
 <!-- Carry Bag ************************************************************************************************************************************************-->
-        <tr>
-            <td style="width:40%; border:1px solid black;">
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_8&session_id=6j7rvh11bja994asmiaq72uj26','_blank')">
+            <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-cb-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
             <td class="style1">
@@ -200,8 +263,8 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
             </td>
         </tr>
 <!-- Tent Poles ************************************************************************************************************************************************-->
-        <tr>
-            <td style="width:40%; border:1px solid black;">
+        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_8&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+            <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-tp-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
             <td class="style1">
@@ -217,8 +280,6 @@ background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox
                </div>
             </td>
         </tr>
-        
-        
     </table>
 <script>
 
