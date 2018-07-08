@@ -11,20 +11,25 @@ angular.module("viewNav")
                 
             var introSelf = this;
             
-            introSelf.test = "This is a controller Test and the view width is: " + viewWidth + "px";
+            // AR Section 1
+            introSelf.rs1fontsize1 = "font-size:" + ((0.00123)*(viewWidth)+0.55556) + "em";         /* AR_1.99_1.00 */
             
-            introSelf.fontsize1 = "font-size:" + ((0.00222)*(viewWidth)+0.40000) + "em";
+            // AR Section 2
+            introSelf.rs2width1 = "width:" + ((-0.02469)*(viewWidth)+58.88889) + "%";               /* AR_30_50 */
+            introSelf.rs2fontsize4 = "font-size:" + ((0.00062)*(viewWidth)+0.52778) + "em";
+            introSelf.rs2fontsize5 = "font-size:" + ((0.00099)*(viewWidth)+0.34444) + "em";         /* AR_1.50_0.70 */
+            introSelf.rs2width2 = "width:" + ((0.02469)*(viewWidth)+41.11111) + "%";
+            introSelf.rs2fontsize6 = "font-size:" + ((0.00136)*(viewWidth)+0.41111) + "em";         /* AR_2.00_0.90 */
+            introSelf.rs2margin1 = "margin:" + ((0.01728)*(viewWidth)+3.77778) + "px";              /* AR_24.00_10.00 */
+            introSelf.rs2margintop1 = "margin-top:" + ((0.04938)*(viewWidth)-17.77778) + "px";       /* AR_20.00_-0.00 */
             
-            introSelf.fontsize2 = "font-size:" + ((0.00111)*(viewWidth)+0.70000) + "em";    /* AR_2_1.1 */
-            introSelf.fontsize3 = "font-size:" + ((0.00123)*(viewWidth)+0.30556) + "em";
-            introSelf.fontsize4 = "font-size:" + ((0.00062)*(viewWidth)+0.52778) + "em";
-            introSelf.fontsize5 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";
-            introSelf.fontsize6 = "font-size:" + ((0.00123)*(viewWidth)+0.55556) + "em";
+            // AR Section 3
+            introSelf.rs3fontsize1 = "font-size:" + ((0.00077)*(viewWidth)+0.59722) + "em";         /* AR_1.50_0.87 */
+            
+            // AR Section 4
+            introSelf.rs4fontsize1 = "font-size:" + ((0.00065)*(viewWidth)+0.49294) + "em";         /* AR_1.25_0.73 */
             
             
-            
-            introSelf.width1 = "width:" + ((-0.02469)*(viewWidth)+58.88889) + "%";  /* AR_30_50 */
-            introSelf.width2 = "width:" + ((0.02469)*(viewWidth)+41.11111) + "%";
             
             introSelf.newWindow = function(){
                 //alert();
@@ -45,8 +50,13 @@ angular.module("viewNav")
         templateUrl: 'components/top_menu/buy_price/buy_price.html',
        
         controller: ['GetSet', function(GetSet){
-            var vWidth = GetSet.getViewWidth();
+            var viewWidth = GetSet.getViewWidth();
+                
+            var buyPriceSelf = this;
             
+            buyPriceSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";   /* AR_1.00_0.65 */
+            buyPriceSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";   /* AR_1.00_0.50 */
+            buyPriceSelf.width1 = "width:" + ((-0.01235)*(viewWidth)+54.44444) + "%";       /* AR_39.99_50.00 */
         }]
     })
     

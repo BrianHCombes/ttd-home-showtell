@@ -21,42 +21,36 @@ cursor:pointer;
          alt="Tarp Tie Down Company Official Logo"  
          title="EZ Grabbit: When a tarp clip just won't do" 
          style="width:80%; border-radius:5px; margin-top:5px;">
-    <div style="{{$ctrl.fontsize2}}; font-weight:bold;">Home of the EZ Grabbit Tarp Tie Down</div>
-</div><br><br>
+    <div style="{{$ctrl.rs1fontsize1}}; font-weight:bold;">Home of the EZ Grabbit Tarp Tie Down</div>
+</div>
 
 <!-- AR Response Section 2 ************************************************************************************************************************************************-->
-<table style="">
+<table style="margin-top:10px;">
     <tr>
-        <td style=" {{$ctrl.width1}}; 
+        <td style=" {{$ctrl.rs2width1}}; 
                     padding-left:1%;
                     vertical-align:top;">
-            <!-- 
-            <div style="{{$ctrl.fontsize3}};
-                        line-height:95%;
-                        ">
-                The EZ Grabbit Tarp Tie Down is our most popular product.
-            </div>
-            -->
-            <br>
             <div style="width:100%; text-align:center;">
                 <button ng-click="$ctrl.newWindow();" 
                         style=" width:100%;
                                 font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
-                                {{$ctrl.fontsize4}}; 
+                                {{$ctrl.rs2fontsize4}}; 
                                 color:#0099ff; 
                                 margin:10px 0px;">Navigate this site <br> Learn how in 15 secs.
                 </button>
             </div>
-            <br>
-            
-            <div style="{{$ctrl.fontsize5}};
+            <div style="{{$ctrl.rs2margintop1}};    /* AR_20.00_-0.00 */
+                        /*margin-top:40px;*/
+                        {{$ctrl.rs2fontsize5}};     /* AR_1.50_0.70 */
                         text-align:left;
-                        color:red">See our other tarp tie downs and tarp management accessories.
+                        color:red;
+                        ">Select the lettered buttons and thumbnail images to see our other tarp tie downs and tarp accessories.
             </div>
         </td>
-        <td ng-show="1" style="{{$ctrl.width2}}; text-align:center; vertical-align:top;">
+        <td ng-show="1" style="{{$ctrl.rs2width2}}; text-align:center; vertical-align:top;">
             <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%"><br>
-            <span style="{{$ctrl.fontsize6}}">The EZ Grabbit: Our most popular product</span>
+            <span style="{{$ctrl.rs2fontsize6}};   /* AR_2.00_0.90 */
+                        ">The EZ Grabbit: Over a million sold</span>
         </td>
     </tr>
     <tr ng-show="0">
@@ -64,57 +58,69 @@ cursor:pointer;
             <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%">
         </td>
     </tr>
-</table><br><hr><br>
+</table>
+<hr style="{{$ctrl.rs2margin1}};">
 
 <!-- AR Response Section 3 ************************************************************************************************************************************************-->
-<table style="width:100%;">
+<table style="  width:100%; 
+                text-align:center; 
+                {{$ctrl.rs3fontsize1}};
+                /*font-size:14px;*/
+                ">
     <tr style="width:100%;">
 
-        <td style="width:16%;"></td>
-        <td style="width:17%; text-align:center;">
+        <td style="width:8%;"></td>
+        <td style="width:21%; text-align:center;">
            <a href="http://www.tarptiedown.com/ttd-website/ttd-website-policy-page/ttd-website-home-page-privacy-policy.htm" target="_blank" 
-           style="font-size:20px; text-decoration:none; ">Privacy Policy</a>
+           style="text-decoration:none; ">Privacy Policy</a>
         </td>
-        <td style="width:17%; text-align:center;">
+        <td style="width:21%; text-align:center;">
            <a href="http://www.tarptiedown.com/ttd-website/ttd-website-policy-page/ttd-website-contact-info.htm" target="_blank"  
-           style="text-align:center; font-size:20px; text-decoration:none;">Contact US</a>
+           style="text-decoration:none;">Contact US</a>
         </td>
-        <td style="width:17%; text-align:center;">
+        <td style="width:21%; text-align:center;">
            <a href="http://www.tarptiedown.com/ttd-website/ttd-website-policy-page/ttd-website-home-page-return-policy.htm" target="_blank" 
-           style="text-align:center; font-size:20px; text-decoration:none;">Return Policy</a>
+           style="text-decoration:none;">Return Policy</a>
         </td>
-        <td style="width:17%; text-align:center;">
+        <td style="width:21%; text-align:center;">
            <a href="http://www.tarptiedown.com/ttd-website/ttd-website-policy-page/ttd-website-home-page-ship-policy.htm" target="_blank" 
-           style="text-align:center; font-size:20px; text-decoration:none;">Shipping Policy</a>
+           style="text-decoration:none;">Shipping Policy</a>
         </td>
-        <td style="width:16%"></td>
+        <td style="width:8%"></td>
         
     </tr>    
 </table>    
 
+<!--style="height:45px;-->
 <!-- AR Response Section 4 ************************************************************************************************************************************************-->
-<table style="width:100%; background-color:lightgray; border:1px solid black; border-radius:7px;">
-    <tr><th colspan="5" style="font-size:1.25em; padding:15px 0px;">Our site is secure - select a merchant seal to verify</th></tr>
+<table style="  width:100%; 
+                background-color:lightgray; 
+                {{$ctrl.rs4fontsize1}};     /* AR_1.25_0.73 */
+                /*font-size:0.70em; */
+                border:1px solid black; 
+                border-radius:7px;
+                ">
+    <tr><th colspan="4" style="padding:5px 0px;">Our site is secure - select a merchant seal to verify</th></tr>
     <tr style="width:100%;">
 
+                <td style="width:40%; text-align:center;">
+                    <img src="http://www.tarptiedown.com/TTD-Store/storefront/view/default/image/payment_VISA_MC_0.75W.png" alt="VISA and MasterCard icons" style="width:90%;">
+                </td>
                 <td style="width:20%; text-align:center;">
-                    <img src="http://www.tarptiedown.com/TTD-Store/storefront/view/default/image/payment_VISA_MC_0.75W.png" alt="VISA and MasterCard icons">
+                    <a href="components/top_menu/policy_tmpl/merchant_seals.html" target="_blank"><img src="resources/images/AuthorizeNet-330x260.png" alt="Authorize.net seal" style="width:90%;"></a>
                 </td>
                 
-                <td style="width:20%; text-align:center;">
-                    <span style="">Copyright © 2018<br>Tarp Tie Down Company LLC.<br>All rights reserved.</span>
-                </td>
-              
-                <td style="width:15%; text-align:center;">
-                    <a href="components/top_menu/policy_tmpl/merchant_seals.html" target="_blank"><img src="resources/images/AuthorizeNet.jpg" alt="Authorize.net seal" style="height:100px;"></a>
+                <td id="siteseal" style="width:20%; text-align:center;">
+                    <a href="components/top_menu/policy_tmpl/merchant_seals.html" target="_blank"><img src="resources/images/godaddy.png" alt="goDaddy seal" style="width:90%;"></a>
                 </td>
                 
-                <td id="siteseal" style="width:15%; padding-top:23px; text-align:center;">
-                    <a href="components/top_menu/policy_tmpl/merchant_seals.html" target="_blank"><img src="resources/images/godaddy.png" alt="goDaddy seal" style="height:100px;"></a>
-                </td>
-                
-                <td id="trustwaveSeal" style="width:15%; padding-top:12px; text-align:center;">
-                    <a href="components/top_menu/policy_tmpl/merchant_seals.html" target="_blank"><img src="resources/images/trustwavelogo_vertical.png" alt="trustwave seal" style="height:100px;"></a>
+                <td id="trustwaveSeal" style="width:20%; text-align:center;">
+                    <a href="components/top_menu/policy_tmpl/merchant_seals.html" target="_blank"><img src="resources/images/trustwavelogo_vertical.png" alt="trustwave seal" style="width:90%;"></a>
                 </td>   
-    </tr>    
+    </tr>  
+    <tr>
+        <td colspan="4" style="text-align:center;">
+            Copyright © 2018 Tarp Tie Down Company LLC.<br>All rights reserved.
+        </td>
+    </tr>
 </table>
