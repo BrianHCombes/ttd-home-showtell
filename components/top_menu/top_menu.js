@@ -2,8 +2,6 @@ angular.module("viewNav")
 
     .component('intro', {
         
-        //template: "<h1>This is the How To template",
-
         templateUrl: 'components/top_menu/intro/intro.html',
        
         controller: ['GetSet', function(GetSet){
@@ -45,8 +43,6 @@ angular.module("viewNav")
     
     .component('buyprice', {
         
-        //template: "<h1>This is the Buy/Price template",
-
         templateUrl: 'components/top_menu/buy_price/buy_price.html',
        
         controller: ['GetSet', function(GetSet){
@@ -62,12 +58,16 @@ angular.module("viewNav")
     
     .component('products', {
         
-        template: "<h1>This is the Products template",
-
-        //templateUrl: 'components/components00_03/tmpl_03/viewTmpl_03.html',
+        templateUrl: 'components/top_menu/products/products.html',
        
-        controller: [ function(){
+        controller: ['GetSet', function(GetSet){
+            var viewWidth = GetSet.getViewWidth();
+                
+            var productsSelf = this;
             
+            productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";   /* AR_1.00_0.65 */
+            productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";   /* AR_1.00_0.50 */
+            productsSelf.width1 = "width:" + ((-0.01235)*(viewWidth)+54.44444) + "%";       /* AR_39.99_50.00 */    // Not used at the moment
         }]
     })
     

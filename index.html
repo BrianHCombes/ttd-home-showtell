@@ -47,6 +47,7 @@
 <!-- Top Menu Section. This is menu selection along the top -->
     <div style="text-align:center; {{vnCTRL.response.height01}};">
         <a  ui-sref="{{menuBar.menuItem}}"
+            title="{{menuBar.title}}"
             class="menuBtns shadow cursorstyle1" 
             ng-repeat="menuBar in vnCTRL.menuBar1" 
             ng-bind-html="menuBar.menuItemName" 
