@@ -73,12 +73,17 @@ angular.module("viewNav")
     
     .component('reviews', {
         
-        template: "<h1>This is the Reviews template",
+        //template: "<h1>This is the Reviews template",
 
-        //templateUrl: 'components/components00_03/tmpl_03/viewTmpl_03.html',
+        templateUrl: 'components/top_menu/reviews/testimonials.htm',
        
         controller: ['GetSet', function(GetSet){
-            var vWidth = GetSet.getViewWidth();
+            var viewWidth = GetSet.getViewWidth();
+            
+            var reviewSelf = this;
+            
+            reviewSelf.fontsize1 = "font-size:" + ((0.00049)*(viewWidth)+0.42222) + "em";      /* AR_1.00_0.60 */
+            
             
         }]
     })

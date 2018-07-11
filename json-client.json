@@ -1,10 +1,9 @@
 {
     "menuBar1": [
-                    {"menuItemName":"Intro",       "menuItem":"intro",      "title":"You are on the home page"},
-                    {"menuItemName":"Buy/Price ",  "menuItem":"buyprice",   "title":"You are on the home page"},
-                    {"menuItemName":"Products ",   "menuItem":"products",   "title":"You are on the home page"},
-                    {"menuItemName":"Reviews ",    "menuItem":"reviews",    "title":"You are on the home page"},
-                    {"menuItemName":"Policy ",     "menuItem":"policy",     "title":"You are on the home page"}
+                    {"menuItemName":"TTD Intro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",       "menuItem":"intro",      "title":"You are on the home page"},
+                    {"menuItemName":"Price/Order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",  "menuItem":"buyprice",   "title":"You are on the home page"},
+                    {"menuItemName":"Products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",   "menuItem":"products",   "title":"You are on the home page"},
+                    {"menuItemName":"Reviews&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",    "menuItem":"reviews",    "title":"You are on the home page"}
                 ],
     
     "showView": [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false ],

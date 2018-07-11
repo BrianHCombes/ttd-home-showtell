@@ -206,7 +206,7 @@ angular.module('viewNav')
 
 //***********************************************************************************************************************************************************            
 // $state.go('some-view') loads the desired view as the default view upon load          
-        $state.go('products');
+        $state.go('reviews');
         
 //***********************************************************************************************************************************************************    
 //  Responsive section for the Hyper Menu and Thumbnail section     
