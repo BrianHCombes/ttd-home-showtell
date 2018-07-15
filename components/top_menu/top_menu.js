@@ -27,12 +27,11 @@ angular.module("viewNav")
             // AR Section 4
             introSelf.rs4fontsize1 = "font-size:" + ((0.00065)*(viewWidth)+0.49294) + "em";         /* AR_1.25_0.73 */
             
-            
+            introSelf.transition = function(){
+                var myWindow = window.open("components/top_menu/intro/transition.html", "", "width=250,height=200,top=100");
+            };
             
             introSelf.newWindow = function(){
-                //alert();
-                //var myWindow = window.open("https://www.tarptiedown.com", "WTF2", "width=600,height=400");
-                //var myWindow = window.open("components/top_menu/intro/TTD-Logo-1200x225-08-07-2017.png", "WTF2", "width=600,height=400,left=285");
                 var left = viewWidth/2-300;
                 var myWindow = window.open("components/top_menu/intro/navigate.html", "", "width=800,height=600,top=100,left="+left);
             };
@@ -76,7 +75,7 @@ angular.module("viewNav")
         //template: "<h1>This is the Reviews template",
 
         templateUrl: 'components/top_menu/reviews/testimonials.htm',
-       
+        
         controller: ['GetSet', function(GetSet){
             var viewWidth = GetSet.getViewWidth();
             
@@ -84,18 +83,33 @@ angular.module("viewNav")
             
             reviewSelf.fontsize1 = "font-size:" + ((0.00049)*(viewWidth)+0.42222) + "em";      /* AR_1.00_0.60 */
             
-            
         }]
     })
     
     .component('policy', {
         
-        //template: "<h1>This is the Policy template",
-
         templateUrl: 'components/top_menu/policy_tmpl/policy.html',
        
         controller: ['GetSet', function(GetSet){
-            var vWidth = GetSet.getViewWidth();
+            var viewWidth = GetSet.getViewWidth();
+            
+        }]
+    })
+    
+    .component('transition', {
+        
+        //template: "<h1>This is the Policy template",
+
+        templateUrl: 'components/top_menu/intro/transition.html',
+       
+        controller: ['GetSet', function(GetSet){
+            var viewWidth = GetSet.getViewWidth();
+            
+            var transitionSelf = this;
+            
+            transitionSelf.fontsize1 = "font-size:" + ((0.00123)*(viewWidth)+0.55556) + "em";
             
         }]
     });
+    
+    

@@ -54,6 +54,13 @@ angular.module('viewNav', ['ui.router', 'ngSanitize'])
                     views:{"rootView":{"component":"policy"}}
                 };    
         $stateProvider.state(state);
+        
+        state = {
+                    name:"transition",
+                    url:"/transition",
+                    views:{"rootView":{"component":"transition"}}
+                };    
+        $stateProvider.state(state);
             
     }]);
 
