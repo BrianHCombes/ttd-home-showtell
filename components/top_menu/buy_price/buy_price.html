@@ -19,10 +19,34 @@ font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic",
 font-family: Futura, "Trebuchet MS", arial, sans-serif;    
 }
 
-tr:hover
+a:hover
 {
-cursor:pointer;    
+cursor:pointer;  
+box-shadow:1px 0px 1px black,   2px 0px 7px black,   3px 0px 13px cyan, 
+            1px 1px 1px black,   2px 2px 7px black,   3px 3px 13px cyan, 
+            0px 1px 1px black,   0px 2px 7px black,   0px 3px 13px cyan, 
+            -1px 1px 1px black,  -2px 2px 7px black,  -3px 3px 13px cyan, 
+            -1px 0px 1px black,  -2px 0px 7px black,  -3px 0px 13px cyan, 
+            -1px -1px 1px black, -2px -2px 7px black, -3px -3px 13px cyan, 
+            0px -1px 1px black,  0px -2px 7px black,  0px -3px 13px cyan, 
+            1px -1px 1px black,  2px -2px 7px black,  3px -3px 13px cyan;
+font-weight:bold;
 }
+
+.btnStyle1
+{
+display:inline-block;
+border:1px solid #b0b0b0;
+border-radius:5px;
+padding:3px 10px 2px 10px;
+background: linear-gradient(to bottom, #fbfbfb, #d9d9d9);
+font-family:arial;
+text-decoration:none;
+color:blue;
+margin-top:5px;
+margin-bottom:5px;
+}
+
 
 </style>
 
@@ -38,19 +62,19 @@ cursor:pointer;
                     "><b>PRICING AND ORDERING</b>
         </div>
         
-        <div style="font-size:2.0em">Select the TTD store button</div>
-        <button onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php', '_blank')" 
-                type="button" 
-                style=" margin:10px 0px;
-                        font-size:2.0em;
-                        color:blue;
-                        border:1px solid black;
-                        border-radius:5px;
-                ">TTD Store
-        </button>
+        <!--<div style="font-size:2.0em">Select the TTD store button</div>-->
+        
+        <a  href="https://www.tarptiedown.com/TTD-Store/index.php" target="_blank" 
+                        class="btnStyle1"
+                        style= "font-size:2.0em;
+                                ">
+                        Go directly to TTD Store
+                    </a>
+        
         <div style="font-size:2.00em">OR</div>
        
-        <div style="margin:5px 0px;
+        <div style="display:inline-block;
+                    margin:5px 0px;
                     padding:10px 5px 10px 5px;
                     font-size:2.0em;
                     color:blue;
@@ -68,7 +92,7 @@ cursor:pointer;
                     /*font-size:0.65em;*/
                  ">
 <!-- EZ Grabbit Yellow ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_8&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+        <tr>
             <td style=" {{$ctrl.width1}};        /* AR_40.00_50.00 */
                         /*width:40%;        */
                         border:1px solid black;">
@@ -88,12 +112,17 @@ cursor:pointer;
                     48pk for $92.64<br>
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue">(in 4pk increments)</span><br>
                     <b><u>More than 48 for<br>
-                    $1.93 per device</u></b>;
+                    $1.93 per device</u></b><br>
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_8&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop EZ Grabbit<br> Mountable Yellow
+                    </a>
                </div>
             </td>
         </tr>
 <!-- EZ Grabbit Black ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_16&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+        <tr>
             <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-black-device-dbns-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
@@ -110,12 +139,18 @@ cursor:pointer;
                     48pk for $92.64<br>
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue">(in 4pk increments)</span><br>
                     <b><u>More than 48 for<br>
-                    $1.93 per device</u></b>;
+                    $1.93 per device</u></b><br>
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_16&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop EZ Grabbit<br> Mountable Black
+                    </a>
+                            
                </div>
             </td>
         </tr>
 <!-- EZ Grabbit Green ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_7&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+        <tr>
             <td style="border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-green-device-dbns-750x350.jpg" alt="ezg hivis image" style="width:100%">
             </td>
@@ -128,12 +163,17 @@ cursor:pointer;
                     <span style="font-size:0.9em; color:blue;"><b>(non-mountable)</b></span><br>
                     <span style="font-size:1.00em;"><b>&nbsp;&nbsp;HIGH VIS GREEN&nbsp;</b><br>
                     </span>24pk for $28.08<br>
-                    48pk for $48.96;
+                    48pk for $48.96<br>
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_7&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop EZ Grabbit<br> Non Mountable Green
+                    </a>
                </div>
             </td>
         </tr>
 <!-- Long Grabbit ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_15&session_id=6j7rvh11bja994asmiaq72uj26','_blank')">
+        <tr>
             <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-lg-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
@@ -148,12 +188,17 @@ cursor:pointer;
                     4pk for $8.08 <b><u>thru</u></b><br>
                     48pk for $66.72<br>
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
-                    <b><u>More than 12 for<br>$4.12 per device</u></b>
+                    <b><u>More than 12 for<br>$4.12 per device</u></b><br>
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_15&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop Long Grabbit
+                    </a>
                </div>
             </td>
         </tr>
 <!-- Mini Grabbit ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_3&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+        <tr>
             <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-mg-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
@@ -168,12 +213,17 @@ cursor:pointer;
                     4pk for $8.08 <b><u>thru</u></b><br>
                     48pk for $66.72<br>
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
-                    <b><u>More than 48 for<br>$1.39 per device</u></b>
+                    <b><u>More than 48 for<br>$1.39 per device</u></b><br>
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_3&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop EZ Mini Grabbit
+                    </a>
                </div>
             </td>
         </tr>
 <!-- EZ Adjust ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=10&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+        <tr>
             <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-eza-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
@@ -188,12 +238,17 @@ cursor:pointer;
                     4pk for $2.92 <b><u>thru</u></b><br>
                     48pk for $16.32<br>
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
-                    <b><u>More than 48 for<br>$0.34 per device</u></b>
+                    <b><u>More than 48 for<br>$0.34 per device</u></b><br>
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=10&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop EZ Adjust
+                    </a>
                </div>
             </td>
         </tr>
 <!-- RockBuster ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=9&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+        <tr>
             <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-rb-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
@@ -206,11 +261,16 @@ cursor:pointer;
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br></span>
                     $1.75 each<br>
                     <span style="font-size:1.13em; line-height:140%; font-weight:bold; color:blue;">Any Quantity!</span><br>
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=9&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop RockBuster
+                    </a>
                </div>
             </td>
         </tr>
 <!-- Bag Grabbit ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=11&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+        <tr>
             <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-bg-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
@@ -224,11 +284,16 @@ cursor:pointer;
                     <span style="font-size:1.00em;"><b>BLACK&nbsp; HANDLE</b></span><br>
                     $4.26 each<br>
                     <span style="font-size:1.13em; line-height:140%; font-weight:bold; color:blue;">Any Quantity!</span><br>
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=11&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop Bag Grabbit
+                    </a>
                </div>
             </td>
         </tr>
 <!-- Keeper ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_12&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+        <tr>
             <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-kpr-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
@@ -242,11 +307,16 @@ cursor:pointer;
                     <span style="font-size:1.00em;"><b>1/8"&nbsp; SHOCK&nbsp; CORD</b></span><br>
                     $2.95 each<br>
                     $9.96 4-pack
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_12&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop Keeper
+                    </a>
                </div>
             </td>
         </tr>
 <!-- Carry Bag ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=17&session_id=6j7rvh11bja994asmiaq72uj26','_blank')">
+        <tr>
             <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-cb-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
@@ -259,11 +329,16 @@ cursor:pointer;
                     <span style="font-size:1.00em;"><b>HEAVY&nbsp; DUTY</b></span><br>
                     <span style="font-size:1.00em;"><b>W&nbsp; SIDE&nbsp; POUCH</b></span><br>
                     $7.95 each
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=17&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop Carry Bag
+                    </a>
                </div>
             </td>
         </tr>
 <!-- Tent Poles ************************************************************************************************************************************************-->
-        <tr onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=18&session_id=6j7rvh11bja994asmiaq72uj26', '_blank')">
+        <tr">
             <td style=" border:1px solid black;">
                 <img src="components/top_menu/buy_price/ttd-vn-tp-device-750x350.jpg" alt="ezg image" style="width:100%;">
             </td>
@@ -277,6 +352,11 @@ cursor:pointer;
                     $7.95 per 12 pack<br>
                     <span style="font-size:1.00em;"><b>24'&nbsp; Elastic&nbsp; Cord</b></span><br>
                     $2.25
+                    <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=18&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
+                        class="btnStyle1"
+                        style= "">
+                        Shop Tent Poles
+                    </a>
                </div>
             </td>
         </tr>
