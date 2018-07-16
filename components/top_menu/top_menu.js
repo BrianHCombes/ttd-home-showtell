@@ -59,10 +59,14 @@ angular.module("viewNav")
         
         templateUrl: 'components/top_menu/products/products.html',
        
-        controller: ['GetSet', function(GetSet){
+        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
                 
             var productsSelf = this;
+            
+            productsSelf.viewNgroup =   function(view, group){
+                                            viewManager.fromProducts(view,group);
+                                        };
             
             productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";   /* AR_1.00_0.65 */
             productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";   /* AR_1.00_0.50 */

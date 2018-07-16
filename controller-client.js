@@ -1,5 +1,5 @@
 angular.module('viewNav')
-    .controller("VNCtrl", ['$scope', '$state', 'VnData', 'compFactory', 'GetSet', function($scope, $state, VnData, compFactory, GetSet){
+    .controller("VNCtrl", ['$scope', '$state', 'VnData', 'compFactory', 'GetSet', 'viewManager', function($scope, $state, VnData, compFactory, GetSet, viewManager){
 
         var vn = this;
         vn.hyperIndex;
@@ -33,6 +33,7 @@ angular.module('viewNav')
 // function arrayIndex selects moused over hyper menu item and highlights it 
 // and unhighlights the others. And shows the proper thumbnail group. 
         vn.arrayIndex = function(index){
+            //alert("arrayIndex Part 1");
             vn.hyperIndex = index;
             
             var selectedTextColor = GetSet.getTextColor1();
@@ -87,6 +88,7 @@ angular.module('viewNav')
                     vn.picMenu1[i].boxshadow = boxShadow2;
                 }
             };
+            // alert("arrayIndex Part 2");
             showCheckMark();
         };
         
@@ -162,7 +164,7 @@ angular.module('viewNav')
                             }
                             showCheckMark();
                         };
-        compFactory.ref(getView);
+        compFactory.ref1(getView);
         
 //***********************************************************************************************************************************************************    
 // This method grays or blacks the left and right history arrow buttons and updates which history buttons should be shown.
@@ -188,7 +190,9 @@ angular.module('viewNav')
 // **********************************************************************************************************************************************************
 // The stateHistory function shows the proper view clicked from the view history menu but does not add to the view history menu    
         vn.stateHistory = function(viewHistory){
-            console.log(viewHistory.view);
+            
+            //alert("viewHistory is" + JSON.stringify(viewHistory));
+            console.log(JSON.stringify(viewHistory));
             compFactory.enableHist(false);                  // Tells compFactory service to disable adding a view history item.
             vn.arrayIndex(viewHistory.group-1);             // Selects and highlights the proper hyper menu item      
             $state.go(viewHistory.view);                    // displays the selected view and also starts the chain reaction by routing to the associated component.
@@ -204,10 +208,34 @@ angular.module('viewNav')
             vn.arrayIndex(currentViewIndex-1);              // Selects and highlights the current view after the previous view history is cleared 
         };
 
-//***********************************************************************************************************************************************************            
-// $state.go('some-view') loads the desired view as the default view upon load          
-        $state.go('intro');
+       
+//***********************************************************************************************************************************************************
+// This getViewFromOtherClick function handles clicks from any non history and non thumbnail clicks. It then displays the proper view and thumbnail group
+        var getViewFromOtherClick = function(view, group){
+            vn.arrayIndex(group-1);             // Selects and highlights the proper hyper menu item and thumbnail group     
+            $state.go(view); 
+        };    
         
+        viewManager.ref1(getViewFromOtherClick); // Passes the reference of the getViewFromOtherClick function to the factory service 'viewManager'on load.
+            
+//***********************************************************************************************************************************************************            
+// $state.go('some-view') loads the desired view as the default view upon load               
+        var stateGo = (function(){    
+            $state.go('intro');
+/*             
+                // Use this setTimeout if intializing with a template. If you initialize with a template only the first thumbnail group will show properly. If
+                // it's a template (view04 and up) then the proper thumbnail group won't show unless you call the stateHistory method and send it the proper parameters
+                setTimeout(function(){ 
+                    var viewHistory = {                         
+                                        "view":"view08",
+                                        "group":3,          
+                                        "thumb":1
+                                      };  
+                    vn.stateHistory(viewHistory);
+                },3000);
+*/
+            }());
+ 
 //***********************************************************************************************************************************************************    
 //  Responsive section for the Hyper Menu and Thumbnail section     
 
@@ -481,18 +509,38 @@ angular.module('viewNav')
 }])
 
 //***********************************************************************************************************************************************************
+// viewManager handles requested views from non thumbnail and non history clicks.
+.factory('viewManager', [ function(){
+    var getViewFromOtherClick = function(){};       // visible to whole factory  
+    
+    
+    return {
+                            // ref1 receives the reference of the getViewFromOtherClick function in the controller scope.
+                ref1:       function(getViewFromOtherClickRef){
+                                getViewFromOtherClick = getViewFromOtherClickRef;
+                            },
+                
+                fromProducts: function(view, group){
+                                getViewFromOtherClick(view, group);
+                            }
+    };
+    
+}])
+
+
+//***********************************************************************************************************************************************************
 // compFactory handles the view history menu. Note component controller calls are made to this among others.
 .factory('compFactory', [ 'GetSet', function(GetSet){
 
-    var getView = function(){};         // visible to whole factory 
-    var viewDataArray = [];             // visible to whole factory and is a cache
-    var viewDataArrayElement = {};      // visible to whole factory
-    var enable = true;                  // visible to whole factory
+    var getView = function(){};                     // visible to whole factory
+    var viewDataArray = [];                         // visible to whole factory and is a cache
+    var viewDataArrayElement = {};                  // visible to whole factory
+    var enable = true;                              // visible to whole factory
     var clickSource = "";
-    var startView = 0;                  // visible to whole factory 
-    var leftArrowMode = "#cccccc";      // visible to whole factory 
-    var rightArrowMode = "#cccccc";     // visible to whole factory 
-    var historyArrowBtnMode =   {       // visible to whole factory 
+    var startView = 0;                              // visible to whole factory 
+    var leftArrowMode = "#cccccc";                  // visible to whole factory 
+    var rightArrowMode = "#cccccc";                 // visible to whole factory 
+    var historyArrowBtnMode =   {                   // visible to whole factory 
                                     leftArrowMode:  "",
                                     rightArrowMode: ""
                                 };
@@ -511,11 +559,12 @@ angular.module('viewNav')
                         }();                 
     
     return {
-                // ref is called here in the parent scope
-                ref:        function(viewRef){
+                // 'ref1' is called in the controller parent scope to pass the 'getView' method reference to here and be called here as a callback.
+                // The 'getView' method manages the histoy list/menu
+                ref1:       function(viewRef){
                                 getView = viewRef;
                             },
-
+                
                 // enableHist is called here in the parent scope
                 // when enable is true it adds to the view history menu because a thumbnail from the thumbnail group was clicked.
                 // when enable is false it's because a view history menu item was clicked so no need to add to the view history menu.
