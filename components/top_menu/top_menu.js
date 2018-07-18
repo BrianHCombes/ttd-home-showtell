@@ -4,7 +4,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/top_menu/intro/intro.html',
        
-        controller: ['GetSet', function(GetSet){
+        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
                 
             var introSelf = this;
@@ -36,6 +36,8 @@ angular.module("viewNav")
                 var myWindow = window.open("components/top_menu/intro/navigate.html", "", "width=800,height=600,top=100,left="+left);
             };
             
+            viewManager.topMenuToHighlight(0);    
+            
             
         }]
     })
@@ -44,7 +46,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/top_menu/buy_price/buy_price.html',
        
-        controller: ['GetSet', function(GetSet){
+        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
                 
             var buyPriceSelf = this;
@@ -52,6 +54,9 @@ angular.module("viewNav")
             buyPriceSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";   /* AR_1.00_0.65 */
             buyPriceSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";   /* AR_1.00_0.50 */
             buyPriceSelf.width1 = "width:" + ((-0.01235)*(viewWidth)+54.44444) + "%";       /* AR_39.99_50.00 */
+            
+            viewManager.topMenuToHighlight(1);  
+                
         }]
     })
     
@@ -71,6 +76,9 @@ angular.module("viewNav")
             productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";   /* AR_1.00_0.65 */
             productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";   /* AR_1.00_0.50 */
             productsSelf.width1 = "width:" + ((-0.01235)*(viewWidth)+54.44444) + "%";       /* AR_39.99_50.00 */    // Not used at the moment
+            
+            viewManager.topMenuToHighlight(2);  
+            
         }]
     })
     
@@ -80,12 +88,14 @@ angular.module("viewNav")
 
         templateUrl: 'components/top_menu/reviews/testimonials.htm',
         
-        controller: ['GetSet', function(GetSet){
+        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
             
             var reviewSelf = this;
             
             reviewSelf.fontsize1 = "font-size:" + ((0.00049)*(viewWidth)+0.42222) + "em";      /* AR_1.00_0.60 */
+            
+            viewManager.topMenuToHighlight(3);  
             
         }]
     })
