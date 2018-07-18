@@ -33,7 +33,6 @@ angular.module('viewNav')
 // function arrayIndex selects moused over hyper menu item and highlights it 
 // and unhighlights the others. And shows the proper thumbnail group. 
         vn.arrayIndex = function(index){
-            //alert("arrayIndex Part 1");
             vn.hyperIndex = index;
             
             var selectedTextColor = GetSet.getTextColor1();
@@ -88,7 +87,6 @@ angular.module('viewNav')
                     vn.picMenu1[i].boxshadow = boxShadow2;
                 }
             };
-            // alert("arrayIndex Part 2");
             showCheckMark();
         };
         
@@ -96,11 +94,8 @@ angular.module('viewNav')
 // The showCheckMark function determines which thumbnail image gets the indicator reflecting the current view.
         var showCheckMark = function(){
             var markerDownTriangle = GetSet.downMarker();
-            //var markerLeftTriangle = GetSet.getLeftMarker();
-            //var markerRightTriangle = GetSet.getRightMarker();
             var currentViewThumbFromThumbClick = GetSet.getThumbThumbClick();
             var currentViewHyperIndexFromThumbClick = GetSet.getHyperThumbClick();
-            //var currentViewFromTopMenuClick = GetSet.getTopMenuClick();                         // Top Menu Click
             vn.checkMarkColor = GetSet.getTextColor1();
             
             if((currentViewThumbFromThumbClick === 0) && (currentViewHyperIndexFromThumbClick === vn.hyperIndex)){
@@ -119,15 +114,21 @@ angular.module('viewNav')
 //***********************************************************************************************************************************************************        
 // topMenuHighlight highlights the clicked upon top menu item. The selected template sends it's index to the 'viewManager' service which then invokes the
 // topMenuHighlight function and returns the index value here and is then compared to the indices of the array of items and highlights the matching item.
-            var topMenuHighlight = function(index){
-            //alert("made it to topMenuHighlight and index is: " + index );
-            //alert("Array length is: " + vn.menuBar1.length);
+        var topMenuHighlight = function(index){
             
-            for(i=0; i<vn.menuBar1.length; i++){
-                if(i === index){
-                    vn.menuBar1[i].highlight = "#00ffff";}
-                else {
-                    vn.menuBar1[i].highlight = "white";};
+            if(GetSet.getHighlightMode() === "topMenu"){
+                highlightManager("topMenu");
+                for(i=0; i<vn.menuBar1.length; i++){
+                    if(i === index){
+                        vn.menuBar1[i].highlight = "#00ffff";}
+                    else {
+                        vn.menuBar1[i].highlight = "white";};
+                }
+            }
+            else {
+                for(i=0; i<vn.menuBar1.length; i++){
+                    vn.menuBar1[i].highlight = "white";
+                };
             }
         };
         
@@ -141,7 +142,7 @@ angular.module('viewNav')
         VnData.rbGetPicsAjax(receiveData);
         
 // **********************************************************************************************************************************************************
-// getView serves as a callback function and manages the history list.
+// getView serves as a callback function and manages the history list and also sets which thumbnail checkmark should show in correspondance to the selected thumbnail.
         var getView  =  function(viewDataArray, viewDataArrayElement, clickSource, historyArrowBtnMode){
                             var bkgndColor = [];    // Contents stay intact for the next return call. But make sure it's not just luck.
                             var color1 = GetSet.getBkgndColor1();
@@ -183,9 +184,50 @@ angular.module('viewNav')
                                 GetSet.setThumbThumbClick(viewDataArrayElement.thumb);
                                 GetSet.setHyperThumbClick(viewDataArrayElement.group - 1);
                             }
+                            highlightManager("thumbOrHist");
                             showCheckMark();
                         };
         compFactory.ref1(getView);
+        
+//***********************************************************************************************************************************************************        
+// This is the highlight manager which manages what menus and thumbnails should have a highlighted item.        
+        function highlightManager(highlightCaller){
+            
+            if(highlightCaller === "thumbOrHist"){
+                GetSet.setHighlightMode(highlightCaller);
+                topMenuHighlight(0);
+            }
+            if(highlightCaller === "topMenu"){
+                
+                // Removes highlight from the history menu when top menu item picked
+                if(vn.bkColor !== undefined){                       
+                    for(i=0; i<vn.bkColor.length; i++){
+                          vn.bkColor[i] = GetSet.getBkgndColor2(); 
+                    }
+                }
+                
+                // Removes highlight from hyper menu when top menu item picked. See arrayIndex() function
+                var unSelectedTextColor = GetSet.getTextColor2();
+                var shadowForUnSelectedTextColor = GetSet.getShadowTextColor2();
+                var boxShadow2 = GetSet.getBoxShadowColor2();
+                for(i=0; i<vn.picMenu1.length; i++){
+                    vn.picMenu1[i].highlight = unSelectedTextColor; 
+                    vn.picMenu1[i].shadow = shadowForUnSelectedTextColor; 
+                    vn.picMenu1[i].boxshadow = boxShadow2;
+                };
+                for(i=0; i<vn.picMenu2.length; i++){
+                    vn.picMenu2[i].highlight = unSelectedTextColor; 
+                    vn.picMenu2[i].shadow = shadowForUnSelectedTextColor; 
+                    vn.picMenu2[i].boxshadow = boxShadow2;
+                };
+                
+                // Removes checkmark (down pointing triangle) from the thumbnails when top menu item picked. See showCheckMark() function.
+                vn.showCheckA = "&nbsp;";
+                vn.showCheckB = "&nbsp;";
+                vn.showCheckC = "&nbsp;";
+                vn.showCheckD = "&nbsp;";
+            }
+        }
         
 //***********************************************************************************************************************************************************    
 // This method grays or blacks the left and right history arrow buttons and updates which history buttons should be shown.
@@ -214,6 +256,10 @@ angular.module('viewNav')
             
             //alert("viewHistory is" + JSON.stringify(viewHistory));
             console.log(JSON.stringify(viewHistory));
+            if(GetSet.getHighlightMode() === "topMenu"){    // Re-highlights the last history button if clicked and previous was a topMenu item.
+                vn.bkColor[vn.bkColor.length-1] = GetSet.getBkgndColor1();
+                highlightManager("thumbOrHist");
+            };
             compFactory.enableHist(false);                  // Tells compFactory service to disable adding a view history item.
             vn.arrayIndex(viewHistory.group-1);             // Selects and highlights the proper hyper menu item      
             $state.go(viewHistory.view);                    // displays the selected view and also starts the chain reaction by routing to the associated component.
@@ -403,6 +449,8 @@ angular.module('viewNav')
         var currentViewThumbFromThumbClick;
         var currentViewHyperIndexFromThumbClick;
         
+        var highlightMode = "";
+        
         var styleCallback = function(data){                     // Called from the VnData factory/service.
 /*             
             textColor1 = data.picMenu1[0].highlight;            // default initialize for selected text highlight on hyper menu, checkmark and history menu
@@ -455,6 +503,9 @@ angular.module('viewNav')
         }
         
         return  {
+            
+            getHighlightMode: function(){return highlightMode;},
+            setHighlightMode: function(value){highlightMode = value;},
 
             downMarker: function(){return markerDownTriangle;},                        
             setMarkerType1: function(value){markerDownTriangle = value;},           // not used
@@ -544,9 +595,10 @@ angular.module('viewNav')
 
 //***********************************************************************************************************************************************************
 // viewManager handles requested views from non thumbnail and non history clicks.
-.factory('viewManager', [ function(){
+.factory('viewManager', [ 'GetSet', function(GetSet){
+        
     var getViewFromOtherClick = function(){};       // visible to whole factory  
-    var topMenuHighlight = function(){};
+    var topMenuHighlight = function(){};            // visible to whole factory
     
     return {
                             // ref1 receives the reference of the getViewFromOtherClick function in the controller scope.
@@ -554,23 +606,25 @@ angular.module('viewNav')
                                 getViewFromOtherClick = getViewFromOtherClickRef;
                             },
                 
+                            // fromProducts handles clicks from products menu in the top menu section
                 fromProducts: function(view, group){
                                 getViewFromOtherClick(view, group);
                             },
                             
+                            // ref2 receives the reference of the topMenuToHighlight function
                 ref2:       function(topMenuHighlightRef){
                                 topMenuHighlight = topMenuHighlightRef; 
                             },
                             
+                            // topMenuToHighlight handles which top menu item to highlight and set the getter setter setHighlightMode
                 topMenuToHighlight: function(index){
-                                // alert("Made it to viewManager");
+                                GetSet.setHighlightMode("topMenu");
                                 topMenuHighlight(index);
                             }
                             
     };
     
 }])
-
 
 //***********************************************************************************************************************************************************
 // compFactory handles the view history menu. Note component controller calls are made to this among others.
