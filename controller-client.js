@@ -96,10 +96,11 @@ angular.module('viewNav')
 // The showCheckMark function determines which thumbnail image gets the indicator reflecting the current view.
         var showCheckMark = function(){
             var markerDownTriangle = GetSet.downMarker();
-            var markerLeftTriangle = GetSet.getLeftMarker();
-            var markerRightTriangle = GetSet.getRightMarker();
+            //var markerLeftTriangle = GetSet.getLeftMarker();
+            //var markerRightTriangle = GetSet.getRightMarker();
             var currentViewThumbFromThumbClick = GetSet.getThumbThumbClick();
             var currentViewHyperIndexFromThumbClick = GetSet.getHyperThumbClick();
+            //var currentViewFromTopMenuClick = GetSet.getTopMenuClick();                         // Top Menu Click
             vn.checkMarkColor = GetSet.getTextColor1();
             
             if((currentViewThumbFromThumbClick === 0) && (currentViewHyperIndexFromThumbClick === vn.hyperIndex)){
@@ -114,6 +115,23 @@ angular.module('viewNav')
             if((currentViewThumbFromThumbClick === 3) && (currentViewHyperIndexFromThumbClick === vn.hyperIndex)){
                 vn.showCheckD = markerDownTriangle;} else{vn.showCheckD = "&nbsp;";};  
         };
+        
+//***********************************************************************************************************************************************************        
+// topMenuHighlight highlights the clicked upon top menu item. The selected template sends it's index to the 'viewManager' service which then invokes the
+// topMenuHighlight function and returns the index value here and is then compared to the indices of the array of items and highlights the matching item.
+            var topMenuHighlight = function(index){
+            //alert("made it to topMenuHighlight and index is: " + index );
+            //alert("Array length is: " + vn.menuBar1.length);
+            
+            for(i=0; i<vn.menuBar1.length; i++){
+                if(i === index){
+                    vn.menuBar1[i].highlight = "#00ffff";}
+                else {
+                    vn.menuBar1[i].highlight = "white";};
+            }
+        };
+        
+        viewManager.ref2(topMenuHighlight);
         
 //***********************************************************************************************************************************************************            
 // receiveData serves as a callback function and retrieves all thumbnail image files names from the db. Setting vn.hyperIndex = 0 shows the first group of thumbnails on load.
@@ -144,9 +162,12 @@ angular.module('viewNav')
                                     }
                                 }    
                                 vn.bkColor = bkgndColor;
-                                
+                               
+                                console.log("viewDataArray is: " + JSON.stringify(viewDataArray));
+                                console.log("viewDataArray[viewDataArray.length-1].thumb is: " + viewDataArray[viewDataArray.length-1].thumb);
                                 GetSet.setThumbThumbClick(viewDataArray[viewDataArray.length-1].thumb);      // Used to show checkmark for selected thumbnail
                                 GetSet.setHyperThumbClick(viewDataArray[viewDataArray.length-1].group - 1);  // Used to show checkmark for selected thumbnail
+                                vn.arrayIndex(viewDataArray[viewDataArray.length-1].group-1);                // Highlights the proper hyper index button when a thumbnail is selected upon page opening
                             }
                             else if(clickSource === "historyClick"){
                                 // The for loop and ensuing < vn.bkColor = bkgndColor; > assignment highlight the current view's history button from a view history click
@@ -217,6 +238,7 @@ angular.module('viewNav')
         };    
         
         viewManager.ref1(getViewFromOtherClick); // Passes the reference of the getViewFromOtherClick function to the factory service 'viewManager'on load.
+        
             
 //***********************************************************************************************************************************************************            
 // $state.go('some-view') loads the desired view as the default view upon load               
@@ -381,15 +403,27 @@ angular.module('viewNav')
         var currentViewThumbFromThumbClick;
         var currentViewHyperIndexFromThumbClick;
         
-        var styleCallback = function(data){
-            textColor1 = data.picMenu1[0].highlight;          // default initialize for selected text highlight on hyper menu, checkmark and history menu
-            bkgndColor1 = data.picMenu1[0].highlight;         // default initialize for selected text highlight on hyper menu, checkmark and history menu
-            shadowTextColor1 = data.picMenu1[0].shadow;       // default initialize for selected text highlight on hyper menu, checkmark and history menu
-            textColor2 = data.picMenu1[1].highlight;          // default initialize for selected text highlight on hyper menu, checkmark and history menu
-            shadowTextColor2 = data.picMenu1[1].shadow;       // default initialize for selected text highlight on hyper menu, checkmark and history menu
+        var styleCallback = function(data){                     // Called from the VnData factory/service.
+/*             
+            textColor1 = data.picMenu1[0].highlight;            // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            bkgndColor1 = data.picMenu1[0].highlight;           // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            shadowTextColor1 = data.picMenu1[0].shadow;         // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            textColor2 = data.picMenu1[1].highlight;            // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            shadowTextColor2 = data.picMenu1[1].shadow;         // default initialize for selected text highlight on hyper menu, checkmark and history menu
             
             boxShadowColor1 = data.picMenu1[0].boxshadow; 
             boxShadowColor2 = data.picMenu1[1].boxshadow; 
+*/
+            
+            textColor1 = data.selectedStyle.highlight;          // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            bkgndColor1 = data.selectedStyle.highlight;         // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            shadowTextColor1 = data.selectedStyle.shadow;       // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            textColor2 = data.picMenu1[1].highlight;          // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            shadowTextColor2 = data.picMenu1[1].shadow;       // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            
+            boxShadowColor1 = data.selectedStyle.boxshadow; 
+            boxShadowColor2 = data.picMenu1[1].boxshadow; 
+            
             
             markerDownTriangle = data.styling[0].downtriangle;                  // Triangle symbol pointing down to imdicate which view is selected
             markerLeftTriangle = data.styling[1].lefttriangle;                  // Triangle symbol pointing down to imdicate which view is selected
@@ -399,7 +433,7 @@ angular.module('viewNav')
         };
         
         var btnCount = 0;
-        VnData.menuConfig(styleCallback, "menus");
+        VnData.menuConfig(styleCallback, "menus");              // passes the reference of the 'styleCallback' function to the VnData service where HTTP calls are made.
         var screenMode = "screen1";
         var viewWidth;
         var vpWidth = window.screen.availWidth;
@@ -512,7 +546,7 @@ angular.module('viewNav')
 // viewManager handles requested views from non thumbnail and non history clicks.
 .factory('viewManager', [ function(){
     var getViewFromOtherClick = function(){};       // visible to whole factory  
-    
+    var topMenuHighlight = function(){};
     
     return {
                             // ref1 receives the reference of the getViewFromOtherClick function in the controller scope.
@@ -522,7 +556,17 @@ angular.module('viewNav')
                 
                 fromProducts: function(view, group){
                                 getViewFromOtherClick(view, group);
+                            },
+                            
+                ref2:       function(topMenuHighlightRef){
+                                topMenuHighlight = topMenuHighlightRef; 
+                            },
+                            
+                topMenuToHighlight: function(index){
+                                // alert("Made it to viewManager");
+                                topMenuHighlight(index);
                             }
+                            
     };
     
 }])
