@@ -48,14 +48,15 @@ s</style>
     <div style="text-align:center; {{vnCTRL.response.height01}};">
         <a  ui-sref="{{menuBar.menuItem}}"
             title="{{menuBar.title}}"
-            class="menuBtns shadow cursorstyle1" 
+            class="topMenu shadow cursorstyle1" 
             ng-repeat="menuBar in vnCTRL.menuBar1" 
             ng-bind-html="menuBar.menuItemName" 
-            style=" text-decoration:none; 
+            style= "text-decoration:none; 
                     vertical-align:text-top;
                     color:{{menuBar.highlight}};
                     {{vnCTRL.response.fontsize04}}; 
-                    {{vnCTRL.response.padding06}};">
+                    {{vnCTRL.response.padding06}};
+                   ">
         </a><br>
     </div>
 <!--************************************************************************************************************************************************-->
@@ -155,7 +156,8 @@ s</style>
                          ng-click="vnCTRL.arrayIndex($index)" 
                          style="border-radius:4px;"  
                          ng-repeat="picMenuA in vnCTRL.picMenu1" >
-                            <div style="width:100%; 
+                            <div class="hyper"
+                                 style="width:100%; 
                                         margin:3px 0px;
                                         {{vnCTRL.response.padding07}}; 
                                         font-size:16px;
@@ -167,7 +169,7 @@ s</style>
                                         text-shadow:{{picMenuA.shadow}};
                                         cursor:crosshair;
                                         text-align:center;
-                                        ">
+                                       ">
                                         {{picMenuA.labelA}}
                             </div>
                     </div>        
@@ -237,7 +239,8 @@ s</style>
                          ng-click="vnCTRL.arrayIndex($index+6)" 
                          style="border-radius:4px;"   
                          ng-repeat="picMenuB in vnCTRL.picMenu2" >         
-                            <div style="width:100%;
+                            <div class="hyper"
+                                 style="width:100%;
                                         margin:3px 0px;
                                         {{vnCTRL.response.padding07}}; 
                                         font-size:16px;
@@ -374,7 +377,8 @@ s</style>
                             margin-left:3%;" 
                      ng-repeat="picMenuA in vnCTRL.picMenu1">
 
-                    <div style="width:100%;
+                    <div class="hyper"
+                         style="width:100%;
                                 padding:{{vnCTRL.padding1}} 0px;  
                                 background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
                                 border-radius:4px;
@@ -401,7 +405,8 @@ s</style>
                             margin-top:{{vnCTRL.margin1}}; 
                             margin-left:3%;"
                      ng-repeat="picMenuB in vnCTRL.picMenu2" >         
-                    <div style="width:100%;
+                    <div class="hyper"
+                         style="width:100%;
                                 padding:{{vnCTRL.padding1}} 0px;
                                 background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
                                 border-radius:4px;
@@ -599,7 +604,8 @@ s</style>
                      ng-click="vnCTRL.arrayIndex($index)" 
                      style="border-radius:4px;"  
                      ng-repeat="picMenuA in vnCTRL.picMenu1" >
-                        <div style="width:100%; 
+                        <div class="hyper"
+                             style="width:100%; 
                                     margin:7px 0px 0px 0px;
                                     {{vnCTRL.response.padding08}};
                                     font-size:16px;
@@ -620,7 +626,8 @@ s</style>
                      ng-click="vnCTRL.arrayIndex($index+6)" 
                      style="border-radius:4px;"  
                      ng-repeat="picMenuB in vnCTRL.picMenu2" >         
-                        <div style="width:100%;
+                        <div class="hyper"
+                             style="width:100%;
                                     margin:7px 0px 0px 0px;
                                     {{vnCTRL.response.padding08}};
                                     font-size:16px;

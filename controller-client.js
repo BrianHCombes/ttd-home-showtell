@@ -371,7 +371,7 @@ angular.module('viewNav')
                                 padding01:  "padding:" + "0px " + ((0.01235)*(vpWidth) + -4.44444)+"px" + " 0px " + ((0.01235)*(vpWidth) + -4.44444)+"px",
                                 padding02:  "padding:" + ((0.00247)*(vpWidth) + 2.11111) + "px",
                                 padding03:  "padding:" + "0px " + ((0.00617)*(vpWidth) + 2.77778)+"px",
-                                padding04:  "padding:" + ((0.00494)*(vpWidth) + -1.77778)+"px" + " 0px",
+                                padding04:  "padding:" + ((0.00494)*(vpWidth) + -1.77778) + "px" + " 2px",
                                 padding05:  "padding:" + "0px " + ((0.00617)*(vpWidth) + 2.77778)+"px" + " 0px " + ((0.01235)*(vpWidth) + -4.44444)+"px",
                                 padding06:  "padding:" + "0px " + ((0.00824)*(vpWidth) + 0.36471)  + "px",
                                 padding07:  "padding:" + ((0.01111)*(vpWidth) + -8.00000)+"px" + " 0px",    // 5 at 1170, 2 at 900 // for screen1
@@ -465,19 +465,17 @@ angular.module('viewNav')
             
             textColor1 = data.selectedStyle.highlight;          // default initialize for selected text highlight on hyper menu, checkmark and history menu
             bkgndColor1 = data.selectedStyle.highlight;         // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            bkgndColor2 = data.selectedStyle.background;        // default initialize for selected text highlight on hyper menu, checkmark and history menu
             shadowTextColor1 = data.selectedStyle.shadow;       // default initialize for selected text highlight on hyper menu, checkmark and history menu
-            textColor2 = data.picMenu1[1].highlight;          // default initialize for selected text highlight on hyper menu, checkmark and history menu
-            shadowTextColor2 = data.picMenu1[1].shadow;       // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            textColor2 = data.picMenu1[1].highlight;            // default initialize for selected text highlight on hyper menu, checkmark and history menu
+            shadowTextColor2 = data.picMenu1[1].shadow;         // default initialize for selected text highlight on hyper menu, checkmark and history menu
             
             boxShadowColor1 = data.selectedStyle.boxshadow; 
             boxShadowColor2 = data.picMenu1[1].boxshadow; 
             
-            
             markerDownTriangle = data.styling[0].downtriangle;                  // Triangle symbol pointing down to imdicate which view is selected
             markerLeftTriangle = data.styling[1].lefttriangle;                  // Triangle symbol pointing down to imdicate which view is selected
             markerRightTriangle = data.styling[1].righttriangle;                // Triangle symbol pointing down to imdicate which view is selected
-            
-            bkgndColor2 = data.styling[2].bkColor2;
         };
         
         var btnCount = 0;

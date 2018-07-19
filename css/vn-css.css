@@ -20,18 +20,33 @@ cursor:pointer;
 max-width:1170px;    
 }
 
-.menuBtns
+.topMenu
 {
-font-size:1.50em;
-color:white;
+/*font-size:1.50em;*/
+/*color:white;*/
 font-family: Futura, "Trebuchet MS", arial, sans-serif;
-
 }
+
+.menuBtns .hyper
+{
+/*font-size:18px;    */
+font-family: Copperplate Gothic Light, fantasy, serif; 
+/*color:blue;*/
+/*font-weight:bold;*/
+}
+
 
 .historyBtn:hover
 {
 cursor:pointer;    
 }
+
+.historyBtn
+{
+font-family: Copperplate Gothic Light, fantasy, serif;   
+font-weight:bold;
+}
+
 
 .cursorstyle1
 {
