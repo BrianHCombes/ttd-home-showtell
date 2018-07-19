@@ -11,6 +11,18 @@ button:hover
 cursor:pointer;    
 }
 
+.enhance_1
+{
+color:#0099ff;    
+}
+
+.enhance_1:hover
+{
+box-shadow:1px 1px 5px #000000, 1px -1px 5px #000000, -1px 1px 5px #000000, -1px -1px 5px #000000;
+color:red;
+text-shadow: 1px 1px 5px #ffffff, 1px -1px 5px #ffffff, -1px 1px 5px #ffffff, -1px -1px 5px #ffffff;
+}
+
 </style>
 
 
@@ -31,26 +43,33 @@ cursor:pointer;
                     padding-left:1%;
                     vertical-align:top;">
             <div style="width:100%; text-align:center;">
-                <a ui-sref="transition" 
+                <a  ui-sref="transition" 
+                    class="enhance_1"
+                    style= "width:100%;
+                            font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+                            {{$ctrl.rs2fontsize4}}; 
+                            margin:10px 0px;
+                            display:inline-block;
+                            border:1px solid #b0b0b0;
+                            border-radius:5px;
+                            background: linear-gradient(to bottom, #fbfbfb, #d9d9d9);
+                            text-decoration:none;
+                           ">
+                            Read Me<br>Website in transition
+                </a><br>
+                <button ng-click="$ctrl.newWindow();" 
+                        class="enhance_1"
                         style= "width:100%;
                                 font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
                                 {{$ctrl.rs2fontsize4}}; 
-                                color:#0099ff; 
                                 margin:10px 0px;
                                 display:inline-block;
                                 border:1px solid #b0b0b0;
                                 border-radius:5px;
-                                /*padding:3px 0px 2px 0px;*/
                                 background: linear-gradient(to bottom, #fbfbfb, #d9d9d9);
                                 text-decoration:none;
-                               ">Read Me<br>Website in transition
-                </a><br>
-                <button ng-click="$ctrl.newWindow();" 
-                        style=" width:100%;
-                                font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
-                                {{$ctrl.rs2fontsize4}}; 
-                                color:#0099ff; 
-                                margin:10px 0px;">Navigate this site <br> Learn how in 15 secs.
+                               ">
+                    Navigate this site <br> Learn how in 15 secs.
                 </button>
             </div>
             <div style="{{$ctrl.rs2margintop1}};    /* AR_20.00_-0.00 */
