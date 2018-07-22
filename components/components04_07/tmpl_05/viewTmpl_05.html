@@ -20,6 +20,15 @@ text-shadow:    1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black,
 font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;     
 }
 
+.imageStyle1:hover
+{
+background-color:black; 
+border-radius:10px;
+box-shadow: 1px 1px 15px #CCEDF2, 1px -1px 15px #CCEDF2, -1px 1px 15px #CCEDF2, -1px -1px 15px #CCEDF2,
+            1px 1px 25px #EAE2BB, 1px -1px 25px #EAE2BB, -1px 1px 25px #EAE2BB, -1px -1px 25px #EAE2BB,
+            1px 1px 25px #EAE2BB, 1px -1px 25px #EAE2BB, -1px 1px 25px #EAE2BB, -1px -1px 25px #EAE2BB;
+}
+
 </style>
 
 <!-- AR Response Section 1 ************************************************************************************************************************************************-->
@@ -82,7 +91,10 @@ font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic',
                     /*left:85%;*/
                     z-index:2;">
                     <a href="https://www.tarptiedown.com"> 
-                        <img src="https://tarptiedown.com/resources/ttd-vn-button3-300x120.png" alt="button" style="{{$ctrl.rs3width3}};">
+                        <img src="https://tarptiedown.com/resources/ttd-vn-button3-300x120.png" 
+                             alt="button" 
+                             class="imageStyle1"
+                             style="{{$ctrl.rs3width3}};">
                     </a>
         </div>
         <div id="div4" 
