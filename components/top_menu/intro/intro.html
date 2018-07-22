@@ -13,14 +13,28 @@ cursor:pointer;
 
 .enhance_1
 {
-color:#0099ff;    
+border-style:solid;
+border-color:black;
+border-radius:5px;
+font-family:Futura, 'Trebuchet MS', Arial, sans-serif; 
+color:black;
+text-shadow:-1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;
+background:linear-gradient(#F27036, #EDEECF); 
+background:-webkit-linear-gradient(#F27036, #EDEECF);  
+background:-o-linear-gradient(#F27036, #EDEECF);  
+background:-moz-linear-gradient(#F27036, #EDEECF);     
 }
 
 .enhance_1:hover
 {
-box-shadow:1px 1px 5px #000000, 1px -1px 5px #000000, -1px 1px 5px #000000, -1px -1px 5px #000000;
+box-shadow:1px 1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, -1px -1px 1px #000000;
 color:red;
-text-shadow: 1px 1px 5px #ffffff, 1px -1px 5px #ffffff, -1px 1px 5px #ffffff, -1px -1px 5px #ffffff;
+text-shadow: 1px 1px 1px #ffffff, 1px -1px 1px #ffffff, -1px 1px 1px #ffffff, -1px -1px 1px #ffffff;
+}
+
+.enhance_3
+{
+font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif; 
 }
 
 </style>
@@ -39,52 +53,59 @@ text-shadow: 1px 1px 5px #ffffff, 1px -1px 5px #ffffff, -1px 1px 5px #ffffff, -1
 <!-- AR Response Section 2 ************************************************************************************************************************************************-->
 <table style="margin-top:10px;">
     <tr>
-        <td style=" {{$ctrl.rs2width1}};                    /* AR_30_50 */
+        <td style= "{{$ctrl.rs2width1}};                    /* AR_30_50 */
                     padding-left:1%;
-                    vertical-align:top;">
+                    vertical-align:top;
+                    text-align:center;
+                   ">
             <div style="width:100%; text-align:center;">
                 <a  ui-sref="transition" 
                     class="enhance_1"
-                    style= "width:100%;
-                            font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+                    style= "width:89%;
                             {{$ctrl.rs2fontsize4}}; 
-                            margin:10px 0px;
+                            {{$ctrl.rs2margintop2;}};       /* AR_20.00_-0.00 */
+                            /*margin-top:0px;*/
                             display:inline-block;
-                            border:1px solid #b0b0b0;
-                            border-radius:5px;
-                            background: linear-gradient(to bottom, #fbfbfb, #d9d9d9);
                             text-decoration:none;
+                            {{$ctrl.rs2borderwidth1}};
+                            {{$ctrl.rs2fontweight1}};
+                            
                            ">
                             Read Me<br>Website in transition
-                </a><br>
+                </a>
                 <button ng-click="$ctrl.newWindow();" 
                         class="enhance_1"
-                        style= "width:100%;
-                                font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+                        style= "width:90%;
                                 {{$ctrl.rs2fontsize4}}; 
-                                margin:10px 0px;
+                                {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
+                                /*margin-top:10px;*/
                                 display:inline-block;
-                                border:1px solid #b0b0b0;
-                                border-radius:5px;
-                                background: linear-gradient(to bottom, #fbfbfb, #d9d9d9);
                                 text-decoration:none;
+                                {{$ctrl.rs2borderwidth1}}; 
+                                {{$ctrl.rs2fontweight1}};
                                ">
                     Navigate this site <br> Learn how in 15 secs.
                 </button>
             </div>
-            <div style="{{$ctrl.rs2margintop1}};    /* AR_20.00_-0.00 */
-                        /*margin-top:40px;*/
-                        {{$ctrl.rs2fontsize5}};     /* AR_1.50_0.70 */
-                        text-align:left;
-                        color:red;
-                        "><span style="color:blue;"><b>Start with EZ Grabbit:</b></span><br>Select button A<br>Select first thumbnail image
-                <!--Select the lettered buttons and thumbnail images to see our other tarp tie downs and tarp accessories.-->
-            </div>
+                <div class="enhance_1"
+                     style="margin:10px auto 0px auto;
+                            text-align:center;
+                            width:90%;
+                            {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
+                            /*margin-top:10px;*/
+                            {{$ctrl.rs2padding1}};      /* AR_10.00_2.00 */
+                            /*padding:2px 0px;*/
+                            {{$ctrl.rs2fontsize5}};     /* AR_1.50_0.70 */
+                            {{$ctrl.rs2borderwidth1}};  /* AR_2.00_1.05 */
+                            {{$ctrl.rs2fontweight1}};   /* AR_100_900.00 */
+                            ">
+                    <span style="color:blue;"><b>Quick Start:</b></span><br>Select button A, B or C<br>Select product image
+                </div>
         </td>
         <td ng-show="1" style="{{$ctrl.rs2width2}}; text-align:center; vertical-align:top;">
             <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%"><br>
             <span style="{{$ctrl.rs2fontsize6}};   /* AR_2.00_0.90 */
-                        ">The EZ Grabbit: Over a million sold</span>
+                  ">The EZ Grabbit<br>Over a million sold</span>
         </td>
     </tr>
     <tr ng-show="0">

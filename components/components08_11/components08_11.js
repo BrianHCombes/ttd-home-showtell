@@ -50,7 +50,32 @@ angular.module('viewNav')
         
         templateUrl: 'components/components08_11/tmpl_09/viewTmpl_09.html',
        
-        controller: ['compFactory', function(compFactory){
+        controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+            var viewWidth = GetSet.getViewWidth();
+
+            var self09 = this; 
+
+            // Response Section 1
+            self09.rs1fontsize1 = "font-size:" + ((0.00235)*(viewWidth) + 0.24706) + "em";          /* AR_3.00_1.09 */
+            self09.rs1margintop1 = "margin-top:" + ((0.01235)*(viewWidth)+0.55556) + "px";          /* AR_15.01_5.00 */
+            self09.rs1marginbottom1 = "margin-bottom:" + ((0.01852)*(viewWidth)+3.33333) + "px";    /* AR_25.00_10.00 */
+
+            // Response Section 2
+            self09.rs2margintop1 = "margin-top:" + ((0.03086)*(viewWidth)-11.11111) + "px";
+            self09.rs2marginbottom1 = "margin-bottom:" + ((0.03704)*(viewWidth)-13.33333) + "px";
+            self09.rs2paddingright = "padding-right:" + ((0.02469)*(viewWidth)+1.11111) + "px";     /* AR_30.00_10.00 */
+            
+            
+            self09.rs2width1 = "width:" + ((0.00353)*(viewWidth) + -1.12941) + "%";
+            self09.rs2width2 = "width:" + ((-0.00941)*(viewWidth) + 58.01176) + "%";
+            self09.rs2fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+0.19444) + "em";
+            self09.rs2fontsize3 = "font-size:" + ((0.00165)*(viewWidth) + 0.07294) + "em";
+            
+            // Response Section 3
+            self09.rs3positiontop1 = "top:" + ((0.03704)*(viewWidth)+6.66667) + "px";
+            self09.rs3positionleft1 = "left:" + ((0.01235)*(viewWidth)+65.55556) + "%";
+            self09.rs3width1 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px";
+            
             
             compFactory.logView(09);
         }]
