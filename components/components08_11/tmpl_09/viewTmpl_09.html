@@ -1,6 +1,132 @@
 <style>
+#divA
+{
+font-size:1em;
+}    
+
+.textStyle1
+{
+font-family:arial; 
+font-weight:bold; 
+color:black;
+}
+
+.textStyle2
+{
+font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
+color:red;
+}
+
+.textStyle3
+{
+font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;    
+}
+
+.textStyle4
+{
+font-family: Copperplate, 'Copperplate Gothic Light', fantasy;    
+}
+    
 </style>
 
-<div style="position:relative;">
-    <img src="resources/images/Open_Space_ViewTemplate_B.jpg" alt="Open Space Template" style="width:100%;">
-</div>    
+<div id="divA">
+<!-- Response Section 1 ************************************************************************************************************************************************-->
+    <div style="text-align:center;">
+        <img src="components/components08_11/tmpl_09/ttd-vn-ezg-logo-w-grn-device-1500x400.png" 
+                         alt="EZ Grabbit Tarp Tie Down Official Logo" 
+                         title="EZ Grabbit Logo with Tarp Tie Down Device" 
+                         style=" width:90%;"> 
+        <div style="font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+                    {{$ctrl.rs1fontsize1}};         /* AR_3.00_1.09 */
+                    font-weight:bold;
+                    padding:0px 10px;
+                    background-color:yellow;
+                    border:2px solid black;
+                    border-radius:5px;
+                    display:inline-block;
+                    letter-spacing:5px;
+                    color:blue;
+                    {{$ctrl.rs1margintop1}};           /* AR_15.01_5.00 */
+                    {{$ctrl.rs1marginbottom1}};
+                   ">
+                    CLASSIC</div>
+    </div> 
+    <div class="textStyle1" 
+         style="{{$ctrl.rs1fontsize1}};             /* AR_3.00_1.09 */
+                text-align:center;
+               ">
+                Superior Performance and Versatility
+    </div>
+    
+<!-- Response Section 2 ************************************************************************************************************************************************-->
+    <table  style=" width:100%; 
+                    border-spacing:0px; 
+                    {{$ctrl.rs2margintop1}};                /* AR_25_0 */
+                    /*margin-top:0px;*/
+                    {{$ctrl.rs2marginbottom1}};             /* AR_30_0 */
+                    /*margin-bottom:0px;*/
+                    ">
+        <tr>
+            <td style="{{$ctrl.rs2width1}};">
+            </td>
+            <td class="textStyle3"
+                style= "{{$ctrl.rs2width2}}; 
+                        {{$ctrl.rs2fontsize2}};
+                        /*font-size:1.5em;*/
+                        color:blue;
+                        {{$ctrl.rs2paddingright}};          /* AR_30.00_10.00 */
+                       ">
+                The <span   class="textStyle4" 
+                            style= "font-weight:bold; 
+                                    background-color:yellow; 
+                                    border:1px solid black; 
+                                    border-radius:3px; 
+                                    padding:0px 3px;
+                                   ">
+                                    CLASSIC
+                    </span> 
+                &nbsp;EZ Grabbit does everything the standard EZ Grabbit does but without the mount features. 
+            </td>    
+            <td style="width:45%;">
+                <div class="textStyle3" style="{{$ctrl.rs2fontsize3}}; background-color:yellow; border:2px solid black; border-radius:5px; padding:10px 10px; margin-top:10px;">
+                    WRAP THE TARP AROUND THE DOG BONE AND SLIDE THE SLEEVE INTO PLACE.<br> <span style="font-size:1.25em; text-align:center;"><b>IT'S THAT EASY!</b></span>
+                    
+                </div>
+            </td>
+            <td style="">
+            </td>
+        </tr>
+    </table>
+
+<!-- Response Section 3 ************************************************************************************************************************************************-->
+    <div style="position:relative;
+                left:2.5%;
+                ">
+        <!--src="http://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-1400x1400.jpg" -->
+        <img    src="components/components08_11/tmpl_09/ttd-vn-ezg-keebler-1200x1020.jpg" 
+                alt="EZ Grabbit Tarp Tie Down Official Logo" 
+                title="EZ Grabbit Logo with Device" 
+                style=" width:95%;"> 
+        <div style="position:absolute; 
+                    
+                    {{$ctrl.rs3positiontop1}}; /* AR_50_20*/
+                    /*top:20px;   */
+                    {{$ctrl.rs3positionleft1}};    /* AR_80_70 */
+                    /*left:70%;   */
+                    z-index:2;
+                    ">
+            
+            <a href="https://www.tarptiedown.com/ttd-website/ttd-website-ezg-page/ttd-website-ezg-page.htm"> 
+                <img src="https://tarptiedown.com/resources/ttd-vn-button3-300x120.png"
+                     alt="button" 
+                     title="EZ Grabbit applications, specs, prices, videos, etc."
+                     style="{{$ctrl.rs3width1}};     /* AR_150_70 */
+                            ">  
+            </a>
+            
+        </div>
+            
+    </div>    
+
+     
+</div>

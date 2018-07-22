@@ -24,7 +24,7 @@ button:hover
 cursor:pointer;    
 }
 
-.btnStyle1
+.btnStyle2
 {
 display:inline-block;
 border:1px solid #b0b0b0;
@@ -37,6 +37,20 @@ color:black;
 margin-top:5px;
 margin-bottom:5px;
 font-size:1.0em;
+}
+
+.btnStyle2
+{
+border-style:solid;
+border-color:black;
+border-radius:5px;
+font-family:Futura, 'Trebuchet MS', Arial, sans-serif; 
+color:black;
+text-shadow:-1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;
+background:linear-gradient(#F27036, #EDEECF); 
+background:-webkit-linear-gradient(#F27036, #EDEECF);  
+background:-o-linear-gradient(#F27036, #EDEECF);  
+background:-moz-linear-gradient(#F27036, #EDEECF);     
 }
 
 </style>
@@ -52,35 +66,10 @@ font-size:1.0em;
                     margin:5px 0px;
                     "><b>OUR PRODUCTS</b>
         </div>
-        <!-- 
-        <div style="font-size:2.0em">Select the TTD store button</div>
-        <button onclick="window.open('https://www.tarptiedown.com/TTD-Store/index.php', '_blank')" 
-                type="button" 
-                style=" margin:10px 0px;
-                        font-size:2.0em;
-                        color:blue;
-                        border:1px solid black;
-                        border-radius:5px;
-                ">TTD Store
-        </button>
-        <div style="font-size:2.00em">OR</div>
-       
-        <div style="margin:5px 0px;
-                    padding:10px 5px 10px 5px;
-                    font-size:2.0em;
-                    color:blue;
-                    background-color:yellow;
-                    border:1px solid black;
-                    border-radius:5px;
-                    ">Select any item below to go directly<br>to that store item for the price details.</div> 
-        <br>
-        -->
-        
     </div>
 
     <table style="  border:1px solid black; 
                     {{$ctrl.fontsize1}};         /* AR_1.00_0.65 */
-                    /*font-size:0.65em;*/
                  ">
 <!-- EZ Grabbit Yellow ************************************************************************************************************************************************-->
         <tr>
@@ -106,8 +95,17 @@ font-size:1.0em;
                                 But of course it's spectacularly well suited for rope leader use as well.
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view00',1)" 
-                                    class="btnStyle1"> 
-                                        Mountable EZ Grabbit Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                        Go To:<br>Mountable EZ Grabbit
                             </button>
                 </div>
             </td>
@@ -134,8 +132,17 @@ font-size:1.0em;
                                 But of course it's spectacularly well suited for rope leader use as well.
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view00',1)" 
-                                    class="btnStyle1"> 
-                                        Mountable EZ Grabbit Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                        Go To:<br>Mountable EZ Grabbit
                             </button>
                </div>
             </td>
@@ -163,8 +170,17 @@ font-size:1.0em;
                                 EZ Grabbit is as superior as our mountable EZ Grabbit.
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view09',3)" 
-                                    class="btnStyle1">
-                                        Non-Mount EZ Grabbit Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           ">
+                                        Go To:<br>Non-Mount EZ Grabbit
                             </button>
                </div>
             </td>
@@ -192,8 +208,17 @@ font-size:1.0em;
                                 over a haystack, etc. 
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view01',1)" 
-                                    class="btnStyle1">
-                                        Long Grabbit Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           ">
+                                        Go To:<br>Long Grabbit
                             </button>
                 </div>
             </td>
@@ -220,8 +245,17 @@ font-size:1.0em;
                                 users who travel lightly.  
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view02',1)" 
-                                    class="btnStyle1">
-                                        Mini Grabbit Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                        Go To:<br>Mini Grabbit
                             </button>
                </div>
             </td>
@@ -247,8 +281,17 @@ font-size:1.0em;
                                 etc. 
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view03',1)" 
-                                    class="btnStyle1">
-                                        EZ Adjust Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                        Go To:<br>EZ Adjust
                             </button>
                 </div>
             </td>
@@ -274,8 +317,17 @@ font-size:1.0em;
                                 canopies, tents, tarps.
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view04',2)" 
-                                    class="btnStyle1">
-                                        RockBuster Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                        Go To:<br>RockBuster
                             </button>
                 </div>
             </td>
@@ -300,8 +352,17 @@ font-size:1.0em;
                                 ► Use again and again, lasts a lifetime. 
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view05',2)" 
-                                    class="btnStyle1">
-                                        Bag Grabbit Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           ">
+                                        Go To:<br>Bag Grabbit
                             </button>
                </div>
             </td>
@@ -326,8 +387,17 @@ font-size:1.0em;
                                 Sleeve and Dog Bone together when not in use.
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view06',2)" 
-                                    class="btnStyle1">
-                                        The Keeper Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                        Go To:<br>The Keeper
                             </button>
                </div>
             </td>
@@ -351,8 +421,17 @@ font-size:1.0em;
                                 Grabbit assortment.
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view07',2)" 
-                                    class="btnStyle1">
-                                        Carry Bag Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                        Go To:<br>Carry Bag
                             </button>
                </div>
             </td>
@@ -375,8 +454,17 @@ font-size:1.0em;
                                 our RockBuster ground stake.
                             </div>
                             <button ng-click="$ctrl.viewNgroup('view08',3)" 
-                                    class="btnStyle1">
-                                        Tent Poles Page
+                                    class="btnStyle2"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            font-size:1.13em;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            padding:3px 10px;
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                        Go To:<br>Tent Poles
                             </button>
                </div>
             </td>

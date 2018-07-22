@@ -58,6 +58,26 @@ margin-top:5px;
 margin-bottom:5px;
 }
 
+.btnStyle2
+{
+border-style:solid;
+border-color:black;
+border-radius:5px;
+font-family:Futura, 'Trebuchet MS', Arial, sans-serif; 
+color:black;
+text-shadow:-1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;
+background:linear-gradient(#F27036, #EDEECF); 
+background:-webkit-linear-gradient(#F27036, #EDEECF);  
+background:-o-linear-gradient(#F27036, #EDEECF);  
+background:-moz-linear-gradient(#F27036, #EDEECF);     
+}
+
+.btnStyle2:hover
+{
+box-shadow:1px 1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, -1px -1px 1px #000000;
+color:red;
+text-shadow: 1px 1px 1px #ffffff, 1px -1px 1px #ffffff, -1px 1px 1px #ffffff, -1px -1px 1px #ffffff;
+}
 
 </style>
 
@@ -73,25 +93,40 @@ margin-bottom:5px;
                     "><b>PRICING AND ORDERING</b>
         </div>
         
-        <!--<div style="font-size:2.0em">Select the TTD store button</div>-->
-        
         <a  href="https://www.tarptiedown.com/TTD-Store/index.php" target="_blank" 
-                        class="btnStyle1"
-                        style= "font-size:2.0em;
-                                ">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                font-size:2.00em;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Go directly to TTD Store
                     </a>
         
-        <div style="font-size:2.00em">OR</div>
+        <div style="font-size:2.00em;
+                    font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
+                   ">OR
+        </div>
        
         <div style="display:inline-block;
                     margin:5px 0px;
-                    padding:10px 5px 10px 5px;
-                    font-size:2.0em;
+                    {{$ctrl.padding1}};
+                    /*padding:5px 5px;*/
+                    font-size:1.5em;
                     color:blue;
-                    background-color:yellow;
+                    font-family: Arial, sans-serif;    
+                    text-shadow: 1px 1px 1px #ffffff, 1px -1px 1px #ffffff, -1px 1px 1px #ffffff, -1px -1px 1px #ffffff;
+                    background:linear-gradient(#F27036, #EDEECF); 
+                    background:-webkit-linear-gradient(#b6d9fa, #a9d4e4);  
+                    background:-o-linear-gradient(#F27036, #EDEECF);  
+                    background:-moz-linear-gradient(#F27036, #EDEECF);   
                     border:1px solid black;
                     border-radius:5px;
+                    {{$ctrl.marginbottom1}};
+                    /*margin-bottom:10px;*/
                     ">Select any item below to go directly<br>to that store item for the price details.</div> 
         <br>
         
@@ -125,8 +160,14 @@ margin-bottom:5px;
                     <b><u>More than 48 for<br>
                     $1.93 per device</u></b><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_8&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop EZ Grabbit<br> Mountable Yellow
                     </a>
                </div>
@@ -152,8 +193,14 @@ margin-bottom:5px;
                     <b><u>More than 48 for<br>
                     $1.93 per device</u></b><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_16&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop EZ Grabbit<br> Mountable Black
                     </a>
                             
@@ -176,8 +223,14 @@ margin-bottom:5px;
                     </span>24pk for $28.08<br>
                     48pk for $48.96<br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_7&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop EZ Grabbit<br> Non Mountable Green
                     </a>
                </div>
@@ -201,8 +254,14 @@ margin-bottom:5px;
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
                     <b><u>More than 12 for<br>$4.12 per device</u></b><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_15&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop Long Grabbit
                     </a>
                </div>
@@ -226,8 +285,14 @@ margin-bottom:5px;
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
                     <b><u>More than 48 for<br>$1.39 per device</u></b><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_3&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop EZ Mini Grabbit
                     </a>
                </div>
@@ -251,8 +316,14 @@ margin-bottom:5px;
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
                     <b><u>More than 48 for<br>$0.34 per device</u></b><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=10&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop EZ Adjust
                     </a>
                </div>
@@ -273,8 +344,14 @@ margin-bottom:5px;
                     $1.75 each<br>
                     <span style="font-size:1.13em; line-height:140%; font-weight:bold; color:blue;">Any Quantity!</span><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=9&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop RockBuster
                     </a>
                </div>
@@ -296,8 +373,14 @@ margin-bottom:5px;
                     $4.26 each<br>
                     <span style="font-size:1.13em; line-height:140%; font-weight:bold; color:blue;">Any Quantity!</span><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=11&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop Bag Grabbit
                     </a>
                </div>
@@ -317,10 +400,16 @@ margin-bottom:5px;
                     <span style="font-size:1.00em;"><b>BLACK&nbsp; TABS</b></span><br>
                     <span style="font-size:1.00em;"><b>1/8"&nbsp; SHOCK&nbsp; CORD</b></span><br>
                     $2.95 each<br>
-                    $9.96 4-pack
+                    $9.96 4-pack<br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=1_2_12&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop Keeper
                     </a>
                </div>
@@ -339,10 +428,16 @@ margin-bottom:5px;
                                 <b>CARRY BAG</b><br>
                     <span style="font-size:1.00em;"><b>HEAVY&nbsp; DUTY</b></span><br>
                     <span style="font-size:1.00em;"><b>W&nbsp; SIDE&nbsp; POUCH</b></span><br>
-                    $7.95 each
+                    $7.95 each<br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=17&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop Carry Bag
                     </a>
                </div>
@@ -362,10 +457,16 @@ margin-bottom:5px;
                     <span style="font-size:1.00em;"><b>GENERAL&nbsp; PURPOSE</b></span><br>
                     $7.95 per 12 pack<br>
                     <span style="font-size:1.00em;"><b>24'&nbsp; Elastic&nbsp; Cord</b></span><br>
-                    $2.25
+                    $2.25<br>
                     <a  href="https://www.tarptiedown.com/TTD-Store/index.php?rt=product/category&path=18&session_id=6j7rvh11bja994asmiaq72uj26" target="_blank" 
-                        class="btnStyle1"
-                        style= "">
+                        class="btnStyle2"
+                        style= "display:inline-block;
+                                text-decoration:none;
+                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                               ">
                         Shop Tent Poles
                     </a>
                </div>
