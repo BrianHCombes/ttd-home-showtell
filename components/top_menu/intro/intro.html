@@ -1,40 +1,15 @@
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 <style>
 
 div
 {
-font-size:16px;    
+font-size:1em;    
 font-family: Futura, "Trebuchet MS", Arial, sans-serif;    
 }
 
 button:hover
 {
 cursor:pointer;    
-}
-
-.style_1
-{
-border-style:solid;
-border-color:black;
-border-radius:5px;
-font-family:Futura, 'Trebuchet MS', Arial, sans-serif; 
-color:black;
-text-shadow:-1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;
-background:linear-gradient(#F27036, #EDEECF); 
-background:-webkit-linear-gradient(#F27036, #EDEECF);  
-background:-o-linear-gradient(#F27036, #EDEECF);  
-background:-moz-linear-gradient(#F27036, #EDEECF);     
-}
-
-.style_1hover:hover
-{
-box-shadow:1px 1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, -1px -1px 1px #000000;
-color:red;
-text-shadow: 1px 1px 1px #ffffff, 1px -1px 1px #ffffff, -1px 1px 1px #ffffff, -1px -1px 1px #ffffff;
-}
-
-.enhance_3
-{
-font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif; 
 }
 
 </style>
@@ -59,35 +34,33 @@ font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic',
                     text-align:center;
                    ">
             <div style="width:100%; text-align:center;">
-                <a  ui-sref="transition" 
-                    class="style_1 style_1hover"
+                <button  ui-sref="transition" 
+                    class="btnStyle2"
                     style= "width:89%;
-                            {{$ctrl.rs2fontsize4}}; 
-                            {{$ctrl.rs2margintop2;}};       /* AR_20.00_-0.00 */
-                            /*margin-top:0px;*/
                             display:inline-block;
                             text-decoration:none;
+                            {{$ctrl.rs2fontsize4}}; 
+                            {{$ctrl.rs2margintop2;}};       /* AR_20.00_-0.00 */
                             {{$ctrl.rs2borderwidth1}};
                             {{$ctrl.rs2fontweight1}};
                             
                            ">
                             Read Me<br>Website in transition
-                </a>
+                </button>
                 <button ng-click="$ctrl.newWindow();" 
-                        class="style_1 style_1hover"
+                        class="btnStyle2"
                         style= "width:90%;
-                                {{$ctrl.rs2fontsize4}}; 
-                                {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
-                                /*margin-top:10px;*/
                                 display:inline-block;
                                 text-decoration:none;
+                                {{$ctrl.rs2fontsize4}}; 
+                                {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
                                 {{$ctrl.rs2borderwidth1}}; 
                                 {{$ctrl.rs2fontweight1}};
                                ">
                     Navigate this site <br> Learn how in 15 secs.
                 </button>
             </div>
-                <div class="style_1"
+                <div class="textBoxStyle1"
                      style="margin:10px auto 0px auto;
                             text-align:center;
                             width:90%;
