@@ -30,13 +30,6 @@ box-shadow:1px 1px 3px #000000, 1px -1px 3px #000000, -1px 1px 3px #000000, -1px
 text-shadow: 1px 1px 1px #ffffff, 1px -1px 1px #ffffff, -1px 1px 1px #ffffff, -1px -1px 1px #ffffff;
 }
 
-.youAreHere2
-{ 
-font-size:.8em; 
-background-color:red;
-border-radius:3px;
-}
-
 #interactBlockStyle1
 {
 text-align:left;
@@ -85,6 +78,14 @@ background-color:rgba(0,   255, 255, 0.3);
 {
 background-color:rgba(255, 0,   0,   1.0);    
 }
+
+.youAreHere2
+{ 
+font-size:.8em; 
+background-color:red;
+border-radius:3px;
+}
+
 .tdStyle
 {
 padding: 0px 6px;
