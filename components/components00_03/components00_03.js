@@ -73,9 +73,24 @@ angular.module('viewNav')
             self01.rs2marginbottom1 = "margin-bottom:" + ((0.01605)*(viewWidth)+1.22222) + "px";    /* AR_20px_7px */
             
             // Response Section 3
-            self01.rs3positiontop1 = "top:" + ((0.04321)*(viewWidth)-0.55556) + "px"; // AR_50_15 
-            self01.rs3width1 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px"; // AR_150_70 
-          
+            self01.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
+            self01.rs3top1 = "top:" + ((0.01852)*(viewWidth)+8.33333) + "px";                   /* AR_30.00_15.00 */      
+            self01.rs3marginleft1= "margin-left:" + ((0.01852)*(viewWidth)-1.66667) + "px";     /* AR_20.00_5.00 */
+            self01.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
+            
+            // Sets mode of the "NAVIGATE" button
+            self01.display2 = false;
+            self01.morelessText2 = "NAVIGATE";
+            self01.moreless2 = function(){
+                if(self01.morelessText2 === "NAVIGATE"){
+                    self01.morelessText2 = "HIDE NAVIGATE";
+                    self01.display2 = true;
+                } 
+                else {
+                    self01.morelessText2 = "NAVIGATE";
+                    self01.display2 = false;
+                }
+            }; 
             
             compFactory.logView(01);
         }]
