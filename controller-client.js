@@ -289,7 +289,7 @@ angular.module('viewNav')
 //***********************************************************************************************************************************************************            
 // $state.go('some-view') loads the desired view as the default view upon load               
         var stateGo = (function(){    
-            $state.go('view01');
+            $state.go('view02');
 /*             
                 // Use this setTimeout if intializing with a template. If you initialize with a template only the first thumbnail group will show properly. If
                 // it's a template (view04 and up) then the proper thumbnail group won't show unless you call the stateHistory method and send it the proper parameters
