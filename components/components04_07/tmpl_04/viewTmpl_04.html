@@ -1,35 +1,4 @@
-<style>
-.textStyle1
-{
-font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
-color:white;
-text-shadow:    1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black, 
-                1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black,
-                0px 1px 1px black, 0px 2px 2px black, 0px 3px 3px black,
-
-                -1px 1px 1px black, -2px 2px 2px black, -3px 3px 3px black,
-                -1px 0px 1px black, -2px 0px 2px black, -3px 0px 3px black,
-                
-                -1px -1px 1px black, -2px -2px 2px black, -3px -3px 3px black,
-                 0px -1px 1px black,  0px -2px 2px black,  0px -3px 3px black,
-                 1px -1px 1px black,  2px -2px 2px black,  3px -3px 3px black;
-}
-
-.fontFam
-{
-font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;     
-}
-
-.imageStyle1:hover
-{
-background-color:black; 
-border-radius:10px;
-box-shadow: 1px 1px 15px #CCEDF2, 1px -1px 15px #CCEDF2, -1px 1px 15px #CCEDF2, -1px -1px 15px #CCEDF2,
-            1px 1px 25px #EAE2BB, 1px -1px 25px #EAE2BB, -1px 1px 25px #EAE2BB, -1px -1px 25px #EAE2BB,
-            1px 1px 25px #EAE2BB, 1px -1px 25px #EAE2BB, -1px 1px 25px #EAE2BB, -1px -1px 25px #EAE2BB;
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 
 <div style="text-align:center;">    
    
@@ -71,39 +40,79 @@ box-shadow: 1px 1px 15px #CCEDF2, 1px -1px 15px #CCEDF2, -1px 1px 15px #CCEDF2, 
    
 <!-- AR Response Section 3 ************************************************************************************************************************************************-->
     <br>
-    <div style="position:relative;">
-        
-        <table style="  position:absolute; 
-                        {{$ctrl.rs3positiontop1}};      /* AR_100_25 */
-                        {{$ctrl.rs3positionleft1}};     /* AR_80_ 70*/
-                        z-index:2;">
-            <tr>
-                <td style="text-align:right;">
-                    <a href="https://www.tarptiedown.com/index-old.html"> 
-                        <img src="https://tarptiedown.com/resources/ttd-vn-button3-300x120.png" 
-                             alt="button" 
-                             class="imageStyle1"
-                             style="{{$ctrl.rs3width3}};">
-                    </a>
-                </td>
-                
-            </tr>
-        </table>
-        <div id="div4" 
-             class="textStyle1" 
-             style="position:absolute; 
-                    {{$ctrl.rs3positiontop2}};    /* AR_450px_140px*/
-                    left:5%; 
-                    {{$ctrl.rs3fontsize5}}; 
-                    text-align:left; 
-                    z-index:2;">
-            Get that<br>extra strong hold<br>when you need it the most!
-        </div>
+    <div style="position:relative;
+                {{$ctrl.rs3fontsize1}};
+               ">
         
         <img    src="components/components04_07/tmpl_04/ttd-vn-rb-presentation2-1500x900.png" 
                 alt="RockBuster Field Presentation" 
                 title="RockBuster Field Presentation" 
                 style="position:absolute; top:0px; left:0px; width:100%;"> 
+        
+        <div style="position:absolute;
+                    left:2%;
+                    {{$ctrl.rs3top1}};
+                   ">
+            <a  href="https://www.tarptiedown.com/components/components04_07/tmpl_04/ttd-vn-rb-not-complete-msg.html"
+                class="btnStyle2"
+                style= "{{$ctrl.rs3padding1}};
+                        text-decoration:none;
+                        font-weight:bold;
+                       "
+               > Go To RockBuster Region
+                
+            </a>
+            <div class="btnStyle2" 
+                 ng-click="$ctrl.moreless2()"
+                 style="{{$ctrl.rs3padding1}};
+                        {{$ctrl.rs3marginleft1}};
+                        font-weight:bold;
+                       ">
+                     {{$ctrl.morelessText2}}
+            </div>
+            <div class="textBoxStyle2 textStyle3"
+                 ng-show="$ctrl.display2">
+                 
+                <table  style= "width:100%;">
+                    <tr><td><u>SELECTION</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td><u>DESTINATION</u>
+                            <span   class= "youAreHere2">
+                                &nbsp;&nbsp;you are here&nbsp;&nbsp;
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="topMenuNav">  <td class="tdStyle">TTD Intro          </td><td class="tdStyle">Tarp Tie Down Home & intro </td></tr>
+                    <tr class="topMenuNav">  <td class="tdStyle">Price/Buy          </td><td class="tdStyle">Product pricing and store  </td></tr>
+                    <tr class="topMenuNav">  <td class="tdStyle">Products           </td><td class="tdStyle">Tarp Tie Down products     </td></tr>
+                    <tr class="topMenuNav">  <td class="tdStyle">Reviews            </td><td class="tdStyle">Customer feedback          </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 1  </td><td class="tdStyle">Standard EZ Grabbit        </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 2  </td><td class="tdStyle">Long Grabbit               </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 3  </td><td class="tdStyle">Mini Grabbit               </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 4  </td><td class="tdStyle">EZ Adjust Rope Adjuster    </td></tr>
+                    <tr class="youAreHere">  <td class="tdStyle">Button B  Thumb 1  </td><td class="tdStyle">RockBuster Ground Stake    </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 2  </td><td class="tdStyle">Bag Grabbit Bag Handle     </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 3  </td><td class="tdStyle">The EZ Grabbit Keeper      </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 4  </td><td class="tdStyle">Carry/Duffle Bag           </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button C  Thumb 1  </td><td class="tdStyle">Tent Poles                 </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button C  Thumb 2  </td><td class="tdStyle">Classic EZ Grabbit         </td></tr>
+
+                </table>
+            </div>  
+        </div>
+        
+        <div id="div4" 
+             class="textStyle2 textShadow1" 
+             style="position:absolute; 
+                    {{$ctrl.rs3positiontop2}};    /* AR_450px_140px*/
+                    left:5%; 
+                    {{$ctrl.rs3fontsize5}}; 
+                    color:white;
+                    text-align:left; 
+                    z-index:2;">
+            Get that<br>extra strong hold<br>when you need it the most!
+        </div>
+        
+       
     </div>
 
 </div> 
