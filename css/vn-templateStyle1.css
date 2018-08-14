@@ -4,6 +4,20 @@
 .textStyle4 {font-family: Futura, "Trebuchet MS", arial, sans-serif;}
 .textStyle5 {font-family: Copperplate, 'Copperplate Gothic Light', fantasy;}
 
+.textShadow1
+{
+text-shadow:    1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black, 
+                1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black,
+                0px 1px 1px black, 0px 2px 2px black, 0px 3px 3px black,
+
+                -1px 1px 1px black, -2px 2px 2px black, -3px 3px 3px black,
+                -1px 0px 1px black, -2px 0px 2px black, -3px 0px 3px black,
+                
+                -1px -1px 1px black, -2px -2px 2px black, -3px -3px 3px black,
+                 0px -1px 1px black,  0px -2px 2px black,  0px -3px 3px black,
+                 1px -1px 1px black,  2px -2px 2px black,  3px -3px 3px black;
+}
+
 .btnStyle2
 {
 display:inline-block;
