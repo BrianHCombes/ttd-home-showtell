@@ -121,9 +121,24 @@ angular.module('viewNav')
             self02.rs3fontsize3 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";
             
             // Response Section 4
-            self02.rs4width1 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px";      // AR_150_70 
-            self02.rs4positiontop = "top:" + ((0.06790)*(viewWidth)-4.44444) + "px";   // AR_75px_20px    
-            // self02.rs4fontsize4 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";     
+            self02.rs4fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
+            self02.rs4top1 = "top:" + ((0.01852)*(viewWidth)+8.33333) + "px";                   /* AR_30.00_15.00 */      
+            self02.rs4marginleft1= "margin-left:" + ((0.01852)*(viewWidth)-1.66667) + "px";     /* AR_20.00_5.00 */
+            self02.rs4padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
+            
+            // Sets mode of the "NAVIGATE" button
+            self02.display2 = false;
+            self02.morelessText2 = "NAVIGATE";
+            self02.moreless2 = function(){
+                if(self02.morelessText2 === "NAVIGATE"){
+                    self02.morelessText2 = "HIDE NAVIGATE";
+                    self02.display2 = true;
+                } 
+                else {
+                    self02.morelessText2 = "NAVIGATE";
+                    self02.display2 = false;
+                }
+            };     
             
             compFactory.logView(02);
         }]    
