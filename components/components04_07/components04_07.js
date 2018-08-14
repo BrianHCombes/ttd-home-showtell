@@ -19,11 +19,27 @@ angular.module('viewNav')
             
             
             // AR Response Section 3
-            self04.rs3positiontop1 = "top:" + ((0.09259)*(viewWidth)-8.33333) + "px";       // AR_100_25
-            self04.rs3positionleft1 = "left:" + ((0.01235)*(viewWidth)+65.55556) + "%";     // AR_80_70
-            self04.rs3width3 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px";          // AR_150_70         
-            self04.rs3positiontop2 = "top:" + ((0.38272)*(viewWidth)+2.22222) + "px";       // AR_450_140      
-            self04.rs3fontsize5 = "font-size:" + ((0.00370)*(viewWidth)-0.33333) + "em";    // AR_4_1
+            self04.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
+            self04.rs3top1 = "top:" + ((0.01852)*(viewWidth)+8.33333) + "px";                   /* AR_30.00_15.00 */      
+            self04.rs3marginleft1= "margin-left:" + ((0.01852)*(viewWidth)-1.66667) + "px";     /* AR_20.00_5.00 */
+            self04.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
+            
+            // Sets mode of the "NAVIGATE" button
+            self04.display2 = false;
+            self04.morelessText2 = "NAVIGATE";
+            self04.moreless2 = function(){
+                if(self04.morelessText2 === "NAVIGATE"){
+                    self04.morelessText2 = "HIDE NAVIGATE";
+                    self04.display2 = true;
+                } 
+                else {
+                    self04.morelessText2 = "NAVIGATE";
+                    self04.display2 = false;
+                }
+            };
+                 
+            self04.rs3positiontop2 = "top:" + ((0.38272)*(viewWidth)+2.22222) + "px";       /* AR_450_140   */      
+            self04.rs3fontsize5 = "font-size:" + ((0.00162)*(viewWidth)+0.76511) + "em";    /* AR_2.66_1.35 */ /*relative to rs3fontsize1 */
             
             compFactory.logView(04);
         }]
