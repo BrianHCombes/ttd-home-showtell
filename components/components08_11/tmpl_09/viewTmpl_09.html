@@ -1,44 +1,6 @@
-<style>
-#divA
-{
-font-size:1em;
-}    
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 
-.textStyle1
-{
-font-family:arial; 
-font-weight:bold; 
-color:black;
-}
-
-.textStyle2
-{
-font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
-color:red;
-}
-
-.textStyle3
-{
-font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;    
-}
-
-.textStyle4
-{
-font-family: Copperplate, 'Copperplate Gothic Light', fantasy;    
-}
-
-.imageStyle1:hover
-{
-background-color:black; 
-border-radius:10px;
-box-shadow: 1px 1px 15px #CCEDF2, 1px -1px 15px #CCEDF2, -1px 1px 15px #CCEDF2, -1px -1px 15px #CCEDF2,
-            1px 1px 25px #EAE2BB, 1px -1px 25px #EAE2BB, -1px 1px 25px #EAE2BB, -1px -1px 25px #EAE2BB,
-            1px 1px 25px #EAE2BB, 1px -1px 25px #EAE2BB, -1px 1px 25px #EAE2BB, -1px -1px 25px #EAE2BB;
-}
-    
-</style>
-
-<div id="divA">
+<div>
 <!-- Response Section 1 ************************************************************************************************************************************************-->
     <div style="text-align:center;">
         <img src="components/components08_11/tmpl_09/ttd-vn-ezg-logo-w-grn-device-1500x400.png" 
@@ -85,7 +47,7 @@ box-shadow: 1px 1px 15px #CCEDF2, 1px -1px 15px #CCEDF2, -1px 1px 15px #CCEDF2, 
                         color:blue;
                         {{$ctrl.rs2paddingright}};          /* AR_30.00_10.00 */
                        ">
-                The <span   class="textStyle4" 
+                The <span   class="textStyle5" 
                             style= "font-weight:bold; 
                                     background-color:yellow; 
                                     border:1px solid black; 
@@ -109,34 +71,63 @@ box-shadow: 1px 1px 15px #CCEDF2, 1px -1px 15px #CCEDF2, -1px 1px 15px #CCEDF2, 
 
 <!-- Response Section 3 ************************************************************************************************************************************************-->
     <div style="position:relative;
-                left:2.5%;
+                {{$ctrl.rs3fontsize1}};
                 ">
-        <!--src="https://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-1400x1400.jpg" -->
         <img    src="components/components08_11/tmpl_09/ttd-vn-ezg-keebler-1200x1020.jpg" 
-                alt="EZ Grabbit Tarp Tie Down Official Logo" 
-                title="EZ Grabbit Logo with Device" 
+                alt="EZ Grabbit Tarp Tie Down Composite with Keebler Pass backgrpund" 
+                title="EZ Grabbit Tarp Tie Down Composite with Keebler Pass backgrpund" 
                 style=" width:95%;"> 
-        <div style="position:absolute; 
-                    
-                    {{$ctrl.rs3positiontop1}}; /* AR_50_20*/
-                    /*top:20px;   */
-                    {{$ctrl.rs3positionleft1}};    /* AR_80_70 */
-                    /*left:70%;   */
-                    z-index:2;
-                    ">
-            
-            <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html"> 
-                <img src="https://tarptiedown.com/resources/ttd-vn-button3-300x120.png"
-                     alt="button" 
-                     title="EZ Grabbit applications, specs, prices, videos, etc."
-                     class="imageStyle1"
-                     style="{{$ctrl.rs3width1}};     /* AR_150_70 */
-                            ">  
+        
+        
+        <div style="position:absolute;
+                    left:2%;
+                    {{$ctrl.rs3top1}};
+                   ">
+            <a  href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro"
+                class="btnStyle2"
+                style= "{{$ctrl.rs3padding1}};
+                        text-decoration:none;
+                        font-weight:bold;
+                       "
+               > Go To EZ Grabbit Region
+                
             </a>
-            
-        </div>
-            
-    </div>    
+            <div class="btnStyle2" 
+                 ng-click="$ctrl.moreless2()"
+                 style="{{$ctrl.rs3padding1}};
+                        {{$ctrl.rs3marginleft1}};
+                        font-weight:bold;
+                       ">
+                     {{$ctrl.morelessText2}}
+            </div>
+            <div class="textBoxStyle2 textStyle3"
+                 ng-show="$ctrl.display2">
+                 
+                <table  style= "width:100%;">
+                    <tr><td><u>SELECTION</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td><u>DESTINATION</u>
+                            <span   class= "youAreHere2">
+                                &nbsp;&nbsp;you are here&nbsp;&nbsp;
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="topMenuNav">  <td class="tdStyle">TTD Intro          </td><td class="tdStyle">Tarp Tie Down Home & intro </td></tr>
+                    <tr class="topMenuNav">  <td class="tdStyle">Price/Buy          </td><td class="tdStyle">Product pricing and store  </td></tr>
+                    <tr class="topMenuNav">  <td class="tdStyle">Products           </td><td class="tdStyle">Tarp Tie Down products     </td></tr>
+                    <tr class="topMenuNav">  <td class="tdStyle">Reviews            </td><td class="tdStyle">Customer feedback          </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 1  </td><td class="tdStyle">Standard EZ Grabbit        </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 2  </td><td class="tdStyle">Long Grabbit               </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 3  </td><td class="tdStyle">Mini Grabbit               </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 4  </td><td class="tdStyle">EZ Adjust Rope Adjuster    </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 1  </td><td class="tdStyle">RockBuster Ground Stake    </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 2  </td><td class="tdStyle">Bag Grabbit Bag Handle     </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 3  </td><td class="tdStyle">The EZ Grabbit Keeper      </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 4  </td><td class="tdStyle">Carry/Duffle Bag           </td></tr>
+                    <tr class="hyperMenuNav"><td class="tdStyle">Button C  Thumb 1  </td><td class="tdStyle">Tent Poles                 </td></tr>
+                    <tr class="youAreHere">  <td class="tdStyle">Button C  Thumb 2  </td><td class="tdStyle">Classic EZ Grabbit         </td></tr>
 
-     
+                </table>
+            </div>  
+        </div>
+    </div>    
 </div>
