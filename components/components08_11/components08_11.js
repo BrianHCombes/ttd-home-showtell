@@ -19,27 +19,31 @@ angular.module('viewNav')
             self08.rs1width3 = "width:" + ((-0.01235)*(viewWidth)+99.44444) + "%";          // AR_85_95
             self08.rs1positionleft1 = "left:" + ((0.00617)*(viewWidth)+0.27778) + "%";      // AR_7.5_2.5
             
-             
-            
             // Response Section 2
-            self08.rs2fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+0.19444) + "em";               // AR_2_0.75
+            self08.rs2fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+0.19444) + "em";            // AR_2_0.75
             self08.rs2marginbottom1 = "margin-bottom:" + ((0.06173)*(viewWidth)+7.77778) + "px";    // AR_80_30 
             
             // Response Section 3
-            self08.rs3positiontop1 = "top:" + ((-0.03086)*(viewWidth)-13.88889) + "px";        // AR_-50_-25
-            self08.rs3positionleft1 = "left:" + ((0.01235)*(viewWidth)+70.55556)    + "%";     // AR_85_75
-            self08.rs3width3 = "width:" + ((0.09877)*(viewWidth)+34.44444) + "px";             // AR_150_70  
-            self08.fontsize4 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em"; 
-            self08.rs3height1 = "height" + ((0.12963)*(viewWidth)+48.33333) + "em"; 
+            self08.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";            /* AR_1.50_0.73 */
+            self08.rs3margintop1 = "margin-top:" + ((0.03704)*(viewWidth)+11.66667) + "px";         /* AR_55.00_25.00 */
+            self08.rs3top1 = "top:" + ((-0.01235)*(viewWidth)-10.55556) + "px";                     /* AR_-25.01_-15.00 */
+            self08.rs3marginleft1= "margin-left:" + ((0.01852)*(viewWidth)-1.66667) + "px";         /* AR_20.00_5.00 */
+            self08.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
-            
-            // Not used
-            self08.margintop2 = "margin-top:" + ((0.01235)*(viewWidth)+0.55556) + "px";
-            self08.positiontop2 = "top:" + ((0.43210)*(viewWidth)-5.55556) + "px";          //div4
-            self08.fontsize5 = "font-size:" + ((0.00370)*(viewWidth)-0.33333) + "em";
-            
-             
-            
+            // Sets mode of the "NAVIGATE" button
+            self08.display2 = false;
+            self08.morelessText2 = "NAVIGATE";
+            self08.moreless2 = function(){
+                if(self08.morelessText2 === "NAVIGATE"){
+                    self08.morelessText2 = "HIDE NAVIGATE";
+                    self08.display2 = true;
+                } 
+                else {
+                    self08.morelessText2 = "NAVIGATE";
+                    self08.display2 = false;
+                }
+            };    
+          
             compFactory.logView(08);
         }]
     })
