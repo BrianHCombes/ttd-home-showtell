@@ -45,7 +45,7 @@ cursor:pointer;
                                 {{$ctrl.rs2borderwidth1}};
                                 {{$ctrl.rs2fontweight1}};
                                ">
-                                Read Me<br>Website in transition
+                                Read Me<br>We're in transition
                     </button>
                     <button ng-click="$ctrl.newWindow();" 
                             class="btnStyle2"
@@ -54,12 +54,25 @@ cursor:pointer;
                                     text-decoration:none;
                                     {{$ctrl.rs2fontsize4}}; 
                                     {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
+                                    /*margin-top:5px;*/
                                     {{$ctrl.rs2borderwidth1}}; 
                                     {{$ctrl.rs2fontweight1}};
                                    ">
-                        Navigate this site <br> Learn how in 15 secs.
+                        Navigate this site <br> Learn in 15 secs.
                     </button>
                 </div>
+                    <div class="btnStyle2" 
+                         ng-click="$ctrl.moreless2()"
+                         style="position:relative;
+                                {{$ctrl.rs2padding1}};
+                                {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
+                                width:90%;
+                                {{$ctrl.rs2borderwidth1}};  /* AR_2.00_1.05 */
+                                {{$ctrl.rs2fontsize4}};     /* AR_1.25_0.75 */
+                                {{$ctrl.rs2fontweight1}};   /* AR_100_900.00 */
+                               ">
+                             {{$ctrl.morelessText2}}
+                    </div>
                     <div class="textBoxStyle1"
                          style="margin:10px auto 0px auto;
                                 text-align:center;
@@ -72,27 +85,6 @@ cursor:pointer;
                                 ">
                         <span style="color:blue;"><b>Quick Start:</b></span><br>Select button A, B or C<br>Select product image
                     </div>
-
-
-    <!--************************************************************************************************************************************************-->
-            <div style="">
-                <div class="btnStyle2" 
-                     ng-click="$ctrl.moreless2()"
-                     style="position:relative;
-                            {{$ctrl.rs2padding1}};
-                            {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
-                            width:90%;
-                            {{$ctrl.rs2borderwidth1}};  /* AR_2.00_1.05 */
-                            {{$ctrl.rs2fontsize4}};     /* AR_1.25_0.75 */
-                           ">
-                         {{$ctrl.morelessText2}}
-                </div>
-    
-                
-            </div>
-
-    <!--************************************************************************************************************************************************-->
-
             </td>
             <td ng-show="1" style="{{$ctrl.rs2width2}}; text-align:center; vertical-align:top;">
                 <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%"><br>
@@ -107,6 +99,7 @@ cursor:pointer;
                         style= "{{$ctrl.rs2fontsize1}};
                                 position:absolute;
                                 {{$ctrl.rs2top1}};
+                                /*top:100px;*/
                                 left:0px;
                                ">
 
@@ -122,7 +115,7 @@ cursor:pointer;
                         <tr class="topMenuNav">  <td class="tdStyle">Price/Buy          </td><td class="tdStyle">Product pricing and store  </td></tr>
                         <tr class="topMenuNav">  <td class="tdStyle">Products           </td><td class="tdStyle">Tarp Tie Down products     </td></tr>
                         <tr class="topMenuNav">  <td class="tdStyle">Reviews            </td><td class="tdStyle">Customer feedback          </td></tr>
-                        <tr class="hyperMenuNav">  <td class="tdStyle">Button A  Thumb 1  </td><td class="tdStyle">Standard EZ Grabbit        </td></tr>
+                        <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 1  </td><td class="tdStyle">Standard EZ Grabbit        </td></tr>
                         <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 2  </td><td class="tdStyle">Long Grabbit               </td></tr>
                         <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 3  </td><td class="tdStyle">Mini Grabbit               </td></tr>
                         <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 4  </td><td class="tdStyle">EZ Adjust Rope Adjuster    </td></tr>

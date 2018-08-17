@@ -20,25 +20,25 @@ angular.module("viewNav")
             introSelf.rs2width2 = "width:" + ((0.02469)*(viewWidth)+41.11111) + "%";
             introSelf.rs2fontsize6 = "font-size:" + ((0.00136)*(viewWidth)+0.41111) + "em";             /* AR_2.00_0.90 */
             introSelf.rs2margin1 = "margin:" + ((0.01728)*(viewWidth)+3.77778) + "px";                  /* AR_24.00_10.00 */
-            introSelf.rs2margintop1 = "margin-top:" + ((0.01235)*(viewWidth)+5.55556) + "px";           /* AR_20.00_10.00 */
+            introSelf.rs2margintop1 = "margin-top:" + ((0.01852)*(viewWidth)-1.66667) + "px";           /* AR_20.00_5.00 */
             introSelf.rs2borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
             introSelf.rs2fontweight1 = "font-weight:" + ((-0.98765)*(viewWidth)+1255.55556);            /* AR_100.01_900.00 */
             introSelf.rs2padding1 = "padding:" + ((0.00988)*(viewWidth)-1.55556) + "px 0px";            /* AR_10.00_2.00 */
             
             introSelf.rs2fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";             /* AR_1.50_0.73 */
-            introSelf.rs2top1 = "top:" + ((0.20988)*(viewWidth)+104.44444) + "px";                      /* AR_350.00_180.00 */     
+            introSelf.rs2top1 = "top:" + ((0.14691)*(viewWidth)+53.11111) + "px";                       /* AR_225.00_106.00 */    
             introSelf.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
             // Sets mode of the "NAVIGATE" button
             introSelf.display2 = false;
-            introSelf.morelessText2 = "NAVIGATE";
+            introSelf.morelessText2 = "NAVIGATE MAP";
             introSelf.moreless2 = function(){
-                if(introSelf.morelessText2 === "NAVIGATE"){
+                if(introSelf.morelessText2 === "NAVIGATE MAP"){
                     introSelf.morelessText2 = "HIDE NAVIGATE";
                     introSelf.display2 = true;
                 } 
                 else {
-                    introSelf.morelessText2 = "NAVIGATE";
+                    introSelf.morelessText2 = "NAVIGATE MAP";
                     introSelf.display2 = false;
                 }
             }; 
