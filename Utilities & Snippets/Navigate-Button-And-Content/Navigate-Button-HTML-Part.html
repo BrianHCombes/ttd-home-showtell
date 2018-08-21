@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigate Button</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Navigate Button -->
+        <div    
+            class="btnStyle2" 
+            ng-click="$ctrl.moreless2()" 
+            style= "margin-left:10px;
+                    text-decoration:none;
+                    font-weight:bold;
+                    {{$ctrl.rs3fontsize1}};
+                    {{$ctrl.rs3padding1}};
+                   ">
+                    {{$ctrl.morelessText2}}
+        </div>
+        <!-- Navigate Button content-->
+        <div    class="textBoxStyle2 textStyle3"
+                ng-show="$ctrl.display2" 
+                style= "{{$ctrl.rs3fontsize1}};
+                        {{$ctrl.rs3top1}};
+                       ">
+            <table  style= "width:100%;">
+                <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
+                    <td><u>{{$ctrl.navMenuHeader.col2}}</u>
+                        <span class="youAreHere2">
+                            &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
+                        </span>
+                    </td>
+                </tr>
+                <tr class="{{NAVMENU.rowClass}}" 
+                    ng-repeat="NAVMENU in $ctrl.navMenuBody">  
+                        <td class="tdStyle">{{NAVMENU.selection}}</td>
+                        <td class="tdStyle">{{NAVMENU.destination}}</td>
+                </tr>
+            </table>
+        </div> 
+    </body>
+</html>

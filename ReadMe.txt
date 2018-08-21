@@ -41,3 +41,23 @@ Process:
     ***************************************************************************
 
 
+08/19/2018
+
+    These are the files I worked on in the LG view nav to consolidate the
+    NAVIGATION List into a service. Mostly you add the service file and refer
+    to it in the index file and set up the dependencies as needed in the 
+    component modules.
+
+    c:\xampp\htdocs\TTD-ViewNav-LG\ttd-vn-lg>git status
+    On branch ng-repeat-test
+    Changes to be committed:
+    (use "git reset HEAD <file>..." to unstage)
+
+        new file:   components/component-services.js
+        deleted:    components/test.txt
+        modified:   components/top_menu/intro/intro.html
+        modified:   components/top_menu/top_menu.js
+        modified:   components/top_menu/ttd/ttd.html
+        modified:   index.html
+        modified:   json-client.json
+    c:\xampp\htdocs\TTD-ViewNav-LG\ttd-vn-lg>git commit -m "Created a factory service for the navigate list. It's needed in almost every view so consolidating it to one location was needed."
