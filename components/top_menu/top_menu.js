@@ -4,7 +4,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/top_menu/intro/intro.html',
        
-        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
+        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
                 
             var introSelf = this;
@@ -31,27 +31,19 @@ angular.module("viewNav")
             
             // Sets mode of the "NAVIGATE" button
             introSelf.display2 = false;
-            introSelf.morelessText2 = "NAVIGATE MAP";
+            introSelf.morelessText2 = "GETTING AROUND";
             introSelf.moreless2 = function(){
-                if(introSelf.morelessText2 === "NAVIGATE MAP"){
-                    introSelf.morelessText2 = "HIDE NAVIGATE";
+                if(introSelf.morelessText2 === "GETTING AROUND"){
+                    introSelf.morelessText2 = "HIDE GETTING AROUND";
                     introSelf.display2 = true;
                 } 
                 else {
-                    introSelf.morelessText2 = "NAVIGATE MAP";
+                    introSelf.morelessText2 = "GETTING AROUND";
                     introSelf.display2 = false;
                 }
             }; 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            introSelf.navMenuHeader = NavMenuFactory.navMenuHeader();
+            introSelf.navMenuBody = NavMenuFactory.getViewNav(0);
             
             // AR Section 3
             introSelf.rs3fontsize1 = "font-size:" + ((0.00077)*(viewWidth)+0.59722) + "em";         /* AR_1.50_0.87 */
