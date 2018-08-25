@@ -2,25 +2,28 @@
 
 <div>
 <!-- Response Section 1 ************************************************************************************************************************************************-->
-    <div style="text-align:center;">
+    <div style="font-size:1em;">
         <img src="components/components08_11/tmpl_09/ttd-vn-ezg-logo-w-grn-device-1500x400.png" 
                          alt="EZ Grabbit Tarp Tie Down Official Logo" 
                          title="EZ Grabbit Logo with Tarp Tie Down Device" 
-                         style=" width:90%;"> 
-        <div style="font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
-                    {{$ctrl.rs1fontsize1}};         /* AR_3.00_1.09 */
-                    font-weight:bold;
-                    padding:0px 10px;
-                    background-color:yellow;
-                    border:2px solid black;
-                    border-radius:5px;
-                    display:inline-block;
-                    letter-spacing:5px;
-                    color:blue;
-                    {{$ctrl.rs1margintop1}};           /* AR_15.01_5.00 */
-                    {{$ctrl.rs1marginbottom1}};
-                   ">
-                    CLASSIC</div>
+                         style=" width:90%;">
+        <div style="text-align:center;">
+            <div class="textStyle5"
+                 style="display:inline-block;
+                        font-weight:bold;
+                        padding:0px 10px;
+                        background-color:yellow;
+                        border:2px solid black;
+                        border-radius:5px;
+                        letter-spacing:5px;
+                        color:blue;
+                        {{$ctrl.rs1fontsize1}};         /* AR_3.00_1.09 */
+                        {{$ctrl.rs1margintop1}};           /* AR_15.01_5.00 */
+                        {{$ctrl.rs1marginbottom1}};
+                       ">
+                        CLASSIC
+            </div>
+        </div>
     </div> 
     <div class="textStyle1" 
          style="{{$ctrl.rs1fontsize1}};             /* AR_3.00_1.09 */
@@ -33,38 +36,45 @@
     <table  style=" width:100%; 
                     border-spacing:0px; 
                     {{$ctrl.rs2margintop1}};                /* AR_25_0 */
-                    /*margin-top:0px;*/
                     {{$ctrl.rs2marginbottom1}};             /* AR_30_0 */
-                    /*margin-bottom:0px;*/
                     ">
         <tr>
-            <td style="{{$ctrl.rs2width1}};">
-            </td>
-            <td class="textStyle3"
-                style= "{{$ctrl.rs2width2}}; 
-                        {{$ctrl.rs2fontsize2}};
-                        /*font-size:1.5em;*/
-                        color:blue;
-                        {{$ctrl.rs2paddingright}};          /* AR_30.00_10.00 */
-                       ">
-                The <span   class="textStyle5" 
-                            style= "font-weight:bold; 
-                                    background-color:yellow; 
-                                    border:1px solid black; 
-                                    border-radius:3px; 
-                                    padding:0px 3px;
-                                   ">
-                                    CLASSIC
-                    </span> 
-                &nbsp;EZ Grabbit does everything the standard EZ Grabbit does but without the mount features. 
-            </td>    
-            <td style="width:45%;">
-                <div class="textStyle3" style="{{$ctrl.rs2fontsize3}}; background-color:yellow; border:2px solid black; border-radius:5px; padding:10px 10px; margin-top:10px;">
-                    WRAP THE TARP AROUND THE DOG BONE AND SLIDE THE SLEEVE INTO PLACE.<br> <span style="font-size:1.25em; text-align:center;"><b>IT'S THAT EASY!</b></span>
-                    
+            <td>
+                <div style="text-align:center;">
+                    <div class="textStyle3"
+                         style="display:inline-block;
+                                color:blue;
+                                width:85%;
+                                text-align:left;
+                                {{$ctrl.rs2fontsize2}};
+                               ">
+                    The <span   class="textStyle5" 
+                                style= "font-weight:bold; 
+                                        background-color:yellow; 
+                                        border:1px solid black; 
+                                        border-radius:3px; 
+                                        padding:0px 3px;
+                                       ">
+                                        CLASSIC
+                        </span> 
+                    &nbsp;EZ Grabbit does everything the standard EZ Grabbit does but without the mount features.
                 </div>
+
             </td>
-            <td style="">
+            <td>
+                <div class="textStyle3" 
+                     style="display:inline-block;
+                            width:85%;
+                            background-color:yellow; 
+                            border:2px solid black; 
+                            border-radius:5px; 
+                            padding:10px 10px; 
+                            margin-top:10px;
+                            {{$ctrl.rs2fontsize3}};
+                           ">
+                    WRAP THE TARP AROUND THE DOG BONE AND SLIDE THE SLEEVE INTO PLACE.<br> <span style="font-size:1.25em; text-align:center;"><b>IT'S THAT EASY!</b></span>
+
+                </div>
             </td>
         </tr>
     </table>
@@ -76,7 +86,7 @@
         <img    src="components/components08_11/tmpl_09/ttd-vn-ezg-keebler-1200x1020.jpg" 
                 alt="EZ Grabbit Tarp Tie Down Composite with Keebler Pass backgrpund" 
                 title="EZ Grabbit Tarp Tie Down Composite with Keebler Pass backgrpund" 
-                style=" width:95%;"> 
+                style=" width:100%;"> 
         
         
         <div style="position:absolute;
@@ -101,31 +111,31 @@
                      {{$ctrl.morelessText2}}
             </div>
             <div class="textBoxStyle2 textStyle3"
-                 ng-show="$ctrl.display2">
-                 
-                <table  style= "width:100%;">
-                    <tr><td><u>SELECTION</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <td><u>DESTINATION</u>
-                            <span   class= "youAreHere2">
-                                &nbsp;&nbsp;you are here&nbsp;&nbsp;
+                 ng-show="$ctrl.display2"
+                 style="width:96%;
+                        position:absolute;
+                        z-index:3;">
+                <table  style="width:100%;">
+                    <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
+                        <td><u>{{$ctrl.navMenuHeader.col2}}</u>
+                            <span class="youAreHere2">
+                                &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
+                            </span>
+                            <span class="closeText" 
+                                  ng-click="$ctrl.moreless2()" 
+                                  style="color:white;
+                                         float:right;
+                                        ">
+                                        &nbsp;&nbsp;&nbsp;&#10062;
                             </span>
                         </td>
                     </tr>
-                    <tr class="topMenuNav">  <td class="tdStyle">TTD Intro          </td><td class="tdStyle">Tarp Tie Down Home & intro </td></tr>
-                    <tr class="topMenuNav">  <td class="tdStyle">Price/Buy          </td><td class="tdStyle">Product pricing and store  </td></tr>
-                    <tr class="topMenuNav">  <td class="tdStyle">Products           </td><td class="tdStyle">Tarp Tie Down products     </td></tr>
-                    <tr class="topMenuNav">  <td class="tdStyle">Reviews            </td><td class="tdStyle">Customer feedback          </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 1  </td><td class="tdStyle">Standard EZ Grabbit        </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 2  </td><td class="tdStyle">Long Grabbit               </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 3  </td><td class="tdStyle">Mini Grabbit               </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 4  </td><td class="tdStyle">EZ Adjust Rope Adjuster    </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 1  </td><td class="tdStyle">RockBuster Ground Stake    </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 2  </td><td class="tdStyle">Bag Grabbit Bag Handle     </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 3  </td><td class="tdStyle">The EZ Grabbit Keeper      </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 4  </td><td class="tdStyle">Carry/Duffle Bag           </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button C  Thumb 1  </td><td class="tdStyle">Tent Poles                 </td></tr>
-                    <tr class="youAreHere">  <td class="tdStyle">Button C  Thumb 2  </td><td class="tdStyle">Classic EZ Grabbit         </td></tr>
-
+                    <tr class="{{NAVMENU.rowClass}}" 
+                        ng-repeat="NAVMENU in $ctrl.navMenuBody"
+                        style="">  
+                            <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.selection}}</a></td>
+                            <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.destination}}</a></td>
+                    </tr>
                 </table>
             </div>  
         </div>

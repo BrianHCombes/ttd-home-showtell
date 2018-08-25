@@ -4,7 +4,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_04/viewTmpl_04.html',
        
-         controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+         controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
 
             var self04 = this; 
@@ -15,7 +15,9 @@ angular.module('viewNav')
             
             
             // AR Response Section 2
-            self04.rs2fontsize2 = "font-size:" + ((0.00265)*(viewWidth)-0.10556) + "em";    //AR_3_0.85
+            self04.rs2fontsize2 = "font-size:" + ((0.00265)*(viewWidth)-0.10556) + "em";
+            self04.rs2fontsize3 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";
+            self04.rs2padding1 = "padding:" + ((0.01852)*(viewWidth)-1.66667) + "px " + ((0.25926)*(viewWidth)-83.33333) + "px";      /* AR_20.00_5.00 */   /* AR_220.00_10.00 */
             
             
             // AR Response Section 3
@@ -26,20 +28,23 @@ angular.module('viewNav')
             
             // Sets mode of the "NAVIGATE" button
             self04.display2 = false;
-            self04.morelessText2 = "NAVIGATE";
+            self04.morelessText2 = "GETTING AROUND";
             self04.moreless2 = function(){
-                if(self04.morelessText2 === "NAVIGATE"){
-                    self04.morelessText2 = "HIDE NAVIGATE";
+                if(self04.morelessText2 === "GETTING AROUND"){
+                    self04.morelessText2 = "HIDE GETTING AROUND";
                     self04.display2 = true;
                 } 
                 else {
-                    self04.morelessText2 = "NAVIGATE";
+                    self04.morelessText2 = "GETTING AROUND";
                     self04.display2 = false;
                 }
-            };
-                 
-            self04.rs3positiontop2 = "top:" + ((0.38272)*(viewWidth)+2.22222) + "px";       /* AR_450_140   */      
-            self04.rs3fontsize5 = "font-size:" + ((0.00162)*(viewWidth)+0.76511) + "em";    /* AR_2.66_1.35 */ /*relative to rs3fontsize1 */
+            }; 
+            self04.navMenuHeader = NavMenuFactory.navMenuHeader();
+            self04.navMenuBody = NavMenuFactory.getViewNav(7);   
+              
+            // AR Response Section 4     
+            self04.rs3positiontop2 = "top:" + ((0.40741)*(viewWidth)-26.66667) + "px";      /* AR_450.00_120.00 */     
+            self04.rs3fontsize5 = "font-size:" + ((0.00093)*(viewWidth)+0.91667) + "em";    /* AR_2.00_1.25 */ /*relative to rs3fontsize1 */
             
             compFactory.logView(04);
         }]
@@ -51,7 +56,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_05/viewTmpl_05.html',
        
-        controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+        controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
 
             var self05 = this; 
@@ -63,26 +68,30 @@ angular.module('viewNav')
             
             // AR Response Section 2 
             self05.rs2fontsize2 = "font-size:" + ((0.00265)*(viewWidth)-0.10556) + "em";
+            self05.rs2fontsize3 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";
+            self05.rs2padding1 = "padding:" + ((0.01852)*(viewWidth)-1.66667) + "px " + ((0.29630)*(viewWidth)-66.66667) + "px";      /* AR_20.00_5.00 */   /* AR_280.00_40.00 */
             
             // AR Response Section 3 
             self05.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
-            self05.rs3top1 = "top:" + ((0.01852)*(viewWidth)+8.33333) + "px";                   /* AR_30.00_15.00 */      
+            self05.rs3top1 = "top:" + ((0.05556)*(viewWidth)-5.00000) + "px";                   /* AR_60.01_15.00 */     
             self05.rs3marginleft1= "margin-left:" + ((0.01852)*(viewWidth)-1.66667) + "px";     /* AR_20.00_5.00 */
             self05.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
             // Sets mode of the "NAVIGATE" button
             self05.display2 = false;
-            self05.morelessText2 = "NAVIGATE";
+            self05.morelessText2 = "GETTING AROUND";
             self05.moreless2 = function(){
-                if(self05.morelessText2 === "NAVIGATE"){
-                    self05.morelessText2 = "HIDE NAVIGATE";
+                if(self05.morelessText2 === "GETTING AROUND"){
+                    self05.morelessText2 = "HIDE GETTING AROUND";
                     self05.display2 = true;
                 } 
                 else {
-                    self05.morelessText2 = "NAVIGATE";
+                    self05.morelessText2 = "GETTING AROUND";
                     self05.display2 = false;
                 }
-            };
+            }; 
+            self05.navMenuHeader = NavMenuFactory.navMenuHeader();
+            self05.navMenuBody = NavMenuFactory.getViewNav(9);   
             
             self05.rs3positiontop2 = "top:" + ((0.43210)*(viewWidth)-5.55556) + "px"; 
             self05.rs3fontsize5 = "font-size:" + ((0.00162)*(viewWidth)+0.76511) + "em";    /* AR_2.66_1.35 */ /*relative to rs3fontsize1 */
@@ -97,7 +106,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_06/viewTmpl_06.html',
        
-         controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+         controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
 
             var self06 = this; 
@@ -120,17 +129,19 @@ angular.module('viewNav')
             
             // Sets mode of the "NAVIGATE" button
             self06.display2 = false;
-            self06.morelessText2 = "NAVIGATE";
+            self06.morelessText2 = "GETTING AROUND";
             self06.moreless2 = function(){
-                if(self06.morelessText2 === "NAVIGATE"){
-                    self06.morelessText2 = "HIDE NAVIGATE";
+                if(self06.morelessText2 === "GETTING AROUND"){
+                    self06.morelessText2 = "HIDE GETTING AROUND";
                     self06.display2 = true;
                 } 
                 else {
-                    self06.morelessText2 = "NAVIGATE";
+                    self06.morelessText2 = "GETTING AROUND";
                     self06.display2 = false;
                 }
-            };
+            }; 
+            self06.navMenuHeader = NavMenuFactory.navMenuHeader();
+            self06.navMenuBody = NavMenuFactory.getViewNav(10);  
              
             compFactory.logView(06);
         }]
@@ -142,7 +153,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_07/viewTmpl_07.html',
        
-        controller: ['compFactory', 'GetSet', function(compFactory, GetSet){
+        controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
 
             var self07 = this; 
@@ -167,17 +178,20 @@ angular.module('viewNav')
             
             // Sets mode of the "NAVIGATE" button
             self07.display2 = false;
-            self07.morelessText2 = "NAVIGATE";
+            self07.morelessText2 = "GETTING AROUND";
             self07.moreless2 = function(){
-                if(self07.morelessText2 === "NAVIGATE"){
-                    self07.morelessText2 = "HIDE NAVIGATE";
+                if(self07.morelessText2 === "GETTING AROUND"){
+                    self07.morelessText2 = "HIDE GETTING AROUND";
                     self07.display2 = true;
                 } 
                 else {
-                    self07.morelessText2 = "NAVIGATE";
+                    self07.morelessText2 = "GETTING AROUND";
                     self07.display2 = false;
                 }
-            };
+            }; 
+            self07.navMenuHeader = NavMenuFactory.navMenuHeader();
+            self07.navMenuBody = NavMenuFactory.getViewNav(11);  
+            
             compFactory.logView(07);
         }]
     });

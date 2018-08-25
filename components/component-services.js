@@ -13,7 +13,7 @@ angular.module("viewNav")
 
                     var navMenu = 
                     [           
-                        {"rowClass":"youAreHere",   "selection":"TTD Intro",         "view":"intro",    "destination":"Tarp Tie Down Home & intro"},
+                        {"rowClass":"topMenuNav",   "selection":"TTD Intro",         "view":"intro",    "destination":"Tarp Tie Down Home & intro"},
                         {"rowClass":"topMenuNav",   "selection":"Price/Buy",         "view":"buyprice", "destination":"Product pricing and store "},
                         {"rowClass":"topMenuNav",   "selection":"Products",          "view":"products", "destination":"Tarp Tie Down products    "},
                         {"rowClass":"topMenuNav",   "selection":"Reviews",           "view":"reviews",  "destination":"Customer feedback         "},
