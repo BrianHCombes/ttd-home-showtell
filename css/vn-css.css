@@ -27,6 +27,12 @@ max-width:1170px;
 font-family: Futura, "Trebuchet MS", arial, sans-serif;
 }
 
+.topMenu:hover
+{
+/*background-color:#EFEFEF;    */
+background-color:transparent;
+}
+
 .menuBtns .hyper
 {
 /*font-size:18px;    */
