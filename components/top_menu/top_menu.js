@@ -30,15 +30,16 @@ angular.module("viewNav")
             introSelf.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
             // Sets mode of the "NAVIGATE" button
+            var btnText = NavMenuFactory.getBtnText();
             introSelf.display2 = false;
-            introSelf.morelessText2 = "GETTING AROUND";
+            introSelf.morelessText2 = btnText.showText;
             introSelf.moreless2 = function(){
-                if(introSelf.morelessText2 === "GETTING AROUND"){
-                    introSelf.morelessText2 = "HIDE GETTING AROUND";
+                if(introSelf.morelessText2 === btnText.showText){
+                    introSelf.morelessText2 = btnText.hideText;
                     introSelf.display2 = true;
                 } 
                 else {
-                    introSelf.morelessText2 = "GETTING AROUND";
+                    introSelf.morelessText2 = btnText.showText;
                     introSelf.display2 = false;
                 }
             }; 

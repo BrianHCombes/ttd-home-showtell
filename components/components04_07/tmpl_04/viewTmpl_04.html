@@ -49,84 +49,78 @@
     <div style="position:relative;
                 {{$ctrl.rs3fontsize1}};
                ">
-        
         <img    src="components/components04_07/tmpl_04/ttd-vn-rb-presentation2-1500x900.png" 
                 alt="RockBuster Field Presentation" 
                 title="RockBuster Field Presentation" 
                 style="position:absolute; top:0px; left:0px; width:100%;"> 
         
-        
-        
         <div style="position:absolute;
                     left:2%;
+                    width:100%;
                     {{$ctrl.rs3top1}};
                    ">
-            <a  href="https://www.tarptiedown.com/components/components04_07/tmpl_04/ttd-vn-rb-not-complete-msg.html"
-                class="btnStyle2"
-                style= "{{$ctrl.rs3padding1}};
-                        text-decoration:none;
-                        font-weight:bold;
-                       "
-               > Go To RockBuster Pages
-                
-            </a>
-            <div class="btnStyle2" 
-                 ng-click="$ctrl.moreless2()"
-                 style="font-weight:bold;
-                        {{$ctrl.rs3padding1}};
-                        {{$ctrl.rs3marginleft1}};
-                       ">
-                     {{$ctrl.morelessText2}}
-            </div>
-            <div class="textBoxStyle2 textStyle3"
-                 ng-show="$ctrl.display2"
-                 style="width:96%;
-                        position:absolute;
-                        z-index:3;">
-                <table  style="width:100%;">
-                    <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
-                        <td><u>{{$ctrl.navMenuHeader.col2}}</u>
-                            <span class="youAreHere2">
-                                &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
-                            </span>
-                            <span class="closeText" 
-                                  ng-click="$ctrl.moreless2()" 
-                                  style="color:white;
-                                         float:right;
-                                        ">
-                                        &nbsp;&nbsp;&nbsp;&#10062;
-                            </span>
-                        </td>
-                    </tr>
-                    <tr class="{{NAVMENU.rowClass}}" 
-                        ng-repeat="NAVMENU in $ctrl.navMenuBody"
-                        style="">  
-                            <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.selection}}</a></td>
-                            <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.destination}}</a></td>
-                    </tr>
-                </table>
-            </div> 
+            <div style="text-align:left;">
+                <a  href="https://www.tarptiedown.com/components/components04_07/tmpl_04/ttd-vn-rb-not-complete-msg.html"
+                    class="btnStyle2"
+                    style= "{{$ctrl.rs3padding1}};
+                            text-decoration:none;
+                            font-weight:bold;
+                           "
+                   > Go To RockBuster Pages
+
+                </a>
+                <div class="btnStyle2" 
+                     ng-click="$ctrl.moreless2()"
+                     style="font-weight:bold;
+                            {{$ctrl.rs3padding1}};
+                            {{$ctrl.rs3marginleft1}};
+                           ">
+                         {{$ctrl.morelessText2}}
+                </div>
+                <div class="textBoxStyle2 textStyle3"
+                     ng-show="$ctrl.display2"
+                     style="position:absolute;
+                            z-index:3;">
+                    <table  style="width:100%;">
+                        <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
+                            <td><u>{{$ctrl.navMenuHeader.col2}}</u>
+                                <span class="youAreHere2">
+                                    &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
+                                </span>
+                                <span class="closeText" 
+                                      ng-click="$ctrl.moreless2()" 
+                                      style="color:white;
+                                             float:right;
+                                            ">
+                                            &nbsp;&nbsp;&nbsp;&#10062;
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="{{NAVMENU.rowClass}}" 
+                            ng-repeat="NAVMENU in $ctrl.navMenuBody"
+                            style="">  
+                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.selection}}</a></td>
+                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.destination}}</a></td>
+                        </tr>
+                    </table>
+                </div> 
 
 <!-- AR Response Section 4 ************************************************************************************************************************************************-->            
-            <div class="textStyle2 textShadow1" 
-                 style="position:absolute; 
-                        left:5%; 
-                        color:white;
-                        text-align:left; 
-                        z-index:2;
-                        {{$ctrl.rs3positiontop2}};    /* AR_450px_140px */
-                        /*top:120px;*/
-                        {{$ctrl.rs3fontsize5}}; 
-                        /*font-size:1.35em;*/
-                        ">
-                Get that extra strong<br>hold when you need<br>it the most!
+                <div class="textStyle2 textShadow1" 
+                     style="position:absolute; 
+                            left:5%; 
+                            color:white;
+                            text-align:left; 
+                            z-index:2;
+                            {{$ctrl.rs3positiontop2}};    /* AR_450px_140px */
+                            /*top:120px;*/
+                            {{$ctrl.rs3fontsize5}}; 
+                            /*font-size:1.35em;*/
+                            ">
+                    Get that extra strong<br>hold when you need<br>it the most!
+                </div>
             </div>
         </div>
-        
-        
-        
-       
     </div>
-
 </div> 
 

@@ -29,15 +29,16 @@ angular.module('viewNav')
             self00.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
             // Sets mode of the "NAVIGATE" button
+            var btnText = NavMenuFactory.getBtnText();
             self00.display2 = false;
-            self00.morelessText2 = "GETTING AROUND";
+            self00.morelessText2 = btnText.showText;
             self00.moreless2 = function(){
-                if(self00.morelessText2 === "GETTING AROUND"){
-                    self00.morelessText2 = "HIDE GETTING AROUND";
+                if(self00.morelessText2 === btnText.showText){
+                    self00.morelessText2 = btnText.hideText;
                     self00.display2 = true;
                 } 
                 else {
-                    self00.morelessText2 = "GETTING AROUND";
+                    self00.morelessText2 = btnText.showText;
                     self00.display2 = false;
                 }
             }; 
@@ -81,15 +82,16 @@ angular.module('viewNav')
             self01.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
             // Sets mode of the "NAVIGATE" button
+            var btnText = NavMenuFactory.getBtnText();
             self01.display2 = false;
-            self01.morelessText2 = "GETTING AROUND";
+            self01.morelessText2 = btnText.showText;
             self01.moreless2 = function(){
-                if(self01.morelessText2 === "GETTING AROUND"){
-                    self01.morelessText2 = "HIDE GETTING AROUND";
+                if(self01.morelessText2 === btnText.showText){
+                    self01.morelessText2 = btnText.hideText;
                     self01.display2 = true;
                 } 
                 else {
-                    self01.morelessText2 = "GETTING AROUND";
+                    self01.morelessText2 = btnText.showText;
                     self01.display2 = false;
                 }
             }; 
@@ -132,15 +134,16 @@ angular.module('viewNav')
             self02.rs4padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
             // Sets mode of the "NAVIGATE" button
+            var btnText = NavMenuFactory.getBtnText();
             self02.display2 = false;
-            self02.morelessText2 = "GETTING AROUND";
+            self02.morelessText2 = btnText.showText;
             self02.moreless2 = function(){
-                if(self02.morelessText2 === "GETTING AROUND"){
-                    self02.morelessText2 = "HIDE GETTING AROUND";
+                if(self02.morelessText2 === btnText.showText){
+                    self02.morelessText2 = btnText.hideText;
                     self02.display2 = true;
                 } 
                 else {
-                    self02.morelessText2 = "GETTING AROUND";
+                    self02.morelessText2 = btnText.showText;
                     self02.display2 = false;
                 }
             }; 
@@ -178,15 +181,16 @@ angular.module('viewNav')
             self03.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
             // Sets mode of the "NAVIGATE" button
+            var btnText = NavMenuFactory.getBtnText();
             self03.display2 = false;
-            self03.morelessText2 = "GETTING AROUND";
+            self03.morelessText2 = btnText.showText;
             self03.moreless2 = function(){
-                if(self03.morelessText2 === "GETTING AROUND"){
-                    self03.morelessText2 = "HIDE GETTING AROUND";
+                if(self03.morelessText2 === btnText.showText){
+                    self03.morelessText2 = btnText.hideText;
                     self03.display2 = true;
                 } 
                 else {
-                    self03.morelessText2 = "GETTING AROUND";
+                    self03.morelessText2 = btnText.showText;
                     self03.display2 = false;
                 }
             }; 

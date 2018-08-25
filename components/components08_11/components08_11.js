@@ -28,15 +28,16 @@ angular.module('viewNav')
             self08.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
              // Sets mode of the "NAVIGATE" button
+            var btnText = NavMenuFactory.getBtnText(); 
             self08.display2 = false;
-            self08.morelessText2 = "GETTING AROUND";
+            self08.morelessText2 = btnText.showText;
             self08.moreless2 = function(){
-                if(self08.morelessText2 === "GETTING AROUND"){
-                    self08.morelessText2 = "HIDE GETTING AROUND";
+                if(self08.morelessText2 === btnText.showText){
+                    self08.morelessText2 = btnText.hideText;
                     self08.display2 = true;
                 } 
                 else {
-                    self08.morelessText2 = "GETTING AROUND";
+                    self08.morelessText2 = btnText.showText;
                     self08.display2 = false;
                 }
             }; 
@@ -78,15 +79,16 @@ angular.module('viewNav')
             self09.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
              // Sets mode of the "NAVIGATE" button
+            var btnText = NavMenuFactory.getBtnText();
             self09.display2 = false;
-            self09.morelessText2 = "GETTING AROUND";
+            self09.morelessText2 = btnText.showText;
             self09.moreless2 = function(){
-                if(self09.morelessText2 === "GETTING AROUND"){
-                    self09.morelessText2 = "HIDE GETTING AROUND";
+                if(self09.morelessText2 === btnText.showText){
+                    self09.morelessText2 = btnText.hideText;
                     self09.display2 = true;
                 } 
                 else {
-                    self09.morelessText2 = "GETTING AROUND";
+                    self09.morelessText2 = btnText.showText;
                     self09.display2 = false;
                 }
             }; 
