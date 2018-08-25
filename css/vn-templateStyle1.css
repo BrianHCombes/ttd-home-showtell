@@ -120,6 +120,13 @@ text-decoration:none;
 color:white;
 }
 
+a:hover
+{
+background-color:yellow;
+color:black;
+}
+
+
 .closeText:hover
 {
 cursor:pointer;    
