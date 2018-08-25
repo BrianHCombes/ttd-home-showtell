@@ -66,40 +66,38 @@
             </a>
             <div class="btnStyle2" 
                  ng-click="$ctrl.moreless2()"
-                 style="{{$ctrl.rs3padding1}};
-                        /*padding:5px 10px;*/
+                 style="font-weight:bold;
+                        {{$ctrl.rs3padding1}};
                         {{$ctrl.rs3marginleft1}};
-                        /*margin-left:5px;*/
-                        font-weight:bold;
+                        
                        ">
-                     {{$ctrl.morelessText2}}
+                        {{$ctrl.morelessText2}}
             </div>
             <div class="textBoxStyle2 textStyle3"
-                 ng-show="$ctrl.display2">
-                 
+                 ng-show="$ctrl.display2"
+                 style="width:96%;
+                        position:absolute;
+                        z-index:3;">
                 <table  style= "width:100%;">
-                    <tr><td><u>SELECTION</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <td><u>DESTINATION</u>
-                            <span   class= "youAreHere2">
-                                &nbsp;&nbsp;you are here&nbsp;&nbsp;
+                    <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
+                        <td><u>{{$ctrl.navMenuHeader.col2}}</u>
+                            <span class="youAreHere2">
+                                &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
+                            </span>
+                            <span class="closeText" 
+                                  ng-click="$ctrl.moreless2()" 
+                                  style="color:white;
+                                         float:right;
+                                        ">
+                                        &nbsp;&nbsp;&nbsp;&#10062;
                             </span>
                         </td>
                     </tr>
-                    <tr class="topMenuNav">  <td class="tdStyle">TTD Intro          </td><td class="tdStyle">Tarp Tie Down Home & intro </td></tr>
-                    <tr class="topMenuNav">  <td class="tdStyle">Price/Buy          </td><td class="tdStyle">Product pricing and store  </td></tr>
-                    <tr class="topMenuNav">  <td class="tdStyle">Products           </td><td class="tdStyle">Tarp Tie Down products     </td></tr>
-                    <tr class="topMenuNav">  <td class="tdStyle">Reviews            </td><td class="tdStyle">Customer feedback          </td></tr>
-                    <tr class="youAreHere">  <td class="tdStyle">Button A  Thumb 1  </td><td class="tdStyle">Standard EZ Grabbit        </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 2  </td><td class="tdStyle">Long Grabbit               </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 3  </td><td class="tdStyle">Mini Grabbit               </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button A  Thumb 4  </td><td class="tdStyle">EZ Adjust Rope Adjuster    </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 1  </td><td class="tdStyle">RockBuster Ground Stake    </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 2  </td><td class="tdStyle">Bag Grabbit Bag Handle     </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 3  </td><td class="tdStyle">The EZ Grabbit Keeper      </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button B  Thumb 4  </td><td class="tdStyle">Carry/Duffle Bag           </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button C  Thumb 1  </td><td class="tdStyle">Tent Poles                 </td></tr>
-                    <tr class="hyperMenuNav"><td class="tdStyle">Button C  Thumb 2  </td><td class="tdStyle">Classic EZ Grabbit         </td></tr>
-
+                    <tr class="{{NAVMENU.rowClass}}" 
+                        ng-repeat="NAVMENU in $ctrl.navMenuBody">  
+                            <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.selection}}</a></td>
+                            <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.destination}}</a></td>
+                    </tr>
                 </table>
             </div>  
         </div>
