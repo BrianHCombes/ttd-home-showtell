@@ -7,20 +7,21 @@ introSelf.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + (
 
 
 // Sets mode of the "NAVIGATE" button
-introSelf.display2 = false;
-introSelf.morelessText2 = "NAVIGATE";
-introSelf.moreless2 = function(){
-    if(introSelf.morelessText2 === "NAVIGATE"){
-        introSelf.morelessText2 = "HIDE NAVIGATE";
-        introSelf.display2 = true;
-    } 
-    else {
-        introSelf.morelessText2 = "NAVIGATE";
-        introSelf.display2 = false;
-    }
-}; 
-introSelf.navMenuHeader = NavMenuFactory.navMenuHeader();
-introSelf.navMenuBody = NavMenuFactory.getViewNav(1);
+            var btnText = NavMenuFactory.getBtnText();
+            introSelf.display2 = false;
+            introSelf.morelessText2 = btnText.showText;
+            introSelf.moreless2 = function(){
+                if(introSelf.morelessText2 === btnText.showText){
+                    introSelf.morelessText2 = btnText.hideText;
+                    introSelf.display2 = true;
+                } 
+                else {
+                    introSelf.morelessText2 = btnText.showText;
+                    introSelf.display2 = false;
+                }
+            }; 
+            introSelf.navMenuHeader = NavMenuFactory.navMenuHeader();
+            introSelf.navMenuBody = NavMenuFactory.getViewNav(7);    
 
 
 // Angular factory module part
