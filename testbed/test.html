@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style type="text/css">
+.textStyle1 {font-family: arial; font-weight:bold; color:black;}
+.textStyle2 {font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;}
+.textStyle3 {font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;}    
+.textStyle4 {font-family: Futura, "Trebuchet MS", arial, sans-serif;}
+.textStyle5 {font-family: Copperplate, 'Copperplate Gothic Light', fantasy;}
+
+.btnStyle1
+{
+font-size:20px;
+background-color:#00a1cb;
+text-decoration:none;
+color:white;
+border:1px solid black; 
+border-radius:4px;
+padding:3px 10px;
+box-shadow:1px 1px 6px rgba(0, 0, 0, 0.4);
+font-family:Futura, 'Trebuchet MS', Arial, sans-serif;
+}
+ 
+.btnStyle1:hover
+{
+color:white;
+box-shadow:3px 3px 20px rgba(0, 0, 255, 0.5);
+}
+
+.btnStyle1:visited
+{
+color:white;
+text-decoration:none;
+}
+
+.btnStyle2
+{
+display:inline-block;
+padding:2px 5px;
+margin:2px 0px;
+color:black;
+border-style:solid;
+border-color:black;
+border-width:1px; 
+border-radius:5px;
+font-family:Futura, 'Trebuchet MS', Arial, sans-serif; 
+text-shadow:-1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;
+background:linear-gradient(#F27036, #EDEECF);                    /*Standard*/
+background:-webkit-linear-gradient(#F27036, #EDEECF);            /*Safari*/
+background:-o-linear-gradient(#F27036, #EDEECF);                 /*Opera*/
+background:-moz-linear-gradient(#F27036, #EDEECF);               /*FireFox*/
+}
+
+.btnStyle2:hover
+{
+cursor:pointer;
+color:red;
+box-shadow:1px 1px 3px #000000, 1px -1px 3px #000000, -1px 1px 3px #000000, -1px -1px 3px #000000;
+text-shadow: 1px 1px 1px #ffffff, 1px -1px 1px #ffffff, -1px 1px 1px #ffffff, -1px -1px 1px #ffffff;
+}
+
+.textBoxStyle1
+{ 
+color:black; 
+text-shadow:none; 
+background:linear-gradient(#CCEDF2, #EAE2BB);           /*Standard*/
+background:-webkit-linear-gradient(#CCEDF2, #EAE2BB);   /*Safari*/
+background:-o-linear-gradient(#CCEDF2, #EAE2BB);        /*Opera*/
+background:-moz-linear-gradient(#CCEDF2, #EAE2BB);      /*FireFox */
+padding:0px 10px 10px 10px; 
+border:2px solid black; 
+border-radius:7px; 
+margin-top:10px;
+}
+</style>
+    </head>
+    <body>
+        
+    
+<div style="text-align:center;">
+<a href="https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_14" class="btnStyle2" id="backBtn" style="text-align:center;"><b>Back to pack/ price table</b></a>
+</div>
+
+<div class="textBoxStyle1" id="AddtoCart" style="margin:2vh auto 0vh auto; text-align:center; padding-top:1vh;">
+    <span id="packSize" style="font-size:1.50em;">
+        Pack Size Here
+    </span>
+    <br>
+    <span style="font-size:2.0em; color:black; background-color:yellow; border:1px solid black; border-radius:5px;">
+        &nbsp;&nbsp;<b>Scroll Down!</b>&nbsp;&nbsp;
+    </span>
+    <br>
+    <span style="font-size:1.10em;">
+        <span style="font-size:1.25em">
+            and select:
+        </span>
+        <br>
+        <span style="font-size:1.75em; color:white; background-color:#00a1cb;">
+            <b>&nbsp;&nbsp;Add to Cart&nbsp;&nbsp;</b>
+        </span>
+        </br>
+        <span style="font-size:1.25em;">
+            for cart placement.
+        </span>
+    </span>
+</div>
+<!--------------------------------------------------------------------------------------------------------->
+<script>
+var urlString = document.URL;
+// var segment = urlString.slice(urlString.search("product_id"));
+var segment = "product_id=2";
+    
+    switch(segment){
+        case "product_id=2":
+                document.getElementById("packSize").innerHTML = "You've chosen a 4pk!"; 
+                break;
+        default: 
+                document.getElementById("packSize").innerHTML = "No match found";
+    }
+  var vpWidth = window.screen.availWidth;
+
+  document.getElementById("backBtn").style.fontSize = ((0.00064)*(vpWidth)+0.76923) + "em";
+  document.getElementById("backBtn").style.width = ((-0.04808)*(vpWidth)+117.30769) + "%";
+
+  document.getElementById("AddtoCart").style.width = ((-0.04808)*(vpWidth)+117.30769) + "%";
+  document.getElementById("AddtoCart").style.fontSize = ((0.00019)*(vpWidth)+0.63077) + "em";
+
+</script>    
+        
+<!--
+        <div class="textBoxStyle1" id="AddtoCart" style="margin:2vh auto 0vh auto; text-align:center; padding-top:1vh;">
+            <span id="packSize" style="font-size:1.50em;">
+                Pack Size Here
+            </span>
+            <span style="font-size:2.0em; color:black; background-color:yellow; border:1px solid black; border-radius:5px;">
+                &nbsp;&nbsp;<b>Scroll Down!</b>&nbsp;&nbsp;
+            </span>
+            <br>
+            <span style="font-size:1.10em;">
+                <span style="font-size:1.25em">
+                    and select:
+                </span>
+                <br>
+                <span style="font-size:1.5em; color:white; background-color:#00a1cb;">
+                    <b>&nbsp;&nbsp;Add to Cart&nbsp;&nbsp;</b>
+                </span>
+                </br>
+                <span style="font-size:1.25em;">
+                    for cart placement.
+                </span>
+            </span>
+</div>
+
+-->
+    </body>
+</html>
