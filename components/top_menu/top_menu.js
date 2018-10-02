@@ -13,7 +13,7 @@ angular.module("viewNav")
             introSelf.rs1fontsize1 = "font-size:" + ((0.00123)*(viewWidth)+0.55556) + "em";             /* AR_1.99_1.00 */
             
             // AR Section 2
-            introSelf.rs2width1 = "width:" + ((-0.02469)*(viewWidth)+58.88889) + "%";                   /* AR_30_50 */
+            introSelf.rs2width1 = "width:" + ((-0.03086)*(viewWidth)+66.11111) + "%";                   /* AR_30_55 */
             introSelf.rs2fontsize4 = "font-size:" + ((0.00062)*(viewWidth)+0.52778) + "em";             /* AR_1.25_0.75 */
             introSelf.rs2margintop2 = "margin-top:" + ((0.02469)*(viewWidth)-8.88889) + "px";           /* AR_20.00_-0.00 */
             introSelf.rs2fontsize5 = "font-size:" + ((0.00074)*(viewWidth)+0.43333) + "em";               /* AR_1.30_0.70 */
