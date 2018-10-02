@@ -27,7 +27,7 @@ cursor:pointer;
     </div>
 
     <!-- AR Response Section 2 ************************************************************************************************************************************************-->
-    <table style="margin-top:10px; position:relative;">
+    <table style="margin-top:10px; position:relative; width:100%;">
         <tr >
             <td style= "{{$ctrl.rs2width1}};                    /* AR_30_50 */
                         padding-left:1%;
@@ -47,20 +47,7 @@ cursor:pointer;
                                ">
                                 Read Me<br>We're in transition
                     </button>
-                    <button ng-click="$ctrl.newWindow();" 
-                            class="btnStyle2"
-                            style= "width:90%;
-                                    display:inline-block;
-                                    text-decoration:none;
-                                    {{$ctrl.rs2fontsize4}}; 
-                                    {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
-                                    /*margin-top:5px;*/
-                                    {{$ctrl.rs2borderwidth1}}; 
-                                    {{$ctrl.rs2fontweight1}};
-                                   ">
-                        Navigate this site <br> Learn in 15 secs.
-                    </button>
-                </div>
+                    </div>
                     <div class="btnStyle2" 
                          ng-click="$ctrl.moreless2()"
                          style="position:relative;
@@ -75,7 +62,7 @@ cursor:pointer;
                     </div>
                     <div class="textBoxStyle1"
                          style="margin:10px auto 0px auto;
-                                text-align:center;
+                                text-align:left;
                                 width:90%;
                                 {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
                                 {{$ctrl.rs2padding1}};      /* AR_10.00_2.00 */
@@ -83,11 +70,11 @@ cursor:pointer;
                                 {{$ctrl.rs2borderwidth1}};  /* AR_2.00_1.05 */
                                 {{$ctrl.rs2fontweight1}};   /* AR_100_900.00 */
                                 ">
-                        <span style="color:blue;"><b>Quick Start:</b></span><br>Select button A, B or C<br>Select product image
+                        <div style="color:blue;text-align:center;"><b>Quick Start:</b></div>&#9656;Select button A, B or C<br>&#9656;Select product image<br>&#9656;Browse page
                     </div>
             </td>
             <td ng-show="1" style="{{$ctrl.rs2width2}}; text-align:center; vertical-align:top;">
-                <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%"><br>
+                <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%;"><br>
                 <span style="{{$ctrl.rs2fontsize6}};   /* AR_2.00_0.90 */
                       ">The EZ Grabbit<br>Over one million sold</span>
             </td>
