@@ -80,6 +80,15 @@ padding:0px 10px 10px 10px;
 margin-top:10px;
 }
 
+.textBoxStyle3
+{
+border:2px solid black;    
+background:linear-gradient(#CCEDF2, #EAE2BB);              // Standard
+background:-webkit-linear-gradient(#CCEDF2, #EAE2BB);      // Safari
+background:-o-linear-gradient(#CCEDF2, #EAE2BB);           // Opera
+background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox    
+}
+
 .topMenuNav
 {
 background-color:rgba(255, 255, 0, 0.3);    
@@ -117,13 +126,12 @@ box-shadow: 1px 1px 15px #CCEDF2, 1px -1px 15px #CCEDF2, -1px 1px 15px #CCEDF2, 
 a
 {
 text-decoration:none;
-color:white;
 }
 
 a:hover
 {
-background-color:yellow;
-color:black;
+background-color:lightgray;
+text-decoration:none;
 }
 
 
