@@ -16,7 +16,7 @@ angular.module("viewNav")
             introSelf.rs2width1 = "width:" + ((-0.03086)*(viewWidth)+66.11111) + "%";                   /* AR_30_55 */
             introSelf.rs2fontsize4 = "font-size:" + ((0.00062)*(viewWidth)+0.52778) + "em";             /* AR_1.25_0.75 */
             introSelf.rs2margintop2 = "margin-top:" + ((0.02469)*(viewWidth)-8.88889) + "px";           /* AR_20.00_-0.00 */
-            introSelf.rs2fontsize5 = "font-size:" + ((0.00074)*(viewWidth)+0.43333) + "em";               /* AR_1.30_0.70 */
+            introSelf.rs2fontsize5 = "font-size:" + ((0.00074)*(viewWidth)+0.43333) + "em";             /* AR_1.30_0.70 */
             introSelf.rs2width2 = "width:" + ((0.02469)*(viewWidth)+41.11111) + "%";
             introSelf.rs2fontsize6 = "font-size:" + ((0.00136)*(viewWidth)+0.41111) + "em";             /* AR_2.00_0.90 */
             introSelf.rs2margin1 = "margin:" + ((0.01728)*(viewWidth)+3.77778) + "px";                  /* AR_24.00_10.00 */
@@ -25,29 +25,10 @@ angular.module("viewNav")
             introSelf.rs2fontweight1 = "font-weight:" + ((-0.98765)*(viewWidth)+1255.55556);            /* AR_100.01_900.00 */
             introSelf.rs2padding1 = "padding:" + ((0.00988)*(viewWidth)-1.55556) + "px 0px";            /* AR_10.00_2.00 */
             
-            introSelf.rs2fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";             /* AR_1.50_0.73 */
-            introSelf.rs2top1 = "top:" + ((0.14691)*(viewWidth)+53.11111) + "px";                       /* AR_225.00_106.00 */    
-            introSelf.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
-            
-            // Sets mode of the "NAVIGATE" button
-            var btnText = NavMenuFactory.getBtnText();
-            introSelf.display2 = false;
-            introSelf.morelessText2 = btnText.showText;
-            introSelf.moreless2 = function(){
-                if(introSelf.morelessText2 === btnText.showText){
-                    introSelf.morelessText2 = btnText.hideText;
-                    introSelf.display2 = true;
-                } 
-                else {
-                    introSelf.morelessText2 = btnText.showText;
-                    introSelf.display2 = false;
-                }
-            }; 
-            introSelf.navMenuHeader = NavMenuFactory.navMenuHeader();
-            introSelf.navMenuBody = NavMenuFactory.getViewNav(0);
-            
             // AR Section 3
             introSelf.rs3fontsize1 = "font-size:" + ((0.00077)*(viewWidth)+0.59722) + "em";         /* AR_1.50_0.87 */
+            introSelf.rs3width1 = "width:" + ((0.01852)*(viewWidth)+53.33333) + "%";         /* AR_1.50_0.87 */
+            
             
             // AR Section 4
             introSelf.rs4fontsize1 = "font-size:" + ((0.00065)*(viewWidth)+0.49294) + "em";         /* AR_1.25_0.73 */
@@ -62,7 +43,6 @@ angular.module("viewNav")
             };
             
             viewManager.topMenuToHighlight(0);    
-            
             
         }]
     })
@@ -86,7 +66,6 @@ angular.module("viewNav")
             buyPriceSelf.margin1 = "margin:" + ((0.00617)*(viewWidth)+2.77778) + "px 0px";              /* AR_10.00_5.00 */
             
             buyPriceSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
-            buyPriceSelf.marginbottom1 = "margin-bottom:" + ((0.01852)*(viewWidth)+3.33333) + "px";            /* AR_10.00_5.00 */
             
             viewManager.topMenuToHighlight(1);  
             
@@ -124,7 +103,7 @@ angular.module("viewNav")
         
         //template: "<h1>This is the Reviews template",
 
-        templateUrl: 'components/top_menu/reviews/testimonials.htm',
+        templateUrl: 'components/top_menu/reviews/testimonials.html',
         
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();

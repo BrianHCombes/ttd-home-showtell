@@ -1,17 +1,4 @@
 <link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
-<!--
-<style>
-div
-{
-font-size:1em;    
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;    
-}
-button:hover
-{
-cursor:pointer;    
-}
-</style>
--->
 
 <div style="font-size:1em;">
 <!-- AR Response Section 1 ************************************************************************************************************************************************-->
@@ -24,7 +11,7 @@ cursor:pointer;
              style="width:80%; border-radius:5px; margin-top:5px;">
         <div style="{{$ctrl.rs1fontsize1}}; font-weight:bold;">Home of the EZ Grabbit Tarp Tie Down</div>
     </div>
-
+<div data-ui-view="childView1" style="text-align:center; margin:2vh auto;">This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working</div>
     <!-- AR Response Section 2 ************************************************************************************************************************************************-->
     <table class="textStyle4" 
            style=  "margin-top:10px; 
@@ -50,71 +37,29 @@ cursor:pointer;
                                    ">
                                     Read Me<br>We're in transition
                     </button>
+                </div>
+
+                <div class="textBoxStyle1"
+                     style="margin:10px auto 0px auto;
+                            text-align:left;
+                            width:90%;
+                            {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
+                            {{$ctrl.rs2padding1}};      /* AR_10.00_2.00 */
+                            {{$ctrl.rs2fontsize5}};     /* AR_1.50_0.70 */
+                            {{$ctrl.rs2borderwidth1}};  /* AR_2.00_1.05 */
+                            {{$ctrl.rs2fontweight1}};   /* AR_100_900.00 */
+                            ">
+                    <div style="color:blue;text-align:center;">
+                        <b>Quick Start:</b>
                     </div>
-                    <div class="btnStyle2" 
-                         ng-click="$ctrl.moreless2()"
-                         style="position:relative;
-                                width:90%;
-                                {{$ctrl.rs2padding1}};
-                                {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
-                                {{$ctrl.rs2borderwidth1}};  /* AR_2.00_1.05 */
-                                {{$ctrl.rs2fontsize4}};     /* AR_1.25_0.75 */
-                                {{$ctrl.rs2fontweight1}};   /* AR_100_900.00 */
-                               ">
-                             {{$ctrl.morelessText2}}
-                    </div>
-                    <div class="textBoxStyle1"
-                         style="margin:10px auto 0px auto;
-                                text-align:left;
-                                width:90%;
-                                {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
-                                {{$ctrl.rs2padding1}};      /* AR_10.00_2.00 */
-                                {{$ctrl.rs2fontsize5}};     /* AR_1.50_0.70 */
-                                {{$ctrl.rs2borderwidth1}};  /* AR_2.00_1.05 */
-                                {{$ctrl.rs2fontweight1}};   /* AR_100_900.00 */
-                                ">
-                        <div style="color:blue;text-align:center;"><b>Quick Start:</b></div>&nbsp;&#9656; Select button A, B or C<br>&nbsp;&#9656; Select product image<br>&nbsp;&#9656; Browse page
-                    </div>
+                    &nbsp;&#9656; Select button A, B or C<br>&nbsp;&#9656; Select product image<br>&nbsp;&#9656; Browse page
+                </div>
             </td>
             <td ng-show="1" style="{{$ctrl.rs2width2}}; text-align:center; vertical-align:top;">
                 <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%;"><br>
                 <span style="{{$ctrl.rs2fontsize6}};   /* AR_2.00_0.90 */
                       ">The EZ Grabbit<br>Over one million sold</span>
             </td>
-        </tr>
-        <tr>
-            <td  colspan="2">
-                <div    class="textBoxStyle2 textStyle3"
-                        ng-show="$ctrl.display2" 
-                        style= "position:absolute;
-                                z-index:2;
-                                left:0px;
-                                {{$ctrl.rs2top1}};
-                                {{$ctrl.rs2fontsize1}};
-                               ">
-                    <table  style= "width:100%;">
-                        <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
-                            <td><u>{{$ctrl.navMenuHeader.col2}}</u>
-                                <span class="youAreHere2">
-                                    &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
-                                </span>
-                                <span class="closeText" 
-                                      ng-click="$ctrl.moreless2()" 
-                                      style="color:white;
-                                             float:right;
-                                            ">
-                                            &nbsp;&nbsp;&nbsp;&#10062;
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="{{NAVMENU.rowClass}}" 
-                            ng-repeat="NAVMENU in $ctrl.navMenuBody">  
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.selection}}</a></td>
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.destination}}</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </td>    
         </tr>
     </table>
 
@@ -129,20 +74,28 @@ cursor:pointer;
         <tr>
             <td style="width:8%;"></td>
             <td style="width:21%; text-align:center;">
-               <a href="#" target="_blank" 
-               style="text-decoration:none; color:black;">Privacy Policy</a>
+               <a   href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-privacy-policy.htm" 
+                    target="_blank" 
+                    class="btnStyle2" 
+                    style="text-decoration:none; {{$ctrl.rs3width1}}">Privacy Policy</a>
             </td>
             <td style="width:21%; text-align:center;">
-               <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-contact-policy.htm" target="_blank"  
-               style="text-decoration:none; color:black;">Contact US</a>
+               <a   href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-contact-policy.htm" 
+                    target="_blank"
+                    class="btnStyle2" 
+                    style="text-decoration:none; {{$ctrl.rs3width1}}">Contact US</a>
             </td>
             <td style="width:21%; text-align:center;">
-               <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-return-policy.htm" target="_blank" 
-               style="text-decoration:none; color:black;">Return Policy</a>
+               <a   href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-return-policy.htm" 
+                    target="_blank" 
+                    class="btnStyle2"  
+                    style="text-decoration:none; {{$ctrl.rs3width1}}">Return Policy</a>
             </td>
             <td style="width:21%; text-align:center;">
-               <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-ship-policy.htm" target="_blank" 
-               style="text-decoration:none; color:black;">Shipping Policy</a>
+               <a   href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-ship-policy.htm" 
+                    target="_blank" 
+                    class="btnStyle2"  
+                    style="text-decoration:none; {{$ctrl.rs3width1}}">Shipping Policy</a>
             </td>
             <td style="width:8%"></td>
         </tr>    
