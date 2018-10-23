@@ -1,4 +1,10 @@
 <link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
+<style>
+.viewTmpl_07CSS-A
+{
+color:blue;
+}
+</style>
 
 <!-- AR Response Section 1 ************************************************************************************************************************************************-->
 <div style="font-size:1em;">    
@@ -62,67 +68,20 @@
     </div>
     
 <!-- AR Response Section 3 ************************************************************************************************************************************************-->
-    <div style="position:relative;
-                {{$ctrl.rs3fontsize1}};
-               ">
+    <div style="position:relative; top:5.0vh">
         
         <img    src="components/components04_07/tmpl_07/ttd-vn-cb-presentation1-1450x550.jpg" 
                 alt="Tarp Tie Down's Carry Bag Image" 
                 title="Tarp Tie Down's Carry Bag Image" 
                 style="position:absolute; top:0px; left:0px; width:100%;"> 
         
-        <div style="position:absolute;
-                    left:2%;
-                    width:100%;
-                    {{$ctrl.rs3top1}};
-                   ">
-            <div style="text-align:left;">
-                <a  href="https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html"
-                    class="btnStyle2"
-                    style= "{{$ctrl.rs3padding1}};
-                            text-decoration:none;
-                            font-weight:bold;
-                           "
-                   > Go To Carry Bag Pages
-
-                </a>
-                <div class="btnStyle2" 
-                     ng-click="$ctrl.moreless2()"
-                     style="{{$ctrl.rs3padding1}};
-                            {{$ctrl.rs3marginleft1}};
-                            font-weight:bold;
-                           ">
-                         {{$ctrl.morelessText2}}
-                </div>
-                <div class="textBoxStyle2 textStyle3"
-                     ng-show="$ctrl.display2"
-                     style="position:absolute;
-                            z-index:3;">
-                    <table  style="width:100%;">
-                        <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
-                            <td><u>{{$ctrl.navMenuHeader.col2}}</u>
-                                <span class="youAreHere2">
-                                    &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
-                                </span>
-                                <span class="closeText" 
-                                      ng-click="$ctrl.moreless2()" 
-                                      style="color:white;
-                                             float:right;
-                                            ">
-                                            &nbsp;&nbsp;&nbsp;&#10062;
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="{{NAVMENU.rowClass}}" 
-                            ng-repeat="NAVMENU in $ctrl.navMenuBody"
-                            style="">  
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.selection}}</a></td>
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.destination}}</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>    
-        </div>
+        <div style="position:absolute; {{$ctrl.rs3top1}}; left:2%; width:100%; z-index:3;"> 
+            <div data-ui-view="childView1" 
+                     title="This Read About has a link to Carry Bag pages"
+                     style="margin:1vh auto;">
+                            This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+            </div>
+        </div>    
     </div>
 </div> 
 

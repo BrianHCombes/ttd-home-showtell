@@ -23,27 +23,7 @@ angular.module('viewNav')
             // Response Section 3
             self08.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";            /* AR_1.50_0.73 */
             self08.rs3margintop1 = "margin-top:" + ((0.03704)*(viewWidth)+11.66667) + "px";         /* AR_55.00_25.00 */
-            self08.rs3top1 = "top:" + ((-0.01235)*(viewWidth)-10.55556) + "px";                     /* AR_-25.01_-15.00 */
-            self08.rs3marginleft1= "margin-left:" + ((0.01852)*(viewWidth)-1.66667) + "px";         /* AR_20.00_5.00 */
-            self08.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
             
-             // Sets mode of the "NAVIGATE" button
-            var btnText = NavMenuFactory.getBtnText(); 
-            self08.display2 = false;
-            self08.morelessText2 = btnText.showText;
-            self08.moreless2 = function(){
-                if(self08.morelessText2 === btnText.showText){
-                    self08.morelessText2 = btnText.hideText;
-                    self08.display2 = true;
-                } 
-                else {
-                    self08.morelessText2 = btnText.showText;
-                    self08.display2 = false;
-                }
-            }; 
-            self08.navMenuHeader = NavMenuFactory.navMenuHeader();
-            self08.navMenuBody = NavMenuFactory.getViewNav(12);     
-          
             compFactory.logView(08);
         }]
     })
@@ -71,31 +51,9 @@ angular.module('viewNav')
             self09.rs2fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+0.19444) + "em";
             self09.rs2fontsize3 = "font-size:" + ((0.00165)*(viewWidth) + 0.07294) + "em";
             
-            // Response Section 3
-            // AR Response Section 3
-            self09.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
-            self09.rs3top1 = "top:" + ((0.01852)*(viewWidth)+8.33333) + "px";                   /* AR_30.00_15.00 */      
-            self09.rs3marginleft1= "margin-left:" + ((0.01852)*(viewWidth)-1.66667) + "px";     /* AR_20.00_5.00 */
-            self09.rs3padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px " + ((0.01235)*(viewWidth)+5.55556) + "px";    /* AR_10.00_5.00 */ /* AR_20.01_10.00 */
-            
-             // Sets mode of the "NAVIGATE" button
-            var btnText = NavMenuFactory.getBtnText();
-            self09.display2 = false;
-            self09.morelessText2 = btnText.showText;
-            self09.moreless2 = function(){
-                if(self09.morelessText2 === btnText.showText){
-                    self09.morelessText2 = btnText.hideText;
-                    self09.display2 = true;
-                } 
-                else {
-                    self09.morelessText2 = btnText.showText;
-                    self09.display2 = false;
-                }
-            }; 
-            self09.navMenuHeader = NavMenuFactory.navMenuHeader();
-            self09.navMenuBody = NavMenuFactory.getViewNav(13);  
-            
-            compFactory.logView(09);
+            // Response Section 3 (Not needed for now)
+
+                compFactory.logView(09);
         }]
     })
     

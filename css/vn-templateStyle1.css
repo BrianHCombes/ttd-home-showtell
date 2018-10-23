@@ -23,17 +23,49 @@ text-shadow:    1px 0px 1px black, 2px 0px 2px black, 3px 0px 3px black,
 display:inline-block;
 padding:2px 10px;
 margin:2px 0px;
-color:black;
+color:#404040;
 border-style:solid;
 border-color:black;
 border-width:1px; 
 border-radius:5px;
 font-family:Futura, 'Trebuchet MS', Arial, sans-serif; 
 text-shadow:-1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;
-background:linear-gradient(#F27036, #EDEECF);                    /*Standard*/
-background:-webkit-linear-gradient(#F27036, #EDEECF);            /*Safari*/
-background:-o-linear-gradient(#F27036, #EDEECF);                 /*Opera*/
-background:-moz-linear-gradient(#F27036, #EDEECF);               /*FireFox*/
+/*background:linear-gradient(#F27036, #EDEECF);                    // /*Standard*/
+/*background:-webkit-linear-gradient(#F27036, #EDEECF);            // /*Safari*/
+/*background:-o-linear-gradient(#F27036, #EDEECF);                 // /*Opera*/
+/*background:-moz-linear-gradient(#F27036, #EDEECF);               // /*FireFox*/
+text-align:center; 
+
+/* 
+background:linear-gradient(#CCCCCC, #EFEFEF);                    // Standard
+background:-webkit-linear-gradient(#CCCCCC, #EFEFEF);            // Safari
+background:-o-linear-gradient(#CCCCCC, #EFEFEF);                 // Opera
+background:-moz-linear-gradient(#CCCCCC, #EFEFEF);               // FireFox
+*/
+
+
+/* 
+background:linear-gradient(#F29046, #EDEECF);                    // Standard
+background:-webkit-linear-gradient(#F29046, #EDEECF);            // Safari
+background:-o-linear-gradient(#F29046, #EDEECF);                 // Opera
+background:-moz-linear-gradient(#F29046, #EDEECF);               // FireFox
+*/
+
+
+/* 
+background:linear-gradient(#faccb7, #e7e9d3);                    // Standard
+background:-webkit-linear-gradient(#faccb7, #e7e9d3);            // Safari
+background:-o-linear-gradient(#faccb7, #e7e9d3);                 // Opera
+background:-moz-linear-gradient(#faccb7, #e7e9d3);               // FireFox
+*/
+
+
+background:linear-gradient(#B4D4EB, #e7e9d3);                    // Standard
+background:-webkit-linear-gradient(#B4D4EB, #e7e9d3);            // Safari
+background:-o-linear-gradient(#B4D4EB, #e7e9d3);                 // Opera
+background:-moz-linear-gradient(#B4D4EB, #e7e9d3);               // FireFox
+
+
 }
 
 .btnStyle2:hover
@@ -80,6 +112,31 @@ padding:0px 10px 10px 10px;
 margin-top:10px;
 }
 
+.textBoxStyle3
+{
+border:2px solid black;    
+background:linear-gradient(#CCEDF2, #EAE2BB);              // Standard
+background:-webkit-linear-gradient(#CCEDF2, #EAE2BB);      // Safari
+background:-o-linear-gradient(#CCEDF2, #EAE2BB);           // Opera
+background:-moz-linear-gradient(#CCEDF2, #EAE2BB);         // FireFox    
+}
+
+.textBoxStyle4
+{
+color:blue;
+font-family: Arial, sans-serif;    
+text-shadow: 1px 1px 1px #ffffff, 1px -1px 1px #ffffff, -1px 1px 1px #ffffff, -1px -1px 1px #ffffff;
+background:linear-gradient(#B6D9FA, #A9D4E4); 
+background:-webkit-linear-gradient(#B6D9FA, #A9D4E4);  
+background:-o-linear-gradient(#B6D9FA, #A9D4E4);  
+background:-moz-linear-gradient(#B6D9FA, #A9D4E4);   
+border:1px solid black;
+border-radius:5px;    
+}
+
+
+
+
 .topMenuNav
 {
 background-color:rgba(255, 255, 0, 0.3);    
@@ -117,13 +174,12 @@ box-shadow: 1px 1px 15px #CCEDF2, 1px -1px 15px #CCEDF2, -1px 1px 15px #CCEDF2, 
 a
 {
 text-decoration:none;
-color:white;
 }
 
 a:hover
 {
-background-color:yellow;
-color:black;
+background-color:lightgray;
+text-decoration:none;
 }
 
 

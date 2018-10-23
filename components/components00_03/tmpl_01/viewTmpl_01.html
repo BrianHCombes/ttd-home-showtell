@@ -1,5 +1,10 @@
 <link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
-
+<style>
+.viewTmpl_01CSS-A
+{
+color:blue;    
+}
+</style>
 <div style="font-size:1em;">    
    
 <!-- Response Section 1 ************************************************************************************************************************************************-->
@@ -51,74 +56,26 @@
          style="text-align:center;
                 {{$ctrl.rs2fontsize3}};
                 {{$ctrl.rs2padding1}};
-                /*padding:0px 10px;*/
-                
-             "> 
-        The Long Grabbit's super-strong hold and long gripping edge is ideal
+               "> 
+        The Long Grabbit's super-strong hold and long gripping edge are ideal
         for securing large spans of tarp for big shelters, tarp walls, and windbreaks.
     </div>
 
 
 <!-- Response Section 3 ************************************************************************************************************************************************-->
 
-    <div style="position:relative;
-                {{$ctrl.rs3fontsize1}};
-               ">
+    <div style="position:relative;">
         <img    src="components/components00_03/tmpl_01/ttd-vn-lg-presentation1-od-1175x975.jpg" 
                 alt="EZ Grabbit Tarp Tie Down Presentation" 
                 title="Long Grabbit Presentation" 
                 style=" width:100%;"> 
         
-        <div style="position:absolute;
-                    left:2%;
-                    width:100%;
-                    {{$ctrl.rs3top1}};
-                   ">
-            <div style="text-align:left;">
-                <a  href="https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html"
-                    class="btnStyle2"
-                    style= "{{$ctrl.rs3padding1}};
-                            text-decoration:none;
-                            font-weight:bold;
-                           "
-                   > Go To Long Grabbit Pages
-
-                </a>
-                <div class="btnStyle2" 
-                     ng-click="$ctrl.moreless2()"
-                     style="font-weight:bold;
-                            {{$ctrl.rs3padding1}};
-                            {{$ctrl.rs3marginleft1}};
-                           ">
-                            {{$ctrl.morelessText2}}
-                </div>
-                <div class="textBoxStyle2 textStyle3"
-                     ng-show="$ctrl.display2"
-                     style="position:absolute;
-                            z-index:3;">
-                    <table  style= "width:100%;">
-                        <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
-                            <td><u>{{$ctrl.navMenuHeader.col2}}</u>
-                                <span class="youAreHere2">
-                                    &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
-                                </span>
-                                <span class="closeText" 
-                                      ng-click="$ctrl.moreless2()" 
-                                      style="color:white;
-                                             float:right;
-                                            ">
-                                            &nbsp;&nbsp;&nbsp;&#10062;
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="{{NAVMENU.rowClass}}" 
-                            ng-repeat="NAVMENU in $ctrl.navMenuBody">  
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.selection}}</a></td>
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.destination}}</a></td>
-                        </tr>
-                    </table>
-                </div> 
-            </div>    
+        <div style="position:absolute; top:3.0vh; left:2%; width:100%;">  
+            <div data-ui-view="childView1" 
+                 title="This Read About has a link to Long Grabbit pages"
+                 style="margin:1vh auto;">
+                        This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+            </div>
         </div>
     </div>
 </div> 

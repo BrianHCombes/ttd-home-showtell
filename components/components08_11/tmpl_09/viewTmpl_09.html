@@ -80,65 +80,19 @@
     </table>
 
 <!-- Response Section 3 ************************************************************************************************************************************************-->
-    <div style="position:relative;
-                {{$ctrl.rs3fontsize1}};
-                ">
+    <div style="position:relative;">
         <img    src="components/components08_11/tmpl_09/ttd-vn-ezg-keebler-1200x1020.jpg" 
-                alt="EZ Grabbit Tarp Tie Down Composite with Keebler Pass backgrpund" 
-                title="EZ Grabbit Tarp Tie Down Composite with Keebler Pass backgrpund" 
+                alt="EZ Grabbit Tarp Tie Down Composite with Keebler Pass background" 
+                title="EZ Grabbit Tarp Tie Down Composite with Keebler Pass background" 
                 style=" width:100%;"> 
         
         
-        <div style="position:absolute;
-                    left:2%;
-                    width:100%;
-                    {{$ctrl.rs3top1}};
-                   ">
-            <div style="text-align:left;">
-                <a  href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro"
-                    class="btnStyle2"
-                    style= "{{$ctrl.rs3padding1}};
-                            text-decoration:none;
-                            font-weight:bold;
-                           "
-                   > Go To EZ Grabbit Pages
-                </a>
-                <div class="btnStyle2" 
-                     ng-click="$ctrl.moreless2()"
-                     style="{{$ctrl.rs3padding1}};
-                            {{$ctrl.rs3marginleft1}};
-                            font-weight:bold;
-                           ">
-                         {{$ctrl.morelessText2}}
-                </div>
-                <div class="textBoxStyle2 textStyle3"
-                     ng-show="$ctrl.display2"
-                     style="position:absolute;
-                            z-index:3;">
-                    <table  style="width:100%;">
-                        <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
-                            <td><u>{{$ctrl.navMenuHeader.col2}}</u>
-                                <span class="youAreHere2">
-                                    &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
-                                </span>
-                                <span class="closeText" 
-                                      ng-click="$ctrl.moreless2()" 
-                                      style="color:white;
-                                             float:right;
-                                            ">
-                                            &nbsp;&nbsp;&nbsp;&#10062;
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="{{NAVMENU.rowClass}}" 
-                            ng-repeat="NAVMENU in $ctrl.navMenuBody"
-                            style="">  
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.selection}}</a></td>
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.destination}}</a></td>
-                        </tr>
-                    </table>
-                </div>
+        <div style="position:absolute; top:1.5vh; left:2%; width:100%; z-index:3;"> 
+            <div data-ui-view="childView1" 
+                     title="This Read About has a link to EZ Grabbit pages"
+                     style="margin:1vh auto;">
+                            This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
             </div>
         </div>
-    </div>    
+    </div>
 </div>

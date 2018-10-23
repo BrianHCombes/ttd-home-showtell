@@ -57,66 +57,19 @@
     </div>
 
 <!-- Response Section 4 ************************************************************************************************************************************************-->
-    <div style="position:relative;
-                {{$ctrl.rs4fontsize1}};
-               ">
+    <div style="position:relative;">
         
         <img    src="components/components00_03/tmpl_02/ttd-vn-mg-arc-1200x935-featherd-top.jpg" 
                 alt="EZ Grabbit Tarp Tie Down Presentation" 
                 title="Mini Grabbit Presentation" 
                 style="position:absolute; top:0px; left:0px; width:100%;"> 
         
-        <div style="position:absolute;
-                    left:2%;
-                    width:100%;
-                    {{$ctrl.rs4top1}};
-                   ">
-            <div style="text-align:left;">
-                <a  href="https://www.tarptiedown.com/components/components00_03/tmpl_02/ttd-vn-mg-not-complete-msg.html"
-                    class="btnStyle2"
-                    style= "{{$ctrl.rs4padding1}};
-                            /*padding:5px 10px;*/
-                            text-decoration:none;
-                            font-weight:bold;
-                           "
-                   > Go To Mini Grabbit Pages
-
-                </a>
-                <div class="btnStyle2" 
-                     ng-click="$ctrl.moreless2()"
-                     style="font-weight:bold;
-                            {{$ctrl.rs4padding1}};
-                            {{$ctrl.rs4marginleft1}};
-                           ">
-                         {{$ctrl.morelessText2}}
-                </div>
-                <div class="textBoxStyle2 textStyle3"
-                     ng-show="$ctrl.display2"
-                     style="position:absolute;
-                            z-index:3;">                 
-                    <table  style= "width:100%;">
-                        <tr><td><u>{{$ctrl.navMenuHeader.col1}}</u></td>
-                            <td><u>{{$ctrl.navMenuHeader.col2}}</u>
-                                <span class="youAreHere2">
-                                    &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
-                                </span>
-                                <span class="closeText" 
-                                      ng-click="$ctrl.moreless2()" 
-                                      style="color:white;
-                                             float:right;
-                                            ">
-                                            &nbsp;&nbsp;&nbsp;&#10062;
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="{{NAVMENU.rowClass}}" 
-                            ng-repeat="NAVMENU in $ctrl.navMenuBody">  
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.selection}}</a></td>
-                                <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}">{{NAVMENU.destination}}</a></td>
-                        </tr>
-                    </table>
-                </div>  
-            </div>    
+        <div style="margin-top:1.0vh; position:absolute; top:0px; left:2%; width:100%;">  
+            <div data-ui-view="childView1" 
+                 title="This Read About has a link to Mini Grabbit pages"
+                 style="margin:1vh auto;">
+                        This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+            </div>
         </div>
     </div>
 </div> 

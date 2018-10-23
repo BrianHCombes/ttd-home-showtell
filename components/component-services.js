@@ -4,8 +4,14 @@ angular.module("viewNav")
             
         return {
             
+                readAboutBtnText: function(){ 
+                        var btnText = {"showText":"INFO ABOUT THIS", "hideText":"HIDE INFO ABOUT"};
+                    
+                    return btnText;
+                },
+            
                 navMenuHeader:  function(){
-                    var header = {"col1":"SELECTION", "col2":"DESTINATION", "msg":"you are here"};
+                    var header = {"col1":"SELECTION", "col2":"DESTINATION", "msg":"your location"};
                     return header;
                 },    
 
@@ -33,7 +39,7 @@ angular.module("viewNav")
                 },
                 
                 getBtnText: function(){
-                    var btnText = {"showText":"HOME MENU", "hideText":"HIDE HOME MENU"};
+                    var btnText = {"showText":"LOCATION MENU", "hideText":"HIDE LOCATION MENU"};
                     return btnText;
                 }
         };
