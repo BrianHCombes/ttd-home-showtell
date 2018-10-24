@@ -160,6 +160,12 @@ border-radius:3px;
 .tdStyle
 {
 padding: 0px 6px;
+color:white;
+}
+
+.tdStyle:hover
+{
+color:black;    
 }
 
 .imageStyle1:hover
@@ -178,7 +184,7 @@ text-decoration:none;
 
 a:hover
 {
-background-color:lightgray;
+background-color:yellow;
 text-decoration:none;
 }
 

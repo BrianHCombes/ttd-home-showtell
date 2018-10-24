@@ -144,8 +144,8 @@
             </tr>
             <tr class="{{NAVMENU.rowClass}}" 
                 ng-repeat="NAVMENU in $ctrl.navMenuBody">  
-                    <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}" ng-bind-html="NAVMENU.selection" style="color:white;"></a></td>
-                    <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}" ng-bind-html="NAVMENU.destination" style="color:white;"></a></td>
+                    <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.selection"></a></td>
+                    <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.destination"></a></td>
             </tr>
         </table>
     </div> 
