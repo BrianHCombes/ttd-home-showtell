@@ -118,8 +118,9 @@
     <div class="textBoxStyle2 textStyle3"
         ng-show="$ctrl.display2"
         style= "position:absolute;
+                width:93%;
                 top:10vh;
-                left:3%;
+                left:1%;
                 z-index:3;
                 text-align:center;
                 box-shadow:4px 4px 45px black;
@@ -144,8 +145,8 @@
             </tr>
             <tr class="{{NAVMENU.rowClass}}" 
                 ng-repeat="NAVMENU in $ctrl.navMenuBody">  
-                    <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.selection"></a></td>
-                    <td class="tdStyle"><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.destination"></a></td>
+                    <td><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.selection"></a></td>
+                    <td><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.destination"></a></td>
             </tr>
         </table>
     </div> 
