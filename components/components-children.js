@@ -23,7 +23,7 @@ angular.module("viewNav")
             
             // Response 'Menu' button and text box
             child1Self.rsNavfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";           /* AR_1.50_0.75 */
-            child1Self.rsNavfontsize2 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";           /* AR_1.50_0.73 */
+            child1Self.rsNavfontsize2 = "font-size:" + ((0.00098)*(viewWidth)+0.35753) + "em";           /* AR_1.50_0.71 */
             
             
             // Sets mode of the "READ ABOUT" button
