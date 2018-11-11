@@ -194,7 +194,7 @@ angular.module("viewNav")
                                                             </span> \n\
                                                             The Bag Grabbit is made possible by attaching a custom made handle to the mount features on the EZ \n\
                                                             Grabbit and voila, a bag handle. If you already know the stand alone capabilities of the EZ Grabbit \n\
-                                                            than you know the Bag Grabbit is the real deal.Additionally, you can use the Bag Grabbit as a pull \n\
+                                                            than you know the Bag Grabbit is the real deal. Additionally, you can use the Bag Grabbit as a pull \n\
                                                             handle for a drag tarp. ";  
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
