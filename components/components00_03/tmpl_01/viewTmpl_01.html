@@ -1,22 +1,82 @@
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 <style>
-.textStyle1
+.viewTmpl_01CSS-A
 {
-font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
-color:red;
-text-align:center; 
+color:blue;    
 }
-
 </style>
+<div style="font-size:1em;">    
+   
+<!-- Response Section 1 ************************************************************************************************************************************************-->
+    <table style="width:100%">
+        <tr>
+            <td style="{{$ctrl.rs1width1}}; vertical-align:top;">
+                <img    src="components/components00_03/tmpl_01/ttd-vn-lg-logo-825x375.jpg"
+                        alt="Long Grabbit Logo"
+                        title="Long Grabbit Logo"
+                        style=" width:100%;
+                                {{$ctrl.rs1margintop2}};">
+            </td>
+            <td style="{{$ctrl.rs1width2}};">
+                <img    src="components/components00_03/tmpl_01/ttd-vn-lg-device-od-1200x525.jpg" 
+                        alt="EZ Grabbit Tarp Tie Down Official Logo" 
+                        title="Long Grabbit Device" 
+                        style=" width:100%; 
+                                {{$ctrl.rs1margintop1}};"> 
+            </td>
+        </tr>
+    </table>
+    
+<!-- Response Section 2 ************************************************************************************************************************************************-->
+    <div class="textStyle2"
+         style="text-align:center;
+                color:red; 
+                text-shadow:1px 1px 1px black;
+                {{$ctrl.rs2fontsize1}}; 
+                ">
+        500mm of pure holding power!
+    </div>
+    <div style="text-align:center;">
+        <div class="textStyle2"
+             style="display:inline-block;
+                    color:black;
+                    background-color:yellow;
+                    padding:5px 8px;
+                    border:2px solid black;
+                    border-radius:5px;
+                    {{$ctrl.rs2fontsize2}}; 
+                    {{$ctrl.rs2margintop1}};        /* AR_20px_5px */
+                    {{$ctrl.rs2marginbottom1}};     /* AR_20px_7px */
+                   ">
+            VERSATILE, REUSABLE, SUPERIOR HOLD!
+        </div>
+    </div>
+    
+    <div class="textStyle4"
+         style="text-align:center;
+                {{$ctrl.rs2fontsize3}};
+                {{$ctrl.rs2padding1}};
+               "> 
+        The Long Grabbit's super-strong hold and long gripping edge are ideal
+        for securing large spans of tarp for big shelters, tarp walls, and windbreaks.
+    </div>
 
 
-<div class="textStyle1" style="{{$ctrl.fontsize1}};">
-    Mount Tarps! 
-</div>
+<!-- Response Section 3 ************************************************************************************************************************************************-->
 
-<div style="text-align:center;">    
-    <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-mount-1600x1200.jpg" 
-         alt="EZ Grabbit Tarp Tie Down Official Logo" 
-         title="EZ Grabbit Logo with Device" 
-         style=" width:95%; border:2px solid black; border-radius:7px; margin-top:10px;"> 
+    <div style="position:relative;">
+        <img    src="components/components00_03/tmpl_01/ttd-vn-lg-presentation1-od-1175x975.jpg" 
+                alt="EZ Grabbit Tarp Tie Down Presentation" 
+                title="Long Grabbit Presentation" 
+                style=" width:100%;"> 
+        
+        <div style="position:absolute; top:3.0vh; left:2%; width:100%;">  
+            <div data-ui-view="childView1" 
+                 title="This Read About has a link to Long Grabbit pages"
+                 style="margin:1vh auto;">
+                        This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+            </div>
+        </div>
+    </div>
 </div> 
 

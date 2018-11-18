@@ -1,20 +1,77 @@
-<style>
-.textStyle1
-{
-font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
-color:red;
-text-align:center; 
-}
-    
-</style>
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 
-<div class="textStyle1" style="{{$ctrl.fontsize1}};">
-    Attach Anywhere 
-</div>
+<div style="font-size:1em;">    
 
-<div style="text-align:center;">    
-    <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-sameside-1500x1000.jpg" 
-         alt="EZ Grabbit Tarp Tie Down Official Logo" 
-         title="Connecting tarps with EZ Grabbit" 
-         style=" width:95%; border:2px solid black; border-radius:7px; margin-top:10px;"> 
+<!-- AR Response Section 1 ************************************************************************************************************************************************-->
+
+    <table style="width:100%">
+        <tr>
+            <td style="width:50%; vertical-align:top;">
+                <img    src="components/components00_03/tmpl_03/ttd-vn-eza-logo-1000x400.jpg"
+                        alt="EZ Adjust Logo"
+                        title="EZ Adjust Logo"
+                        style=" width:90%;
+                                {{$ctrl.rs1margintop2}};">
+                
+                <div    class="textStyle2" 
+                        style="text-align:center;
+                               color:black; 
+                               margin-top:10px;
+                               {{$ctrl.rs1fontsize1}}; 
+                              ">
+                    Use with:<br>1/8" thru 3/16" rope
+                </div>
+            </td>
+            <td style="width:50%">
+                <img    src="https://www.tarptiedown.com/components/components00_03/tmpl_03/ttd-vn-eza-device-1300x810.jpg" 
+                        alt="EZ Adjust Device." 
+                        title="EZ Adjust Device" 
+                        style=" width:100%; 
+                                {{$ctrl.rs1margintop1}};
+                                "> 
+            </td>
+        </tr>
+    </table>
+
+<!-- AR Response Section 2 ************************************************************************************************************************************************-->
+    <div style="text-align:center;">
+        <div class="textStyle2" 
+             style="display:inline-block;
+                    margin-top:7px;
+                    color:black;
+                    background-color:yellow;
+                    padding:5px 8px;
+                    border:2px solid black;
+                    border-radius:5px;
+                    {{$ctrl.rs2fontsize2}}; 
+                    ">
+            ADJUST ROPE LINES ON TENTS, CANOPIES, ETC.
+        </div>
+    </div>    
+
+    <div class="textStyle4" 
+         style="text-align:center;
+                {{$ctrl.rs2padding1}};
+                {{$ctrl.rs2fontsize3}}; 
+               "> 
+        Use EZ Adjust to secure rope lines to trees, ground stakes, and other tie down points.
+    </div>
+   
+<!-- AR Response Section 3 ************************************************************************************************************************************************-->
+    <br>
+    <div style="position:relative;">
+        <img    src="components/components00_03/tmpl_03/ttd-vn-eza-app1-1200x900.jpg" 
+                alt="EZ Adjust Rope Adjuster Application Presentation" 
+                title="EZ Adjust Rope Adjuster Application Presentation" 
+                style="position:absolute; top:0px; left:0px; width:100%;"> 
+        
+        <div style="margin-top:1.0vh; position:absolute; top:0px; left:2%; width:100%;">  
+            <div data-ui-view="childView1" 
+                 title="This Read About has a link to EZ Adjust pages"
+                 style="margin:1vh auto;">
+                        This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+            </div>
+        </div>
+    </div>
 </div> 
+

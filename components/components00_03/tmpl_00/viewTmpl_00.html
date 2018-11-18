@@ -1,69 +1,56 @@
-<style>
-#divA
-{
-font-size:1em;
-}    
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 
-.textStyle1
-{
-font-family:arial; 
-font-weight:bold; 
-color:black;
-}
-
-.textStyle2
-{
-font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
-color:red;
-}
-
-.textStyle3
-{
-font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;    
-}
-    
-</style>
-
-<div id="divA">
-    <!--<div>The innerWidth reported is: {{$ctrl.reportedWidth}}</div>-->
-    <!--<a href="http://www.tarptiedown.com">TTD link</a>-->
-    <!--<a ui-sref="view13" ui-sref-active="active">view13</a>-->
-    
+<div style="font-size:1em;">
+<!-- Response Section 1 ************************************************************************************************************************************************-->
     <div style="text-align:center;">
-        <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-logo-w-device-1500x400.png" 
+        <img src="https://www.tarptiedown.com/resources/ttd-vn-ezg-logo-w-device-1500x400.png" 
                          alt="EZ Grabbit Tarp Tie Down Official Logo" 
-                         title="EZ Grabbit Logo with Device" 
+                         title="EZ Grabbit Logo with Tarp Tie Down Device" 
                          style=" width:90%;"> 
     </div> 
-    <!--<br>-->
-    <div class="textStyle1" style="{{$ctrl.fontsize1}}; text-align:center;">Superior Performance and Versatility</div>
-    <!--<br>-->
-        
-    <table style="width:100%; border-spacing:0px;">
+    <div class="textStyle1" style="{{$ctrl.rs1fontsize1}}; text-align:center;">Superior Performance and Versatility</div>
+    
+<!-- Response Section 2 ************************************************************************************************************************************************-->
+    <table  style=" width:100%; 
+                    border-spacing:0px; 
+                    {{$ctrl.rs2margintop1}};               /* AR_25_0 */
+                    /*margin-top:0px;*/
+                    {{$ctrl.rs2marginbottom1}};            /* AR_30_10 */
+                    /*margin-bottom:10px;*/
+                    ">
         <tr>
-            <td style="{{$ctrl.width1}};">
+            <td style="{{$ctrl.rs2width1}};">
             </td>
-            <td style="{{$ctrl.width2}}; {{$ctrl.fontsize2}};">
-                <div class="textStyle2" style="">&#10004; Mount Tarps to Structures</div>
-                <div class="textStyle2" style="">&#10004; Fasten Tarps Together</div>
-                <div class="textStyle2" style="">&#10004; Grab Tarps Anywhere</div>
-                <div class="textStyle2" style="">&#10004; Far Superior To Grommets</div>
+            <td style="{{$ctrl.rs2width2}}; {{$ctrl.rs2fontsize2}}; color:red;">
+                <div class="textStyle2" style="">&#10004; &nbsp;Mount Tarps to Structures</div>
+                <div class="textStyle2" style="">&#10004; &nbsp;Fasten Tarps Together</div>
+                <div class="textStyle2" style="">&#10004; &nbsp;Grab Tarps Anywhere</div>
+                <div class="textStyle2" style="">&#10004; &nbsp;Far Superior To Grommets</div>
             </td>    
             <td style="width:45%;">
-                <div class="textStyle3" style="{{$ctrl.fontsize3}}; background-color:yellow; border:2px solid black; border-radius:5px; padding:10px 10px; margin-top:10px;">
+                <div class="textStyle3" style="{{$ctrl.rs2fontsize3}}; background-color:yellow; border:2px solid black; border-radius:5px; padding:10px 10px; margin-top:10px;">
                     WRAP THE TARP AROUND THE DOG BONE AND SLIDE THE SLEEVE INTO PLACE.<br> <span style="font-size:1.25em; text-align:center;"><b>IT'S THAT EASY!</b></span>
                     
                 </div>
             </td>
-            <td style="{{$ctrl.width3}};">
+            <td style="{{$ctrl.rs2width1}};">
             </td>
         </tr>
     </table>
-    
-    <div style="text-align:center;">
-        <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-1400x1400.jpg" 
-                         alt="EZ Grabbit Tarp Tie Down Official Logo" 
-                         title="EZ Grabbit Logo with Device" 
-                         style=" width:95%; border:2px solid black; border-radius:7px; margin-top:10px;"> 
-    </div>     
+
+<!-- Response Section 3 ************************************************************************************************************************************************-->
+    <div style="position:relative;">
+        <img    src="components/components00_03/tmpl_00/ttd-vn-ezg-tarp-arc-1500x1425.jpg" 
+                alt="EZ Grabbit Tarp Tie Down's four feature capabilities." 
+                title="EZ Grabbit Tarp Tie Down's four feature capabilities." 
+                style= "width:99%; border:2px solid black; border-radius:7px;">  
+ 
+        <div style="margin-top:1.0vh; position:absolute; top:0px; left:2%; width:100%;">  
+            <div data-ui-view="childView1" 
+                 title="This Read About has a link to EZ Grabbit pages"
+                 style="margin:1vh auto;">
+                        This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+            </div>
+        </div>    
+    </div>    
 </div>

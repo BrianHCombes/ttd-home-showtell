@@ -1,15 +1,87 @@
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 <style>
-#divA
+.viewTmpl_07CSS-A
 {
-text-decoration:underline;
 color:blue;
-}    
-
+}
 </style>
 
-<div style="position:relative;">
-    <img src="resources/images/Open_Space_ViewTemplate_B.jpg" alt="Open Space Template" style="width:100%;">
-</div>    
-<!--<div id="divA" style="font-weight:bold; font-size:3em">This is a test to show HTML template <br>viewTmpl_02 is working as part of view02</div>-->
+<!-- AR Response Section 1 ************************************************************************************************************************************************-->
+<div style="font-size:1em;">    
+   
+    <table style="width:100%">
+        <tr>
+            <td style="{{$ctrl.rs1width1}}; vertical-align:top;">
+                <div    class="textStyle2"
+                        style=" width:100%;
+                                text-align:center;
+                                {{$ctrl.rs1fontsize3}};
+                                ">
+                    <span style="font-size:1.75em">CARRY BAG</span><br>
+                    <div style="display:inline-block; 
+                                width:85%; 
+                                background-color:#EFEFEF; 
+                                border:1px solid black;
+                                border-radius:6px;
+                                padding:10px 0px;
+                                ">
+                                general purpose
+                    </div>
+                </div> 
+                <div style="text-align:center;">
+                    <div    class="textStyle3"
+                            style="display:inline-block;
+                                   color:black; 
+                                   text-align:left;
+                                   width:85%;
+                                   {{$ctrl.rs1fontsize1}}; 
+                                   ">
+                        <br>We have a large but limited inventory of these rugged carry bags. Designed for carrying heavy camping gear, not to mention your entire Grabbit assortment.
+                    </div>
+                </div>
+            </td>
+            <td style="{{$ctrl.rs1width2}};">
+                <img    src="components/components04_07/tmpl_07/ttd-vn-cb-presentation1-1450x550.jpg" 
+                        alt="Carry Bag" 
+                        title="Carry Bag" 
+                        style=" width:100%; 
+                                {{$ctrl.rs1margintop1}};"> 
+            </td>
+        </tr>
+    </table>
+   
+<!-- AR Response Section 2 ************************************************************************************************************************************************-->
+    <div style="text-align:center;">
+        <div class="textStyle2" 
+             style="display:inline-block;
+                    color:black;
+                    background-color:yellow;
+                    padding:5px 8px;
+                    border:2px solid black;
+                    border-radius:5px;
+                    {{$ctrl.rs2fontsize2}};
+                    {{$ctrl.rs2margintop1}};
+                    {{$ctrl.rs2marginbottom1}};
+                   ">
+            CARRY YOUR HEAVY STUFF IN THESE CARRY BAGS
+        </div>
+    </div>
+    
+<!-- AR Response Section 3 ************************************************************************************************************************************************-->
+    <div style="position:relative; top:5.0vh">
+        
+        <img    src="components/components04_07/tmpl_07/ttd-vn-cb-presentation1-1450x550.jpg" 
+                alt="Tarp Tie Down's Carry Bag Image" 
+                title="Tarp Tie Down's Carry Bag" 
+                style="position:absolute; top:0px; left:0px; width:100%;"> 
+        
+        <div style="position:absolute; {{$ctrl.rs3top1}}; left:2%; width:100%; z-index:3;"> 
+            <div data-ui-view="childView1" 
+                     title="This Read About has a link to Carry Bag pages"
+                     style="margin:1vh auto;">
+                            This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+            </div>
+        </div>    
+    </div>
+</div> 
 
-<!--<div style="color:red;">This is from the service in the other component file: {{$ctrl.display}}</div>-->

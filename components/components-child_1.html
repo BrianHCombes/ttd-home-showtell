@@ -1,0 +1,153 @@
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
+<style>
+    
+.intro01
+{
+    color:blue;
+}    
+    
+</style>
+<div style="position:relative;">
+    <div class="btnStyle2" 
+         ng-click="$ctrl.moreless1()" 
+         style="font-weight:bold;
+                {{$ctrl.rsReadAboutfontsize1}};
+                {{$ctrl.rsReadAboutwidth2}};
+               ">
+        {{$ctrl.morelessText1}}
+    </div>
+    <div class="textBoxStyle1 textStyle3"
+         ng-show="$ctrl.display1"
+         style="position:absolute;
+                width:90%;
+                z-index:2;
+                padding-top:10px;
+                box-shadow:8px 8px 45px;
+                text-align:left;
+                {{$ctrl.rsReadAboutfontsize2}};
+                ">
+        <b><span ng-bind-html="$ctrl.readAboutHeaderText"></span></b>
+        <span   class="closeText"
+                ng-click="$ctrl.moreless1()" 
+                style= "color:white;
+                        float:right;
+                       ">
+            &nbsp;&nbsp;&nbsp;&#10062;
+        </span><br>
+                <span ng-bind-html="$ctrl.readAboutBodyText"></span><br>
+
+                <div ng-show="$ctrl.readAboutExtraStuff1">
+                    <div style="color:blue; margin-top:5px;">See applications:</div>
+                        <div style="display:inline-block; background-color:black; color:white; border-radius:5px; padding:2px 10px;">
+                            Select buttons C thru L, then thumbnail
+                        </div><br>
+                    <div style="color:blue; margin-bottom:7px;">(or) select an application below:</div>
+
+                    <a ui-sref="view08" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Go to: Mount apps</b></a><br>
+                    <a ui-sref="view16" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Go to: connect apps</b></a><br>
+                    <a ui-sref="view24" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Go to: attach anywhere apps</b></a><br>
+                    <a ui-sref="view32" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Go to: save and reuse apps</b></a><br><br>
+                    <a ui-sref="view40" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>EZG Specs and extra info</b></a><br>
+                </div>    
+                
+                <div ng-show="$ctrl.readAboutExtraStuff2">
+                    <div style="color:blue; margin-top:5px;">See standard features:</div>
+                        <div style="display:inline-block; background-color:black; color:white; border-radius:5px; padding:2px 10px;">
+                            Select button B, then thumbnail
+                        </div><br>
+                    <div style="color:blue; margin-bottom:7px;">(or) select a feature discussion below:</div>
+
+                    <a ui-sref="view04" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Mounting tarps to surfaces</b></a><br>
+                    <a ui-sref="view05" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Connecting tarps together</b></a><br>
+                    <a ui-sref="view06" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Attach anywhere to tarp</b></a><br>
+                    <a ui-sref="view07" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Save and reuse tarps</b></a><br><br>
+                    <a ui-sref="view40" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>EZG Specs and extra info</b></a><br>
+                </div>
+                
+                <div ng-show="$ctrl.readAboutExtraStuff3">
+                    <div style="color:blue; margin-top:5px;">Go to Classic features:</div>
+                        <div style="display:inline-block; background-color:black; color:white; border-radius:5px; padding:2px 10px;">
+                            &nbsp;Select button B, then thumbnail 2,3, or 4.
+                        </div><br>
+                    <div style="color:blue; margin-bottom:7px;">&nbsp;(or) select below:</div>
+                    
+                    <a ui-sref="view05" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Connecting tarps together</b></a><br>
+                    <a ui-sref="view06" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Attach anywhere to tarp</b></a><br>
+                    <a ui-sref="view07" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Save and reuse tarps</b></a><br><br>
+                    <a ui-sref="view40" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>EZG Specs and extra info</b></a><br>
+                </div>
+                
+                <div ng-show="$ctrl.readAboutExtraStuff4">
+                    
+                    <div style="color:blue; margin-top:5px;">Discussion and Applications:</div>
+                        <div style="display:inline-block; background-color:black; color:white; border-radius:5px; padding:2px 10px; text-align:center; {{$ctrl.rsReadAboutwidth1}}">
+                            &nbsp;Select below
+                        </div><br><br>
+                    
+                    <div class="textStyle4">Mounting Tarps to Surfaces:</div>
+                    <a ui-sref="view04" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Discussion<span style="font-size:.85em; text-shadow:initial; float:right">B-1</span></b></a><br>
+                    <a ui-sref="view08" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Applications<span style="font-size:.85em; text-shadow:initial; float:right">C-1</span></b></a><br><br>
+                    
+                    <div class="textStyle4">Connecting Tarps Together:</div>
+                    <a ui-sref="view05" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Discussion<span style="font-size:.85em; text-shadow:initial; float:right">B-2</span></b></a><br>
+                    <a ui-sref="view16" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Applications<span style="font-size:.85em; text-shadow:initial; float:right">E-1</span></b></a><br><br>
+                    
+                    <div class="textStyle4">Attach Anywhere to Tarps:</div>
+                    <a ui-sref="view06" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Discussion<span style="font-size:.85em; text-shadow:initial; float:right">B-3</span></b></a><br>
+                    <a ui-sref="view24" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Applications<span style="font-size:.85em; text-shadow:initial; float:right">G-1</span></b></a><br><br>
+
+                    <div class="textStyle4">Save and Reuse Tarps:</div>
+                    <a ui-sref="view07" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Discussion<span style="font-size:.85em; text-shadow:initial; float:right">B-4</span></b></a><br>
+                    <a ui-sref="view32" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Applications<span style="font-size:.85em; text-shadow:initial; float:right">I-1</span></b></a><br><br>
+                    
+                    <div class="textStyle4">EZG Specs and Extra Info:</div>
+                    <a ui-sref="view40" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Specs and info<span style="font-size:.85em; text-shadow:initial; float:right">K-1</span></b></a><br>
+                    
+                </div>
+    </div>
+
+    <div class="btnStyle2" 
+         ng-click="$ctrl.moreless2()"
+         style="font-weight:bold;
+                margin-left:1%;
+                {{$ctrl.rsNavfontsize1}};
+               ">
+        {{$ctrl.morelessText2}}
+    </div>
+
+    <div class="textBoxStyle2 textStyle3"
+        ng-show="$ctrl.display2"
+        style= "position:absolute;
+                width:93%;
+                top:10vh;
+                left:1%;
+                z-index:3;
+                text-align:center;
+                box-shadow:4px 4px 45px black;
+                {{$ctrl.rsNavfontsize2}};
+                {{$ctrl.rsNavleft1}};
+               ">
+        <table  style= "width:100%;
+                        text-align:left;">
+            <tr><td ng-bind-html="$ctrl.navMenuHeader.col1"><u></u></td>
+                <td><u>{{$ctrl.navMenuHeader.col2}}</u>
+                    <span class="youAreHere2">
+                        &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
+                    </span>
+                    <span class="closeText" 
+                          ng-click="$ctrl.moreless2()" 
+                          style="color:white;
+                                 float:right;
+                                ">
+                                &nbsp;&nbsp;&nbsp;&#10062;
+                    </span>
+                </td>
+            </tr>
+            <tr class="{{NAVMENU.rowClass}}" 
+                ng-repeat="NAVMENU in $ctrl.navMenuBody">  
+                    <td><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.selection"></a></td>
+                    <td><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.destination"></a></td>
+            </tr>
+        </table>
+    </div> 
+</div>

@@ -2,7 +2,7 @@
 
 $q = $_REQUEST["q"];
 //echo $q;
-// Reference URL's: http://www.w3schools.com/php/php_ref_mysqli.asp
+// Reference URL's: https://www.w3schools.com/php/php_ref_mysqli.asp
 
 
 $imageArray = array(    array("picColA"=>"DSCN3181.jpg", "picColB"=>"DSCN3469.jpg", "picColC"=>"DSCN2049.jpg", "picColD"=>"DSCN2453.jpg"),

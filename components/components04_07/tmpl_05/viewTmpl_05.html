@@ -1,74 +1,91 @@
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 <style>
-#divA
+.viewTmpl_05CSS-A
 {
-/*background-image: url("rockbuster-rocks-bkgnd-3200x1200-gradient-adj1.png");*/
-/*background-color: lightgray;*/
-font-size:1em;
-
-}    
-    
+color:blue;
+}
 </style>
 
-<div id="divA">
-    <h1>Reuse Tarps</h1> 
-    <h2 style="color:#00ff00; background-color:black;">This is root View 05 which shows this html template file.</h2>
-    <button ng-click="$ctrl.testView()"> Test for view change </button><br><br>
-    <a ui-sref="view00" ui-sref-active="active" style="text-decoration:none; color:black;">Try this</a>
-    
-    <div id="testTD1" style="color:blue;">   
-        1)  The RockBuster Ground and Tent Stake is a very robust and sturdy ground peg.<br> 
-        2)  Made from a high impact polypropylene and at 12 inches long, they are designed for 
-        that extra-strong hold. Each stake comes with it's own extraction rope to 
-        make it easier to pull it from the ground. The RockBuster is ideal for use 
-        as a tent peg or to hold almost anything in the ground. 
-    <br>
-    </div>
-    <div >
-        <table>
-            <tr>
-                <td id="testTD3" style="width:50%;">
-                    <img id="testTD4" src="http://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-sameside-1500x1000.jpg" alt="EZG Presentation"  style="object-fit:cover; border:2px solid black; background-color:white; border-radius:10px;">
-                </td>
-                <td id="testTD2" style="width:50%; line-height:110%; background-color:white; padding:0px 5px; border-radius:5px;">
-                    Notice the Turnaround Post which makes it so easy to tie off the rope. 
-                    It is a beefy ground and tent stake with several unique high technology design features. 
-                    The RockBuster has a nice wide point so it won't curl when pounding in the stake. 
-                    This stake will last longer than the typical plastic stake! 
-                    Each stake comes with an extraction rope to help pull it from the ground. 
-                    Sold at $1.75 each for any quantity they are a great value.
-                </td>
-            </tr>
-        </table>    
-    </div>
-</div>
+<!-- AR Response Section 1 ************************************************************************************************************************************************-->
+<div style="font-size:1em;">    
+   
+    <table style="width:100%">
+        <tr>
+            <td style="width:50%; vertical-align:top;">
+                <img    src="components/components04_07/tmpl_05/ttd-vn-bg-logo-1725x650.jpg"
+                        alt="Bag Grabbit Logo"
+                        title="Bag Grabbit Logo"
+                        style=" width:100%;
+                                {{$ctrl.rs1margintop2}};">
+                <div    class="textStyle2" 
+                        style= "text-align:center;
+                                color:black; 
+                                {{$ctrl.rs1fontsize1}}; 
+                               ">
+                    <br>Close, carry and store<br>bulky bags with ease!
+                </div>
+            </td>
+            <td style="width:50%">
+                <img    src="components/components04_07/tmpl_05/ttd-vn-bg-presentation1-1240x890.jpg" 
+                        alt="Bag Grabbit Device." 
+                        title="Bag Grabbit Device" 
+                        style=" width:100%; 
+                                {{$ctrl.rs1margintop1}};"> 
+            </td>
+        </tr>
+    </table>
 
-<script>
+<!-- AR Response Section 2 ************************************************************************************************************************************************-->
+    <div style="text-align:center;">
+        <div class="textStyle2"
+             style="display:inline-block;
+                    margin-top:7px;
+                    color:black;
+                    background-color:yellow;
+                    padding:5px 8px;
+                    border:2px solid black;
+                    border-radius:5px;
+                    {{$ctrl.rs2fontsize2}};  
+                    ">
+            FOR ALL TYPES OF BAGS
+        </div>
+    </div>
+    <div class="textStyle4" 
+         style="text-align:center;
+                {{$ctrl.rs2fontsize3}}; 
+                {{$ctrl.rs2padding1}};
+               "> 
+        Use Bag Grabbit on bags of fertilizer, potting soil, pet food, bird seed, ice melt, and more! 
+    </div>
+
+<!-- AR Response Section 3 ************************************************************************************************************************************************-->
+    <div style="position:relative;">
+        
+        <img    src="components/components04_07/tmpl_05/ttd-vn-bg-carrybag1-1600x1200.jpg" 
+                alt="Bag Grabbit Application" 
+                title="Bag Grabbit Application" 
+                style="position:absolute; top:0px; left:0px; width:100%;"> 
+        
+        <div style="position:absolute; top:1.5vh; left:2%; width:100%; z-index:3;">  
+            <div data-ui-view="childView1" 
+                 title="This Read About has a link to Bag Grabbit pages"
+                 style="margin:1vh auto;">
+                        This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+            </div>
+        </div>
+        <div id="div4" 
+            class="textStyle2 textShadow1" 
+            style="position:absolute; 
+                   left:5%; 
+                   color:white;
+                   text-align:left; 
+                   z-index:2;
+                   {{$ctrl.rs4positiontop2}}; 
+                   {{$ctrl.rs4fontsize5}}; 
+                  ">
+            Close, carry, and store bags of:<br>Fertilizer, Potting Soil, Pet Food,<br>Bird Seed, Ice Melt, and More!
+        </div>
+    </div>
     
-    var vpWidth = window.innerWidth; // use when testing with zoom.
-    // alert("In the template: " + vpWidth);
-    if(vpWidth >= 1170){
-        vpWidth=1170;
-    };
-    
-    // alert((0.01605)*(vpWidth) + 5.22222 + "px");
-    
-    document.getElementById("testTD1").style.fontSize = (0.01605)*(vpWidth) + 5.22222 + "px";       // 1170:24px - 360:11px
-    document.getElementById("testTD2").style.fontSize = (0.01481)*(vpWidth) + 6.66667 + "px";       // 1170:24px - 360:12px
-    document.getElementById("testTD2").style.lineHeight = (0.02469)*(vpWidth) + 101.11111 + "%";       // 1170:24px - 360:12px
-    
-    
-    // document.getElementById("testTD2").style.fontSize = (0.01852)*(vpWidth) + 2.33333 + "px";    // 1170:24px - 360:9px
-    
-    document.getElementById("testTD3").style.width = (0.02778)*(vpWidth) + 17.50000 + "%";       // 1170:50% - 360:27.5%
-    document.getElementById("testTD2").style.width = (-0.02778)*(vpWidth) + 82.50000 + "%";       // 1170:50% - 360:72.5%
-    
-    document.getElementById("testTD4").style.width = (0.57407)*(vpWidth) + -116.66667 + "px";       // 1170:555px - 360:90px
-    //document.getElementById("testTD4").style.width = "285px";       // 1170:585px - 360:99px%
-    document.getElementById("testTD4").style.height = (0.15432)*(vpWidth) + 69.44444 + "px";       // 1170:250px - 360:125px
-    
-    document.getElementById("testTD1").style.borderRadius = "25px";
-    
-    
-    // https://stackoverflow.com/questions/15167545/how-to-crop-a-rectangular-image-into-a-square-with-css
-    
-</script>
+</div> 
+

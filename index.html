@@ -6,34 +6,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <meta name="generator" content="NetBeans IDE 8.0.2">
-    <meta name="dcterms.created" content="Sunday, 03 June 2018 14:26:22 GMT">
+    <meta name="dcterms.created" content="Sunday, 05 August 2018">
     <meta name="description" content="Mount Tarps to Surfaces, Overlap and Connect Tarps Together, Fold and Secure Multiple Tarp Layers, Attach Anywhere to Tarp and Pull from any Angle. Build your Tarp City with Grabbit Tarp Tie Downs!">
     <meta name="keywords" content="EZ Grabbit, grabbit, grabit, grab-it, tarp fastener, tarp clip, tarp klip, tarp clamp, tarp holder, tarp tie down, tie down, mounting tarp, connecting tarp, tarp shelter, camp tarp, tent camping, canopy">
     <meta name="author" content="Brian H.Combes">
     
-    <link rel="SHORTCUT ICON" href="http://www.tarptiedown.com/ttd-website/ttd-website-pics-videos/ttd-website-icon-ttd-256x256.ico"> 
+    <link rel="SHORTCUT ICON" href="https://www.tarptiedown.com/resources/ttd-vn-icon-ttd-256x256.ico"> 
     <link rel="stylesheet" type="text/css" href="css/vn-css.css">
     
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-sanitize.js"></script>
-    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>  
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js" ></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-sanitize.js" ></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js" ></script>  
     
-    <script src="view-config.js"></script>
-    <script src="controller-client.js"></script>
+    <script src="view-config.js" ></script>
+    <script src="controller-client.js" ></script>
     
-    <script src="components/components00_03/components00_03.js"></script>
-    <script src="components/components04_07/components04_07.js"></script>
-    <script src="components/components08_11/components08_11.js"></script>
-    <script src="components/components12_15/components12_15.js"></script>
-    <script src="components/components16_19/components16_19.js"></script>
-    <script src="components/components20_23/components20_23.js"></script>
-    <script src="components/components24_27/components24_27.js"></script>
-    <script src="components/components28_31/components28_31.js"></script>
-    <script src="components/components32_35/components32_35.js"></script>
-    <script src="components/components36_39/components36_39.js"></script>
-    <script src="components/components40_43/components40_43.js"></script>
-    <script src="components/components44_47/components44_47.js"></script>
-    <script src="components/top_menu/top_menu.js"></script>
+    <script src="components/components-children.js"  ></script>
+    <script src="components/component-services.js"  ></script>
+    <script src="components/components00_03/components00_03.js"  ></script>
+    <script src="components/components04_07/components04_07.js"  ></script>
+    <script src="components/components08_11/components08_11.js"  ></script>
+    <script src="components/components12_15/components12_15.js"  ></script>
+    <script src="components/components16_19/components16_19.js"  ></script>
+    <script src="components/components20_23/components20_23.js"  ></script>
+    <script src="components/components24_27/components24_27.js"  ></script>
+    <script src="components/components28_31/components28_31.js"  ></script>
+    <script src="components/components32_35/components32_35.js"  ></script>
+    <script src="components/components36_39/components36_39.js"  ></script>
+    <script src="components/components40_43/components40_43.js"  ></script>
+    <script src="components/components44_47/components44_47.js"  ></script>
+    <script src="components/top_menu/top_menu.js" ></script>
     
 <style> 
 </style>
@@ -47,13 +49,17 @@
 <!-- Top Menu Section. This is menu selection along the top -->
     <div style="text-align:center; {{vnCTRL.response.height01}};">
         <a  ui-sref="{{menuBar.menuItem}}"
-            class="menuBtns shadow cursorstyle1" 
+            title="{{menuBar.title}}"
+            class="topMenu shadow cursorstyle1" 
             ng-repeat="menuBar in vnCTRL.menuBar1" 
             ng-bind-html="menuBar.menuItemName" 
-            style=" text-decoration:none; 
+            style= "text-decoration:none; 
                     vertical-align:text-top;
+                    color:{{menuBar.highlight}};
+                    border-radius:5px;
                     {{vnCTRL.response.fontsize04}}; 
-                    {{vnCTRL.response.padding06}};">
+                    {{vnCTRL.response.padding06}};
+                   ">   
         </a><br>
     </div>
 <!--************************************************************************************************************************************************-->
@@ -72,8 +78,7 @@
     <div ng-show="vnCTRL.screen1 || vnCTRL.screen2" class="maxWidth" style="margin-top:2px; {{vnCTRL.response.fontsize01}};">
         <table style="width:100%; {{vnCTRL.response.height05}};;">
             <tr>
-                <td style=" 
-                            {{vnCTRL.response.width04}};
+                <td style=" {{vnCTRL.response.width04}};
                             text-align:left;">
                     <button 
                         class="historyBtn"
@@ -97,7 +102,7 @@
                     <b>|</b>
                 </td>
                 <td style="">
-                    <div style="">                            
+                    <div style="font-size:1em;">                            
                         <button ng-click="vnCTRL.stateHistory(viewHistory)"
                                 ng-show="viewHistory.btnShow"
                                 class="historyBtn" 
@@ -107,8 +112,8 @@
                                         background-color:{{vnCTRL.bkColor[$index]}};
                                         border-radius:4px;
                                         border:1px solid #808080; " 
+                                ng-bind-html="viewHistory.btnText"
                                 ng-repeat="viewHistory in vnCTRL.currentView">
-                                {{viewHistory.btnText}} 
                         </button>
                     </div>    
                 </td>
@@ -146,13 +151,16 @@
             <tr>   
                 <td class="menuBtns" style="width:7.8%; 
                                             padding-top:2px;
-                                            padding-right:10px;">   
-                    <div class="shadow cursorstyle1" 
+                                            padding-right:10px;
+                                            vertical-align:top;">   
+                    <div class="shadow cursorstyle1"
+                         ng-show="picMenuA.showBtnA"
                          ng-click="vnCTRL.arrayIndex($index)" 
                          style="border-radius:4px;"  
                          ng-repeat="picMenuA in vnCTRL.picMenu1" >
-                            <div style="width:100%; 
-                                        margin:3px 0px;
+                            <div class="hyper"
+                                 style="width:100%; 
+                                        margin:6px 0px;
                                         {{vnCTRL.response.padding07}}; 
                                         font-size:16px;
                                         background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
@@ -161,10 +169,10 @@
                                         box-shadow:{{picMenuA.boxshadow}};
                                         color:{{picMenuA.highlight}}; 
                                         text-shadow:{{picMenuA.shadow}};
-                                        cursor:crosshair;
+                                        cursor:pointer;
                                         text-align:center;
-                                        ">
-                                        {{picMenuA.label}}
+                                       ">
+                                        {{picMenuA.labelA}}
                             </div>
                     </div>        
                 </td>
@@ -179,7 +187,7 @@
                                     <div style="margin-bottom:5px; {{vnCTRL.response.height03}};">
                                             <a ui-sref="{{stateNames.stateNameColA}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                                 <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColA}}" 
-                                                     alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Shed Site" 
+                                                     alt="This should be thumbnail 1" 
                                                      class="imageshadow "
                                                      style="width:100%; border:1px solid #8c8c8c; border-top-left-radius:3px; border-top-right-radius:3px;">
                                             </a>
@@ -191,7 +199,7 @@
                                     <div style="margin-bottom:5px; {{vnCTRL.response.height03}};">
                                         <a ui-sref="{{stateNames.stateNameColB}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                             <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColB}}" 
-                                                 alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Roof A\Raw Images" 
+                                                 alt="This should be thumbnail 2" 
                                                  class="imageshadow"
                                                  style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
                                         </a>
@@ -203,7 +211,7 @@
                                     <div style="margin-bottom:5px; {{vnCTRL.response.height03}};">
                                         <a ui-sref="{{stateNames.stateNameColC}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                             <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColC}}" 
-                                                 alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                                 alt="This should be thumbnail 3" 
                                                  class="imageshadow"
                                                  style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
                                         </a>
@@ -215,7 +223,7 @@
                                     <div style="margin-bottom:5px; {{vnCTRL.response.height03}};">
                                         <a ui-sref="{{stateNames.stateNameColD}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                             <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColD}}" 
-                                                 alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                                 alt="This should be thumbnail 4" 
                                                  class="imageshadow"
                                                  style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
                                         </a>
@@ -227,13 +235,15 @@
                 <td class="menuBtns" style="width:7.8%; 
                                             padding-top:2px;
                                             padding-left:10px;
-                                            vertical-align:middle;">
+                                            vertical-align:top;">
                     <div class="shadow cursorstyle1" 
+                         ng-show="picMenuB.showBtnA"
                          ng-click="vnCTRL.arrayIndex($index+6)" 
                          style="border-radius:4px;"   
                          ng-repeat="picMenuB in vnCTRL.picMenu2" >         
-                            <div style="width:100%;
-                                        margin:3px 0px;
+                            <div class="hyper"
+                                 style="width:100%;
+                                        margin:6px 0px;
                                         {{vnCTRL.response.padding07}}; 
                                         font-size:16px;
                                         background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
@@ -242,22 +252,22 @@
                                         box-shadow:{{picMenuB.boxshadow}};
                                         color:{{picMenuB.highlight}}; 
                                         text-shadow:{{picMenuB.shadow}};
-                                        cursor:crosshair;
+                                        cursor:pointer;
                                         text-align:center;">
-                                        {{picMenuB.label}}
+                                        {{picMenuB.labelA}}
                            </div>
                     </div>
                 </td>
             </tr>   
         </table>   
 <!--************************************************************************************************************************************************-->
-<!-- Hyper index and view thumbnails for viewport width of 899px and below-->
+<!-- Hyper index and view thumbnails for viewport width of 899px and below - This is screen2-->
     <table ng-show="vnCTRL.screen2"
            style="  width:{{vnCTRL.width1}}; 
                     {{vnCTRL.response.height06}};
                     border-spacing:0px; 
-                    background-color:#d9d9d9; 
-                    border:2px solid black; 
+                    /*background-color:#d9d9d9; */
+                    /*border:2px solid black; */
                     margin-top:0px; 
                     margin-left:auto;
                     margin-right:auto;
@@ -265,7 +275,11 @@
                     border-radius:7px;">
         <tr style="">
             <td>
-                <table style="border-spacing:0px;">
+                <table  style= "border-spacing:0px;
+                                background-color:#d9d9d9; 
+                                border:2px solid black;
+                                border-radius:7px;
+                               "> 
                     <tr ng-repeat="stateNames in vnCTRL.stateNAMES" ng-show="stateNames.showView">
                         <td style=" width:{{vnCTRL.width2}};
                                     vertical-align:top;">
@@ -281,7 +295,7 @@
                                     </div>
                                     <a ui-sref="{{stateNames.stateNameColA}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                         <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColA}}"
-                                             alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Shed Site" 
+                                             alt="This should be thumbnail 1" 
                                              class="imageshadow "
                                              style="width:100%; 
                                                     border:1px solid #8c8c8c; 
@@ -301,7 +315,7 @@
                             </div> 
                                     <a ui-sref="{{stateNames.stateNameColC}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                         <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColC}}"
-                                             alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                             alt="This should be thumbnail 3" 
                                              class="imageshadow"
                                              style="width:100%; 
                                                     border:1px solid #8c8c8c; 
@@ -324,7 +338,7 @@
                                     </div>   
                                     <a ui-sref="{{stateNames.stateNameColB}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                         <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColB}}" 
-                                             alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Roof A\Raw Images" 
+                                             alt="This should be thumbnail 2" 
                                              class="imageshadow"
                                              style="width:100%; 
                                                     border:1px solid #8c8c8c; 
@@ -344,7 +358,7 @@
                                     </div>    
                                     <a ui-sref="{{stateNames.stateNameColD}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                         <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColD}}" 
-                                             alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                             alt="This should be thumbnail 4" 
                                              class="imageshadow"
                                              style="width:100%; 
                                                     border:1px solid #8c8c8c; 
@@ -359,15 +373,18 @@
             <td class="menuBtns" style="width:{{vnCTRL.width4}};
                                         border:none; 
                                         padding:5px 5px 5px 7px; 
-                                        background-color:black;">   
+                                        /*background-color:none;*/
+                                        vertical-align:top;">   
                 <div class=" shadow cursorstyle1" 
+                     ng-show="picMenuA.showBtnB" 
                      ng-click="vnCTRL.arrayIndexPre($index)"
                      style="width:85%; 
                             margin-bottom:{{vnCTRL.margin1}};
                             margin-left:3%;" 
                      ng-repeat="picMenuA in vnCTRL.picMenu1">
 
-                    <div style="width:100%;
+                    <div class="hyper"
+                         style="width:100%;
                                 padding:{{vnCTRL.padding1}} 0px;  
                                 background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
                                 border-radius:4px;
@@ -377,35 +394,37 @@
                                 text-shadow:{{picMenuA.shadow}};
                                 text-align:center;
                                 font-size:{{vnCTRL.btnFontSize}};
-                                font-family:arial;" 
-                            >{{picMenuA.label*2-1}}
+                                font-family:arial;">
+                        {{picMenuA.labelB}}
                     </div>        
                 </div>
             </td>
             <td class="menuBtns" style="width:{{vnCTRL.width5}}; 
                                         border:none; 
                                         padding:5px 7px 5px 5px; 
-                                        background-color:black;">
+                                        /*background-color:none;*/
+                                        vertical-align:top;">
                 <div class="shadow cursorstyle1"
+                     ng-show="picMenuB.showBtnB" 
                      ng-click="vnCTRL.arrayIndexPre($index+6)"
                      style="width:85%; 
                             margin-top:{{vnCTRL.margin1}}; 
-                            margin-left:3%;" 
+                            margin-left:3%;"
                      ng-repeat="picMenuB in vnCTRL.picMenu2" >         
-                        <div class="" 
-                            style=" width:100%;
-                                    padding:{{vnCTRL.padding1}} 0px;
-                                    background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
-                                    border-radius:4px;
-                                    border:1px solid #808080;
-                                    box-shadow:{{picMenuB.boxshadow}};
-                                    color:{{picMenuB.highlight}}; 
-                                    text-shadow:{{picMenuB.shadow}};
-                                    text-align:center;
-                                    font-size:{{vnCTRL.btnFontSize}};
-                                    font-family:arial;">
-                            {{picMenuB.label*2-12}}
-                        </div>
+                    <div class="hyper"
+                         style="width:100%;
+                                padding:{{vnCTRL.padding1}} 0px;
+                                background: linear-gradient(to bottom, white, #d9d9d9, #d9d9d9);
+                                border-radius:4px;
+                                border:1px solid #808080;
+                                box-shadow:{{picMenuB.boxshadow}};
+                                color:{{picMenuB.highlight}}; 
+                                text-shadow:{{picMenuB.shadow}};
+                                text-align:center;
+                                font-size:{{vnCTRL.btnFontSize}};
+                                font-family:arial;">
+                        {{picMenuB.labelB}}
+                    </div>
                 </div>
             </td>
         </tr>
@@ -463,8 +482,8 @@
                                                     border:1px solid #808080;
                                                     text-align:center;
                                                     margin-top:3px;" 
+                                            ng-bind-html="viewHistory.btnText"
                                             ng-repeat="viewHistory in vnCTRL.currentView">
-                                        {{viewHistory.btnText}}
                                     </div>
                                 </div>    
 
@@ -519,7 +538,7 @@
                                     </div>    
                                         <a ui-sref="{{stateNames.stateNameColA}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                             <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColA}}" 
-                                                 alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Shed Site" 
+                                                 alt="This should be thumbnail 1" 
                                                  class="imageshadow "
                                                  style="width:100%; border:1px solid #8c8c8c; border-top-left-radius:3px; border-top-right-radius:3px;">
                                         </a>
@@ -536,7 +555,7 @@
                                     </div>    
                                     <a ui-sref="{{stateNames.stateNameColB}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                         <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColB}}" 
-                                             alt="H:\Backup - Archive Discs\From 2007 BU Disc Dated 08-26-2007 2\PicturesAA At Work\Covering Roof A\Raw Images" 
+                                             alt="This should be thumbnail 2" 
                                              class="imageshadow"
                                              style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
                                     </a>
@@ -553,7 +572,7 @@
                                     </div>    
                                     <a ui-sref="{{stateNames.stateNameColC}}" ui-sref-active="active" style="text-decoration:none; color:black;">
                                         <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColC}}" 
-                                             alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                             alt="This should be thumbnail 3" 
                                              class="imageshadow"
                                              style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
                                     </a>
@@ -569,9 +588,8 @@
                                          ng-bind-html="vnCTRL.showCheckD">
                                     </div>    
                                     <a ui-sref="{{stateNames.stateNameColD}}" ui-sref-active="active" style="text-decoration:none; color:black;">
-                                        <!--<img ng-src="templates/tmpl_03/DSCN4494.JPG" alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" style="width:100%;">-->
                                         <img ng-src="{{vnCTRL.showPicObj[vnCTRL.hyperIndex].picColD}}" 
-                                             alt="H:\Backup - Archive Discs\From 2006 BU Disc Dated 07-29-2006 3\Long Grabbit\Raw Images\Tarp Tent" 
+                                             alt="This should be thumbnail 4" 
                                              class="imageshadow"
                                              style="width:100%; border:1px solid #8c8c8c; border-radius:3px; ">
                                     </a>
@@ -586,11 +604,13 @@
                                         width:70px; 
                                         padding-top:2px;
                                         padding-right:10px;">   
-                <div class="shadow cursorstyle1" 
+                <div class="shadow cursorstyle1"
+                     ng-show="picMenuA.showBtnA"
                      ng-click="vnCTRL.arrayIndex($index)" 
                      style="border-radius:4px;"  
                      ng-repeat="picMenuA in vnCTRL.picMenu1" >
-                        <div style="width:100%; 
+                        <div class="hyper"
+                             style="width:100%; 
                                     margin:7px 0px 0px 0px;
                                     {{vnCTRL.response.padding08}};
                                     font-size:16px;
@@ -600,17 +620,19 @@
                                     box-shadow:{{picMenuA.boxshadow}};
                                     color:{{picMenuA.highlight}}; 
                                     text-shadow:{{picMenuA.shadow}};
-                                    cursor:crosshair;
+                                    cursor:pointer;
                                     text-align:center;">
-                                    {{picMenuA.label}}
+                                    {{picMenuA.labelA}}
                         </div>
                 </div>        
 
                 <div class="shadow cursorstyle1" 
+                     ng-show="picMenuB.showBtnA"
                      ng-click="vnCTRL.arrayIndex($index+6)" 
                      style="border-radius:4px;"  
                      ng-repeat="picMenuB in vnCTRL.picMenu2" >         
-                        <div style="width:100%;
+                        <div class="hyper"
+                             style="width:100%;
                                     margin:7px 0px 0px 0px;
                                     {{vnCTRL.response.padding08}};
                                     font-size:16px;
@@ -620,9 +642,9 @@
                                     box-shadow:{{picMenuB.boxshadow}};
                                     color:{{picMenuB.highlight}}; 
                                     text-shadow:{{picMenuB.shadow}};
-                                    cursor:crosshair;
+                                    cursor:pointer;
                                     text-align:center;">
-                                    {{picMenuB.label}}
+                                    {{picMenuB.labelA}}
                        </div>
                 </div>
             </td>

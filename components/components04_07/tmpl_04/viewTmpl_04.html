@@ -1,37 +1,77 @@
-<style>
-.textStyle1
-{
-font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;   
-color:red;
-text-align:center; 
-}
-    
-</style>
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 
-<div class="textStyle1" style="{{$ctrl.fontsize1}};">
-    Reuse Tarps 
-</div>
-
-
-<div>    
-    <table style="wdth:100%">
+<div style="font-size:1em;">    
+   
+<!-- AR Response Section 1 ************************************************************************************************************************************************-->
+    <table style="width:100%">
         <tr>
-            <td style="width:38%; {{$ctrl.fontsize2}}; padding-left:2%;">
-                Grommets are great when they're in the right place and not ripped out. 
-                However, when you need to secure that damaged area of tarp or
-                secure that loose area of tarp or to create an attachment point 
-                in the middle area of your tarp nothing is better for the job
-                than EZ Grabbit.
-                
+            <td style="width:50%; vertical-align:top;">
+                <img    src="components/components04_07/tmpl_04/ttd-vn-rb-logo-b-1325x440.jpg"
+                        alt="RockBuster Logo"
+                        title="RockBuster Logo"
+                        style=" width:100%;
+                                {{$ctrl.rs1margintop2}};">
             </td>
-            <td style="width:58%; padding-right:2%">
-                <img src="http://www.tarptiedown.com/resources/ttd-vn-ezg-tarp-arc-torn-grommet-1200x700.jpg" 
-                alt="EZ Grabbit Tarp Tie Down Official Logo" 
-                title="Connecting tarps with EZ Grabbit" 
-                style=" width:100%; border:2px solid black; border-radius:7px; margin-top:10px;">  
+            <td style="width:50%">
+                <img    src="components/components04_07/tmpl_04/ttd-vn-rb-device-c-1760x600.png" 
+                        alt="RockBuster Device." 
+                        title="RockBuster Device" 
+                        style=" width:100%; 
+                                {{$ctrl.rs1margintop1}};"> 
             </td>
-            
         </tr>
-        
     </table>
+
+<!-- AR Response Section 2 ************************************************************************************************************************************************-->
+    <div style="text-align:center">
+        <div class="textStyle2" 
+             style="display:inline-block;
+                    margin-top:7px;
+                    color:black;
+                    background-color:yellow;
+                    padding:5px 8px;
+                    border:2px solid black;
+                    border-radius:5px;
+                    {{$ctrl.rs2fontsize2}}; 
+                    ">
+            RUGGED - &nbsp;RELIABLE - &nbsp;VERSATILE
+        </div>
+    </div>
+    <div class="textStyle4" 
+         style="text-align:center;
+                {{$ctrl.rs2fontsize3}}; 
+                {{$ctrl.rs2padding1}};
+               "> 
+        The RockBuster provides and extra strong hold for anchoring: Tarps, Tents, Canopies, and more!
+    </div>
+
+<!-- AR Response Section 3 ************************************************************************************************************************************************-->
+    <div style="position:relative;">
+        
+        <img    src="components/components04_07/tmpl_04/ttd-vn-rb-presentation2-1500x900.png" 
+                alt="RockBuster Application" 
+                title="RockBuster Application" 
+                style="position:absolute; top:0px; left:0px; width:100%;"> 
+        
+        <div style="position:absolute; top:3.0vh; left:2%; width:100%; z-index:3;">  
+            <div data-ui-view="childView1" 
+                 title="This Read About has a link to RockBuster pages"
+                 style="margin:1vh auto;">
+                        This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+            </div>
+        </div>    
+<!-- AR Response Section 4 ************************************************************************************************************************************************-->            
+        <div class="textStyle2 textShadow1" 
+             style="position:absolute; 
+                    left:5%; 
+                    color:white;
+                    text-align:left; 
+                    z-index:2;
+                    {{$ctrl.rs4positiontop2}};    /* AR_450px_140px */
+                    {{$ctrl.rs4fontsize5}}; 
+                   ">
+            Get that extra strong<br>hold when you need<br>it the most!
+        </div>
+    </div>
 </div> 
+

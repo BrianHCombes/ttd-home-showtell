@@ -1,60 +1,137 @@
-<style>
+<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 
-div
-{
-font-size:16px;    
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;    
-}
+<div style="font-size:1em;">
+<!-- AR Response Section 1 ************************************************************************************************************************************************-->
+    <div class="textStyle4" 
+         style="text-align:center;">
 
-</style>
+        <img src="components/top_menu/intro/TTD-Logo-1200x225-08-07-2017.png" 
+             alt="Tarp Tie Down Company Official Logo"  
+             title="EZ Grabbit: When a tarp clip just won't do" 
+             style="width:80%; border-radius:5px; margin-top:5px;">
+        <div style="{{$ctrl.rs1fontsize1}}; font-weight:bold;">Home of the EZ Grabbit Tarp Tie Down</div>
+    </div>
+<div data-ui-view="childView1" style="text-align:center; margin:2vh auto;">This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working</div>
+    <!-- AR Response Section 2 ************************************************************************************************************************************************-->
+    <table class="textStyle4" 
+           style=  "margin-top:10px; 
+                    position:relative; 
+                    width:100%;
+                   ">
+        <tr >
+            <td style= "padding-left:1%;
+                        vertical-align:top;
+                        text-align:center;
+                        {{$ctrl.rs2width1}};                    /* AR_30_55 */
+                       ">
+                <div style="width:100%; text-align:center;">
+                    <button ui-sref="transition" 
+                            class="btnStyle2"
+                            style= "width:90%;
+                                    display:inline-block;
+                                    text-decoration:none;
+                                    {{$ctrl.rs2fontsize4}}; 
+                                    {{$ctrl.rs2margintop2;}};       /* AR_20.00_-0.00 */
+                                    {{$ctrl.rs2borderwidth1}};
+                                    {{$ctrl.rs2fontweight1}};
+                                   ">
+                                    Read Me<br>We're in transition
+                    </button>
+                </div>
 
-<a href="https://www.tarptiedown.com/viewNavTest/index.html">TTD Home</a>
+                <div class="textBoxStyle1"
+                     style="margin:10px auto 0px auto;
+                            text-align:left;
+                            width:90%;
+                            {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
+                            {{$ctrl.rs2padding1}};      /* AR_10.00_2.00 */
+                            {{$ctrl.rs2fontsize5}};     /* AR_1.50_0.70 */
+                            {{$ctrl.rs2borderwidth1}};  /* AR_2.00_1.05 */
+                            {{$ctrl.rs2fontweight1}};   /* AR_100_900.00 */
+                            ">
+                    <div style="color:blue;text-align:center;">
+                        <b>Quick Start:</b>
+                    </div>
+                    &nbsp;&#9656; Select button A, B or C<br>&nbsp;&#9656; Select product image<br>&nbsp;&#9656; Browse page<br>&nbsp;&#9656; Select <span style="color:blue;"><b>INFO ABOUT THIS</b></span>
+                </div>
+            </td>
+            <td ng-show="1" style="{{$ctrl.rs2width2}}; text-align:center; vertical-align:top;">
+                <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%;"><br>
+                <span style="{{$ctrl.rs2fontsize6}};   /* AR_2.00_0.90 */
+                      ">The EZ Grabbit<br>Over one million sold</span>
+            </td>
+        </tr>
+    </table>
 
-<div style="text-align:center;">
+    <hr style="{{$ctrl.rs2margin1}};">
+
+    <!-- AR Response Section 3 ************************************************************************************************************************************************-->
+    <table  class="textStyle4" 
+            style= "width:100%; 
+                    text-align:center; 
+                    {{$ctrl.rs3fontsize1}};
+                   ">
+        <tr>
+            <td style="width:8%;"></td>
+            <td style="width:21%; text-align:center;">
+               <a   href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-privacy-policy.htm" 
+                    target="_blank" 
+                    class="btnStyle2" 
+                    style="text-decoration:none; {{$ctrl.rs3width1}}">Privacy Policy</a>
+            </td>
+            <td style="width:21%; text-align:center;">
+               <a   href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-contact-policy.htm" 
+                    target="_blank"
+                    class="btnStyle2" 
+                    style="text-decoration:none; {{$ctrl.rs3width1}}">Contact US</a>
+            </td>
+            <td style="width:21%; text-align:center;">
+               <a   href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-return-policy.htm" 
+                    target="_blank" 
+                    class="btnStyle2"  
+                    style="text-decoration:none; {{$ctrl.rs3width1}}">Return Policy</a>
+            </td>
+            <td style="width:21%; text-align:center;">
+               <a   href="https://www.tarptiedown.com/ttd-vn/ttd-vn-policy-pages/ttd-vn-ship-policy.htm" 
+                    target="_blank" 
+                    class="btnStyle2"  
+                    style="text-decoration:none; {{$ctrl.rs3width1}}">Shipping Policy</a>
+            </td>
+            <td style="width:8%"></td>
+        </tr>    
+    </table><br>    
    
-    <img src="components/top_menu/intro/TTD-Logo-1200x225-08-07-2017.png" 
-         alt="Tarp Tie Down Company Official Logo"  
-         title="EZ Grabbit: When a tarp clip just won't do" 
-         style="width:80%; border-radius:5px; margin-top:5px;">
-    <div style="{{$ctrl.fontsize2}};">Home of the EZ Grabbit Tarp Tie Down</div>
-    <!--<div style="font-size:2em;">Home of the EZ Grabbit Tarp Tie Down</div>-->
-</div>
-<div style="text-align:center;">
-    <button ng-click="$ctrl.newWindow();" 
-            style=" font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
-                    {{$ctrl.fontsize4}}; 
-                    color:#0099ff; 
-                    margin:10px 0px;">Navigate this site - learn how in 15 secs.
-    </button>
-</div>
+    <!--style="height:45px;-->
+    <!-- AR Response Section 4 ************************************************************************************************************************************************-->
+    <table  class="textStyle4"
+            style= "width:100%; 
+                    background-color:lightgray; 
+                    border:1px solid black; 
+                    border-radius:7px;
+                    {{$ctrl.rs4fontsize1}};     
+                   ">
+        <tr><th colspan="4" style="padding:5px 0px;">Our site is secure - select a merchant seal to verify</th></tr>
+        <tr style="width:100%;">
 
-<table style="">
-    <tr>
-        <td style="{{$ctrl.width1}}; padding-left:1%;">
-            <div style="{{$ctrl.fontsize3}};">
-                The EZ Grabbit Tarp Tie Down is our most popular product.
-            </div>
-            <br>
-            <div style="{{$ctrl.fontsize5}};
-                        text-align:left;
-                        color:red"> <u>To navigate:</u><br>
-                                    1) Select numbered button.<br>
-                                    2) Select thumbnail(s)<br>
-                                    3) Roam around<br>
-                                    4) Repeat as needed<br>
-                                    5) Select Intro at top<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;for this page
-            </div>
-            <!--<span style="color:blue;">Click or mouse on button 1 then click a thumbnail image. Likewise for the other numbered buttons.</span>-->
-        </td>
-        <td ng-show="1" style="{{$ctrl.width2}}; text-align:center; vertical-align:top;">
-            <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%"><br>
-            <span style="{{$ctrl.fontsize6}}">The EZ Grabbit</span>
-        </td>
-    </tr>
-    <tr ng-show="0">
-        <td>
-            <img src="https://www.tarptiedown.com/resources/ttd-vn-website-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%">
-        </td>
-    </tr>
-</table>
+                    <td style="width:40%; text-align:center;">
+                        <img src="https://www.tarptiedown.com/TTD-Store/storefront/view/default/image/payment_VISA_MC_0.75W.png" alt="VISA and MasterCard icons" style="width:90%;">
+                    </td>
+                    <td style="width:20%; text-align:center;">
+                        <a href="components/top_menu/policy_tmpl/merchant_seals.html" target="_blank"><img src="resources/images/AuthorizeNet-330x260.png" alt="Authorize.net seal" style="width:90%;"></a>
+                    </td>
+
+                    <td id="siteseal" style="width:20%; text-align:center;">
+                        <a href="components/top_menu/policy_tmpl/merchant_seals.html" target="_blank"><img src="resources/images/godaddy.png" alt="goDaddy seal" style="width:90%;"></a>
+                    </td>
+
+                    <td id="trustwaveSeal" style="width:20%; text-align:center;">
+                        <a href="components/top_menu/policy_tmpl/merchant_seals.html" target="_blank"><img src="resources/images/trustwavelogo_vertical.png" alt="trustwave seal" style="width:90%;"></a>
+                    </td>   
+        </tr>  
+        <tr>
+            <td colspan="4" style="text-align:center;">
+                Copyright © 2018 Tarp Tie Down Company LLC.<br>All rights reserved.
+            </td>
+        </tr>
+    </table>
+</div>
