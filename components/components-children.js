@@ -166,7 +166,7 @@ angular.module("viewNav")
                         
                     case "view04":
                         child1Self.readAboutHeaderText  =  "RockBuster Ground Stake:";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_04/ttd-vn-rb-not-complete-msg.html'><b>Go To RockBuster Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html'><b>Go To RockBuster Pages</b></a><br> \n\
                                                             The RockBuster is a 12\" ground stake specifically designed to secure rope lines to tents, \n\
                                                             tarps, canopies, and all other situations where anchoring ground lines is important. Rugged \n\
                                                             and reliable the RockBuster's straight fluted design holds the ground tight even when \n\
