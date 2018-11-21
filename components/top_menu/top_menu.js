@@ -53,15 +53,6 @@ angular.module("viewNav")
             // AR Section 4
             introSelf.rs4fontsize1 = "font-size:" + ((0.00065)*(viewWidth)+0.49294) + "em";         /* AR_1.25_0.73 */
             
-            introSelf.transition = function(){
-                var myWindow = window.open("components/top_menu/intro/transition.html", "", "width=250,height=200,top=100");
-            };
-            
-            introSelf.newWindow = function(){
-                var left = viewWidth/2-300;
-                var myWindow = window.open("components/top_menu/intro/navigate.html", "", "width=800,height=600,top=100,left="+left);
-            };
-            
             viewManager.topMenuToHighlight(1);    
             
         }]

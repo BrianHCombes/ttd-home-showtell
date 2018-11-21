@@ -107,7 +107,7 @@ angular.module("viewNav")
                         child1Self.readAboutBodyText    = "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro'><b>Go To EZ Grabbit Pages</b></a><br> \n\
                                                            This composite image shows the four feature capabilities of the standard \n\
                                                            EZ Grabbit. You can mount tarps to surfaces, connect tarps together, \n\
-                                                           attach anywhere, and save and reuse damaged tarps.<br>"
+                                                           attach anywhere, and save and reuse damaged tarps.<br>";
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
                         child1Self.readAboutExtraStuff3 = false;
@@ -125,7 +125,7 @@ angular.module("viewNav")
                                                             where an extra strong hold is needed. And don't forget you can connect tarps \n\
                                                             together with Long Grabbit also. A mix of Long Grabbits and EZ Grabbits will \n\
                                                             assure you can create the ultimate tarp city or protective cover.<br> \n\
-                                                            <span class='viewTmpl_01CSS-A'><b>So when you go big, go Long Grabbit!</b>"
+                                                            <span class='viewTmpl_01CSS-A'><b>So when you go big, go Long Grabbit!</b>";
                                                             
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
@@ -141,7 +141,7 @@ angular.module("viewNav")
                                                             lightweight tarp and tent shelters and is intended for recreational users who travel \n\
                                                             lightly. One Mini Grabbit device weighs about an ounce (28g) which includes the 6' \n\
                                                             (183cm) long 1/8\" (3mm) dia. rope. There's no mount capability, but you get all the \n\
-                                                            other great features of the EZ Grabbit but only in a miniature version.<br>" 
+                                                            other great features of the EZ Grabbit but only in a miniature version.<br>"; 
                                                             
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
@@ -156,7 +156,7 @@ angular.module("viewNav")
                                                             (5mm) diameter. Use it to adjust lines on tents, canopies, tarps, tarp shelters, etc. \n\
                                                             Its open end design allows you to secure lines around trees, poles, ground stakes, and \n\
                                                             irregular shaped tie down points. Remarkably strong, it can withstand almost any line \n\
-                                                            load a tent or a canopy would endure on a very windy day.<br>" 
+                                                            load a tent or a canopy would endure on a very windy day.<br>"; 
                                                             
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
