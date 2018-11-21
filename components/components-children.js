@@ -50,8 +50,8 @@ angular.module("viewNav")
                 switch(queryParam){
                     
                     case "ttd":
-                        child1Self.readAboutHeaderText  = "Not used";
-                        child1Self.readAboutBodyText    = "Not used";  
+                        child1Self.readAboutHeaderText  = "The TTD Home Page Region:";
+                        child1Self.readAboutBodyText    = "This page provides a brief overview about how to get around the EZ Grabbit region.";  
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
                         child1Self.readAboutExtraStuff3 = false;
@@ -299,23 +299,24 @@ angular.module("viewNav")
             function callMenu(queryParam){
                 var locationHighlight;
                 switch(queryParam){
-                    case "intro":   locationHighlight = 0; break;
-                    case "buyprice":locationHighlight = 1; break;
-                    case "products":locationHighlight = 2; break;
-                    case "reviews": locationHighlight = 3; break;    
-                    case "view00":  locationHighlight = 4; break; 
-                    case "view01":  locationHighlight = 5; break; 
-                    case "view02":  locationHighlight = 6; break; 
-                    case "view03":  locationHighlight = 7; break; 
-                    case "view04":  locationHighlight = 8; break; 
-                    case "view05":  locationHighlight = 9; break;
-                    case "view06":  locationHighlight = 10; break;
-                    case "view07":  locationHighlight = 11; break;
-                    case "view08":  locationHighlight = 12; break;
-                    case "view09":  locationHighlight = 13; break;
-                    case "view10":  locationHighlight = 14; break;
-                    case "view11":  locationHighlight = 15; break;
-                    default:console.log("No view match"); break;
+                    case "ttd":     locationHighlight = 0; break;
+                    case "intro":   locationHighlight = 1; break;
+                    case "buyprice":locationHighlight = 2; break;
+                    case "products":locationHighlight = 3; break;
+                    case "reviews": locationHighlight = 4; break;    
+                    case "view00":  locationHighlight = 5; break; 
+                    case "view01":  locationHighlight = 6; break; 
+                    case "view02":  locationHighlight = 7; break; 
+                    case "view03":  locationHighlight = 8; break; 
+                    case "view04":  locationHighlight = 9; break; 
+                    case "view05":  locationHighlight = 10; break;
+                    case "view06":  locationHighlight = 11; break;
+                    case "view07":  locationHighlight = 12; break;
+                    case "view08":  locationHighlight = 13; break;
+                    case "view09":  locationHighlight = 14; break;
+                    case "view10":  locationHighlight = 15; break;
+                    case "view11":  locationHighlight = 16; break;
+                    default:console.log("From components-children.js file: There is no view match"); break;
                 }
                     
                 child1Self.navMenuHeader = NavMenuFactory.navMenuHeader();

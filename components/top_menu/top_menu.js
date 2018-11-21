@@ -1,5 +1,25 @@
 angular.module("viewNav")
 
+    .component('ttd', {
+        
+        // templateUrl: 'https://www.tarptiedown.com/ttd-vn/ttd-vn-top-menu-pages/ttd.html',
+        templateUrl: 'components/top_menu/ttd/ttd.html',
+       
+        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
+            var viewWidth = GetSet.getViewWidth();
+                
+            var ttdSelf = this;
+            
+            // Response Section 1
+            ttdSelf.rs1fontsize1 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";             /* AR_2.00_0.75 */
+            ttdSelf.rs1fontsize2 = "font-size:" + ((0.00049)*(viewWidth)+0.62222) + "em";             /* AR_1.20_0.90 */
+            ttdSelf.rs1fontsize3 = "font-size:" + ((0.00031)*(viewWidth)+0.73889) + "em";             /* AR_1.10_0.85 */
+            ttdSelf.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                      /* AR_45.00_2.00 */
+            
+            viewManager.topMenuToHighlight(0);    
+        }]
+    })
+
     .component('intro', {
         
         templateUrl: 'components/top_menu/intro/intro.html',
@@ -42,7 +62,7 @@ angular.module("viewNav")
                 var myWindow = window.open("components/top_menu/intro/navigate.html", "", "width=800,height=600,top=100,left="+left);
             };
             
-            viewManager.topMenuToHighlight(0);    
+            viewManager.topMenuToHighlight(1);    
             
         }]
     })
@@ -67,7 +87,7 @@ angular.module("viewNav")
             
             buyPriceSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
             
-            viewManager.topMenuToHighlight(1);  
+            viewManager.topMenuToHighlight(2);  
             
         }]
     })
@@ -94,7 +114,7 @@ angular.module("viewNav")
             productsSelf.margin1 = "margin:" + ((0.00617)*(viewWidth)+2.77778) + "px 0px";              /* AR_10.00_5.00 */
             productsSelf.fontweight1 = "font-weight:" + ((-0.98765)*(viewWidth)+1255.55556);            /* AR_100.01_900.00 */
             
-            viewManager.topMenuToHighlight(2);  
+            viewManager.topMenuToHighlight(3);  
             
         }]
     })
@@ -112,7 +132,7 @@ angular.module("viewNav")
             
             reviewSelf.fontsize1 = "font-size:" + ((0.00049)*(viewWidth)+0.42222) + "em";      /* AR_1.00_0.60 */
             
-            viewManager.topMenuToHighlight(3);  
+            viewManager.topMenuToHighlight(4);  
             
         }]
     })

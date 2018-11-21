@@ -18,8 +18,9 @@ angular.module("viewNav")
                 getViewNav: function(location){
 
                     var navMenu = 
-                    [           
-                        {"rowClass":"topMenuNav",   "selection":"TTD",              "view":"intro",    "destination":"Tarp Tie Down Home & intro   "},
+                    [    
+                        {"rowClass":"topMenuNav",   "selection":"Help",             "view":"ttd",      "destination":"Navigating TTD Home region"},
+                        {"rowClass":"topMenuNav",   "selection":"TTD Home",         "view":"intro",    "destination":"Tarp Tie Down Home & intro   "},
                         {"rowClass":"topMenuNav",   "selection":"Price/Buy",        "view":"buyprice", "destination":"Product pricing and shopping "},
                         {"rowClass":"topMenuNav",   "selection":"Products",         "view":"products", "destination":"Overview of our 10 products "},
                         {"rowClass":"topMenuNav",   "selection":"Reviews",          "view":"reviews",  "destination":"Customer feedback         "},

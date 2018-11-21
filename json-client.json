@@ -1,9 +1,10 @@
 {
     "menuBar1": [
-                    {"menuItemName":"&nbsp;&nbsp;&nbsp;&nbsp;TTD&nbsp;&nbsp;&nbsp;&nbsp;",    "menuItem":"intro",      "title":"You are on the Tarp Tie Down home page",  "highlight":"white"},
-                    {"menuItemName":"&nbsp;&nbsp;&nbsp;Price/Buy&nbsp;&nbsp;&nbsp;",    "menuItem":"buyprice",   "title":"You are on the Tarp Tie Down home page",  "highlight":"white"},
-                    {"menuItemName":"&nbsp;&nbsp;&nbsp;Products&nbsp;&nbsp;&nbsp;",     "menuItem":"products",   "title":"You are on the Tarp Tie Down home page",  "highlight":"white"},
-                    {"menuItemName":"&nbsp;&nbsp;&nbsp;Reviews&nbsp;&nbsp;&nbsp;",      "menuItem":"reviews",    "title":"You are on the Tarp Tie Down home page",  "highlight":"white"}
+                    {"menuItemName":"&nbsp;&nbsp;Help&nbsp;&nbsp;",                 "menuItem":"ttd",       "title":"More info about getting around in the Tarp Tie Down home page region",  "highlight":"white"},
+                    {"menuItemName":"&nbsp;&nbsp;&nbsp;TTD Home&nbsp;&nbsp;&nbsp;", "menuItem":"intro",     "title":"This is the opening home page of Tarp Tie Down Company",  "highlight":"white"},
+                    {"menuItemName":"&nbsp;&nbsp;&nbsp;Price/Buy&nbsp;&nbsp;&nbsp;","menuItem":"buyprice",  "title":"This is where you go to get prices and shop",  "highlight":"white"},
+                    {"menuItemName":"&nbsp;&nbsp;&nbsp;Products&nbsp;&nbsp;&nbsp;", "menuItem":"products",  "title":"This is a quick overview of our products with go to links",  "highlight":"white"},
+                    {"menuItemName":"&nbsp;&nbsp;&nbsp;Reviews&nbsp;&nbsp;&nbsp;",  "menuItem":"reviews",   "title":"These are customer reviews we never asked for but they came anyway",  "highlight":"white"}
                 ],
     
     "showView": [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false ],
