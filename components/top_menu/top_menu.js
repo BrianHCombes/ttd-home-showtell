@@ -5,7 +5,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/ttd-vn/ttd-vn-top-menu-pages/ttd.html',
         templateUrl: 'components/top_menu/ttd/ttd.html',
        
-        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
+        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
                 
             var ttdSelf = this;
@@ -24,7 +24,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/top_menu/intro/intro.html',
        
-        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
+        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
                 
             var introSelf = this;

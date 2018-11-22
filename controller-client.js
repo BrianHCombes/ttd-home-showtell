@@ -131,8 +131,12 @@ angular.module('viewNav')
                 };
             }
         };
-        
-        viewManager.ref2(topMenuHighlight);
+        // IMPORTANT!!!!  11/21/2018
+        // This (commented out) service call: viewManager.ref2(topMenuHighlight); below is now called in the IIFE where the default view is called. 
+        // See IIFE function expression: stateGo
+        // Doing this is a test for fixing the occasional corrupt load that happens. I see it too often for comfort so trying to fix it. Thinking is there is
+        // a function invoking order that may be a problem. So this a test to see if it this fixes it.
+        // viewManager.ref2(topMenuHighlight);
         
 //***********************************************************************************************************************************************************            
 // receiveData serves as a callback function and retrieves all thumbnail image files names from the db. Setting vn.hyperIndex = 0 shows the first group of thumbnails on load.
@@ -287,22 +291,16 @@ angular.module('viewNav')
         
             
 //***********************************************************************************************************************************************************            
-// $state.go('some-view') loads the desired view as the default view upon load               
+// $state.go('some-view') loads the desired view as the default view upon load. 
+// IMPORTANT!!! 11/21/2018 Due to the occasional (unexplained) corrupt load and subsequent error report which
+// provided a clue the problem may be a function loading order. So moved the invocation of: viewManager.ref2(topMenuHighlight); to this stateGo IIFE so it
+// would be invoked after the default state: $state.go('intro'); is invoked.               
         var stateGo = (function(){    
             $state.go('intro');
-/*             
-                // Use this setTimeout if intializing with a template. If you initialize with a template only the first thumbnail group will show properly. If
-                // it's a template (view04 and up) then the proper thumbnail group won't show unless you call the stateHistory method and send it the proper parameters
-                setTimeout(function(){ 
-                    var viewHistory = {                         
-                                        "view":"view08",
-                                        "group":3,          
-                                        "thumb":1
-                                      };  
-                    vn.stateHistory(viewHistory);
-                },3000);
-*/
-            }());
+            viewManager.ref2(topMenuHighlight);
+        }());
+        
+        // setTimeout(function(){$state.go('intro');},200)  
  
 //***********************************************************************************************************************************************************    
 //  Responsive section for the Hyper Menu and Thumbnail section     

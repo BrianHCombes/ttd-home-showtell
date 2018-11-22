@@ -54,9 +54,9 @@ font-weight:bold;
 }
 
 
-.cursorstyle1
+.cursorstyle1:hover
 {
-cursor:default;    
+cursor:pointer;    
 }
 
 .shadow
