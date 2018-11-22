@@ -92,10 +92,6 @@ angular.module("viewNav")
                 
             var productsSelf = this;
             
-            productsSelf.viewNgroup =   function(view, group){
-                                            viewManager.fromProducts(view,group);
-                                        };
-            
             productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";   /* AR_1.00_0.65 */
             productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";   /* AR_1.00_0.50 */
             productsSelf.width1 = "width:" + ((-0.01235)*(viewWidth)+54.44444) + "%";       /* AR_39.99_50.00 */    // Not used at the moment
