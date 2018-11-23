@@ -136,6 +136,8 @@ angular.module('viewNav')
         // See IIFE function expression: stateGo
         // Doing this is a test for fixing the occasional corrupt load that happens. I see it too often for comfort so trying to fix it. Thinking is there is
         // a function invoking order that may be a problem. So this a test to see if it this fixes it.
+        // IMPORTANT!!! 11/23/2018 The above doesn't seem to work. So now have added a reload after 200ms using the setTimeout function. This is not satisfactory
+        // but manual reloads always seem to do the trick. Still suspicious of timing issues with all load time functions and methods. 
         // viewManager.ref2(topMenuHighlight);
         
 //***********************************************************************************************************************************************************            
@@ -294,13 +296,16 @@ angular.module('viewNav')
 // $state.go('some-view') loads the desired view as the default view upon load. 
 // IMPORTANT!!! 11/21/2018 Due to the occasional (unexplained) corrupt load and subsequent error report which
 // provided a clue the problem may be a function loading order. So moved the invocation of: viewManager.ref2(topMenuHighlight); to this stateGo IIFE so it
-// would be invoked after the default state: $state.go('intro'); is invoked.               
+// would be invoked after the default state: $state.go('intro'); is invoked.  
+// IMPORTANT!!! 11/23/2018 The above doesn't seem to work. So now have added a reload after 200ms using the setTimeout function. This is not satisfactory
+// but manual reloads always seem to do the trick. Still suspicious of timing issues with all load time functions and methods. 
         var stateGo = (function(){    
             $state.go('intro');
             viewManager.ref2(topMenuHighlight);
         }());
         
-        // setTimeout(function(){$state.go('intro');},200)  
+        setTimeout(function(){$state.go('intro');},200);
+        
  
 //***********************************************************************************************************************************************************    
 //  Responsive section for the Hyper Menu and Thumbnail section     
