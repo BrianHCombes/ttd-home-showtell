@@ -1,6 +1,15 @@
 angular.module('viewNav', ['ui.router', 'ngSanitize'])
 
-    .config(['$stateProvider', function($stateProvider) {
+    .config(['$stateProvider', '$sceDelegateProvider', function($stateProvider, $sceDelegateProvider) {
+ 
+        $sceDelegateProvider.resourceUrlWhitelist([
+            // Allow same origin resource loads.
+            'self',
+            // Allow loading from other specified domains.
+            'https://www.tarptiedown.com/ttd-vn/ttd-vn-top-menu-pages/ttd.html'
+        ]);
+ 
+ 
  
         //  configure states for hyper menu items
         var viewsObj = {};

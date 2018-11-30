@@ -1,3 +1,12 @@
+// https://docs.angularjs.org/api/ng/provider/$sceDelegateProvider#resourceUrlWhitelist
+// https://docs.angularjs.org/api/ng/service/$sce#impact-on-loading-templates
+// https://stackoverflow.com/questions/23823010/how-to-enable-cors-in-angularjs
+// https://enable-cors.org/
+// https://www.html5rocks.com/en/tutorials/cors/
+// https://humanwhocodes.com/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/
+
+
+
 angular.module("viewNav")
 
     .component('ttd', {
@@ -5,10 +14,14 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/ttd-vn/ttd-vn-top-menu-pages/ttd.html',
         templateUrl: 'components/top_menu/ttd/ttd.html',
        
-        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
+        controller: ['GetSet', 'viewManager', '$sce', function(GetSet, viewManager, $sce){
             var viewWidth = GetSet.getViewWidth();
                 
             var ttdSelf = this;
+            
+            ttdSelf.fill1 = "TTD Home";
+            ttdSelf.fill2 = "Tarp Tie Down home page";
+            ttdSelf.fill3 = "TTD Home";
             
             // Response Section 1
             ttdSelf.rs1fontsize1 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";             /* AR_2.00_0.75 */
@@ -94,7 +107,6 @@ angular.module("viewNav")
             
             productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";   /* AR_1.00_0.65 */
             productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";   /* AR_1.00_0.50 */
-            productsSelf.width1 = "width:" + ((-0.01235)*(viewWidth)+54.44444) + "%";       /* AR_39.99_50.00 */    // Not used at the moment
             
             productsSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
             productsSelf.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
