@@ -151,7 +151,7 @@ angular.module("viewNav")
                     
                     case "view03":
                         child1Self.readAboutHeaderText  =  "EZ Adjust Rope Adjuster";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components00_03/tmpl_03/ttd-vn-eza-not-complete-msg.html'><b>Go To EZ Adjust Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html'><b>Go To EZ Adjust Pages</b></a><br> \n\
                                                             The EZ Adjust Rope Adjuster is perfect for use with ropes 1/8\" (3mm) diameter to 3/16\" \n\
                                                             (5mm) diameter. Use it to adjust lines on tents, canopies, tarps, tarp shelters, etc. \n\
                                                             Its open end design allows you to secure lines around trees, poles, ground stakes, and \n\

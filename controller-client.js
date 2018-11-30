@@ -300,11 +300,11 @@ angular.module('viewNav')
 // IMPORTANT!!! 11/23/2018 The above doesn't seem to work. So now have added a reload after 200ms using the setTimeout function. This is not satisfactory
 // but manual reloads always seem to do the trick. Still suspicious of timing issues with all load time functions and methods. 
         var stateGo = (function(){    
-            $state.go('intro');
+            $state.go('view00');
             viewManager.ref2(topMenuHighlight);
         }());
         
-        setTimeout(function(){$state.go('intro');},200);
+        setTimeout(function(){$state.go('intro');},400);
         
  
 //***********************************************************************************************************************************************************    
