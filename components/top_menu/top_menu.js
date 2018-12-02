@@ -105,6 +105,9 @@ angular.module("viewNav")
                 
             var productsSelf = this;
             
+           productsSelf.title1 = "A short product overview located here on the home pages";
+           productsSelf.title2 = "Full coverage of the product including detailed discussion, field applications, and specifications";
+            
             var quickLIST = [ 
                 {"localview":"view00", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Standard EZ Grabbit"},
                 {"localview":"view09", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Classic EZ Grabbit"},
