@@ -83,10 +83,10 @@ angular.module("viewNav")
                         break;
                     
                     case "products":
-                        child1Self.readAboutHeaderText  = "Our list of products:";
-                        child1Self.readAboutBodyText    = "These brief product overviews familiarize you with the products. \n\
-                                                           Select for a more detailed description. Be sure to follow the button \n\
-                                                           text if it notifies you of which lettered button to click.";  
+                        child1Self.readAboutHeaderText  =  "Our list of products:";
+                        child1Self.readAboutBodyText    =  "Use the Quick Menu or scroll down for brief product overviews. \n\
+                                                            Select the app links for more detailed discussion, field \n\
+                                                            applications, and specifications.";  
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
                         child1Self.readAboutExtraStuff3 = false;

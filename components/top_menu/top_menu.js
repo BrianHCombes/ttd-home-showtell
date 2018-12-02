@@ -105,8 +105,29 @@ angular.module("viewNav")
                 
             var productsSelf = this;
             
+            var quickLIST = [ 
+                {"localview":"view00", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Standard EZ Grabbit"},
+                {"localview":"view09", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Classic EZ Grabbit"},
+                {"localview":"view01", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html",    "product":"Long Grabbit"},
+                {"localview":"view02", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_02/ttd-vn-mg-not-complete-msg.html",    "product":"Mini Grabbit"},
+                {"localview":"view03", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html",                                      "product":"EZ Adjust Rope Adjuster"},
+                {"localview":"view04", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html",                                        "product":"RockBuster Ground Stake"},
+                {"localview":"view05", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html",    "product":"Bag Grabbit Bag Handle"},
+                {"localview":"view06", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html",   "product":"EZ Grabbit Keeper"},
+                {"localview":"view07", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html",    "product":"Carry Bag"},
+                {"localview":"view08", "regionURL":"https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html",    "product":"Tent Poles"}
+            ];
+            
+            productsSelf.quickLIST = quickLIST;
+            
+            // Response Section
+            productsSelf.width1 = "width:" + ((-0.06118)*(viewWidth)+116.57647) + "%";   // AR_1170_45.00_320_97.00
+             
             productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";   /* AR_1.00_0.65 */
             productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";   /* AR_1.00_0.50 */
+            productsSelf.fontsize3 = "font-size:" + ((0.00037)*(viewWidth)+0.56985) + "em";   // AR_1170_1.00_320_0.69
+            productsSelf.fontsize4 = "font-size:" + ((0.00024)*(viewWidth)+0.97471) + "em";   // AR_1170_1.25_320_1.05
+            
             
             productsSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
             productsSelf.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
