@@ -49,10 +49,13 @@ border-radius:7px
     <div class="textStyle4" style="margin:1% auto; background-color:black; color:white; padding:5px; border-radius:5px; {{$ctrl.fontsize3}}; {{$ctrl.width1}};">
         <table class="tableBorder" style="width:100%;">
             <tr><th class="headerBorder topMenuNav" colspan="2">Quick Menu</th></tr>
-            <tr><th class="headerBorder topMenuNav" style="width:50%;">Local Quick View</th><th class="headerBorder topMenuNav" style="width:50%;">Go to Apps</th></tr>
+            <tr>
+                <th class="headerBorder topMenuNav" title="{{$ctrl.title1}}" style="width:50%;">Local Quick View</th>
+                <th class="headerBorder topMenuNav" title="{{$ctrl.title2}}" style="width:50%;">Go to Apps</th>
+            </tr>
             <tr ng-repeat="quicklist in $ctrl.quickLIST">
-                <td class="dataBorder hyperMenuNav"><a class="quickLink" ui-sref="{{quicklist.localview}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
-                <td class="dataBorder hyperMenuNav"><a class="quickLink" href="{{quicklist.regionURL}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
+                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title1}}" ui-sref="{{quicklist.localview}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
+                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title2}}" href="{{quicklist.regionURL}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
             </tr>    
         </table>
         <div style=" margin:1% 0%; text-align:center">(or)&nbsp;&nbsp;Quick product info with App links below</div>
@@ -86,6 +89,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro"
                                     class="btnStyle2"
+                                    title="Takes you to the EZ Grabbit pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             padding:3px 10px;
@@ -126,6 +130,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro"
                                     class="btnStyle2"
+                                    title="Takes you to the EZ Grabbit pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             padding:3px 10px;
@@ -166,6 +171,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro"
                                     class="btnStyle2"
+                                    title="Takes you to the EZ Grabbit pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             padding:3px 10px;
@@ -206,6 +212,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html"
                                     class="btnStyle2"
+                                    title="Takes you to the Long Grabbit pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             padding:3px 10px;
@@ -245,6 +252,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/components/components00_03/tmpl_02/ttd-vn-mg-not-complete-msg.html"
                                     class="btnStyle2"
+                                    title="Takes you to the Mini Grabbit pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             padding:3px 10px;
@@ -283,6 +291,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html"
                                     class="btnStyle2"
+                                    title="Takes you to the EZ Adjust pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             font-size:1.13em;
@@ -323,6 +332,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html#/intro"
                                     class="btnStyle2"
+                                    title="Takes you to the RockBuster pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             font-size:1.13em;
@@ -362,6 +372,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html"
                                     class="btnStyle2"
+                                    title="Takes you to the Bag Grabbit pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             font-size:1.13em;
@@ -401,6 +412,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html"
                                     class="btnStyle2"
+                                    title="Takes you to the Keeper pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             font-size:1.13em;
@@ -441,6 +453,7 @@ border-radius:7px
                             
                             <a href="https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html"
                                     class="btnStyle2"
+                                    title="Takes you to the Carry Bag pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             font-size:1.13em;
@@ -479,6 +492,7 @@ border-radius:7px
                             </div>
                             <a href="https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html"
                                     class="btnStyle2"
+                                    title="Takes you to the Tent Pole pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             font-size:1.13em;
