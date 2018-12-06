@@ -22,18 +22,17 @@ color:white;
 color:black    
 }
 
-#viewStyle
+.viewStyle
 {
 background-color:gray; 
 border:1px solid black;
 border-radius:7px
 }
-
-
 </style>
 
-<div id="viewStyle">
-    <div style="width:100%; 
+<div class="viewStyle" id="pageTop1">
+    <div id="pageTop2"
+         style="width:100%; 
                 text-align:center; 
                 {{$ctrl.fontsize2}};
                 ">
@@ -48,26 +47,27 @@ border-radius:7px
 
     <div class="textStyle4" style="margin:1% auto; background-color:black; color:white; padding:5px; border-radius:5px; {{$ctrl.fontsize3}}; {{$ctrl.width1}};">
         <table class="tableBorder" style="width:100%;">
-            <tr><th class="headerBorder topMenuNav" colspan="2">Quick Menu</th></tr>
+            <tr><th class="headerBorder topMenuNav" colspan="2" title="{{$ctrl.title3}}">Quick Menu</th></tr>
             <tr>
-                <th class="headerBorder topMenuNav" title="{{$ctrl.title1}}" style="width:50%;">Local Quick View</th>
-                <th class="headerBorder topMenuNav" title="{{$ctrl.title2}}" style="width:50%;">Go to Apps</th>
+                <th class="headerBorder topMenuNav" title="{{$ctrl.title1}}" style="width:50%;">Quick View Below</th>
+                <th class="headerBorder topMenuNav" title="{{$ctrl.title2}}" style="width:50%;">Go to App Pages</th>
             </tr>
             <tr ng-repeat="quicklist in $ctrl.quickLIST">
-                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title1}}" ui-sref="{{quicklist.localview}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
+                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title1}}" href="{{quicklist.localview}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
                 <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title2}}" href="{{quicklist.regionURL}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
             </tr>    
         </table>
-        <div style=" margin:1% 0%; text-align:center">(or)&nbsp;&nbsp;Quick product info with App links below</div>
+        <div style=" margin:1% 0%; text-align:center">(or)&nbsp;&nbsp;Scroll through the products below</div>
     </div>
     
     <table style="  border:1px solid black; 
                     {{$ctrl.fontsize1}};         /* AR_1.00_0.65 */
                  ">
 <!-- EZ Grabbit Yellow ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" width:40%; border:1px solid black; background-color:white;">
+        <tr id="EZGY">
+            <td style=" width:40%; border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-yellow-device-dbns-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -87,9 +87,9 @@ border-radius:7px
                                 When screw mounted to a surface you can emanate a tarp from said surface.
                                 But of course it's spectacularly well suited for rope leader use as well.
                             </div>
-                            <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro"
+                            <a ui-sref="view00"
                                     class="btnStyle2"
-                                    title="Takes you to the EZ Grabbit pages with detailed discussion, field applications, and specs."
+                                    title="Takes you to the thumbnail menu for more quick information about the standard EZ Grabbit."
                                     style= "display:inline-block;
                                             text-decoration:none;
                                             padding:3px 10px;
@@ -97,18 +97,32 @@ border-radius:7px
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                    Go To:<br>Standard EZ Grabbit Apps
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
+                            <!--<a href="http://localhost:8000/ttd-vn-home/index.html#/intro"-->
+                            <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html"
+                                 class="btnStyle2"
+                                 title="Takes you to the EZ Grabbit pages with detailed discussion, field applications, and specs."
+                                 style= "display:inline-block;
+                                         text-decoration:none;
+                                         padding:3px 10px;
+                                         {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                         {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                         {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                         {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                        "> 
+                                Go To:<br>&nbsp;App Pages&nbsp;
                             </a>
                            
                 </div>
             </td>
         </tr>
 <!-- EZ Grabbit Black ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black; background-color:white;">
+        <tr id="EZGBL">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-black-device-dbns-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -128,7 +142,20 @@ border-radius:7px
                                 When screw mounted to a surface you can emanate a tarp from said surface.
                                 But of course it's spectacularly well suited for rope leader use as well.
                             </div>
-                            <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro"
+                            <a ui-sref="view00"
+                                    class="btnStyle2"
+                                    title="Takes you to the thumbnail menu for more quick information about the standard EZ Grabbit."
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
+                            <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html"
                                     class="btnStyle2"
                                     title="Takes you to the EZ Grabbit pages with detailed discussion, field applications, and specs."
                                     style= "display:inline-block;
@@ -138,17 +165,17 @@ border-radius:7px
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                    Go To:<br>Standard EZ Grabbit Apps
+                                    Go To:<br>&nbsp;App Pages&nbsp;
                             </a>
                </div>
             </td>
         </tr>
 <!-- EZ Grabbit Green ************************************************************************************************************************************************-->
-        <tr>
-            <td style="border:1px solid black; background-color:white;">
+        <tr id="EZGG">
+            <td style="border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-green-device-dbns-750x350.jpg" alt="ezg hivis image" style="width:100%">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -169,6 +196,19 @@ border-radius:7px
                                 As always the performance of our non-mountable 
                                 EZ Grabbit is as superior as our mountable EZ Grabbit.
                             </div>
+                            <a ui-sref="view09"
+                                    class="btnStyle2"
+                                    title="Takes you to the thumbnail menu for more quick information about the classic EZ Grabbit."
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
                             <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro"
                                     class="btnStyle2"
                                     title="Takes you to the EZ Grabbit pages with detailed discussion, field applications, and specs."
@@ -179,17 +219,17 @@ border-radius:7px
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                    Go To:<br>Classic EZ Grabbit Apps
+                                    Go To:<br>&nbsp;App Pages&nbsp;
                             </a>
                </div>
             </td>
         </tr>
 <!-- Long Grabbit ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black; background-color:white;">
+        <tr id="LG">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                     <img src="components/top_menu/buy_price/ttd-vn-lg-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                    <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -210,6 +250,19 @@ border-radius:7px
                                 "flanking" spans of material such as tarps 
                                 over a haystack, etc. 
                             </div>
+                            <a ui-sref="view01"
+                                    class="btnStyle2"
+                                    title="Takes you to the thumbnail menu for more quick information about the Long Grabbit"
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
                             <a href="https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html"
                                     class="btnStyle2"
                                     title="Takes you to the Long Grabbit pages with detailed discussion, field applications, and specs."
@@ -220,17 +273,17 @@ border-radius:7px
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                        Go To:<br>Long Grabbit Apps
+                                        Go To:<br>&nbsp;App Pages&nbsp;
                             </a>
                 </div>
             </td>
         </tr>
 <!-- Mini Grabbit ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black; background-color:white;">
+        <tr id="MG">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-mg-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -250,6 +303,19 @@ border-radius:7px
                                 tarp and tent shelters and is intended for recreational 
                                 users who travel lightly.  
                             </div>
+                            <a ui-sref="view02"
+                                    class="btnStyle2"
+                                    title="Takes you to the thumbnail menu for more quick information about the Mini Grabbit."
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
                             <a href="https://www.tarptiedown.com/components/components00_03/tmpl_02/ttd-vn-mg-not-complete-msg.html"
                                     class="btnStyle2"
                                     title="Takes you to the Mini Grabbit pages with detailed discussion, field applications, and specs."
@@ -260,17 +326,17 @@ border-radius:7px
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                        Go To:<br>Mini Grabbit Apps
+                                        Go To:<br>&nbsp;App Pages&nbsp;
                             </a> 
                </div>
             </td>
         </tr>
 <!-- EZ Adjust ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black; background-color:white;">
+        <tr id="EZA">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-eza-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -289,28 +355,41 @@ border-radius:7px
                                 adjust lines on tents, canopies, tarps, tarp shelters, 
                                 etc. 
                             </div>
-                            <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html"
+                            <a ui-sref="view03"
                                     class="btnStyle2"
-                                    title="Takes you to the EZ Adjust pages with detailed discussion, field applications, and specs."
+                                    title="Takes you to the thumbnail menu for more quick information about the EZ Adjust rope adjuster."
                                     style= "display:inline-block;
                                             text-decoration:none;
-                                            font-size:1.13em;
                                             padding:3px 10px;
                                             {{$ctrl.padding1}};         /* AR_10.00_2.00 */
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                        Go To:<br>EZ Adjust Apps
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
+                            <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html"
+                                    class="btnStyle2"
+                                    title="Takes you to the EZ Adjust pages with detailed discussion, field applications, and specs."
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            /*font-size:1.13em;*/
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                        Go To:<br>&nbsp;App Pages&nbsp;
                             </a> 
                 </div>
             </td>
         </tr>
 <!-- RockBuster ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black; background-color:white;">
+        <tr id="RB">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-rb-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -330,28 +409,41 @@ border-radius:7px
                                 It has an extra strong hold for anchoring: 
                                 canopies, tents, tarps.
                             </div>
-                            <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html#/intro"
+                            <a ui-sref="view04"
                                     class="btnStyle2"
-                                    title="Takes you to the RockBuster pages with detailed discussion, field applications, and specs."
+                                    title="Takes you to the thumbnail menu for more quick information about the RockBuster ground stake."
                                     style= "display:inline-block;
                                             text-decoration:none;
-                                            font-size:1.13em;
                                             padding:3px 10px;
                                             {{$ctrl.padding1}};         /* AR_10.00_2.00 */
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                    Go To:<br>RockBuster Apps
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
+                            <a href="https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html#/intro"
+                                    class="btnStyle2"
+                                    title="Takes you to the RockBuster pages with detailed discussion, field applications, and specs."
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            /*font-size:1.13em;*/
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                    Go To:<br>&nbsp;App Pages&nbsp;
                             </a>
                 </div>
             </td>
         </tr>
 <!-- Bag Grabbit ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black; background-color:white;">
+        <tr id="BG">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-bg-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -370,28 +462,41 @@ border-radius:7px
                                 ► Also works on tarps, plastic sheeting, and other materials.<br>
                                 ► Use again and again, lasts a lifetime. 
                             </div>
-                            <a href="https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html"
+                            <a ui-sref="view05"
                                     class="btnStyle2"
-                                    title="Takes you to the Bag Grabbit pages with detailed discussion, field applications, and specs."
+                                    title="Takes you to the thumbnail menu for more quick information about the Bag Grabbit bag handle."
                                     style= "display:inline-block;
                                             text-decoration:none;
-                                            font-size:1.13em;
                                             padding:3px 10px;
                                             {{$ctrl.padding1}};         /* AR_10.00_2.00 */
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                    Go To:<br>Bag Grabbit Apps
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
+                            <a href="https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html"
+                                    class="btnStyle2"
+                                    title="Takes you to the Bag Grabbit pages with detailed discussion, field applications, and specs."
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            /*font-size:1.13em;*/
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                    Go To:<br>&nbsp;App Pages&nbsp;
                             </a>
                </div>
             </td>
         </tr>
 <!-- Keeper ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black; background-color:white;">
+        <tr id="KPR">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-kpr-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -410,28 +515,41 @@ border-radius:7px
                                 circumstances. It is also used to keep the EZ Grabbit’s 
                                 Sleeve and Dog Bone together when not in use.
                             </div>
-                            <a href="https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html"
+                            <a ui-sref="view06"
                                     class="btnStyle2"
-                                    title="Takes you to the Keeper pages with detailed discussion, field applications, and specs."
+                                    title="Takes you to the thumbnail menu for more quick information about the Keeper retainer device."
                                     style= "display:inline-block;
                                             text-decoration:none;
-                                            font-size:1.13em;
                                             padding:3px 10px;
                                             {{$ctrl.padding1}};         /* AR_10.00_2.00 */
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                    Go To:<br>The Keeper Apps
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
+                            <a href="https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html"
+                                    class="btnStyle2"
+                                    title="Takes you to the Keeper pages with detailed discussion, field applications, and specs."
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            /*font-size:1.13em;*/
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                    Go To:<br>&nbsp;App Pages&nbsp;
                             </a>
                </div>
             </td>
         </tr>
 <!-- Carry Bag ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black; background-color:white;">
+        <tr id="CB">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-cb-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -450,29 +568,41 @@ border-radius:7px
                                 camping gear, not to mention your entire 
                                 Grabbit assortment.
                             </div>
-                            
-                            <a href="https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html"
+                            <a ui-sref="view07"
                                     class="btnStyle2"
-                                    title="Takes you to the Carry Bag pages with detailed discussion, field applications, and specs."
+                                    title="Takes you to the thumbnail menu for more quick information about the Carry Bag gear carrier."
                                     style= "display:inline-block;
                                             text-decoration:none;
-                                            font-size:1.13em;
                                             padding:3px 10px;
                                             {{$ctrl.padding1}};         /* AR_10.00_2.00 */
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                    Go To:<br>Carry Bag Apps
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
+                            <a href="https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html"
+                                    class="btnStyle2"
+                                    title="Takes you to the Carry Bag pages with detailed discussion, field applications, and specs."
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            /*font-size:1.13em;*/
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                    Go To:<br>&nbsp;App Pages&nbsp;
                             </a> 
                </div>
             </td>
         </tr>
 <!-- Tent Poles ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black; background-color:white;">
+        <tr id="TP">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-tp-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
             <td class="textBoxStyle3" style="padding:0.35%;">
                 <div class="textStyle4" 
@@ -490,20 +620,32 @@ border-radius:7px
                                 but have additional uses when used in conjunction with 
                                 our RockBuster ground stake.
                             </div>
-                            <a href="https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html"
+                            <a ui-sref="view08"
                                     class="btnStyle2"
-                                    title="Takes you to the Tent Pole pages with detailed discussion, field applications, and specs."
+                                    title="Takes you to the thumbnail menu for more quick information about the Tent Poles."
                                     style= "display:inline-block;
                                             text-decoration:none;
-                                            font-size:1.13em;
                                             padding:3px 10px;
                                             {{$ctrl.padding1}};         /* AR_10.00_2.00 */
                                             {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
                                             {{$ctrl.margin1}};          /* AR_2.00_1.05 */
                                             {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                                            {{$ctrl.fontsize4}};
                                            "> 
-                                    Go To:<br>Tent Pole Apps
+                                    More:<br>&nbsp;Quick Info&nbsp;
+                            </a>
+                            <a href="https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html"
+                                    class="btnStyle2"
+                                    title="Takes you to the Tent Pole pages with detailed discussion, field applications, and specs."
+                                    style= "display:inline-block;
+                                            text-decoration:none;
+                                            /*font-size:1.13em;*/
+                                            padding:3px 10px;
+                                            {{$ctrl.padding1}};         /* AR_10.00_2.00 */
+                                            {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                                            {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                                            {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                                           "> 
+                                    Go To:<br>&nbsp;App Pages&nbsp;
                             </a>
                             <br><br>
                </div>

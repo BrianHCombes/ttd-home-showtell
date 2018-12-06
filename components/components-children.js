@@ -10,10 +10,10 @@ angular.module("viewNav")
             var child1Self = this;
                         
             // Response Section 1
-            child1Self.rs1fontsize1 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";             /* AR_2.00_0.75 */
-            child1Self.rs1fontsize2 = "font-size:" + ((0.00049)*(viewWidth)+0.62222) + "em";             /* AR_1.20_0.90 */
-            child1Self.rs1fontsize3 = "font-size:" + ((0.00031)*(viewWidth)+0.73889) + "em";             /* AR_1.10_0.85 */
-            child1Self.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                      /* AR_45.00_2.00 */
+            child1Self.rs1fontsize1 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";            /* AR_2.00_0.75 */
+            child1Self.rs1fontsize2 = "font-size:" + ((0.00049)*(viewWidth)+0.62222) + "em";            /* AR_1.20_0.90 */
+            child1Self.rs1fontsize3 = "font-size:" + ((0.00031)*(viewWidth)+0.73889) + "em";            /* AR_1.10_0.85 */
+            child1Self.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                     /* AR_45.00_2.00 */
             
              // Response 'read about' button and text box
             child1Self.rsReadAboutfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";    /* AR_1.50_0.75 */
@@ -22,8 +22,11 @@ angular.module("viewNav")
             child1Self.rsReadAboutwidth2 = "width:" + ((0.14198)*(viewWidth)+63.88889) + "px";          /* AR_230.01_115.00 */
             
             // Response 'Menu' button and text box
-            child1Self.rsNavfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";           /* AR_1.50_0.75 */
-            child1Self.rsNavfontsize2 = "font-size:" + ((0.00098)*(viewWidth)+0.35753) + "em";           /* AR_1.50_0.71 */
+            child1Self.rsNavfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";          /* AR_1.50_0.75 */
+            child1Self.rsNavfontsize2 = "font-size:" + ((0.00037)*(viewWidth)+0.56667) + "em";          // AR_1170_1.00_360_0.70
+            
+            child1Self.rsNavleft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
+            child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  
             
             
             // Sets mode of the "READ ABOUT" button

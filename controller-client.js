@@ -131,14 +131,7 @@ angular.module('viewNav')
                 };
             }
         };
-        // IMPORTANT!!!!  11/21/2018
-        // This (commented out) service call: viewManager.ref2(topMenuHighlight); below is now called in the IIFE where the default view is called. 
-        // See IIFE function expression: stateGo
-        // Doing this is a test for fixing the occasional corrupt load that happens. I see it too often for comfort so trying to fix it. Thinking is there is
-        // a function invoking order that may be a problem. So this a test to see if it this fixes it.
-        // IMPORTANT!!! 11/23/2018 The above doesn't seem to work. So now have added a reload after 200ms using the setTimeout function. This is not satisfactory
-        // but manual reloads always seem to do the trick. Still suspicious of timing issues with all load time functions and methods. 
-        // viewManager.ref2(topMenuHighlight);
+        viewManager.ref2(topMenuHighlight);
         
 //***********************************************************************************************************************************************************            
 // receiveData serves as a callback function and retrieves all thumbnail image files names from the db. Setting vn.hyperIndex = 0 shows the first group of thumbnails on load.
@@ -293,18 +286,15 @@ angular.module('viewNav')
         
             
 //***********************************************************************************************************************************************************            
-// $state.go('some-view') loads the desired view as the default view upon load. 
-// IMPORTANT!!! 11/21/2018 Due to the occasional (unexplained) corrupt load and subsequent error report which
-// provided a clue the problem may be a function loading order. So moved the invocation of: viewManager.ref2(topMenuHighlight); to this stateGo IIFE so it
-// would be invoked after the default state: $state.go('intro'); is invoked.  
-// IMPORTANT!!! 11/23/2018 The above doesn't seem to work. So now have added a reload after 200ms using the setTimeout function. This is not satisfactory
-// but manual reloads always seem to do the trick. Still suspicious of timing issues with all load time functions and methods. 
+//  $state.go('some-view') loads the desired view as the default view upon load.
+//  IMPORTANT!!! 11/21/2018 Due to the occasional (unexplained) corrupt load and subsequent error report which needs further investigation I have
+//  temporarily implemented a workaround fix that seems to be holding. Note how view00 is loaded first then 400ms later the intro view is loaded.
+//  Did this because the second loading always comes up good (so far).
         var stateGo = (function(){    
             $state.go('view00');
-            viewManager.ref2(topMenuHighlight);
         }());
         
-        setTimeout(function(){$state.go('intro');},400);
+        setTimeout(function(){$state.go('products');},400);
         
  
 //***********************************************************************************************************************************************************    
