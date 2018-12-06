@@ -60,4 +60,41 @@ Process:
         modified:   components/top_menu/ttd/ttd.html
         modified:   index.html
         modified:   json-client.json
-    c:\xampp\htdocs\TTD-ViewNav-LG\ttd-vn-lg>git commit -m "Created a factory service for the navigate list. It's needed in almost every view so consolidating it to one location was needed."
+    c:\xampp\htdocs\TTD-ViewNav-LG\ttd-vn-lg>git commit -m "Created a factory service for the navigate list. 
+    It's needed in almost every view so consolidating it to one location was needed."
+
+
+12/03/2018
+
+    Here's a link that helped me jump to bookmarks within a page.
+    < https://stackoverflow.com/questions/20840986/angularjs-using-bookmarks >
+    < https://docs.angularjs.org/api/ng/service/$anchorScroll#! >
+    Where the path is defined as #/statename#bookmark. I used this first
+    in the buyprice component where an example path is defined as:
+    <a href="#/buyprice#EZGY">EZ Grabbit Yellow</a>
+
+
+12/04/2018
+    < CORS >
+    Because I want to access the same template for all duplicated VN frameworks
+    I started working on the CORS issue. At first I dealt with $sce from an
+    AngularJS standpoint. Once that was fixed the CORS issue came up next.
+    For the sake of time I am continuing production until I have time to resolve
+    the CORS issue. Here's the links I have amassed so far:
+    https://docs.angularjs.org/api/ng/provider/$sceDelegateProvider#resourceUrlWhitelist
+    https://docs.angularjs.org/api/ng/service/$sce#impact-on-loading-templates
+    https://stackoverflow.com/questions/23823010/how-to-enable-cors-in-angularjs
+    https://enable-cors.org/
+    https://www.html5rocks.com/en/tutorials/cors/
+    https://humanwhocodes.com/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/
+    It should be noted once a given framework is uploaded to the host the CORS
+    problem goes away since everything is under one roof.
+
+    I have created a git branch called: < CORS_vnDev > but when this is revisited
+    It'll be anybody's guess the status of this branch.
+
+12/05/2018
+    < PASSING DATA ON THE URL >
+    Time to bone up on passing data on a URL. Seems simple so far and have already
+    demonstrated passing data. Here's a great link that explains much.
+    < https://www.quora.com/What-is-does-20-and-30-mean-in-URL >

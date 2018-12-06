@@ -1,61 +1,105 @@
 <link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
+<style>
+.tableBorder, .headerBorder, .dataBorder    
+{
+border: 2px solid black;
+border-collapse: collapse;
+}
 
-    <div style="width:100%; 
-                text-align:center; 
-                {{$ctrl.fontsize2}};
-                ">
-        <div class="textStyle4"
-             style="font-size:3.0em;
-                    margin:5px 0px;
-                    "><b>PRICING AND ORDERING</b>
-        </div>
-        
-        <a  href="https://www.tarptiedown.com/TTD-Store-2018/" 
-                        class="btnStyle2"
-                        style= "display:inline-block;
-                                text-decoration:none;
-                                font-size:2.00em;
-                                {{$ctrl.padding1}};         /* AR_10.00_2.00 */
-                                {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
-                                {{$ctrl.margin1}};          /* AR_2.00_1.05 */
-                                {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
-                               ">
-                        Go directly to TTD Store
-                    </a>
-        
-        <div class="textStyle2"
-             style="font-size:2.00em;
-                   ">OR
-        </div>
-       
-        <div class="textBoxStyle4"
-             style="display:inline-block;
-                    font-size:1.5em;
-                    {{$ctrl.padding1}};
-                   ">Select any item below to go directly<br>to that store item for price details.
-        </div> 
+.headerBorder, .dataBorder   
+{
+padding:2px 0px;    
+}
+
+.quickLink
+{
+text-decoration:none;
+color:white;
+}
+
+.quickLink:hover
+{
+color:black    
+}
+
+.viewStyle
+{
+background-color:gray; 
+border:1px solid black;
+border-radius:7px
+}
+</style>
+
+<div class="viewStyle" id="pageTop1" style="font-size:1.0em;">
+
+    <div class="textStyle4"
+         id="pageTop2"
+         ng-focus="$ctrl.blurFocus()"
+         style="text-align:center; 
+                margin:5px 0px;
+                {{$ctrl.fontsize4}};
+                "><b>PRICE AND SHOP</b>
     </div>
 
-    <div data-ui-view="childView1" style="text-align:center; margin:2vh auto;">This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working</div> 
-    
+    <div data-ui-view="childView1" 
+     style="text-align:center; 
+            margin:2vh auto;
+           ">This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+    </div> 
+
+    <div style="text-align:center;">
+        <a  href="https://www.tarptiedown.com/TTD-Store-2018/" 
+            class="btnStyle2"
+            style= "display:inline-block;
+                    text-decoration:none;
+                    padding:2px 10px;
+                    {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                    {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                    {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                    {{$ctrl.fontsize5}};
+                   ">
+            Go directly to TTD Store
+        </a>
+    </div>
+
+    <div class="textStyle2"
+         style="text-align:center;
+                {{$ctrl.fontsize5}};
+               ">OR
+    </div>
+    <div class="textStyle4" style="margin:1% auto; background-color:black; color:white; padding:5px; border-radius:5px; {{$ctrl.fontsize3}}; {{$ctrl.width1}};">
+        <table class="tableBorder" style="width:100%;">
+            <tr><th class="headerBorder topMenuNav" colspan="2" title="{{$ctrl.title3}}">Quick Price and Shop Menu</th></tr>
+            <tr>
+                <th class="headerBorder topMenuNav" title="{{$ctrl.title1}}" style="width:50%;">Quick price below</th>
+                <th class="headerBorder topMenuNav" title="{{$ctrl.title2}}" style="width:50%;">Shop item</th>
+            </tr>
+            <tr ng-repeat="quicklist in $ctrl.quickLIST">
+                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title1}}" href="{{quicklist.localview}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
+                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title2}}" href="{{quicklist.regionURL}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
+            </tr>    
+        </table>
+        <div style=" margin:1% 0%; text-align:center">(or)&nbsp;&nbsp;Scroll below for all product pricing</div>
+    </div>
+
     <table style="  border:1px solid black; 
                     {{$ctrl.fontsize1}};         /* AR_1.00_0.65 */
-                    /*font-size:0.65em;*/
                  ">
 <!-- EZ Grabbit Yellow ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" {{$ctrl.width1}};        /* AR_40.00_50.00 */
-                        /*width:40%;        */
-                        border:1px solid black;">
+        <tr id="EZGY">
+            <td style="position:relative; border:1px solid black; background-color:white; width:40%; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-yellow-device-dbns-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
-                     
+            <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
                             font-size:1.13em;
-                            padding:3px 0px;"> 
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           "> 
                                 <b>STANDARD EZ GRABBIT</b><br>
                     <span style="font-size:0.90em; color:blue;"><b>(mountable)</b></span><br>
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br>
@@ -79,16 +123,20 @@
             </td>
         </tr>
 <!-- EZ Grabbit Black ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black;">
+        <tr id="EZGBL">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-black-device-dbns-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
+            <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
                             font-size:1.13em;
-                            padding:3px 0px;"> 
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           ">  
                                 <b>STANDARD EZ GRABBIT</b><br>
                     <span style="font-size:0.90em; color:blue;"><b>(mountable)</b></span><br>
                     <span style="font-size:1.00em;"><b>GLOSS&nbsp; BLACK</b><br>
@@ -113,16 +161,21 @@
             </td>
         </tr>
 <!-- EZ Grabbit Green ************************************************************************************************************************************************-->
-        <tr>
-            <td style="border:1px solid black;">
+        <tr id="EZGG">
+            <td style="border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-ezg-green-device-dbns-750x350.jpg" alt="ezg hivis image" style="width:100%">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
-                    style="text-align:center;
-                           width:100%;
-                           font-size:1.13em;"> 
-                               <b>CLASSIC EZ GRABBIT</b><br> 
+            <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
+                     style="text-align:center;
+                            width:100%;
+                            font-size:1.13em;
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           ">
+                            <br><br><b>CLASSIC EZ GRABBIT</b><br> 
                     <span style="font-size:0.9em; color:blue;"><b>(non-mountable)</b></span><br>
                     <span style="font-size:1.00em;"><b>&nbsp;&nbsp;HIGH VIS GREEN&nbsp;</b><br>
                     </span>24pk for $28.08<br>
@@ -137,21 +190,25 @@
                                 {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
                                ">
                         Shop EZ Grabbit<br> Non Mountable Green
-                    </a>
+                    </a><br><br>
                </div>
             </td>
         </tr>
 <!-- Long Grabbit ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black;">
+        <tr id="LG">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-lg-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
+            <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
                             font-size:1.13em;
-                            padding:3px 0px;"> 
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           ">
                                 <b>LONG LONG GRABBIT</b><br>
                     <span style="font-size:1.00em;"><b>OLIVE&nbsp; DRAB</b><br></span>
                     4pk for $8.08 <b><u>thru</u></b><br>
@@ -173,17 +230,21 @@
             </td>
         </tr>
 <!-- Mini Grabbit ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black;">
+        <tr id="MG">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-mg-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
+            <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
                             font-size:1.13em;
-                            padding:3px 0px;"> 
-                                <b>MINI GRABBIT</b><br>
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           ">
+                            <br><b>MINI GRABBIT</b><br>
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br></span>
                     4pk for $8.08 <b><u>thru</u></b><br>
                     48pk for $66.72<br>
@@ -199,22 +260,26 @@
                                 {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
                                ">
                         Shop Mini Grabbit
-                    </a>
+                    </a><br>
                </div>
             </td>
         </tr>
 <!-- EZ Adjust ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black;">
+        <tr id="EZA">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-eza-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
+           <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
                             font-size:1.13em;
-                            padding:3px 0px;"> 
-                                <b>EZ ADJUST</b><br>
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           ">
+                            <br><b>EZ ADJUST</b><br>
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br></span>
                     4pk for $2.92 <b><u>thru</u></b><br>
                     48pk for $16.32<br>
@@ -230,21 +295,25 @@
                                 {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
                                ">
                         Shop EZ Adjust
-                    </a>
+                    </a><br>
                </div>
             </td>
         </tr>
 <!-- RockBuster ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black;">
+        <tr id="RB">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-rb-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
+            <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
-                            font-size:1.13em;"> 
-                                <b>ROCKBUSTER</b><br>
+                            font-size:1.13em;
+                            background-color:gray;
+                            color:#ffffff;
+                           ">
+                    <br><br><br><b>ROCKBUSTER</b><br>
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br></span>
                     $1.75 each<br>
                     <span style="font-size:1.13em; line-height:140%; font-weight:bold; color:blue;">Any Quantity!</span><br>
@@ -258,21 +327,26 @@
                                 {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
                                ">
                         Shop RockBuster
-                    </a>
+                    </a><br><br><br>
                </div>
             </td>
         </tr>
 <!-- Bag Grabbit ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black;">
+        <tr id="BG">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-bg-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
+            <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
-                            font-size:1.13em;"> 
-                                <b>BAG GRABBIT</b><br>
+                            font-size:1.13em;
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           ">
+                            <br><br><b>BAG GRABBIT</b><br>
                     <span style="font-size:1.00em;"><b>GOLDEN&nbsp; YELLOW</b></span><br>
                     <span style="font-size:1.00em;"><b>BLACK&nbsp; HANDLE</b></span><br>
                     $4.26 each<br>
@@ -287,21 +361,26 @@
                                 {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
                                ">
                         Shop Bag Grabbit
-                    </a>
+                    </a><br><br>
                </div>
             </td>
         </tr>
 <!-- Keeper ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black;">
+        <tr id="KPR">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-kpr-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
+           <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
-                            font-size:1.13em;"> 
-                                <b>The KEEPER</b><br>
+                            font-size:1.13em;
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           "> 
+                            <br><br>    <b>The KEEPER</b><br>
                     <span style="font-size:1.00em;"><b>BLACK&nbsp; TABS</b></span><br>
                     <span style="font-size:1.00em;"><b>1/8"&nbsp; SHOCK&nbsp; CORD</b></span><br>
                     $2.95 each<br>
@@ -316,21 +395,26 @@
                                 {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
                                ">
                         Shop Keeper
-                    </a>
+                    </a><br><br>
                </div>
             </td>
         </tr>
 <!-- Carry Bag ************************************************************************************************************************************************-->
-        <tr>
-            <td style=" border:1px solid black;">
+        <tr id="CB">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-cb-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
+            <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
-                            font-size:1.13em;"> 
-                                <b>CARRY BAG</b><br>
+                            font-size:1.13em;
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           "> 
+                            <br><br><br><b>CARRY BAG</b><br>
                     <span style="font-size:1.00em;"><b>HEAVY&nbsp; DUTY</b></span><br>
                     <span style="font-size:1.00em;"><b>W&nbsp; SIDE&nbsp; POUCH</b></span><br>
                     $7.95 each<br>
@@ -344,21 +428,26 @@
                                 {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
                                ">
                         Shop Carry Bag
-                    </a>
+                    </a><br><br><br>
                </div>
             </td>
         </tr>
 <!-- Tent Poles ************************************************************************************************************************************************-->
-        <tr">
-            <td style=" border:1px solid black;">
+        <tr id="TP">
+            <td style=" border:1px solid black; background-color:white; position:relative;">
                 <img src="components/top_menu/buy_price/ttd-vn-tp-device-750x350.jpg" alt="ezg image" style="width:100%;">
+                <button class="btnStyle2" title="Go to menu atop" ng-click="$ctrl.toTop()" style="position:absolute; {{$ctrl.top1}}; left:2%; padding:1px 0px 1px 2px;">&#9650;&nbsp;</button>
             </td>
-            <td class="textBoxStyle3">
-                <div class="" 
+            <td class="textBoxStyle3" style="padding:0.35%;">
+                <div class="textStyle4" 
                      style="text-align:center;
                             width:100%;
-                            font-size:1.13em;"> 
-                                <b>TENT POLES</b><br>
+                            font-size:1.13em;
+                            padding:3px 0px;
+                            background-color:gray;
+                            color:#ffffff;
+                           ">
+                            <br><br><b>TENT POLES</b><br>
                     <span style="font-size:1.00em;"><b>GENERAL&nbsp; PURPOSE</b></span><br>
                     $7.95 per 12 pack<br>
                     <span style="font-size:1.00em;"><b>24'&nbsp; Elastic&nbsp; Cord</b></span><br>
@@ -373,11 +462,12 @@
                                 {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
                                ">
                         Shop Tent Poles
-                    </a>
+                    </a><br><br>
                </div>
             </td>
         </tr>
     </table>
+<div>
 <script>
 
 </script>        

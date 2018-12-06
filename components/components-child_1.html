@@ -9,7 +9,7 @@
 </style>
 <div style="position:relative;">
     <div class="btnStyle2" 
-         title="Product or page discussion with links as needed to more information"
+         title="Product or page discussion with links as needed to pertinent information"
          ng-click="$ctrl.moreless1()" 
          style="font-weight:bold;
                 {{$ctrl.rsReadAboutfontsize1}};
@@ -109,7 +109,7 @@
 
     <div class="btnStyle2" 
          ng-click="$ctrl.moreless2()"
-         title="Links to product locations and information within these pages"
+         title="Menu of product information among these home pages"
          style="font-weight:bold;
                 margin-left:1%;
                 {{$ctrl.rsNavfontsize1}};
@@ -120,14 +120,14 @@
     <div class="textBoxStyle2 textStyle3"
         ng-show="$ctrl.display2"
         style= "position:absolute;
-                width:93%;
                 top:10vh;
-                left:1%;
                 z-index:3;
                 text-align:center;
                 box-shadow:4px 4px 45px black;
+                {{$ctrl.rsNavwidth1}};
                 {{$ctrl.rsNavfontsize2}};
                 {{$ctrl.rsNavleft1}};
+                /*left:25%;*/
                ">
         <table  style= "width:100%;
                         text-align:left;">
