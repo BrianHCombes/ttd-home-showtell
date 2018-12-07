@@ -1,9 +1,3 @@
-// https://docs.angularjs.org/api/ng/provider/$sceDelegateProvider#resourceUrlWhitelist
-// https://docs.angularjs.org/api/ng/service/$sce#impact-on-loading-templates
-// https://stackoverflow.com/questions/23823010/how-to-enable-cors-in-angularjs
-// https://enable-cors.org/
-// https://www.html5rocks.com/en/tutorials/cors/
-// https://humanwhocodes.com/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/
 
 
 
@@ -80,9 +74,48 @@ angular.module("viewNav")
                 
             var buyPriceSelf = this;
             
+            buyPriceSelf.title1 = "Jumps down to specific product price in the listing below";
+            buyPriceSelf.title2 = "Jumps directly to the specific store item with the full price table";
+            buyPriceSelf.title3 = "This quick menu provides quick pricing below or the full price tables listed at our store.";
+            
+            var quickLIST = [ 
+                {"localview":"#/buyprice#EZGY", "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_14","product":"Standard EZ Grabbit Yellow"},
+                {"localview":"#/buyprice#EZGBL","regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_11","product":"Standard EZ Grabbit Black"},
+                {"localview":"#/buyprice#EZGG", "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_15","product":"Classic EZ Grabbit Green"},
+                {"localview":"#/buyprice#LG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_13",   "product":"Long Grabbit"},
+                {"localview":"#/buyprice#MG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_12",   "product":"Mini Grabbit"},
+                {"localview":"#/buyprice#EZA",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=17",     "product":"EZ Adjust Rope Adjuster"},
+                {"localview":"#/buyprice#RB",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=18",     "product":"RockBuster Ground Stake"},
+                {"localview":"#/buyprice#BG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=19",     "product":"Bag Grabbit Bag Handle"},
+                {"localview":"#/buyprice#KPR",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_16","product":"EZ Grabbit Keeper"},
+                {"localview":"#/buyprice#CB",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=20",     "product":"Carry Bag"},
+                {"localview":"#/buyprice#TP",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=21",     "product":"Tent Poles"}
+            ];
+            buyPriceSelf.quickLIST = quickLIST;
+            
+            // The toTop function is a workaround to alternate the target href so it always goes to the top should a scroll down be done and toTop() is clicked again. 
+            var pickPageTop = true;
+            buyPriceSelf.toTop = function(){
+                if(pickPageTop === true){
+                    window.location.href="#/buyprice#pageTop1";
+                    pickPageTop = false;
+                } 
+                else {
+                    window.location.href="#/buyprice#pageTop2";
+                    pickPageTop = true;
+                };
+            };
+            
+            // Response Section
+            buyPriceSelf.top1 = "top:" + ((0.00185)*(viewWidth)-0.16667) + "%";                 // AR_1170_2.00_360_0.50
+            
             buyPriceSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";             /* AR_1.00_0.65 */
-            buyPriceSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";             /* AR_1.00_0.50 */
-            buyPriceSelf.width1 = "width:" + ((-0.01235)*(viewWidth)+54.44444) + "%";                   /* AR_39.99_50.00 */
+            buyPriceSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";             // AR_1170_1.00_360_0.50
+            buyPriceSelf.fontsize3 = "font-size:" + ((0.00037)*(viewWidth)+0.56985) + "em";             // AR_1170_1.00_320_0.69
+            buyPriceSelf.fontsize4 = "font-size:" + ((0.00185)*(viewWidth)+0.83333) + "em";             // AR_1170_3.00_360_1.50
+            buyPriceSelf.fontsize5 = "font-size:" + ((0.00123)*(viewWidth)+0.55556) + "em";             // AR_1170_2.00_360_1.00
+            
+            buyPriceSelf.width1 = "width:" + ((-0.06118)*(viewWidth)+116.57647) + "%";   // AR_1170_45.00_320_97.00
             
             buyPriceSelf.fontweight1 = "font-weight:" + ((-0.98765)*(viewWidth)+1255.55556);            /* AR_100.01_900.00 */
             buyPriceSelf.padding1 = "padding:" + ((0.00988)*(viewWidth)-1.55556) + "px 10px";           /* AR_10.00_2.00 */
@@ -105,31 +138,48 @@ angular.module("viewNav")
                 
             var productsSelf = this;
             
-           productsSelf.title1 = "A short product overview located here on the home pages";
-           productsSelf.title2 = "Full coverage of the product including detailed discussion, field applications, and specifications";
+            productsSelf.title1 = "Jumps to a short product overview in the listing below";
+            productsSelf.title2 = "Full coverage of the product including detailed discussion, field applications, and specifications";
+            productsSelf.title3 = "The quick menu takes you to the product overviews below or to the product application pages.";
             
             var quickLIST = [ 
-                {"localview":"view00", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Standard EZ Grabbit"},
-                {"localview":"view09", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Classic EZ Grabbit"},
-                {"localview":"view01", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html",    "product":"Long Grabbit"},
-                {"localview":"view02", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_02/ttd-vn-mg-not-complete-msg.html",    "product":"Mini Grabbit"},
-                {"localview":"view03", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html",                                      "product":"EZ Adjust Rope Adjuster"},
-                {"localview":"view04", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html",                                        "product":"RockBuster Ground Stake"},
-                {"localview":"view05", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html",    "product":"Bag Grabbit Bag Handle"},
-                {"localview":"view06", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html",   "product":"EZ Grabbit Keeper"},
-                {"localview":"view07", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html",    "product":"Carry Bag"},
-                {"localview":"view08", "regionURL":"https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html",    "product":"Tent Poles"}
+                {"localview":"#/products#EZGY", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Standard EZ Grabbit Yellow"},
+                {"localview":"#/products#EZGBL","regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Standard EZ Grabbit Black"},
+                {"localview":"#/products#EZGG", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Classic EZ Grabbit"},
+                {"localview":"#/products#LG", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html",    "product":"Long Grabbit"},
+                {"localview":"#/products#MG", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_02/ttd-vn-mg-not-complete-msg.html",    "product":"Mini Grabbit"},
+                {"localview":"#/products#EZA", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html",                                      "product":"EZ Adjust Rope Adjuster"},
+                {"localview":"#/products#RB", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html",                                        "product":"RockBuster Ground Stake"},
+                {"localview":"#/products#BG", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html",    "product":"Bag Grabbit Bag Handle"},
+                {"localview":"#/products#KPR", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html",   "product":"EZ Grabbit Keeper"},
+                {"localview":"#/products#CB", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html",    "product":"Carry Bag"},
+                {"localview":"#/products#TP", "regionURL":"https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html",    "product":"Tent Poles"}
             ];
-            
             productsSelf.quickLIST = quickLIST;
             
+            // The toTop function is a workaround to alternate the target href so it always goes to the top should a scroll down be done and toTop() is clicked again. 
+
+            var pickPageTop = true;
+            productsSelf.toTop = function(){
+                if(pickPageTop === true){
+                    window.location.href="#/products#pageTop1";
+                    pickPageTop = false;
+                } 
+                else {
+                    window.location.href="#/products#pageTop2";
+                    pickPageTop = true;
+                };
+            };
+                
             // Response Section
-            productsSelf.width1 = "width:" + ((-0.06118)*(viewWidth)+116.57647) + "%";   // AR_1170_45.00_320_97.00
+            productsSelf.width1 = "width:" + ((-0.06118)*(viewWidth)+116.57647) + "%";          // AR_1170_45.00_320_97.00
+            
+            productsSelf.top1 = "top:" + ((0.00185)*(viewWidth)-0.16667) + "%";                 // AR_1170_2.00_360_0.50
              
-            productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";   /* AR_1.00_0.65 */
-            productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";   /* AR_1.00_0.50 */
-            productsSelf.fontsize3 = "font-size:" + ((0.00037)*(viewWidth)+0.56985) + "em";   // AR_1170_1.00_320_0.69
-            productsSelf.fontsize4 = "font-size:" + ((0.00024)*(viewWidth)+0.97471) + "em";   // AR_1170_1.25_320_1.05
+            productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";     /* AR_1.00_0.65 */
+            productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";     /* AR_1.00_0.50 */
+            productsSelf.fontsize3 = "font-size:" + ((0.00041)*(viewWidth)+0.51824) + "em";     // AR_1170_1.00_320_0.65
+           // productsSelf.fontsize4 = "font-size:" + ((0.00024)*(viewWidth)+0.97471) + "em";   // AR_1170_1.25_320_1.05
             
             
             productsSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
@@ -154,6 +204,7 @@ angular.module("viewNav")
             var reviewSelf = this;
             
             reviewSelf.fontsize1 = "font-size:" + ((0.00049)*(viewWidth)+0.42222) + "em";      /* AR_1.00_0.60 */
+            reviewSelf.fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+1.19444) + "em";      // AR_1170_3.00_360_1.75
             
             viewManager.topMenuToHighlight(4);  
             
