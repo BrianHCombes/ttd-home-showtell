@@ -290,11 +290,26 @@ angular.module('viewNav')
 //  IMPORTANT!!! 11/21/2018 Due to the occasional (unexplained) corrupt load and subsequent error report which needs further investigation I have
 //  temporarily implemented a workaround fix that seems to be holding. Note how view00 is loaded first then 400ms later the intro view is loaded.
 //  Did this because the second loading always comes up good (so far).
+        var urlExp = window.location.href;
+        var urlParamIndex = urlExp.indexOf("?");
+        var urlParam = "";
+
+        if(urlParamIndex === -1){   
+            urlParam = "intro"
+        }
+        else{
+            urlParam = urlExp.slice(urlParamIndex+1);
+        }
+    
+    // alert(urlParam);
+    //alert(window.location.search);
+    
+    
         var stateGo = (function(){    
             $state.go('view00');
         }());
         
-        setTimeout(function(){$state.go('products');},400);
+        setTimeout(function(){$state.go(urlParam);},400);
         
  
 //***********************************************************************************************************************************************************    
