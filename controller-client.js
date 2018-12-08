@@ -301,7 +301,7 @@ angular.module('viewNav')
             urlParam = urlExp.slice(urlParamIndex+1);
         };
 
-            var stateGo = (function(){    
+        var stateGo = (function(){    
             $state.go('view00');
         }());
         
