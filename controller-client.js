@@ -295,17 +295,13 @@ angular.module('viewNav')
         var urlParam = "";
 
         if(urlParamIndex === -1){   
-            urlParam = "intro"
+            urlParam = "intro";
         }
         else{
             urlParam = urlExp.slice(urlParamIndex+1);
-        }
-    
-    // alert(urlParam);
-    //alert(window.location.search);
-    
-    
-        var stateGo = (function(){    
+        };
+
+            var stateGo = (function(){    
             $state.go('view00');
         }());
         
