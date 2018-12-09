@@ -5,7 +5,7 @@ angular.module("viewNav")
 
     .component('ttd', {
         
-        // templateUrl: 'https://www.tarptiedown.com/ttd-vn/ttd-vn-top-menu-pages/ttd.html',
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/ttd.html',
         templateUrl: 'components/top_menu/ttd/ttd.html',
        
         controller: ['GetSet', 'viewManager', '$sce', function(GetSet, viewManager, $sce){
@@ -19,7 +19,7 @@ angular.module("viewNav")
             
             // Response Section 1
             ttdSelf.rs1fontsize1 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";             /* AR_2.00_0.75 */
-            ttdSelf.rs1fontsize2 = "font-size:" + ((0.00049)*(viewWidth)+0.62222) + "em";             /* AR_1.20_0.90 */
+            ttdSelf.rs1fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+1.19444) + "em";             // AR_1170_3.00_360_1.75
             ttdSelf.rs1fontsize3 = "font-size:" + ((0.00031)*(viewWidth)+0.73889) + "em";             /* AR_1.10_0.85 */
             ttdSelf.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                      /* AR_45.00_2.00 */
             
@@ -67,6 +67,7 @@ angular.module("viewNav")
     
     .component('buyprice', {
         
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/buy_price.html',
         templateUrl: 'components/top_menu/buy_price/buy_price.html',
        
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
@@ -131,6 +132,7 @@ angular.module("viewNav")
     
     .component('products', {
         
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/products.html',
         templateUrl: 'components/top_menu/products/products.html',
        
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
@@ -194,8 +196,7 @@ angular.module("viewNav")
     
     .component('reviews', {
         
-        //template: "<h1>This is the Reviews template",
-
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/testimonials.html',
         templateUrl: 'components/top_menu/reviews/testimonials.html',
         
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
