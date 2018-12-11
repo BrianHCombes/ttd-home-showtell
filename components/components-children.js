@@ -23,7 +23,7 @@ angular.module("viewNav")
             
             // Response 'Menu' button and text box
             child1Self.rsNavfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";          /* AR_1.50_0.75 */
-            child1Self.rsNavfontsize2 = "font-size:" + ((0.00037)*(viewWidth)+0.56667) + "em";          // AR_1170_1.00_360_0.70
+            child1Self.rsNavfontsize2 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";          // AR_1170_1.25_360_0.70
             
             child1Self.rsNavleft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
             child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  

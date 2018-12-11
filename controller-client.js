@@ -288,19 +288,18 @@ angular.module('viewNav')
 //***********************************************************************************************************************************************************            
 //  $state.go('some-view') loads the desired view as the default view upon load.
 //  IMPORTANT!!! 11/21/2018 Due to the occasional (unexplained) corrupt load and subsequent error report which needs further investigation I have
-//  temporarily implemented a workaround fix that seems to be holding. Note how view00 is loaded first then 400ms later the intro view is loaded.
-//  Did this because the second loading always comes up good (so far).
+//  temporarily implemented a workaround fix that seems to be holding. Note how view00 is loaded first then 400ms later the view as defined by the urlParam
+//  variable is loaded. Did this because the second loading always comes up good (so far).
+
         var urlExp = window.location.href;
         var urlParamIndex = urlExp.indexOf("?");
         var urlParam = "";
 
-        if(urlParamIndex === -1){   
-            urlParam = "intro";
-        }
-        else{
-            urlParam = urlExp.slice(urlParamIndex+1);
-        };
-
+        if(urlParamIndex === -1){urlParam = "intro";}
+        else {urlParam = urlExp.slice(urlParamIndex+1);};
+        
+        if(urlParam.length > 6) urlParam = "intro";
+        
         var stateGo = (function(){    
             $state.go('view00');
         }());
