@@ -98,3 +98,28 @@ Process:
     Time to bone up on passing data on a URL. Seems simple so far and have already
     demonstrated passing data. Here's a great link that explains much.
     < https://www.quora.com/What-is-does-20-and-30-mean-in-URL >
+
+12/09/2018
+    < PASSING DATA ON THE URL >
+    A complication has popped up. Long story short is to be able to clear the
+    query string from the URL bar before issuing a new URL with query string.
+    Some links won't work if a query string is already present even a fresh 
+    URL with query string is sent. It works the first time but after a < view >
+    is loaded a hash sign is appended and it won't go away. So looking for a
+    fix.
+    < https://www.experts-exchange.com/questions/21600459/How-to-remove-URL-Domain-name-from-windows-title-bar.html >
+
+12/10/2018
+    < PASSING DATA ON THE URL >
+    ***************************************************************************
+    *****                          AHA!                                   *****
+    *****                  URL Fix for Passing Data                       *****
+    ***************************************************************************
+    In reference to the URL problem as discussed in the 12/09/2018 entry.
+    I experimented and found the location object method 
+    < window.location.assign(url) > sends a clean url with parameter and all
+    works as desired. See:
+    < https://www.w3schools.com/jsref/obj_location.asp > I'd still like to know
+    why using href in the html page doesn't work but this fix allows me to keep
+    going. But, I am still boning up on all things URL including the need to
+    work with CORS.

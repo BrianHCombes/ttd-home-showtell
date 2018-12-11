@@ -172,6 +172,10 @@ angular.module("viewNav")
                     pickPageTop = true;
                 };
             };
+            
+            productsSelf.assignURL = function(url){
+                window.location.assign(url);
+            };
                 
             // Response Section
             productsSelf.width1 = "width:" + ((-0.06118)*(viewWidth)+116.57647) + "%";          // AR_1170_45.00_320_97.00
@@ -186,7 +190,7 @@ angular.module("viewNav")
             
             productsSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
             productsSelf.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
-            productsSelf.margin1 = "margin:" + ((0.00617)*(viewWidth)+2.77778) + "px 0px";              /* AR_10.00_5.00 */
+            productsSelf.margin1 = "margin:" + ((0.00617)*(viewWidth)+2.77778) + "px 0px";              // AR_1170_10.00_360_5.00
             productsSelf.fontweight1 = "font-weight:" + ((-0.98765)*(viewWidth)+1255.55556);            /* AR_100.01_900.00 */
             
             viewManager.topMenuToHighlight(3);  
