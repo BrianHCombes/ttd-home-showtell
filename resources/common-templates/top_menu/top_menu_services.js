@@ -10,10 +10,8 @@ angular.module("viewNav")
                     var currentURL = window.location.href;
                     var regionText = {};
                     var index = "";
-                    //console.log(currentURL);
 
                     index = currentURL.search("#/ttd");
-                    //console.log(index);
                     if(index !== -1){
                         regionText.fill1 = "TTD Home region";
                         regionText.fill2 = "Tarp Tie Down home region";

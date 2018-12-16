@@ -1,24 +1,23 @@
 angular.module("viewNav")
 
-    
-     .component('ttd', {
+    .component('ttd', {
         
         //templateUrl: 'https://www.tarptiedown.com/resources/common-templates/ttd.html',
-        templateUrl: 'components/top_menu/ttd/ttd.html',
+        templateUrl: 'resources/common-templates/top_menu/ttd/ttd.html',
        
-        controller: ['GetSet', 'viewManager', 'topMenuService', '$sce', function(GetSet, viewManager, topMenuService, $sce){
+        controller: ['$scope', 'GetSet', 'viewManager', 'topMenuService', '$sce', function($scope, GetSet, viewManager, topMenuService, $sce){
             var viewWidth = GetSet.getViewWidth();
                 
             var ttdSelf = this;
-            
-            // getText is a callback function
+                        
             getText = function(regionText){
-                ttdSelf.fill1 = regionText.fill1;
-                ttdSelf.fill2 = regionText.fill2;
-                ttdSelf.fill3 = regionText.fill3;
+                $scope.$apply(function(){
+                    ttdSelf.fill1 = regionText.fill1;
+                    ttdSelf.fill2 = regionText.fill2;
+                    ttdSelf.fill3 = regionText.fill3;
+                });
             };
             topMenuService.ttdRegionText(getText);
-                       
             
             // Response Section 1
             ttdSelf.rs1fontsize1 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";             /* AR_2.00_0.75 */
@@ -27,15 +26,13 @@ angular.module("viewNav")
             ttdSelf.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                      /* AR_45.00_2.00 */
             
             viewManager.topMenuToHighlight(0);    
-
         }]
     })
-	
 
     .component('buyprice', {
         
-        //templateUrl: 'https://www.tarptiedown.com/resources/common-templates/buy_price.html',
-        templateUrl: 'components/top_menu/buy_price/buy_price.html',
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/buy_price.html',
+        templateUrl: 'resources/common-templates/top_menu/buy_price/buy_price.html',
        
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
@@ -99,8 +96,8 @@ angular.module("viewNav")
     
     .component('products', {
         
-        //templateUrl: 'https://www.tarptiedown.com/resources/common-templates/products.html',
-        templateUrl: 'components/top_menu/products/products.html',
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/products.html',
+        templateUrl: 'resources/common-templates/top_menu/products/products.html',
        
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
@@ -167,8 +164,8 @@ angular.module("viewNav")
     
     .component('reviews', {
         
-        //templateUrl: 'https://www.tarptiedown.com/resources/common-templates/testimonials.html',
-        templateUrl: 'components/top_menu/reviews/testimonials.html',
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/testimonials.html',
+        templateUrl: 'resources/common-templates/top_menu/reviews/testimonials.html',
         
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
@@ -181,7 +178,32 @@ angular.module("viewNav")
             viewManager.topMenuToHighlight(4);  
             
         }]
+    })
+    
+    .component('policy', {
+        
+        templateUrl: 'resources/common-templates/top_menu/policy_tmpl/policy.html',
+       
+        controller: ['GetSet', function(GetSet){
+            var viewWidth = GetSet.getViewWidth();
+            
+        }]
+    })
+    
+    .component('transition', {
+        
+        //template: "<h1>This is the Policy template",
+
+        templateUrl: 'components/top_menu/intro/transition.html',
+       
+        controller: ['GetSet', function(GetSet){
+            var viewWidth = GetSet.getViewWidth();
+            
+            var transitionSelf = this;
+            
+            transitionSelf.fontsize1 = "font-size:" + ((0.00123)*(viewWidth)+0.55556) + "em";
+            
+        }]
     });
     
- 
     
