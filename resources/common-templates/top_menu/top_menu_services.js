@@ -18,6 +18,14 @@ angular.module("viewNav")
                         regionText.fill3 = "TTD Home";
                         getText(regionText); 
                     };
+                    
+                    index = currentURL.search(".com/#/ttd");
+                    if(index !== -1){
+                        regionText.fill1 = "TTD Home region";
+                        regionText.fill2 = "Tarp Tie Down home region";
+                        regionText.fill3 = "TTD Home";
+                        getText(regionText); 
+                    };
 
                     index = currentURL.search("index-ezg.html");
                     if(index !== -1){
