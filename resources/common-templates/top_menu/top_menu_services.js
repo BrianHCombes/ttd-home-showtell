@@ -11,7 +11,7 @@ angular.module("viewNav")
                     var regionText = {};
                     var index = "";
 
-                    index = currentURL.search("#/ttd");
+                    index = currentURL.search("index.html#/ttd");
                     if(index !== -1){
                         regionText.fill1 = "TTD Home region";
                         regionText.fill2 = "Tarp Tie Down home region";
@@ -21,26 +21,26 @@ angular.module("viewNav")
 
                     index = currentURL.search("index-ezg.html");
                     if(index !== -1){
-                        regionText.fill1 = "EZ Grabbit";
-                        regionText.fill2 = "EZ Grabit region of pages";
+                        regionText.fill1 = "EZ Grabbit region";
+                        regionText.fill2 = "EZ Grabbit region of pages";
                         regionText.fill3 = "EZG Intro";
-                        return regionText; 
+                        getText(regionText);  
                     };
 
                     index = currentURL.search("index-rb.html");
                     if(index !== -1){
-                        regionText.fill1 = "RockBuster";
+                        regionText.fill1 = "RockBuster region";
                         regionText.fill2 = "RockBuster region of pages";
                         regionText.fill3 = "RB Intro";
-                        return regionText; 
+                        getText(regionText); 
                     };
 
                     index = currentURL.search("index-eza.html");
                     if(index !== -1){
-                        regionText.fill1 = "EZ Adjust";
+                        regionText.fill1 = "EZ Adjust region";
                         regionText.fill2 = "EZ Adjust region of pages";
                         regionText.fill3 = "EZA Intro";
-                        return regionText; 
+                        getText(regionText); 
                     };
                 
                 },50);
