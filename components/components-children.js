@@ -67,7 +67,7 @@ angular.module("viewNav")
                                                            (under or below this text box). This website \n\
                                                            is intended to provide information about our products with numerous images and \n\
                                                            discussion. To purchase please go to our store by selecting the Price/Buy link \n\
-                                                           at the top of the page.";    
+                                                           at the top of the page.<br><span class='intro01'><b>NOTE:</b></span> Scroll down to see our policy links and merchant seals.";    
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
                         child1Self.readAboutExtraStuff3 = false;
