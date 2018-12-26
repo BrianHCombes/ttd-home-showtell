@@ -2,7 +2,7 @@ angular.module("viewNav")
 
     .component('ttd', {
         
-        //templateUrl: 'https://www.tarptiedown.com/resources/common-templates/ttd.html',
+        //templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/ttd/ttd.html',
         templateUrl: 'resources/common-templates/top_menu/ttd/ttd.html',
        
         controller: ['$scope', 'GetSet', 'viewManager', 'topMenuService', '$sce', function($scope, GetSet, viewManager, topMenuService, $sce){
@@ -31,7 +31,7 @@ angular.module("viewNav")
 
     .component('buyprice', {
         
-        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/buy_price.html',
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/buy_price/buy_price.html',
         templateUrl: 'resources/common-templates/top_menu/buy_price/buy_price.html',
        
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
@@ -96,7 +96,7 @@ angular.module("viewNav")
     
     .component('products', {
         
-        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/products.html',
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/products/products.html',
         templateUrl: 'resources/common-templates/top_menu/products/products.html',
        
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
@@ -164,7 +164,7 @@ angular.module("viewNav")
     
     .component('reviews', {
         
-        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/testimonials.html',
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/reviews/testimonials.html',
         templateUrl: 'resources/common-templates/top_menu/reviews/testimonials.html',
         
         controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
@@ -192,8 +192,6 @@ angular.module("viewNav")
     
     .component('transition', {
         
-        //template: "<h1>This is the Policy template",
-
         templateUrl: 'components/top_menu/intro/transition.html',
        
         controller: ['GetSet', function(GetSet){
