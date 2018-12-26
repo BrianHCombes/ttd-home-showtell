@@ -109,17 +109,17 @@ angular.module("viewNav")
             productsSelf.title3 = "The quick menu takes you to the product overviews below or to the product application pages.";
             
             var quickLIST = [ 
-                {"localview":"#/products#EZGY", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Standard EZ Grabbit Yellow"},
-                {"localview":"#/products#EZGBL","regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Standard EZ Grabbit Black"},
-                {"localview":"#/products#EZGG", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                      "product":"Classic EZ Grabbit"},
-                {"localview":"#/products#LG", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html",    "product":"Long Grabbit"},
-                {"localview":"#/products#MG", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_02/ttd-vn-mg-not-complete-msg.html",    "product":"Mini Grabbit"},
+                {"localview":"#/products#EZGY", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                     "product":"Standard EZ Grabbit Yellow"},
+                {"localview":"#/products#EZGBL","regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                     "product":"Standard EZ Grabbit Black"},
+                {"localview":"#/products#EZGG", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                     "product":"Classic EZ Grabbit"},
+                {"localview":"#/products#LG", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html",     "product":"Long Grabbit"},
+                {"localview":"#/products#MG", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html",                                         "product":"Mini Grabbit"},
                 {"localview":"#/products#EZA", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html",                                      "product":"EZ Adjust Rope Adjuster"},
-                {"localview":"#/products#RB", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html",                                        "product":"RockBuster Ground Stake"},
-                {"localview":"#/products#BG", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html",    "product":"Bag Grabbit Bag Handle"},
+                {"localview":"#/products#RB", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html",                                         "product":"RockBuster Ground Stake"},
+                {"localview":"#/products#BG", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html",     "product":"Bag Grabbit Bag Handle"},
                 {"localview":"#/products#KPR", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html",   "product":"EZ Grabbit Keeper"},
-                {"localview":"#/products#CB", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html",    "product":"Carry Bag"},
-                {"localview":"#/products#TP", "regionURL":"https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html",    "product":"Tent Poles"}
+                {"localview":"#/products#CB", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html",     "product":"Carry Bag"},
+                {"localview":"#/products#TP", "regionURL":"https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html",     "product":"Tent Poles"}
             ];
             productsSelf.quickLIST = quickLIST;
             
