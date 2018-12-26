@@ -1,0 +1,1 @@
+Until CORS is implemented, you must changed the URLs in the top_menu_common.js file after uploading to GoDaddy.
