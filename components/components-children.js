@@ -138,7 +138,7 @@ angular.module("viewNav")
                         
                     case "view02":
                         child1Self.readAboutHeaderText  =  "Mini Grabbit";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components00_03/tmpl_02/ttd-vn-mg-not-complete-msg.html'><b>Go To Mini Grabbit Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html'><b>Go To Mini Grabbit Pages</b></a><br> \n\
                                                             The Mini Grabbit tarp tie down is a miniature version of EZ Grabbit. It's length is \n\
                                                             a mere 1.625\" (40mm) but its mini size has a mighty hold. It is ideal for \n\
                                                             lightweight tarp and tent shelters and is intended for recreational users who travel \n\
