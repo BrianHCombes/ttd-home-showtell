@@ -31,7 +31,7 @@ angular.module("viewNav")
                     if(index !== -1){
                         regionText.fill1 = "EZ Grabbit region";
                         regionText.fill2 = "EZ Grabbit region of pages";
-                        regionText.fill3 = "EZG Intro";
+                        regionText.fill3 = "EZ Grabbit";
                         getText(regionText);  
                     };
                     
@@ -39,7 +39,7 @@ angular.module("viewNav")
                     if(index !== -1){
                         regionText.fill1 = "Long Grabbit region";
                         regionText.fill2 = "Long Grabbit region of pages";
-                        regionText.fill3 = "LG Intro";
+                        regionText.fill3 = "Long Grabbit";
                         getText(regionText);  
                     };
                     
@@ -55,7 +55,7 @@ angular.module("viewNav")
                     if(index !== -1){
                         regionText.fill1 = "EZ Adjust region";
                         regionText.fill2 = "EZ Adjust region of pages";
-                        regionText.fill3 = "EZA Intro";
+                        regionText.fill3 = "EZ Adjust";
                         getText(regionText); 
                     };
 
@@ -63,7 +63,7 @@ angular.module("viewNav")
                     if(index !== -1){
                         regionText.fill1 = "RockBuster region";
                         regionText.fill2 = "RockBuster region of pages";
-                        regionText.fill3 = "RB Intro";
+                        regionText.fill3 = "RockBuster";
                         getText(regionText); 
                     };
                     
@@ -71,7 +71,7 @@ angular.module("viewNav")
                     if(index !== -1){
                         regionText.fill1 = "Bag Grabbit region";
                         regionText.fill2 = "Bag Grabbit region of pages";
-                        regionText.fill3 = "BG Intro";
+                        regionText.fill3 = "Bag Grabbit";
                         getText(regionText); 
                     };
                     
@@ -79,7 +79,7 @@ angular.module("viewNav")
                     if(index !== -1){
                         regionText.fill1 = "Keeper region";
                         regionText.fill2 = "Keeper region of pages";
-                        regionText.fill3 = "KPR Intro";
+                        regionText.fill3 = "Keeper";
                         getText(regionText); 
                     };
                     
@@ -87,7 +87,7 @@ angular.module("viewNav")
                     if(index !== -1){
                         regionText.fill1 = "Carry Bag region";
                         regionText.fill2 = "Carry Bag region of pages";
-                        regionText.fill3 = "CB Intro";
+                        regionText.fill3 = "Carry Bag";
                         getText(regionText); 
                     };
                     
@@ -95,7 +95,7 @@ angular.module("viewNav")
                     if(index !== -1){
                         regionText.fill1 = "Tent Poles region";
                         regionText.fill2 = "Tent Poles region of pages";
-                        regionText.fill3 = "TP Intro";
+                        regionText.fill3 = "Tent Poles";
                         getText(regionText); 
                     };
                 },50);
