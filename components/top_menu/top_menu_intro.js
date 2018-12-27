@@ -32,7 +32,7 @@ angular.module("viewNav")
             // AR Section 4
             introSelf.rs4fontsize1 = "font-size:" + ((0.00065)*(viewWidth)+0.49294) + "em";         /* AR_1.25_0.73 */
             
-            viewManager.topMenuToHighlight(1);    
+            viewManager.topMenuToHighlight(0);    
             
         }]
     });
