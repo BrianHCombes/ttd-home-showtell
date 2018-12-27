@@ -25,7 +25,7 @@ angular.module("viewNav")
             ttdSelf.rs1fontsize3 = "font-size:" + ((0.00031)*(viewWidth)+0.73889) + "em";             /* AR_1.10_0.85 */
             ttdSelf.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                      /* AR_45.00_2.00 */
             
-            viewManager.topMenuToHighlight(0);    
+            viewManager.topMenuToHighlight(1);    
         }]
     })
 
