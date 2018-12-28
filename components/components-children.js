@@ -302,8 +302,8 @@ angular.module("viewNav")
             function callMenu(queryParam){
                 var locationHighlight;
                 switch(queryParam){
-                    case "ttd":     locationHighlight = 0; break;
-                    case "intro":   locationHighlight = 1; break;
+                    case "intro":     locationHighlight = 0; break;
+                    case "ttd":   locationHighlight = 1; break;
                     case "buyprice":locationHighlight = 2; break;
                     case "products":locationHighlight = 3; break;
                     case "reviews": locationHighlight = 4; break;    
