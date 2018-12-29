@@ -50,6 +50,11 @@ color:blue;
             </td>
         </tr>
     </table>
+    <div data-ui-view="childView1" 
+         title="This Read About has a link to Tent Pole pages"
+         style="text-align:center; margin:2vh auto 2vh auto;">
+                This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
+   </div>
    
 <!-- Response Section 2 ************************************************************************************************************************************************--> 
     <div style="text-align:center;">
@@ -61,8 +66,8 @@ color:blue;
                     padding:5px 8px;
                     border:2px solid black;
                     border-radius:5px;
-                    {{$ctrl.rs2fontsize2}};        /* AR_2_0.75 */
-                    {{$ctrl.rs2marginbottom1}};  /* AR_80_30 */
+                    {{$ctrl.rs2fontsize2}};        
+                    /*{{$ctrl.rs2marginbottom1}};  */
                    ">
             POLES FOR YOUR TENT AND OTHER POSSIBILITIES
         </div>
@@ -75,20 +80,9 @@ color:blue;
             <img    src="components/components08_11/tmpl_08/ttd-vn-tp-presentation5-2540x375.jpg" 
                     alt="Tent Pole" 
                     title="Tent Pole" 
-                    style= "width:90%; {{$ctrl.rs3margintop1}};"> 
+                    style= "width:90%; {{$ctrl.rs3margintop1}}; margin-top:3vh;"> 
         </div>
-        
-        <div style="position:absolute; top:-2.5vh; left:7%; width:100%; z-index:3;"> 
-            <div data-ui-view="childView1" 
-                     title="This Read About has a link to Tent Pole pages"
-                     style="margin:1vh auto;">
-                            This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
-            </div>
             
-            </div>
-        </div>
-    </div>
-
     <table style="margin-left:auto; margin-right:auto;">
         <tr>
              
@@ -105,7 +99,6 @@ color:blue;
                         style="width:100%; border:2px solid black;"> 
             </td>
           
-            </td>
         </tr>
     </table>
 </div> 
