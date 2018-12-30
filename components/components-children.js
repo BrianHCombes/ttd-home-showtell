@@ -17,7 +17,7 @@ angular.module("viewNav")
             
              // Response 'read about' button and text box
             child1Self.rsReadAboutfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";    /* AR_1.50_0.75 */
-            child1Self.rsReadAboutfontsize2 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";    /* AR_1.50_0.73 */
+            child1Self.rsReadAboutfontsize2 = "font-size:" + ((0.00064)*(viewWidth)+0.49889) + "em";    // AR_1170_1.25_360_0.73
             child1Self.rsReadAboutwidth1 = "width:" + ((-0.01605)*(viewWidth)+48.77778) + "%";          /* AR_40.00_60.00 */
             child1Self.rsReadAboutwidth2 = "width:" + ((0.14198)*(viewWidth)+63.88889) + "px";          /* AR_230.01_115.00 */
             
@@ -28,9 +28,53 @@ angular.module("viewNav")
             child1Self.rsNavleft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
             child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  
             
+            // Sets mode of the "NAVIGATE" button
+            var btnText = NavMenuFactory.getBtnText();
+            child1Self.display2 = false;
+            child1Self.morelessText2 = btnText.showText;
+            child1Self.moreless2 = function(){
+                if(child1Self.morelessText2 === btnText.showText){
+                    child1Self.morelessText2 = btnText.hideText;
+                    child1Self.display2 = true;
+                    var urlString = document.URL;
+                    var queryParam = urlString.slice(urlString.search("#/")+2);
+                    callMenu(queryParam);
+                } 
+                else {
+                    child1Self.morelessText2 = btnText.showText;
+                    child1Self.display2 = false;
+                }
+            }; 
+            
+            function callMenu(queryParam){
+                var locationHighlight;
+                switch(queryParam){
+                    case "intro":     locationHighlight = 0; break;
+                    case "ttd":   locationHighlight = 1; break;
+                    case "buyprice":locationHighlight = 2; break;
+                    case "products":locationHighlight = 3; break;
+                    case "reviews": locationHighlight = 4; break;    
+                    case "view00":  locationHighlight = 5; break; 
+                    case "view01":  locationHighlight = 6; break; 
+                    case "view02":  locationHighlight = 7; break; 
+                    case "view03":  locationHighlight = 8; break; 
+                    case "view04":  locationHighlight = 9; break; 
+                    case "view05":  locationHighlight = 10; break;
+                    case "view06":  locationHighlight = 11; break;
+                    case "view07":  locationHighlight = 12; break;
+                    case "view08":  locationHighlight = 13; break;
+                    case "view09":  locationHighlight = 14; break;
+                    case "view10":  locationHighlight = 15; break;
+                    case "view11":  locationHighlight = 16; break;
+                    default:console.log("From components-children.js file: There is no view match"); break;
+                }
+                    
+                child1Self.navMenuHeader = NavMenuFactory.navMenuHeader();
+                child1Self.navMenuBody = NavMenuFactory.getViewNav(locationHighlight); 
+                
+            };
             
             // Sets mode of the "READ ABOUT" button
-            
             var readAboutBtnText = NavMenuFactory.readAboutBtnText();
             child1Self.display1 = false;
             child1Self.morelessText1 = readAboutBtnText.showText;
@@ -63,11 +107,19 @@ angular.module("viewNav")
                         
                     case "intro":
                         child1Self.readAboutHeaderText  = "Tarp Tie Down Home Page:";
-                        child1Self.readAboutBodyText    = "To get around read the <span class='intro01'><b>'Quick Start'</b></span>\n\
-                                                           (under or below this text box). This website \n\
-                                                           is intended to provide information about our products with numerous images and \n\
-                                                           discussion. To purchase please go to our store by selecting the Price/Buy link \n\
-                                                           at the top of the page.<br><span class='intro01'><b>NOTE:</b></span> Scroll down to see our policy links and merchant seals.";    
+                        child1Self.readAboutBodyText    = " Welcome to Tarp Tie Down's home page \"region.\" It provides quick product overviews of \n\
+                                                            our tarp tie downs and accessories. For full product information see GETTING AROUND below. \n\
+                                                            <br><br> \n\
+                                                            <span class='intro01'><b>GETTING AROUND:</b></span><br>\n\
+                                                            &nbsp;&#9679; Select <span class='intro01'><b>Buttons A, B, C</b></span> to show the product thumbnails. \n\
+                                                                          <span class='intro03'>(try button B now, for example)</span><br> \n\
+                                                            &nbsp;&#9679; Then select a product thumbnail image to display that product's information.<br> \n\
+                                                            &nbsp;&#9679; Then select the <span class='intro01'><b>INFO, THIS PAGE</b></span> for more details and \n\
+                                                            a link to full product information. \n\
+                                                            <br><br> \n\
+                                                            <span class='intro01'><b>NOTE:</b></span> Scroll down to see our policy links and merchant seals.\n\
+                                                            <br><br> \n\
+                                                            <a class='btnStyle2' href='#/transition'><b>We're under construction</b></a>";    
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
                         child1Self.readAboutExtraStuff3 = false;
@@ -107,7 +159,7 @@ angular.module("viewNav")
                         
                     case "view00":
                         child1Self.readAboutHeaderText  = "EZ Grabbit's main features:";
-                        child1Self.readAboutBodyText    = "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro'><b>Go To EZ Grabbit Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    = "<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro'><b>Go To EZ Grabbit Pages</b></a><br> \n\
                                                            This composite image shows the four feature capabilities of the standard \n\
                                                            EZ Grabbit. You can mount tarps to surfaces, connect tarps together, \n\
                                                            attach anywhere, and save and reuse damaged tarps.<br>";
@@ -119,7 +171,7 @@ angular.module("viewNav")
                         
                     case "view01":
                         child1Self.readAboutHeaderText  =  "Long Grabbit";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html'><b>Go To Long Grabbit Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html'><b>Go To Long Grabbit Pages</b></a><br> \n\
                                                             The Long Grabbit tarp tie down is our 20\" model. It is ideal for securing \n\
                                                             large spans of material subject to wind forces such as with overhead cover. \n\
                                                             It is also ideal for large \"flanking\" spans of material such as tarps over a \n\
@@ -138,7 +190,7 @@ angular.module("viewNav")
                         
                     case "view02":
                         child1Self.readAboutHeaderText  =  "Mini Grabbit";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html'><b>Go To Mini Grabbit Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html'><b>Go To Mini Grabbit Pages</b></a><br> \n\
                                                             The Mini Grabbit tarp tie down is a miniature version of EZ Grabbit. It's length is \n\
                                                             a mere 1.625\" (40mm) but its mini size has a mighty hold. It is ideal for \n\
                                                             lightweight tarp and tent shelters and is intended for recreational users who travel \n\
@@ -154,7 +206,7 @@ angular.module("viewNav")
                     
                     case "view03":
                         child1Self.readAboutHeaderText  =  "EZ Adjust Rope Adjuster";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html'><b>Go To EZ Adjust Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html'><b>Go To EZ Adjust Pages</b></a><br> \n\
                                                             The EZ Adjust Rope Adjuster is perfect for use with ropes 1/8\" (3mm) diameter to 3/16\" \n\
                                                             (5mm) diameter. Use it to adjust lines on tents, canopies, tarps, tarp shelters, etc. \n\
                                                             Its open end design allows you to secure lines around trees, poles, ground stakes, and \n\
@@ -169,7 +221,7 @@ angular.module("viewNav")
                         
                     case "view04":
                         child1Self.readAboutHeaderText  =  "RockBuster Ground Stake:";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html'><b>Go To RockBuster Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html'><b>Go To RockBuster Pages</b></a><br> \n\
                                                             The RockBuster is a 12\" ground stake specifically designed to secure rope lines to tents, \n\
                                                             tarps, canopies, and all other situations where anchoring ground lines is important. Rugged \n\
                                                             and reliable the RockBuster's straight fluted design holds the ground tight even when \n\
@@ -185,7 +237,7 @@ angular.module("viewNav")
                         
                     case "view05":
                         child1Self.readAboutHeaderText  =  "Bag Grabbit Bag Handle:";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html'><b>Go To Bag Grabbit Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html'><b>Go To Bag Grabbit Pages</b></a><br> \n\
                                                             <b>Close, carry and store bulky bags with ease!</b> <br>\n\
                                                             <span class='textStyle5 viewTmpl_05CSS-A'> \n\
                                                                 &#9658; Works on all plastic bags and many multi-ply paper bags.<br> \n\
@@ -207,7 +259,7 @@ angular.module("viewNav")
                         
                     case "view06":
                         child1Self.readAboutHeaderText  =  "The Keeper:";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html'><b>Go To Keeper Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html'><b>Go To Keeper Pages</b></a><br> \n\
                                                             The EZ Grabbit has two parts: the Dog Bone and Sleeve. The tarp is wrapped around the Dog Bone and \n\
                                                             the Sleeve is slid into place to engage. See instructions for both rope leader and surface mount \n\
                                                             applications. The Keeper adds an extra level of engagement by keeping the Dog Bone and Sleeve \n\
@@ -222,7 +274,7 @@ angular.module("viewNav")
                         
                     case "view07":
                         child1Self.readAboutHeaderText  =  "Carry Bag:";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html'><b>Go To Carry Bag Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html'><b>Go To Carry Bag Pages</b></a><br> \n\
                                                             <span class='textStyle5 viewTmpl_07CSS-A'> \n\
                                                                 &#9658; Carry all your Grabbits and accessories.<br> \n\
                                                                 &#9658; Carry any appropriate gear.<br> \n\
@@ -239,7 +291,7 @@ angular.module("viewNav")
                         
                     case "view08":
                         child1Self.readAboutHeaderText  =  "Tent Poles:";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html'><b>Go To Tent Pole Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html'><b>Go To Tent Pole Pages</b></a><br> \n\
                                                             <span class='textStyle5 viewTmpl_08CSS-A'> \n\
                                                                 Qty 12 - 8mm dia. Tent Poles<br> \n\
                                                                 &#9658; 10 tent poles with connectors.<br> \n\
@@ -259,7 +311,7 @@ angular.module("viewNav")
                       
                     case "view09":
                         child1Self.readAboutHeaderText  =  "Classic EZ Grabbit:";
-                        child1Self.readAboutBodyText    =  "</span><br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro'><b>Go To EZ Grabbit Pages</b></a><br> \n\
+                        child1Self.readAboutBodyText    =  "<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro'><b>Go To EZ Grabbit Pages</b></a><br> \n\
                                                             The Classic EZ Gabbit is our non-mountable version. It does everything our \n\
                                                             standard EZ Grabbit does except it has no mounting points on the Dog Bone. \n\
                                                             Our non-mountable EZ Grabbits  were produced prior to our injection mold \n\
@@ -276,59 +328,8 @@ angular.module("viewNav")
                         console.log("No view match");
                         break;
                 }
-                
             }
-            
-                
-            // Sets mode of the "NAVIGATE" button
-            var btnText = NavMenuFactory.getBtnText();
-            child1Self.display2 = false;
-            child1Self.morelessText2 = btnText.showText;
-            child1Self.moreless2 = function(){
-                if(child1Self.morelessText2 === btnText.showText){
-                    child1Self.morelessText2 = btnText.hideText;
-                    child1Self.display2 = true;
-                    var urlString = document.URL;
-                    var queryParam = urlString.slice(urlString.search("#/")+2);
-                    callMenu(queryParam);
-                } 
-                else {
-                    child1Self.morelessText2 = btnText.showText;
-                    child1Self.display2 = false;
-                }
-            }; 
-            
-            
-            function callMenu(queryParam){
-                var locationHighlight;
-                switch(queryParam){
-                    case "intro":     locationHighlight = 0; break;
-                    case "ttd":   locationHighlight = 1; break;
-                    case "buyprice":locationHighlight = 2; break;
-                    case "products":locationHighlight = 3; break;
-                    case "reviews": locationHighlight = 4; break;    
-                    case "view00":  locationHighlight = 5; break; 
-                    case "view01":  locationHighlight = 6; break; 
-                    case "view02":  locationHighlight = 7; break; 
-                    case "view03":  locationHighlight = 8; break; 
-                    case "view04":  locationHighlight = 9; break; 
-                    case "view05":  locationHighlight = 10; break;
-                    case "view06":  locationHighlight = 11; break;
-                    case "view07":  locationHighlight = 12; break;
-                    case "view08":  locationHighlight = 13; break;
-                    case "view09":  locationHighlight = 14; break;
-                    case "view10":  locationHighlight = 15; break;
-                    case "view11":  locationHighlight = 16; break;
-                    default:console.log("From components-children.js file: There is no view match"); break;
-                }
-                    
-                child1Self.navMenuHeader = NavMenuFactory.navMenuHeader();
-                child1Self.navMenuBody = NavMenuFactory.getViewNav(locationHighlight); 
-                
-            }
-            
-                }]
-        
+        }]
     });
     
     

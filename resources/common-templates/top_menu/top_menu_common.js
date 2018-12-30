@@ -2,7 +2,7 @@ angular.module("viewNav")
 
     .component('ttd', {
         
-        //templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/ttd/ttd.html',
+        // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/ttd/ttd.html',
         templateUrl: 'resources/common-templates/top_menu/ttd/ttd.html',
        
         controller: ['$scope', 'GetSet', 'viewManager', 'topMenuService', '$sce', function($scope, GetSet, viewManager, topMenuService, $sce){
