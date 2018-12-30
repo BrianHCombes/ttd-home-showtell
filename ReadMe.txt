@@ -87,6 +87,11 @@ Process:
     https://enable-cors.org/
     https://www.html5rocks.com/en/tutorials/cors/
     https://humanwhocodes.com/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/
+    Following added 12/29/2018
+    https://github.com/hapijs/discuss/issues/451
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
+    https://stackoverflow.com/questions/17756550/angularjs-cors-issues
+    https://devblast.com/b/cors-with-angular-js-and-sinatra
     It should be noted once a given framework is uploaded to the host the CORS
     problem goes away since everything is under one roof.
 

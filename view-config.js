@@ -6,8 +6,7 @@ angular.module('viewNav', ['ui.router', 'ngSanitize'])
             // Allow same origin resource loads.
             'self',
             // Allow loading from other specified domains.
-            'https://www.tarptiedown.com/ttd-vn/ttd-vn-top-menu-pages/ttd.html',
-            'https://www.tarptiedown.com/resources/common-templates/buy_price.html'
+            'https://www.tarptiedown.com/resources/common-templates/top_menu/ttd/ttd.html'
         ]);
  
  
