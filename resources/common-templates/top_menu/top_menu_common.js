@@ -188,20 +188,6 @@ angular.module("viewNav")
             var viewWidth = GetSet.getViewWidth();
             
         }]
-    })
-    
-    .component('transition', {
-        
-        templateUrl: 'components/top_menu/intro/transition.html',
-       
-        controller: ['GetSet', function(GetSet){
-            var viewWidth = GetSet.getViewWidth();
-            
-            var transitionSelf = this;
-            
-            transitionSelf.fontsize1 = "font-size:" + ((0.00123)*(viewWidth)+0.55556) + "em";
-            
-        }]
     });
     
     

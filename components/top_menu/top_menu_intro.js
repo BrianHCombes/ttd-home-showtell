@@ -35,4 +35,18 @@ angular.module("viewNav")
             viewManager.topMenuToHighlight(0);    
             
         }]
+    })
+    
+    .component('transition', {
+        
+        templateUrl: 'components/top_menu/intro/transition.html',
+       
+        controller: ['GetSet', function(GetSet){
+            var viewWidth = GetSet.getViewWidth();
+            
+            var transitionSelf = this;
+            
+            transitionSelf.fontsize1 = "font-size:" + ((0.00056)*(viewWidth)+0.60000) + "em";   // AR_1170_1.25_360_0.80
+            
+        }]
     });
