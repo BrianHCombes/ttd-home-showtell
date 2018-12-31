@@ -9,7 +9,7 @@
              alt="Tarp Tie Down Company Official Logo"  
              title="EZ Grabbit: When a tarp clip just won't do" 
              style="width:80%; border-radius:5px; margin-top:5px;">
-        <div style="{{$ctrl.rs1fontsize1}}; font-weight:bold;">Home of the EZ Grabbit Tarp Tie Down</div>
+        <div style="{{$ctrl.rs1fontsize1}};"><b>Home of the EZ Grabbit Tarp Tie Down</b></div>
     </div>
     <div data-ui-view="childView1" 
          style="text-align:center; 
@@ -17,56 +17,17 @@
                ">
                 This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working
     </div>
-    <!-- AR Response Section 2 ************************************************************************************************************************************************-->
-    <table class="textStyle4" 
-           style=  "margin-top:10px; 
-                    position:relative; 
-                    width:100%;
-                   ">
-        <tr >
-            <td style= "padding-left:1%;
-                        vertical-align:top;
-                        text-align:center;
-                        {{$ctrl.rs2width1}};                    /* AR_30_55 */
-                       ">
-                <div style="width:100%; text-align:center;">
-                    <button ui-sref="transition" 
-                            class="btnStyle2"
-                            style= "width:90%;
-                                    display:inline-block;
-                                    text-decoration:none;
-                                    {{$ctrl.rs2fontsize4}}; 
-                                    {{$ctrl.rs2margintop2;}};       /* AR_20.00_-0.00 */
-                                    {{$ctrl.rs2borderwidth1}};
-                                    {{$ctrl.rs2fontweight1}};
-                                   ">
-                                    Read Me<br>We're in transition
-                    </button>
-                </div>
-
-                <div class="textBoxStyle1"
-                     style="margin:10px auto 0px auto;
-                            text-align:left;
-                            width:90%;
-                            {{$ctrl.rs2margintop1}};    /* AR_20.00_10.00 */
-                            {{$ctrl.rs2padding1}};      /* AR_10.00_2.00 */
-                            {{$ctrl.rs2fontsize5}};     /* AR_1.50_0.70 */
-                            {{$ctrl.rs2borderwidth1}};  /* AR_2.00_1.05 */
-                            {{$ctrl.rs2fontweight1}};   /* AR_100_900.00 */
-                            ">
-                    <div style="color:blue;text-align:center;">
-                        <b>Quick Start:</b>
-                    </div>
-                    &nbsp;&#9656; Select button A, B or C<br>&nbsp;&#9656; Select product image<br>&nbsp;&#9656; Browse page<br>&nbsp;&#9656; Select <span style="color:blue;"><b>INFO ABOUT THIS</b></span>
-                </div>
-            </td>
-            <td ng-show="1" style="{{$ctrl.rs2width2}}; text-align:center; vertical-align:top;">
-                <img src="https://www.tarptiedown.com/resources/images/ttd-vn-ezg-device-dbns-720x269.png" alt="EZ Grabbit Device" style="width:100%;"><br>
-                <span style="{{$ctrl.rs2fontsize6}};   /* AR_2.00_0.90 */
-                      ">The EZ Grabbit<br>Over one million sold</span>
-            </td>
-        </tr>
-    </table>
+    
+    <div class="textStyle4"
+         style="width:100%; 
+                text-align:center; 
+                vertical-align:top;
+               ">
+        <img src="components/top_menu/intro/ttd-vn-ezg-yellow-device-dbns-750x300.jpg" alt="EZ Grabbit Device" style="{{$ctrl.rs1width1}}"><br>
+        <span style="{{$ctrl.rs1fontsize1}};   /* AR_2.00_0.90 */
+              "><b>Over one million sold</b></span>
+    </div>
+        
 
     <hr style="{{$ctrl.rs2margin1}};">
 

@@ -53,11 +53,8 @@ angular.module('viewNav')
             self05.rs2padding1 = "padding:" + ((0.01852)*(viewWidth)-1.66667) + "px " + ((0.29630)*(viewWidth)-66.66667) + "px";      /* AR_20.00_5.00 */   /* AR_280.00_40.00 */
             
             // AR Response Section 3 
-            self05.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
-            
-            // AR Response Section 4 
-            self05.rs4positiontop2 = "top:" + ((0.43210)*(viewWidth)-5.55556) + "px"; 
-            self05.rs4fontsize5 = "font-size:" + ((0.00162)*(viewWidth)+0.76511) + "em";    /* AR_2.66_1.35 */ /*relative to rs3fontsize1 */
+            self05.rs3positiontop2 = "top:" + ((0.43210)*(viewWidth)-5.55556) + "px"; 
+            self05.rs3fontsize5 = "font-size:" + ((0.00162)*(viewWidth)+0.76511) + "em";    /* AR_2.66_1.35 */ /*relative to rs3fontsize1 */
             
             compFactory.logView(05);
         }]
