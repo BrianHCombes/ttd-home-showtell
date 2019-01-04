@@ -1,5 +1,11 @@
 <link rel="stylesheet" type="text/css" href="https://www.tarptiedown.com/css/vn-templateStyle1.css">
+<style>
 
+.ttd01 {color:blue;}    
+.ttd02 {font-size:.75em; line-height:75%;}
+.ttd03 {color:red;}
+
+</style> 
 
 <div style="font-size:initial; 
             text-align:center;
@@ -52,7 +58,7 @@
                                &#9679;
                             </td>
                             <td>
-                                This is the {{$ctrl.fill2}}. Select <b>"{{$ctrl.fill3}}"</b> in the top menu to start.
+                                This is the {{$ctrl.fill2}}. Select <span class='ttd01'><b>{{$ctrl.fill3}}</b></span> in the top menu to start.
                             </td>
                         </tr>
                         <tr>
@@ -60,7 +66,7 @@
                                &#9679;
                             </td>
                             <td>
-                                Select the LOCATION MENU button for the contents of this region.
+                                Select the <span class='ttd01'><b>LOCAL MENU</b></span> button for the contents of this region.
                             </td>
                         </tr>
                     </table>
@@ -90,11 +96,15 @@
                 <div class="textStyle3" style="line-height:175%; text-align:left;">
                     <b>Top menu:</b> General Info and product offerings<br>
                     <b>Thumbnail menu:</b> Specific product information.<br>
-                    <div style="line-height:110%; padding:3px 0px;">
-                        <b>Navigating the thumbnail section:</b> Start by selecting a lettered button. The corresponding thumbnail images will show. 
-                        Select a thumbnail to open its contents in the main view. Browse the main view as desired.<br><br>
-                        <b>The INFO ABOUT THIS button:</b> The INFO ABOUT THIS button provides info and <span style="color:blue;"><b><u>links</u></b></span>  (as needed) regarding the current subject showing.<br><br>
-                    <b>The LOCATION MENU button:</b> The LOCATION MENU button often appears in any given view. Select it to find your locale and other locales.
+                    <div style="line-height:130%; padding:3px 0px;">
+                        <b>Navigating the thumbnails:</b><br>
+                        &nbsp;&#9679; Select <span class='ttd01'><b>Buttons A, B, C</b></span> to show the product thumbnails.
+                                      <span class='ttd03'>(try button B now, for example)</span><br> 
+                        &nbsp;&#9679; Then select a product thumbnail image to display that product's information.<br> 
+                        &nbsp;&#9679; Then select the <span class='ttd01'><b>INFO, THIS PAGE</b></span> for more details and 
+                        a link to full product information. \n\
+                        <br><br>
+                    <b>The LOCAL MENU button:</b> The LOCAL MENU button often appears in any given view. Select it to find your locale and other locales.
                     </div>
                 </div>
             </div>

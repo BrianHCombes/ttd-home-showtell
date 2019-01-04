@@ -39,22 +39,23 @@ angular.module("viewNav")
                 
             var buyPriceSelf = this;
             
-            buyPriceSelf.title1 = "Jumps down to specific product price in the listing below";
-            buyPriceSelf.title2 = "Jumps directly to the specific store item with the full price table";
-            buyPriceSelf.title3 = "This quick menu provides quick pricing below or the full price tables listed at our store.";
+            buyPriceSelf.title1 = "Select a product here or scroll down for the highest and lowest pack price. Then select \"Shop\" button for full price table.";
+            buyPriceSelf.title2 = "Per device price for lowest pack size to highest pack size. Select here or scroll down for pack sizes. Then select \"Shop\" button for full price table.";
+            buyPriceSelf.title3 = "This quick price menu provides the per device pricing from smallest to largest pack sizes.";
+            buyPriceSelf.title4 = "Select this product here or scroll down for the highest and lowest pack price. Then select \"Shop\" button for full price table.";
             
             var quickLIST = [ 
-                {"localview":"#/buyprice#EZGY", "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_14","product":"Standard EZ Grabbit Yellow"},
-                {"localview":"#/buyprice#EZGBL","regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_11","product":"Standard EZ Grabbit Black"},
-                {"localview":"#/buyprice#EZGG", "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_15","product":"Classic EZ Grabbit Green"},
-                {"localview":"#/buyprice#LG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_13",   "product":"Long Grabbit"},
-                {"localview":"#/buyprice#MG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_12",   "product":"Mini Grabbit"},
-                {"localview":"#/buyprice#EZA",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=17",     "product":"EZ Adjust Rope Adjuster"},
-                {"localview":"#/buyprice#RB",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=18",     "product":"RockBuster Ground Stake"},
-                {"localview":"#/buyprice#BG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=19",     "product":"Bag Grabbit Bag Handle"},
-                {"localview":"#/buyprice#KPR",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_16","product":"EZ Grabbit Keeper"},
-                {"localview":"#/buyprice#CB",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=20",     "product":"Carry Bag"},
-                {"localview":"#/buyprice#TP",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=21",     "product":"Tent Poles"}
+                {"localview":"#/buyprice#EZGY", "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_14","product":"Standard EZ Grabbit Yellow", "price":"&nbsp;starts $2.72 &#10140; low as $1.93"},
+                {"localview":"#/buyprice#EZGBL","regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_11","product":"Standard EZ Grabbit Black",  "price":"&nbsp;starts $2.72 &#10140; low as $1.93"},
+                {"localview":"#/buyprice#EZGG", "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_15","product":"Classic EZ Grabbit Green",   "price":"&nbsp;starts $1.17 &#10140; low as $1.02"},
+                {"localview":"#/buyprice#LG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_13",   "product":"Long Grabbit",               "price":"&nbsp;starts $7.96 &#10140; low as $4.12"},
+                {"localview":"#/buyprice#MG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_12",   "product":"Mini Grabbit",               "price":"&nbsp;starts $2.02 &#10140; low as $1.39"},
+                {"localview":"#/buyprice#EZA",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=17",     "product":"EZ Adjust Rope Adjuster",    "price":"&nbsp;starts $0.73 &#10140; low as $0.34"},
+                {"localview":"#/buyprice#RB",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=18",     "product":"RockBuster Ground Stake",    "price":"&nbsp;$1.75 any Quantity"},
+                {"localview":"#/buyprice#BG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=19",     "product":"Bag Grabbit Bag Handle",     "price":"&nbsp;$4.26 any Quantity"},
+                {"localview":"#/buyprice#KPR",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_16","product":"EZ Grabbit Keeper",          "price":"&nbsp;starts $2.95 &#10140; low as $2.44"},
+                {"localview":"#/buyprice#CB",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=20",     "product":"Carry Bag",                  "price":"&nbsp;$7.95 any Quantity"},
+                {"localview":"#/buyprice#TP",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=21",     "product":"Tent Pole Kit",              "price":"&nbsp;$7.95 any Quantity"}
             ];
             buyPriceSelf.quickLIST = quickLIST;
             
@@ -78,7 +79,7 @@ angular.module("viewNav")
             buyPriceSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";             // AR_1170_1.00_360_0.50
             buyPriceSelf.fontsize3 = "font-size:" + ((0.00037)*(viewWidth)+0.56985) + "em";             // AR_1170_1.00_320_0.69
             buyPriceSelf.fontsize4 = "font-size:" + ((0.00185)*(viewWidth)+0.83333) + "em";             // AR_1170_3.00_360_1.50
-            buyPriceSelf.fontsize5 = "font-size:" + ((0.00123)*(viewWidth)+0.55556) + "em";             // AR_1170_2.00_360_1.00
+            buyPriceSelf.fontsize5 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";             // AR_1170_1.50_360_1.00S
             
             buyPriceSelf.width1 = "width:" + ((-0.06118)*(viewWidth)+116.57647) + "%";   // AR_1170_45.00_320_97.00
             
@@ -149,13 +150,12 @@ angular.module("viewNav")
             productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";     /* AR_1.00_0.65 */
             productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";     /* AR_1.00_0.50 */
             productsSelf.fontsize3 = "font-size:" + ((0.00041)*(viewWidth)+0.51824) + "em";     // AR_1170_1.00_320_0.65
-           // productsSelf.fontsize4 = "font-size:" + ((0.00024)*(viewWidth)+0.97471) + "em";   // AR_1170_1.25_320_1.05
-            
+            productsSelf.fontsize5 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";     // AR_1170_1.50_360_1.00S
             
             productsSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
             productsSelf.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
             productsSelf.margin1 = "margin:" + ((0.00617)*(viewWidth)+2.77778) + "px 0px";              // AR_1170_10.00_360_5.00
-            productsSelf.fontweight1 = "font-weight:" + ((-0.98765)*(viewWidth)+1255.55556);            /* AR_100.01_900.00 */
+            productsSelf.fontweight1 = "font-weight:" + ((-0.98765)*(viewWidth)+1255.55556);            // AR_1170_100.01_360_900.00
             
             viewManager.topMenuToHighlight(3);  
             

@@ -28,6 +28,17 @@ background-color:gray;
 border:1px solid black;
 border-radius:7px
 }
+
+.quickClose:hover
+{
+cursor:pointer;  
+box-shadow:0px 0px 10px yellow;
+}
+
+.buyprice01 {color:blue;}
+.buyprice02 {font-size:.75em; line-height:75%;}
+.buyprice03 {color:red;}
+
 </style>
 
 <div class="viewStyle" id="pageTop1" style="font-size:1.0em;">
@@ -58,28 +69,73 @@ border-radius:7px
                     {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
                     {{$ctrl.fontsize5}};
                    ">
-            Go directly to TTD Store
+            <b>Go directly to TTD Store</b>
         </a>
     </div>
-
-    <div class="textStyle2"
-         style="text-align:center;
-                {{$ctrl.fontsize5}};
-               ">OR
-    </div>
-    <div class="textStyle4" style="margin:1% auto; background-color:black; color:white; padding:5px; border-radius:5px; {{$ctrl.fontsize3}}; {{$ctrl.width1}};">
+    
+    <div style="text-align:center;">
+        <button class="btnStyle2" 
+                ng-click="quickPriceTable = !quickPriceTable"
+                style= "display:inline-block;
+                        text-decoration:none;
+                        padding:2px 10px;
+                        {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                        {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                        {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                        {{$ctrl.fontsize5}};
+                       ">
+            <b>Quick Price</b>
+        </button>
+    </div> 
+    <div ng-show="quickPriceTable" 
+         class="textStyle4" 
+         style="margin:1% auto; 
+                background-color:black; 
+                color:white; padding:5px; 
+                border-radius:5px; 
+                {{$ctrl.fontsize3}}; 
+                {{$ctrl.width1}};
+               ">
         <table class="tableBorder" style="width:100%;">
-            <tr><th class="headerBorder topMenuNav" colspan="2" title="{{$ctrl.title3}}">Quick Price and Shop Menu</th></tr>
             <tr>
-                <th class="headerBorder topMenuNav" title="{{$ctrl.title1}}" style="width:50%;">Quick price below</th>
-                <th class="headerBorder topMenuNav" title="{{$ctrl.title2}}" style="width:50%;">Shop item</th>
+                <th class="headerBorder topMenuNav"     
+                    colspan="2" 
+                    title="{{$ctrl.title3}}">
+                        Quick Price 
+                        <span style="float:right;">&nbsp;</span>
+                        <span class="quickClose" 
+                              ng-click="quickPriceTable = !quickPriceTable" 
+                              style="float:right;">
+                        &#10062;
+                        </span>
+                </th>
+            </tr>
+            <tr>
+                <th class="headerBorder topMenuNav" 
+                    colspan="2"
+                    title="{{$ctrl.title1}}" 
+                    style="width:50%;">
+                    Per device pricing as pack size increases<br>
+                    <span style="color:#aaaa00;">Scroll down or select here for details</span>
+                </th>
             </tr>
             <tr ng-repeat="quicklist in $ctrl.quickLIST">
-                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title1}}" href="{{quicklist.localview}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
-                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title2}}" href="{{quicklist.regionURL}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
+                <td class="dataBorder hyperMenuNav" style="border-right:none;"> 
+                    <a  class="quickLink" 
+                        title="{{$ctrl.title4}}" 
+                        href="{{quicklist.localview}}" 
+                        ng-bind-html="quicklist.product">
+                    </a>
+                </td>
+                <td class="dataBorder hyperMenuNav" style="border-left:none;">
+                    <a  class="quickLink" 
+                        title="{{$ctrl.title2}}" 
+                        href="{{quicklist.localview}}" 
+                        ng-bind-html="quicklist.price">
+                    </a>
+                </td>
             </tr>    
         </table>
-        <div style=" margin:1% 0%; text-align:center">(or)&nbsp;&nbsp;Scroll below for all product pricing</div>
     </div>
 
     <table style="  border:1px solid black; 
@@ -102,9 +158,9 @@ border-radius:7px
                            "> 
                                 <b>STANDARD EZ GRABBIT</b><br>
                     <span style="font-size:0.90em; color:blue;"><b>(mountable)</b></span><br>
-                    <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br>
-                    </span>4pk for $10.88 <b><u>thru</u></b><br>
-                    48pk for $92.64<br>
+                    <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b></span><br>
+                    4pk for $10.88 ($2.72/device)<br><b><u>thru</u></b><br>
+                    48pk for $92.64 ($1.93/device)<br>
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue">(in 4pk increments)</span><br>
                     <b><u>More than 48 for<br>
                     $1.93 per device</u></b><br>
@@ -141,8 +197,8 @@ border-radius:7px
                                 <b>STANDARD EZ GRABBIT</b><br>
                     <span style="font-size:0.90em; color:blue;"><b>(mountable)</b></span><br>
                     <span style="font-size:1.00em;"><b>GLOSS&nbsp; BLACK</b><br>
-                    </span>4pk for $10.88 <b><u>thru</u></b><br>
-                    48pk for $92.64<br>
+                    4pk for $10.88 ($2.72/device)<br><b><u>thru</u></b><br>
+                    48pk for $92.64 ($1.93/device)<br>
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue">(in 4pk increments)</span><br>
                     <b><u>More than 48 for<br>
                     $1.93 per device</u></b><br>
@@ -179,9 +235,9 @@ border-radius:7px
                            ">
                             <br><br><b>CLASSIC EZ GRABBIT</b><br> 
                     <span style="font-size:0.9em; color:blue;"><b>(non-mountable)</b></span><br>
-                    <span style="font-size:1.00em;"><b>&nbsp;&nbsp;HIGH VIS GREEN&nbsp;</b><br>
-                    </span>24pk for $28.08<br>
-                    48pk for $48.96<br>
+                    <span style="font-size:1.00em;"><b>&nbsp;&nbsp;HIGH VIS GREEN&nbsp;</b></span><br>
+                    24pk for $28.08 ($1.17/device)<br>
+                    48pk for $48.96 ($1.02/device)<br>
                     <a  href="https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_15" 
                         class="btnStyle2"
                         title="{{$ctrl.title2}}"
@@ -212,12 +268,13 @@ border-radius:7px
                             background-color:gray;
                             color:#ffffff;
                            ">
-                                <b>LONG LONG GRABBIT</b><br>
+                                <b>LONG GRABBIT</b><br>
                     <span style="font-size:1.00em;"><b>OLIVE&nbsp; DRAB</b><br></span>
-                    4pk for $8.08 <b><u>thru</u></b><br>
-                    48pk for $66.72<br>
-                    <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
-                    <b><u>More than 12 for<br>$4.12 per device</u></b><br>
+                    2pk for $12.52 ($6.26/device)<br>
+                    <b><u>thru</u></b><br>
+                    12pk for $49.44 ($4.12/device)<br>
+                    <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 2pk increments)</span><br>
+                    <b><u>12 or more for<br>$4.12 per device</u></b><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_13"  
                         class="btnStyle2"
                         title="{{$ctrl.title2}}"
@@ -250,8 +307,9 @@ border-radius:7px
                            ">
                             <br><b>MINI GRABBIT</b><br>
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br></span>
-                    4pk for $8.08 <b><u>thru</u></b><br>
-                    48pk for $66.72<br>
+                    4pk for $8.08 ($2.02/device)<br>
+                    <b><u>thru</u></b><br>
+                    48pk for $66.72 ($1.39/device)<br>
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
                     <b><u>More than 48 for<br>$1.39 per device</u></b><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_12"  
@@ -286,8 +344,9 @@ border-radius:7px
                            ">
                             <br><b>EZ ADJUST</b><br>
                     <span style="font-size:1.00em;"><b>CANARY&nbsp; YELLOW</b><br></span>
-                    4pk for $2.92 <b><u>thru</u></b><br>
-                    48pk for $16.32<br>
+                    4pk for $2.92 ($0.73/device)<br>
+                    <b><u>thru</u></b><br>
+                    48pk for $16.32 ($0.34/device)<br>
                     <span style="font-size:0.90em; line-height:140%; font-weight:bold; color:blue;">(in 4pk increments)</span><br>
                     <b><u>More than 48 for<br>$0.34 per device</u></b><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=17" 
@@ -392,7 +451,7 @@ border-radius:7px
                     <span style="font-size:1.00em;"><b>BLACK&nbsp; TABS</b></span><br>
                     <span style="font-size:1.00em;"><b>1/8"&nbsp; SHOCK&nbsp; CORD</b></span><br>
                     $2.95 each<br>
-                    $9.96 4-pack<br>
+                    4pk for $9.96 ($2.44/device)<br>
                     <a  href="https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_16"
                         class="btnStyle2"
                         title="{{$ctrl.title2}}"
@@ -427,6 +486,7 @@ border-radius:7px
                     <span style="font-size:1.00em;"><b>HEAVY&nbsp; DUTY</b></span><br>
                     <span style="font-size:1.00em;"><b>W&nbsp; SIDE&nbsp; POUCH</b></span><br>
                     $7.95 each<br>
+                    <span style="font-size:1.13em; line-height:140%; font-weight:bold; color:blue;">Any Quantity!</span><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=20"
                         class="btnStyle2"
                         title="{{$ctrl.title2}}"
@@ -462,6 +522,7 @@ border-radius:7px
                     $7.95 per 12 pack<br>
                     <span style="font-size:1.00em;"><b>24'&nbsp; Elastic&nbsp; Cord</b></span><br>
                     $2.25<br>
+                    <span style="font-size:1.13em; line-height:140%; font-weight:bold; color:blue;">Any Quantity!</span><br>
                     <a  href="https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=21"  
                         class="btnStyle2"
                         title="{{$ctrl.title2}}"

@@ -16,17 +16,20 @@ angular.module("viewNav")
             child1Self.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                     /* AR_45.00_2.00 */
             
              // Response 'read about' button and text box
-            child1Self.rsReadAboutfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";    /* AR_1.50_0.75 */
+            child1Self.rsReadAboutfontsize1 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";    /* AR_1.50_0.75 */
             child1Self.rsReadAboutfontsize2 = "font-size:" + ((0.00064)*(viewWidth)+0.49889) + "em";    // AR_1170_1.25_360_0.73
             child1Self.rsReadAboutwidth1 = "width:" + ((-0.01605)*(viewWidth)+48.77778) + "%";          /* AR_40.00_60.00 */
-            child1Self.rsReadAboutwidth2 = "width:" + ((0.14198)*(viewWidth)+63.88889) + "px";          /* AR_230.01_115.00 */
             
             // Response 'Menu' button and text box
-            child1Self.rsNavfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";          /* AR_1.50_0.75 */
+            child1Self.rsNavfontsize1 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";          /* AR_1.50_0.75 */
             child1Self.rsNavfontsize2 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";          // AR_1170_1.25_360_0.70
-            
             child1Self.rsNavleft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
             child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  
+            
+            // Response for both Buttons
+            child1Self.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
+            
+            
             
             // Sets mode of the "NAVIGATE" button
             var btnText = NavMenuFactory.getBtnText();
@@ -49,8 +52,8 @@ angular.module("viewNav")
             function callMenu(queryParam){
                 var locationHighlight;
                 switch(queryParam){
-                    case "intro":     locationHighlight = 0; break;
-                    case "ttd":   locationHighlight = 1; break;
+                    case "intro":   locationHighlight = 0; break;
+                    case "ttd":     locationHighlight = 1; break;
                     case "buyprice":locationHighlight = 2; break;
                     case "products":locationHighlight = 3; break;
                     case "reviews": locationHighlight = 4; break;    
@@ -98,7 +101,7 @@ angular.module("viewNav")
                     
                     case "ttd":
                         child1Self.readAboutHeaderText  = "The TTD Home Page Region:";
-                        child1Self.readAboutBodyText    = "This page provides a brief overview about how to get around the EZ Grabbit region.";  
+                        child1Self.readAboutBodyText    = "This page provides a brief overview about how to get around the home page region.";  
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
                         child1Self.readAboutExtraStuff3 = false;
@@ -127,10 +130,15 @@ angular.module("viewNav")
                         break;   
                     
                     case "buyprice":
-                        child1Self.readAboutHeaderText  = "Pricing and Ordering:";
-                        child1Self.readAboutBodyText    = "Click on the shop buttons to go to our store and get pricing tables \n\
-                                                           on the specific products. Or click on <b>'Go directly to TTD Store'</b> to\n\
-                                                           go to our store's home page.";  
+                        child1Self.readAboutHeaderText  =  "Pricing and Ordering:";
+                        child1Self.readAboutBodyText    =  "<div class='buyprice02'>&nbsp;</div> \n\
+                                                            &nbsp;&#9679; Click on the <span class='buyprice01'><b>Quick Price</b></span> button for per device price ranges.<br> \n\
+                                                            <div class='buyprice02'>&nbsp;</div> \n\
+                                                            &nbsp;&#9679; Select a product from the <span class='buyprice01'><b>Quick Price</b></span> menu \n\
+                                                            or scroll down for the corresponding pack size details.<br> \n\
+                                                            <div class='buyprice02'>&nbsp;</div> \n\
+                                                            &nbsp;&#9679; Then select the <span class='buyprice01'><b>Shop...</b></span> button for the complete pack size table.";
+                                                           
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
                         child1Self.readAboutExtraStuff3 = false;
@@ -138,10 +146,16 @@ angular.module("viewNav")
                         break;
                     
                     case "products":
-                        child1Self.readAboutHeaderText  =  "Our list of products:";
-                        child1Self.readAboutBodyText    =  "Use the Quick Menu or scroll down for brief product overviews. \n\
-                                                            Select the app links for more detailed discussion, field \n\
-                                                            applications, and specifications.";  
+                        child1Self.readAboutHeaderText  =  "Our Products:";
+                        child1Self.readAboutBodyText    =  "<div class='products02'>&nbsp;</div> \n\
+                                                            &nbsp;&#9679; Select the <span class='products01'><b>Quick Menu</b></span> button \n\
+                                                            or scroll down for brief product overviews.<br> \n\
+                                                            <div class='products02'>&nbsp;</div> \n\
+                                                            &nbsp;&#9679; Then select the <span class='products01'><b>More: Quick Info</b></span> \n\
+                                                            button for a more in depth overview.\n\
+                                                            <div class='products02'>&nbsp;</div> \n\
+                                                            &nbsp;&#9679; (or) Then select the <span class='products01'><b>Go To: App Pages</b></span> \n\
+                                                            button for more detailed discussion, field applications, and specifications.";  
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
                         child1Self.readAboutExtraStuff3 = false;
