@@ -28,6 +28,18 @@ background-color:gray;
 border:1px solid black;
 border-radius:7px
 }
+
+.quickClose:hover
+{
+cursor:pointer;  
+box-shadow:0px 0px 10px yellow;
+}
+
+.products01 {color:blue;}    
+.products02 {font-size:.75em; line-height:75%;}
+.products03 {color:red;}
+
+
 </style>
 
 <div class="viewStyle" id="pageTop1">
@@ -45,20 +57,82 @@ border-radius:7px
 
     <div data-ui-view="childView1" style="text-align:center; margin:2vh auto;">This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working</div> 
 
-    <div class="textStyle4" style="margin:1% auto; background-color:black; color:white; padding:5px; border-radius:5px; {{$ctrl.fontsize3}}; {{$ctrl.width1}};">
+    <div style="text-align:center;">
+        <button class="btnStyle2" 
+                ng-click="quickProductTable = !quickProductTable"
+                style= "display:inline-block;
+                        text-decoration:none;
+                        padding:2px 10px;
+                        {{$ctrl.borderwidth1}};     /* AR_2.00_1.05 */ 
+                        {{$ctrl.margin1}};          /* AR_2.00_1.05 */
+                        {{$ctrl.fontweight1}};      /* AR_100.01_900.00 */
+                        {{$ctrl.fontsize5}};
+                       ">
+            <b>Quick Menu</b>
+        </button>
+    </div>
+    
+    
+    <div ng-show="quickProductTable" 
+         class="textStyle4" 
+         style="margin:1% auto; 
+                background-color:black; 
+                color:white; 
+                padding:5px; 
+                border-radius:5px; 
+                {{$ctrl.fontsize3}}; 
+                {{$ctrl.width1}};
+               ">
         <table class="tableBorder" style="width:100%;">
-            <tr><th class="headerBorder topMenuNav" colspan="2" title="{{$ctrl.title3}}">Quick Menu</th></tr>
             <tr>
-                <th class="headerBorder topMenuNav" title="{{$ctrl.title1}}" style="width:50%;">Quick View Below</th>
-                <th class="headerBorder topMenuNav" title="{{$ctrl.title2}}" style="width:50%;">Go to App Pages</th>
+                <th class="headerBorder topMenuNav" 
+                    
+                    title="{{$ctrl.title3}}">
+                        Quick Product Menu
+                        <span style="float:right;">&nbsp;</span>
+                        <span class="quickClose" 
+                              ng-click="quickProductTable = !quickProductTable" 
+                              style="float:right;">
+                        &#10062;
+                        </span><br>
+                        <span style="color:#aaaa00;">Scroll down or select here for details</span>
+                </th>
             </tr>
+            <!--
+            <tr>
+                <th class="headerBorder topMenuNav" 
+                    
+                    title="{{$ctrl.title1}}" 
+                    style="width:50%;">
+                    Quick View Below<br>
+                    <span style="color:#aaaa00;">Scroll down or select for details</span>
+                </th>
+            </tr>
+-->
             <tr ng-repeat="quicklist in $ctrl.quickLIST">
-                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title1}}" href="{{quicklist.localview}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
-                <td class="dataBorder hyperMenuNav"><a class="quickLink" title="{{$ctrl.title2}}" href="{{quicklist.regionURL}}">&nbsp;{{quicklist.product}}&nbsp;</a></td>
+                <td class="dataBorder hyperMenuNav">
+                    <a class="quickLink" 
+                       title="{{$ctrl.title1}}" 
+                       href="{{quicklist.localview}}">
+                            &nbsp;{{quicklist.product}}&nbsp;
+                    </a>
+                </td>
+                <!--
+                <td class="dataBorder hyperMenuNav">
+                    <a class="quickLink" 
+                       title="{{$ctrl.title2}}" 
+                       href="{{quicklist.regionURL}}">
+                            &nbsp;{{quicklist.product}}&nbsp;
+                    </a>
+                </td>
+-->
             </tr>    
         </table>
-        <div style=" margin:1% 0%; text-align:center">(or)&nbsp;&nbsp;Scroll through the products below</div>
+        <!--<div style=" margin:1% 0%; text-align:center">(or)&nbsp;&nbsp;Scroll through the products below</div>-->
     </div>
+    
+    
+    
     
     <table style="  border:1px solid black; 
                     {{$ctrl.fontsize1}};         /* AR_1.00_0.65 */
