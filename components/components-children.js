@@ -15,7 +15,7 @@ angular.module("viewNav")
             child1Self.rs1fontsize3 = "font-size:" + ((0.00031)*(viewWidth)+0.73889) + "em";            /* AR_1.10_0.85 */
             child1Self.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                     /* AR_45.00_2.00 */
             
-             // Response 'read about' button and text box
+            // Response 'read about' button and text box
             child1Self.rsReadAboutfontsize1 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";    /* AR_1.50_0.75 */
             child1Self.rsReadAboutfontsize2 = "font-size:" + ((0.00064)*(viewWidth)+0.49889) + "em";    // AR_1170_1.25_360_0.73
             child1Self.rsReadAboutwidth1 = "width:" + ((-0.01605)*(viewWidth)+48.77778) + "%";          /* AR_40.00_60.00 */
@@ -28,8 +28,6 @@ angular.module("viewNav")
             
             // Response for both Buttons
             child1Self.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
-            
-            
             
             // Sets mode of the "NAVIGATE" button
             var btnText = NavMenuFactory.getBtnText();
@@ -152,7 +150,7 @@ angular.module("viewNav")
                                                             or scroll down for brief product overviews.<br> \n\
                                                             <div class='products02'>&nbsp;</div> \n\
                                                             &nbsp;&#9679; Then select the <span class='products01'><b>More: Quick Info</b></span> \n\
-                                                            button for a more in depth overview.\n\
+                                                            button for a more indepth overview.\n\
                                                             <div class='products02'>&nbsp;</div> \n\
                                                             &nbsp;&#9679; (or) Then select the <span class='products01'><b>Go To: App Pages</b></span> \n\
                                                             button for more detailed discussion, field applications, and specifications.";  
