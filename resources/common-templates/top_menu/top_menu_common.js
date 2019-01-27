@@ -15,6 +15,9 @@ angular.module("viewNav")
                     ttdSelf.fill1 = regionText.fill1;
                     ttdSelf.fill2 = regionText.fill2;
                     ttdSelf.fill3 = regionText.fill3;
+                    ttdSelf.fill4 = regionText.fill4;
+                    ttdSelf.fill5 = regionText.fill5;
+                    ttdSelf.fill6 = regionText.fill6;
                 });
             };
             topMenuService.ttdRegionText(getText);
@@ -22,8 +25,10 @@ angular.module("viewNav")
             // Response Section 1
             ttdSelf.rs1fontsize1 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";             /* AR_2.00_0.75 */
             ttdSelf.rs1fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+1.19444) + "em";             // AR_1170_3.00_360_1.75
-            ttdSelf.rs1fontsize3 = "font-size:" + ((0.00031)*(viewWidth)+0.73889) + "em";             /* AR_1.10_0.85 */
+            ttdSelf.rs1fontsize3 = "font-size:" + ((0.00031)*(viewWidth)+0.73889) + "em";             // AR_1170_1.10_360_0.85
             ttdSelf.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                      /* AR_45.00_2.00 */
+            ttdSelf.rs1width1 = "width:" + ((-0.04706)*(viewWidth)+115.05882) + "%";                  // AR_1170_60.00_320_100.00
+            
             
             viewManager.topMenuToHighlight(1);    
         }]

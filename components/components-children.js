@@ -16,12 +16,12 @@ angular.module("viewNav")
             child1Self.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                     /* AR_45.00_2.00 */
             
             // Response 'read about' button and text box
-            child1Self.rsReadAboutfontsize1 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";    /* AR_1.50_0.75 */
+            child1Self.rsReadAboutfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";    // AR_1170_1.50_360_0.75
             child1Self.rsReadAboutfontsize2 = "font-size:" + ((0.00064)*(viewWidth)+0.49889) + "em";    // AR_1170_1.25_360_0.73
             child1Self.rsReadAboutwidth1 = "width:" + ((-0.01605)*(viewWidth)+48.77778) + "%";          /* AR_40.00_60.00 */
             
             // Response 'Menu' button and text box
-            child1Self.rsNavfontsize1 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";          /* AR_1.50_0.75 */
+            child1Self.rsNavfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";          // AR_1170_1.50_360_0.75
             child1Self.rsNavfontsize2 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";          // AR_1170_1.25_360_0.70
             child1Self.rsNavleft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
             child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  

@@ -5,7 +5,7 @@ angular.module("viewNav")
         return {
             
                 readAboutBtnText: function(){ 
-                        var btnText = {"showText":"INFO, THIS PAGE", "hideText":"HIDE INFO"};
+                        var btnText = {"showText":"INFO THIS PAGE", "hideText":"HIDE INFO"};
                     
                     return btnText;
                 },
