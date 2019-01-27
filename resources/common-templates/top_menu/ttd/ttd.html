@@ -15,22 +15,45 @@
             border:1px solid black;
             border-radius:7px;
            ">
-    <div class="textStyle4"
-             style="margin:5px 0px;
-                    {{$ctrl.rs1fontsize2}};
-                    "><b>GETTING AROUND</b><br>
+    <div    class="textStyle4"
+            style="margin:5px 0px; {{$ctrl.rs1fontsize2}};">
+            <b>{{$ctrl.fill4}}</b><br>
     </div>
     
-    <div  
-         style="width:100%;">
+    <div style="text-align:center;">
         <a  class="homeButton"
             href="https://www.tarptiedown.com?intro"
             title="Go to the main Tarp Tie Down home page"
-            style= "
-                    {{$ctrl.rs1fontsize1}};
-                   ">
+            style= "margin:1vh 0; {{$ctrl.rs1fontsize1}};">
             Return to TTD Home
         </a>
+    </div>
+    
+    <div class= "textStyle4" style="{{$ctrl.rs1fontsize3}};">
+        <table style="margin:0 auto; color:#b3ecff; {{$ctrl.rs1width1}}">
+            <tr>
+                <th colspan="2" style="font-size:1.25em;">When browsing:</th>
+            </tr>
+            <tr>
+                <td style="width:5%; vertical-align:top;">&#9679;</td>
+                <td style="text-align:left;">Each product has its own "{{$ctrl.fill5}}."</td>
+            </tr>
+            <tr>
+                <td style="width:5%; vertical-align:top;">&#9679;</td>
+                <td style="text-align:left;">The top left menu item is the {{$ctrl.fill5}} you're in.</td>
+            </tr>
+            <tr>
+                <td style="width:5%; vertical-align:top;">&#9679;</td>
+                <td style="text-align:left;">Select lettered buttons and thumbnail images for product info and links.</td>
+            </tr>
+            <tr>
+                <td style="width:5%; vertical-align:top;">&#9679;</td>
+                <td style="text-align:left;">Select top menu for general info and links.</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div style="width:100%; clear:left;">
 
         <div style="margin-top:1.5vh;">
             <div data-ui-view="childView1">This shows the "Read about" and "Navigation menu" buttons. If you read this it's not working</div>
@@ -68,7 +91,15 @@
                                &#9679;
                             </td>
                             <td>
-                                Select the <span class='ttd01'><b>LOCAL MENU</b></span> button for the contents of this region.
+                                Select the <span class='ttd01'><b>{{$ctrl.fill6}}</b></span> button for info about this page with pertinent links.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:2.5%;  vertical-align:top;">
+                               &#9679;
+                            </td>
+                            <td>
+                                Select the <span class='ttd01'><b>LOCAL MENU</b></span> button for the contents of this {{$ctrl.fill5}}.
                             </td>
                         </tr>
                     </table>
@@ -77,7 +108,6 @@
 
             <div class="textBoxStyle1" 
                  style="padding-top:5px; 
-                        /*text-align:left; */
                         margin-top:2vh;
                        ">
                 <div class="textStyle4"
@@ -90,22 +120,42 @@
                             background-color:yellow; 
                             border:1px solid black; 
                             border-radius:5px;">
-                    <b>Getting around in this region</b>
+                    <b>Getting around in this {{$ctrl.fill5}}</b>
                 </div>
+                
                 <div class="textStyle3">
-                    You're never more than two selections away from everything in this region.
+                    You're never more than two selections away from everything in this {{$ctrl.fill5}}.
                 </div><br>
+                
                 <div class="textStyle3" style="line-height:175%; text-align:left;">
                     <b>Top menu:</b> General Info and product offerings<br>
                     <b>Thumbnail menu:</b> Specific product information.<br>
                     <div style="line-height:130%; padding:3px 0px;">
-                        <b>Navigating the thumbnails:</b><br>
-                        &nbsp;&#9679; Select <span class='ttd01'><b>Buttons A, B, C</b></span> to show the product thumbnails.
-                                      <span class='ttd03'>(try button B now, for example)</span><br> 
-                        &nbsp;&#9679; Then select a product thumbnail image to display that product's information.<br> 
-                        &nbsp;&#9679; Then select the <span class='ttd01'><b>INFO, THIS PAGE</b></span> for more details and 
-                        a link to full product information. \n\
-                        <br><br>
+                        <table>
+                            <tr>
+                                <th colspan="2">Navigating the thumbnails:</th>
+                            </tr>
+                            <tr>
+                                <td style="width:2.5%; vertical-align:top;">&#9679;</td>
+                                <td>
+                                    Select <span class='ttd01'><b>Buttons A, B, C</b></span> to show the product thumbnails.
+                                    <span class='ttd03'>(try button B now, for example)</span>
+                                </td>      
+                            </tr>
+                            <tr>
+                                <td style="width:2.5%; vertical-align:top;">&#9679;</td>
+                                <td>
+                                    Then select a product thumbnail image to display that product's information.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:2.5%; vertical-align:top;">&#9679;</td>
+                                <td>
+                                    Then select the <span class='ttd01'><b>{{$ctrl.fill6}}</b></span> button for more details and 
+                                    links to full product information.
+                                </td>
+                            </tr>
+                        </table><br><br>
                     <b>The LOCAL MENU button:</b> The LOCAL MENU button often appears in any given view. Select it to find your locale and other locales.
                     </div>
                 </div>

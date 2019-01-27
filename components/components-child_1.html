@@ -124,17 +124,27 @@
                ">
         <table  style= "width:100%;
                         text-align:left;">
-            <tr><td ng-bind-html="$ctrl.navMenuHeader.col1"><u></u></td>
-                <td><u>{{$ctrl.navMenuHeader.col2}}</u>
-                    <span class="youAreHere2">
-                        &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
-                    </span>
+            <tr><th colspan="2" 
+                    style= "text-align:center;
+                            padding:1vh 0;
+                            border-bottom:1px solid white;
+                            
+                           ">
+                    Select here for items in this vicinity
                     <span class="closeText" 
                           ng-click="$ctrl.moreless2()" 
                           style="color:white;
                                  float:right;
                                 ">
                                 &nbsp;&nbsp;&nbsp;&#10062;
+                    </span>
+                </th>
+            </tr>   
+            <tr><td colspan="2" style="font-size:0.4em;">&nbsp;</td></tr>
+            <tr><td ng-bind-html="$ctrl.navMenuHeader.col1"><u></u></td>
+                <td><u>{{$ctrl.navMenuHeader.col2}}</u>
+                    <span class="youAreHere2">
+                        &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
                     </span>
                 </td>
             </tr>
