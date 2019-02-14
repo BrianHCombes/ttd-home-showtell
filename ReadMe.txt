@@ -1,5 +1,6 @@
 Project Date: 		06/01/2018
 
+01/28/2019 - This header area is way outdated.
 Project Title:          Project-TTD-Website-Rock-Buster-Final
 
 Project Location:	Local:   C:\xampp\htdocs\Project-TTD-Website-Rock-Buster-Final\final
@@ -128,3 +129,16 @@ Process:
     why using href in the html page doesn't work but this fix allows me to keep
     going. But, I am still boning up on all things URL including the need to
     work with CORS.
+
+01/18/2018
+    < NODE MODULES > 
+    The big deal here is changing over to local node_modules to support the 
+    angular-ui-router. This because there was a systemic problem with the 
+    minified version at < <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js" ></script> >
+    so changed over to the beautified version. That worked but it made me 
+    worry so went to the horses mouth at < https://ui-router.github.io/ng1/tutorial/helloworld#get-ui-router > 
+    and went for an < npm install --save @uirouter/angularjs > at the CLI 
+    for the MG and EZG vn frameworks.
+    Think I need to migrate to a single node_module source for the 
+    angular-ui-router. So have uploaded Angular Node files to the root of
+    < https://www.tarptiedown.com > so playing with that as of this date.
