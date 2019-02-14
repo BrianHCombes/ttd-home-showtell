@@ -108,8 +108,8 @@ angular.module("viewNav")
                         
                     case "intro":
                         child1Self.readAboutHeaderText  = "Tarp Tie Down Home Page:";
-                        child1Self.readAboutBodyText    = " Welcome to Tarp Tie Down's home page \"region.\" It provides product overviews of \n\
-                                                            our tarp tie downs and accessories. For full product information see GETTING AROUND below. \n\
+                        child1Self.readAboutBodyText    = " Welcome to Tarp Tie Down's home page \"vicinity.\" It's our product menu of Grabbit tarp tie downs \n\
+                                                            and accessories. \n\
                                                             <br><br> \n\
                                                             <span class='intro01'><b>GETTING AROUND:</b></span><br>\n\
                                                             &nbsp;&#9679; Select <span class='intro01'><b>Buttons A, B, C</b></span> to show the product thumbnails. \n\
