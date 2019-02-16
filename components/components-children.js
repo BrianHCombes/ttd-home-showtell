@@ -50,23 +50,28 @@ angular.module("viewNav")
             function callMenu(queryParam){
                 var locationHighlight;
                 switch(queryParam){
-                    case "intro":   locationHighlight = 0; break;
-                    case "ttd":     locationHighlight = 1; break;
-                    case "buyprice":locationHighlight = 2; break;
-                    case "products":locationHighlight = 3; break;
-                    case "reviews": locationHighlight = 4; break;    
-                    case "view00":  locationHighlight = 5; break; 
-                    case "view01":  locationHighlight = 6; break; 
-                    case "view02":  locationHighlight = 7; break; 
-                    case "view03":  locationHighlight = 8; break; 
-                    case "view04":  locationHighlight = 9; break; 
-                    case "view05":  locationHighlight = 10; break;
-                    case "view06":  locationHighlight = 11; break;
-                    case "view07":  locationHighlight = 12; break;
-                    case "view08":  locationHighlight = 13; break;
-                    case "view09":  locationHighlight = 14; break;
-                    case "view10":  locationHighlight = 15; break;
-                    case "view11":  locationHighlight = 16; break;
+                    case "intro":   locationHighlight = 1; break;
+                    case "ttd":     locationHighlight = 2; break;
+                    case "buyprice":locationHighlight = 3; break;
+                    case "products":locationHighlight = 4; break;
+                    case "reviews": locationHighlight = 5; break;    
+                    
+                    case "view00":  locationHighlight = 8; break; 
+                    case "view09":  locationHighlight = 9; break; 
+                    case "view01":  locationHighlight = 10; break; 
+                    case "view02":  locationHighlight = 11; break; 
+                    case "view06":  locationHighlight = 12; break;
+                    
+                    case "view03":  locationHighlight = 15; break;
+                    
+                    case "view04":  locationHighlight = 18; break;
+                    
+                    case "view05":  locationHighlight = 21; break;
+                    
+                    case "view07":  locationHighlight = 24; break;
+                    case "view08":  locationHighlight = 25; break;
+                    case "view10":  locationHighlight = 26; break;
+                    case "view11":  locationHighlight = 27; break;
                     default:console.log("From components-children.js file: There is no view match"); break;
                 }
                     
