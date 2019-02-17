@@ -16,7 +16,7 @@ angular.module("viewNav")
                         regionText.fill1 = "TTD Home vicinity";
                         regionText.fill2 = "Tarp Tie Down home vicinity";
                         regionText.fill3 = "TTD Home";
-                        regionText.fill4 = "TTD HOME VICINITY";
+                        regionText.fill4 = "TTD HOME VICINITY OF PAGES";
                         regionText.fill5 = "vicinity";
                         regionText.fill6 = "INFO THIS PAGE";
                         getText(regionText); 
@@ -27,7 +27,7 @@ angular.module("viewNav")
                         regionText.fill1 = "TTD Home vicinity";
                         regionText.fill2 = "Tarp Tie Down home vicinity";
                         regionText.fill3 = "TTD Home";
-                        regionText.fill4 = "TTD HOME VICINITY";
+                        regionText.fill4 = "TTD HOME VICINITY OF PAGES";
                         regionText.fill5 = "vicinity";
                         regionText.fill6 = "INFO THIS PAGE";
                         getText(regionText); 
@@ -38,7 +38,7 @@ angular.module("viewNav")
                         regionText.fill1 = "TTD Home vicinity";
                         regionText.fill2 = "Tarp Tie Down home vicinity";
                         regionText.fill3 = "TTD Home";
-                        regionText.fill4 = "TTD HOME VICINITY";
+                        regionText.fill4 = "TTD HOME VICINITY OF PAGES";
                         regionText.fill5 = "vicinity";
                         regionText.fill6 = "INFO THIS PAGE";
                         getText(regionText); 
