@@ -11,7 +11,7 @@ angular.module("viewNav")
                 },
             
                 navMenuHeader:  function(){
-                    var header = {"col1":"SELECTION", "col2":"LINK / BUTTON", "msg":"page your on in red"};
+                    var header = {"col1":"SELECTION", "col2":" LINK / BUTTON", "msg":"your current page is in red"};
                     return header;
                 },    
 
