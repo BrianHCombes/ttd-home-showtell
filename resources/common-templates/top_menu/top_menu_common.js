@@ -115,17 +115,30 @@ angular.module("viewNav")
             productsSelf.title3 = "The quick menu takes you to the product overviews below or to the product application pages.";
             
             var quickLIST = [ 
-                {"localview":"#/products#EZGY", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                     "product":"Standard EZ Grabbit Yellow"},
-                {"localview":"#/products#EZGBL","regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                     "product":"Standard EZ Grabbit Black"},
-                {"localview":"#/products#EZGG", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                     "product":"Classic EZ Grabbit"},
-                {"localview":"#/products#LG", "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html",     "product":"Long Grabbit"},
-                {"localview":"#/products#MG", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html",                                         "product":"Mini Grabbit"},
-                {"localview":"#/products#EZA", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html",                                      "product":"EZ Adjust Rope Adjuster"},
-                {"localview":"#/products#RB", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html",                                         "product":"RockBuster Ground Stake"},
-                {"localview":"#/products#BG", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html",     "product":"Bag Grabbit Bag Handle"},
-                {"localview":"#/products#KPR", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html",   "product":"EZ Grabbit Keeper"},
-                {"localview":"#/products#CB", "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html",     "product":"Carry Bag"},
-                {"localview":"#/products#TP", "regionURL":"https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html",     "product":"Tent Poles"}
+                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Tarp Tie Downs"},
+                {"rowClass":"", "localview":"#/products#EZGY", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard EZ Grabbit Yellow"},
+                {"rowClass":"", "localview":"#/products#EZGBL","regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard EZ Grabbit Black"},
+                {"rowClass":"", "localview":"#/products#EZGG", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Classic EZ Grabbit"},
+                {"rowClass":"", "localview":"#/products#LG",   "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Long Grabbit"},
+                {"rowClass":"", "localview":"#/products#MG",   "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html",                                     "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Mini Grabbit"},
+                {"rowClass":"", "localview":"#/products#KPR",  "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html","product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Grabbit Keeper"},
+                
+                {"rowClass":"hyperMenuNav2", "localview":"", "regionURL":"",    "product":""},
+                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Rope Adjusters"},
+                {"rowClass":"", "localview":"#/products#EZA",  "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Adjust Rope Adjuster"},
+                
+                {"rowClass":"hyperMenuNav2", "localview":"", "regionURL":"",    "product":""},
+                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Ground Stakes"},
+                {"rowClass":"", "localview":"#/products#RB",   "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html",                                     "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;RockBuster Ground Stake"},
+                
+                {"rowClass":"hyperMenuNav2", "localview":"", "regionURL":"",    "product":""},
+                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Bag Handle"},
+                {"rowClass":"", "localview":"#/products#BG",   "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Bag Grabbit Bag Handle"},
+                
+                {"rowClass":"hyperMenuNav2", "localview":"", "regionURL":"",    "product":""},
+                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Misc"},
+                {"rowClass":"", "localview":"#/products#CB",   "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Carry Bag"},
+                {"rowClass":"", "localview":"#/products#TP",   "regionURL":"https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tent Poles"}
             ];
             productsSelf.quickLIST = quickLIST;
             
@@ -155,7 +168,7 @@ angular.module("viewNav")
             productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";     /* AR_1.00_0.65 */
             productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";     /* AR_1.00_0.50 */
             productsSelf.fontsize3 = "font-size:" + ((0.00041)*(viewWidth)+0.51824) + "em";     // AR_1170_1.00_320_0.65
-            productsSelf.fontsize5 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";     // AR_1170_1.50_360_1.00S
+            productsSelf.fontsize5 = "font-size:" + ((0.00088)*(viewWidth)+0.46765) + "em";     // AR_1170_1.50_360_1.00S
             
             productsSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
             productsSelf.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */

@@ -11,7 +11,8 @@ angular.module('viewNav')
             var self00 = this; 
 
             // Response Section 1
-            self00.rs1fontsize1 = "font-size:" + ((0.00235)*(viewWidth) + 0.24706) + "em";
+            self00.rs1fontsize1 = "font-size:" + ((0.00235)*(viewWidth)+0.24706) + "em";    // AR_1170_3.00_320_1.00
+            self00.rs1fontsize2 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";    // AR_1170_1.50_360_0.75
 
             // Response Section 2
             self00.rs2margintop1 = "margin-top:" + ((0.03086)*(viewWidth)-11.11111) + "px";
