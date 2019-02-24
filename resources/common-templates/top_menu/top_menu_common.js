@@ -97,7 +97,7 @@ angular.module("viewNav")
             buyPriceSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";             // AR_1170_1.00_360_0.50
             buyPriceSelf.fontsize3 = "font-size:" + ((0.00039)*(viewWidth)+0.54576) + "em";             // AR_1170_1.00_320_0.67
             buyPriceSelf.fontsize4 = "font-size:" + ((0.00185)*(viewWidth)+0.83333) + "em";             // AR_1170_3.00_360_1.50
-            buyPriceSelf.fontsize5 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";             // AR_1170_1.50_360_1.00S
+            buyPriceSelf.fontsize5 = "font-size:" + ((0.00088)*(viewWidth)+0.46765) + "em";             // AR_1170_1.50_320_0.75
             
             buyPriceSelf.width1 = "width:" + ((-0.06118)*(viewWidth)+116.57647) + "%";   // AR_1170_45.00_320_97.00
             
@@ -181,7 +181,7 @@ angular.module("viewNav")
             productsSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";     /* AR_1.00_0.65 */
             productsSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";     /* AR_1.00_0.50 */
             productsSelf.fontsize3 = "font-size:" + ((0.00041)*(viewWidth)+0.51824) + "em";     // AR_1170_1.00_320_0.65
-            productsSelf.fontsize5 = "font-size:" + ((0.00088)*(viewWidth)+0.46765) + "em";     // AR_1170_1.50_360_1.00S
+            productsSelf.fontsize5 = "font-size:" + ((0.00088)*(viewWidth)+0.46765) + "em";     // AR_1170_1.50_320_0.75
             
             productsSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
             productsSelf.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
