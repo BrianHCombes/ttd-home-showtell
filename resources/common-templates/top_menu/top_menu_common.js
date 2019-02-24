@@ -50,17 +50,30 @@ angular.module("viewNav")
             buyPriceSelf.title4 = "Select this product here or scroll down for the highest and lowest pack price. Then select \"Shop\" button for full price table.";
             
             var quickLIST = [ 
-                {"localview":"#/buyprice#EZGY", "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_14","product":"Standard EZ Grabbit Yellow", "price":"&nbsp;starts $2.72 &#10140; low as $1.93"},
-                {"localview":"#/buyprice#EZGBL","regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_11","product":"Standard EZ Grabbit Black",  "price":"&nbsp;starts $2.72 &#10140; low as $1.93"},
-                {"localview":"#/buyprice#EZGG", "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_15","product":"Classic EZ Grabbit Green",   "price":"&nbsp;starts $1.17 &#10140; low as $1.02"},
-                {"localview":"#/buyprice#LG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_13",   "product":"Long Grabbit",               "price":"&nbsp;starts $7.96 &#10140; low as $4.12"},
-                {"localview":"#/buyprice#MG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_12",   "product":"Mini Grabbit",               "price":"&nbsp;starts $2.02 &#10140; low as $1.39"},
-                {"localview":"#/buyprice#EZA",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=17",     "product":"EZ Adjust Rope Adjuster",    "price":"&nbsp;starts $0.73 &#10140; low as $0.34"},
-                {"localview":"#/buyprice#RB",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=18",     "product":"RockBuster Ground Stake",    "price":"&nbsp;$1.75 any Quantity"},
-                {"localview":"#/buyprice#BG",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=19",     "product":"Bag Grabbit Bag Handle",     "price":"&nbsp;$4.26 any Quantity"},
-                {"localview":"#/buyprice#KPR",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_16","product":"EZ Grabbit Keeper",          "price":"&nbsp;starts $2.95 &#10140; low as $2.44"},
-                {"localview":"#/buyprice#CB",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=20",     "product":"Carry Bag",                  "price":"&nbsp;$7.95 any Quantity"},
-                {"localview":"#/buyprice#TP",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=21",     "product":"Tent Pole Kit",              "price":"&nbsp;$7.95 any Quantity"}
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                       "product":"&nbsp;Tarp Tie Downs",                                                   "price":""},
+                {"rowClass":"",               "localview":"#/buyprice#EZGY",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_14",  "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard&nbsp;EZ&nbsp;Grabbit&nbsp;Yellow&nbsp;", "price":"&nbsp;start&nbsp;$2.72&nbsp;&#10140;&nbsp;low&nbsp;$1.93&nbsp;"},
+                {"rowClass":"",               "localview":"#/buyprice#EZGBL", "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_11",  "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard EZ Grabbit Black&nbsp;",   "price":"&nbsp;start $2.72 &#10140; low $1.93&nbsp;"},
+                {"rowClass":"",               "localview":"#/buyprice#EZGG",  "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_15",  "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Classic EZ Grabbit Green&nbsp;",    "price":"&nbsp;start $1.17 &#10140; low $1.02&nbsp;"},
+                {"rowClass":"",               "localview":"#/buyprice#LG",    "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_13",     "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Long Grabbit&nbsp;",                "price":"&nbsp;start $7.96 &#10140; low $4.12&nbsp;"},
+                {"rowClass":"",               "localview":"#/buyprice#MG",    "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_12",     "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Mini Grabbit&nbsp;",                "price":"&nbsp;start $2.02 &#10140; low $1.39&nbsp;"},
+                {"rowClass":"",               "localview":"#/buyprice#KPR",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=8_10_16",  "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Grabbit Keeper&nbsp;",           "price":"&nbsp;start $2.95 &#10140; low $2.44&nbsp;"},
+                
+                {"rowClass":"hyperMenuNav2",  "localview":"",                 "regionURL":"",                                                                                       "product":"",                                                                       "price":""},
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                       "product":"&nbsp;Rope Adjusters",                                                   "price":""},
+                {"rowClass":"",               "localview":"#/buyprice#EZA",   "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=17",       "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Adjust Rope Adjuster&nbsp;",     "price":"&nbsp;start $0.73 &#10140; low $0.34&nbsp;"},
+                
+                {"rowClass":"hyperMenuNav2",  "localview":"",                 "regionURL":"",                                                                                       "product":"",                                                                       "price":""},
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                       "product":"&nbsp;Ground Stakes",                                                    "price":""},
+                {"rowClass":"",               "localview":"#/buyprice#RB",    "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=18",       "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;RockBuster Ground Stake&nbsp;",     "price":"&nbsp;$1.75 any Quantity&nbsp;"},
+                
+                {"rowClass":"hyperMenuNav2",  "localview":"",                 "regionURL":"",                                                                                       "product":"",                                                                       "price":""},
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                       "product":"&nbsp;Bag Handle",                                                       "price":""},
+                {"rowClass":"",               "localview":"#/buyprice#BG",    "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=19",       "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Bag Grabbit Bag Handle&nbsp;",      "price":"&nbsp;$4.26 any Quantity&nbsp;"},
+                
+                {"rowClass":"hyperMenuNav2",  "localview":"",                 "regionURL":"",                                                                                       "product":"",                                                                       "price":""},
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                       "product":"&nbsp;Misc",                                                             "price":""},
+                {"rowClass":"",               "localview":"#/buyprice#CB",    "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=20",       "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Carry Bag&nbsp;",                   "price":"&nbsp;$7.95 any Quantity&nbsp;"},
+                {"rowClass":"",               "localview":"#/buyprice#TP",    "regionURL":"https://www.tarptiedown.com/TTD-Store-2018/index.php?rt=product/category&path=21",       "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tent Pole Kit&nbsp;",               "price":"&nbsp;$7.95 any Quantity&nbsp;"}
             ];
             buyPriceSelf.quickLIST = quickLIST;
             
@@ -82,7 +95,7 @@ angular.module("viewNav")
             
             buyPriceSelf.fontsize1 = "font-size:" + ((0.00043)*(viewWidth)+0.49444) + "em";             /* AR_1.00_0.65 */
             buyPriceSelf.fontsize2 = "font-size:" + ((0.00062)*(viewWidth)+0.27778) + "em";             // AR_1170_1.00_360_0.50
-            buyPriceSelf.fontsize3 = "font-size:" + ((0.00037)*(viewWidth)+0.56985) + "em";             // AR_1170_1.00_320_0.69
+            buyPriceSelf.fontsize3 = "font-size:" + ((0.00039)*(viewWidth)+0.54576) + "em";             // AR_1170_1.00_320_0.67
             buyPriceSelf.fontsize4 = "font-size:" + ((0.00185)*(viewWidth)+0.83333) + "em";             // AR_1170_3.00_360_1.50
             buyPriceSelf.fontsize5 = "font-size:" + ((0.00062)*(viewWidth)+0.77778) + "em";             // AR_1170_1.50_360_1.00S
             
@@ -115,30 +128,30 @@ angular.module("viewNav")
             productsSelf.title3 = "The quick menu takes you to the product overviews below or to the product application pages.";
             
             var quickLIST = [ 
-                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Tarp Tie Downs"},
-                {"rowClass":"", "localview":"#/products#EZGY", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard EZ Grabbit Yellow"},
-                {"rowClass":"", "localview":"#/products#EZGBL","regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard EZ Grabbit Black"},
-                {"rowClass":"", "localview":"#/products#EZGG", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Classic EZ Grabbit"},
-                {"rowClass":"", "localview":"#/products#LG",   "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Long Grabbit"},
-                {"rowClass":"", "localview":"#/products#MG",   "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html",                                     "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Mini Grabbit"},
-                {"rowClass":"", "localview":"#/products#KPR",  "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html","product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Grabbit Keeper"},
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                               "product":"&nbsp;Tarp Tie Downs"},
+                {"rowClass":"",               "localview":"#/products#EZGY",  "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard EZ Grabbit Yellow"},
+                {"rowClass":"",               "localview":"#/products#EZGBL", "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard EZ Grabbit Black"},
+                {"rowClass":"",               "localview":"#/products#EZGG",  "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Classic EZ Grabbit"},
+                {"rowClass":"",               "localview":"#/products#LG",    "regionURL":"https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Long Grabbit"},
+                {"rowClass":"",               "localview":"#/products#MG",    "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html",                                     "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Mini Grabbit"},
+                {"rowClass":"",               "localview":"#/products#KPR",   "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html","product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Grabbit Keeper"},
                 
-                {"rowClass":"hyperMenuNav2", "localview":"", "regionURL":"",    "product":""},
-                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Rope Adjusters"},
-                {"rowClass":"", "localview":"#/products#EZA",  "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Adjust Rope Adjuster"},
+                {"rowClass":"hyperMenuNav2",  "localview":"",                 "regionURL":"",                                                                                               "product":""},
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                               "product":"&nbsp;Rope Adjusters"},
+                {"rowClass":"",               "localview":"#/products#EZA",   "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html",                                   "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Adjust Rope Adjuster"},
                 
-                {"rowClass":"hyperMenuNav2", "localview":"", "regionURL":"",    "product":""},
-                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Ground Stakes"},
-                {"rowClass":"", "localview":"#/products#RB",   "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html",                                     "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;RockBuster Ground Stake"},
+                {"rowClass":"hyperMenuNav2",  "localview":"",                 "regionURL":"",                                                                                               "product":""},
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                               "product":"&nbsp;Ground Stakes"},
+                {"rowClass":"",               "localview":"#/products#RB",    "regionURL":"https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html",                                     "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;RockBuster Ground Stake"},
                 
-                {"rowClass":"hyperMenuNav2", "localview":"", "regionURL":"",    "product":""},
-                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Bag Handle"},
-                {"rowClass":"", "localview":"#/products#BG",   "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Bag Grabbit Bag Handle"},
+                {"rowClass":"hyperMenuNav2",  "localview":"",                 "regionURL":"",                                                                                               "product":""},
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                               "product":"&nbsp;Bag Handle"},
+                {"rowClass":"",               "localview":"#/products#BG",    "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Bag Grabbit Bag Handle"},
                 
-                {"rowClass":"hyperMenuNav2", "localview":"", "regionURL":"",    "product":""},
-                {"rowClass":"hyperMenuNav3", "localview":"",                "regionURL":"",                                                                                               "product":"&nbsp;Misc"},
-                {"rowClass":"", "localview":"#/products#CB",   "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Carry Bag"},
-                {"rowClass":"", "localview":"#/products#TP",   "regionURL":"https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tent Poles"}
+                {"rowClass":"hyperMenuNav2",  "localview":"",                 "regionURL":"",                                                                                               "product":""},
+                {"rowClass":"hyperMenuNav3",  "localview":"",                 "regionURL":"",                                                                                               "product":"&nbsp;Misc"},
+                {"rowClass":"",               "localview":"#/products#CB",    "regionURL":"https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Carry Bag"},
+                {"rowClass":"",               "localview":"#/products#TP",    "regionURL":"https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html", "product":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tent Poles"}
             ];
             productsSelf.quickLIST = quickLIST;
             
