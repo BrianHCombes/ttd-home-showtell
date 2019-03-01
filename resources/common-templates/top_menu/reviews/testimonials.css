@@ -1,0 +1,10 @@
+.testimonial 
+{ 
+text-align:left;
+font-size:1.25em;
+border:1px solid black;
+border-radius:7px;
+padding: 10px 20px;
+background-color:#EEFFEE;
+margin:15px 15px;
+}
