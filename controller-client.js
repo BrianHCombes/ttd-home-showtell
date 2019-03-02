@@ -304,8 +304,8 @@ angular.module('viewNav')
             $state.go('view00');
         }());
         
-        //setTimeout(function(){$state.go(urlParam);},200);
-        setTimeout(function(){$state.go("products");},300);
+        setTimeout(function(){$state.go(urlParam);},200);
+        //setTimeout(function(){$state.go("products");},300);
         
  
 //***********************************************************************************************************************************************************    
