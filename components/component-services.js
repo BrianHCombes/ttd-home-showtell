@@ -5,7 +5,7 @@ angular.module("viewNav")
         return {
             
                 readAboutBtnText: function(){ 
-                        var btnText = {"showText":"INFO THIS PAGE", "hideText":"HIDE INFO"};
+                        var btnText = {"showText":"INFO&nbsp;THIS&nbsp;PAGE", "hideText":"HIDE&nbsp;INFO"};
                     
                     return btnText;
                 },
@@ -56,7 +56,7 @@ angular.module("viewNav")
                 },
                 
                 getBtnText: function(){
-                    var btnText = {"showText":"LOCAL MENU", "hideText":"HIDE LOCAL MENU"};
+                    var btnText = {"showText":"LOCAL&nbsp;MENU", "hideText":"HIDE&nbsp;LOCAL&nbsp;MENU"};
                     return btnText;
                 }
         };

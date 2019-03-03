@@ -39,10 +39,12 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/buy_price/buy_price.html',
         templateUrl: 'resources/common-templates/top_menu/buy_price/buy_price.html',
        
-        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
+        controller: ['GetSet', 'viewManager', 'topMenuService', function(GetSet, viewManager, topMenuService){
             var viewWidth = GetSet.getViewWidth();
                 
             var buyPriceSelf = this;
+            
+            topMenuService.setShowStoreFrontBtn(true);
             
             buyPriceSelf.title1 = "Select a product here or scroll down for the highest and lowest pack price. Then select \"Shop\" button for full price table.";
             buyPriceSelf.title2 = "Per device price for lowest pack size to highest pack size. Select here or scroll down for pack sizes. Then select \"Shop\" button for full price table.";

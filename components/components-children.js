@@ -4,7 +4,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/components-child_1.html',
        
-        controller: ['GetSet', 'NavMenuFactory', function(GetSet, NavMenuFactory){
+        controller: ['GetSet', 'NavMenuFactory', 'topMenuService', function(GetSet, NavMenuFactory, topMenuService){
             var viewWidth = GetSet.getViewWidth();
                 
             var child1Self = this;
@@ -28,6 +28,12 @@ angular.module("viewNav")
             
             // Response for both Buttons
             child1Self.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
+            
+            /*child1Self.testText = "AHA!";*/
+            child1Self.showStoreFrontBtn = topMenuService.getShowStoreFrontBtn();
+            
+            
+            
             
             // Sets mode of the "NAVIGATE" button
             var btnText = NavMenuFactory.getBtnText();

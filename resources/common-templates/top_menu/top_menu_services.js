@@ -1,7 +1,9 @@
-angular.module("viewNav")
+  angular.module("viewNav")
 
     .factory("topMenuService", [ function(){
-            
+           
+        var showStoreFrontBtn = false;  
+        /*console.log(showStoreFrontBtn);*/
         return {
             
             ttdRegionText: function(getText){
@@ -143,6 +145,19 @@ angular.module("viewNav")
                         getText(regionText); 
                     };
                 },50);
+            },
+            
+            setShowStoreFrontBtn: function(condition){
+              console.log("Being Called: condition = " + condition);
+              if(condition === true){
+                showStoreFrontBtn = true;    
+                console.log("showStoreFrontBtn is now = " + showStoreFrontBtn);
+              }
+            },
+            
+            getShowStoreFrontBtn: function(){
+                return showStoreFrontBtn;
             }
+            
         };
     }]);
