@@ -8,32 +8,21 @@ angular.module("viewNav")
             var viewWidth = GetSet.getViewWidth();
                 
             var child1Self = this;
-                        
-            // Response Section 1
-            child1Self.rs1fontsize1 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";            /* AR_2.00_0.75 */
-            child1Self.rs1fontsize2 = "font-size:" + ((0.00049)*(viewWidth)+0.62222) + "em";            /* AR_1.20_0.90 */
-            child1Self.rs1fontsize3 = "font-size:" + ((0.00031)*(viewWidth)+0.73889) + "em";            /* AR_1.10_0.85 */
-            child1Self.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                     /* AR_45.00_2.00 */
+                    
+            // Template top menu font size
+            child1Self.rsTemplateTopMenufontsize1 = "font-size:" + ((0.00071)*(viewWidth)+0.42412) + "em";  // AR_1170_1.25_320_0.65
             
             // Response 'read about' button and text box
-            child1Self.rsReadAboutfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";    // AR_1170_1.50_360_0.75
             child1Self.rsReadAboutfontsize2 = "font-size:" + ((0.00064)*(viewWidth)+0.49889) + "em";    // AR_1170_1.25_360_0.73
             child1Self.rsReadAboutwidth1 = "width:" + ((-0.01605)*(viewWidth)+48.77778) + "%";          /* AR_40.00_60.00 */
             
             // Response 'Menu' button and text box
-            child1Self.rsNavfontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";          // AR_1170_1.50_360_0.75
             child1Self.rsNavfontsize2 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";          // AR_1170_1.25_360_0.70
             child1Self.rsNavleft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
             child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  
             
-            // Response for both Buttons
-            child1Self.borderwidth1 = "border-width:" + ((0.00118)*(viewWidth)+0.62353) + "px";       /* AR_2.00_1.05 */
-            
-            /*child1Self.testText = "AHA!";*/
-            child1Self.showStoreFrontBtn = topMenuService.getShowStoreFrontBtn();
-            
-            
-            
+            // templateLinksToShow is an object and the its properties determine what links to show on the template top menu
+            child1Self.templateLinksToShow = topMenuService.getTemplateLinksToShow();
             
             // Sets mode of the "NAVIGATE" button
             var btnText = NavMenuFactory.getBtnText();

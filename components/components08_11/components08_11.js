@@ -4,7 +4,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components08_11/tmpl_08/viewTmpl_08.html',
        
-        controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
+        controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
             var viewWidth = GetSet.getViewWidth();
 
             var self08 = this; 
@@ -24,6 +24,7 @@ angular.module('viewNav')
             self08.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";            /* AR_1.50_0.73 */
             self08.rs3margintop1 = "margin-top:" + ((0.03704)*(viewWidth)+11.66667) + "px";         /* AR_55.00_25.00 */
             
+            topMenuService.showTopMenuTemplateLinks("default");
             compFactory.logView(08);
         }]
     })
@@ -34,7 +35,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components08_11/tmpl_09/viewTmpl_09.html',
        
-        controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
+        controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
             var viewWidth = GetSet.getViewWidth();
 
             var self09 = this; 
@@ -53,7 +54,8 @@ angular.module('viewNav')
             
             // Response Section 3 (Not needed for now)
 
-                compFactory.logView(09);
+            topMenuService.showTopMenuTemplateLinks("default");
+            compFactory.logView(09);
         }]
     })
     

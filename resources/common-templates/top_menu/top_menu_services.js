@@ -2,7 +2,7 @@
 
     .factory("topMenuService", [ function(){
            
-        var showStoreFrontBtn = false;  
+        var templateLinksToShow = {};  
         /*console.log(showStoreFrontBtn);*/
         return {
             
@@ -147,16 +147,23 @@
                 },50);
             },
             
-            setShowStoreFrontBtn: function(condition){
-              console.log("Being Called: condition = " + condition);
-              if(condition === true){
-                showStoreFrontBtn = true;    
-                console.log("showStoreFrontBtn is now = " + showStoreFrontBtn);
+            showTopMenuTemplateLinks: function(templatelinkstoshow){
+              console.log("Being Called: condition = " + templatelinkstoshow);
+              if(templatelinkstoshow === "buyprice"){
+                templateLinksToShow.ttdStoreFrontLink = true;    
+                console.log("showStoreFrontBtn is now = " + templateLinksToShow);
               }
+              else{
+                templateLinksToShow.ttdStoreFrontLink = false;
+              }
+              
+              if(templatelinkstoshow === "default")
+                console.log("templatelinkstoshow = '" + templatelinkstoshow + "' therefor show INFO and LOCAL links only");
+              
             },
             
-            getShowStoreFrontBtn: function(){
-                return showStoreFrontBtn;
+            getTemplateLinksToShow: function(){
+                return templateLinksToShow;
             }
             
         };

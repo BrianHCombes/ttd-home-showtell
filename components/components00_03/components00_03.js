@@ -5,7 +5,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components00_03/tmpl_00/viewTmpl_00.html',
         
-        controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
+        controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
             var viewWidth = GetSet.getViewWidth();
 
             var self00 = this; 
@@ -26,6 +26,7 @@ angular.module('viewNav')
             // Response Section 3
             self00.rs3fontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";        /* AR_1.50_0.73 */
             
+            topMenuService.showTopMenuTemplateLinks("default");
             compFactory.logView(00);
         }]
     })
@@ -36,7 +37,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components00_03/tmpl_01/viewTmpl_01.html',
        
-        controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
+        controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
             var viewWidth = GetSet.getViewWidth();
 
             var self01 = this; 
@@ -58,6 +59,7 @@ angular.module('viewNav')
             // Response Section 3
             self01.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
             
+            topMenuService.showTopMenuTemplateLinks("default");
             compFactory.logView(01);
         }]
     })
@@ -68,7 +70,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components00_03/tmpl_02/viewTmpl_02.html',
 
-         controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
+         controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
             var viewWidth = GetSet.getViewWidth();
 
             var self02 = this; 
@@ -90,6 +92,7 @@ angular.module('viewNav')
             // Response Section 4
             self02.rs4fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
             
+            topMenuService.showTopMenuTemplateLinks("default");
             compFactory.logView(02);
         }]    
     })
@@ -99,7 +102,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components00_03/tmpl_03/viewTmpl_03.html',
        
-        controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
+        controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
             var viewWidth = GetSet.getViewWidth();
 
             var self03 = this; 
@@ -117,6 +120,7 @@ angular.module('viewNav')
             // Response Section 3
             self03.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
          
+            topMenuService.showTopMenuTemplateLinks("default");
             compFactory.logView(03);
         }]
     });
