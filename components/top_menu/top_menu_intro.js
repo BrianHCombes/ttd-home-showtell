@@ -3,7 +3,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/top_menu/intro/intro.html',
        
-        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
+        controller: ['GetSet', 'viewManager', 'topMenuService', function(GetSet, viewManager, topMenuService){
             var viewWidth = GetSet.getViewWidth();
                 
             var introSelf = this;
@@ -22,6 +22,7 @@ angular.module("viewNav")
             // AR Section 4
             introSelf.rs4fontsize1 = "font-size:" + ((0.00065)*(viewWidth)+0.49294) + "em";     /* AR_1.25_0.73 */
             
+            topMenuService.showTopMenuTemplateLinks("default");
             viewManager.topMenuToHighlight(0);    
             
         }]

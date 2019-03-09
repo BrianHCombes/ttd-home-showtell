@@ -20,7 +20,7 @@ angular.module("viewNav")
                     ttdSelf.fill6 = regionText.fill6;
                 });
             };
-            topMenuService.ttdRegionText(getText);
+            
             
             // Response Section 1
             ttdSelf.rs1fontsize1 = "font-size:" + ((0.00086)*(viewWidth)+0.48889) + "em";             /* AR_2.00_0.75 */
@@ -29,7 +29,8 @@ angular.module("viewNav")
             ttdSelf.rs1left1 = "left:" + ((0.05309)*(viewWidth)-17.11111) + "%";                      /* AR_45.00_2.00 */
             ttdSelf.rs1width1 = "width:" + ((-0.04706)*(viewWidth)+115.05882) + "%";                  // AR_1170_60.00_320_100.00
             
-            
+            topMenuService.ttdRegionText(getText);
+            topMenuService.showTopMenuTemplateLinks("default");
             viewManager.topMenuToHighlight(1);    
         }]
     })
@@ -39,7 +40,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/buy_price/buy_price.html',
         templateUrl: 'resources/common-templates/top_menu/buy_price/buy_price.html',
        
-        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
+        controller: ['GetSet', 'viewManager', 'topMenuService', function(GetSet, viewManager, topMenuService){
             var viewWidth = GetSet.getViewWidth();
                 
             var buyPriceSelf = this;
@@ -108,6 +109,7 @@ angular.module("viewNav")
             
             buyPriceSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
             
+            topMenuService.showTopMenuTemplateLinks("buyprice");
             viewManager.topMenuToHighlight(2);  
             
         }]
@@ -118,7 +120,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/products/products.html',
         templateUrl: 'resources/common-templates/top_menu/products/products.html',
        
-        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
+        controller: ['GetSet', 'viewManager', 'topMenuService', function(GetSet, viewManager, topMenuService){
             var viewWidth = GetSet.getViewWidth();
                 
             var productsSelf = this;
@@ -188,6 +190,7 @@ angular.module("viewNav")
             productsSelf.margin1 = "margin:" + ((0.00617)*(viewWidth)+2.77778) + "px 0px";              // AR_1170_10.00_360_5.00
             productsSelf.fontweight1 = "font-weight:" + ((-0.98765)*(viewWidth)+1255.55556);            // AR_1170_100.01_360_900.00
             
+            topMenuService.showTopMenuTemplateLinks("default");
             viewManager.topMenuToHighlight(3);  
             
         }]
@@ -198,14 +201,17 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/reviews/testimonials.html',
         templateUrl: 'resources/common-templates/top_menu/reviews/testimonials.html',
         
-        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
+        controller: ['GetSet', 'viewManager', 'topMenuService', function(GetSet, viewManager, topMenuService){
             var viewWidth = GetSet.getViewWidth();
             
             var reviewSelf = this;
             
             reviewSelf.fontsize1 = "font-size:" + ((0.00049)*(viewWidth)+0.42222) + "em";      /* AR_1.00_0.60 */
             reviewSelf.fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+1.19444) + "em";      // AR_1170_3.00_360_1.75
+            reviewSelf.fontsize3 = "font-size:" + ((-0.00206)*(viewWidth)+2.40644) + "em";     // AR_1170_0.00_360_1.67
             
+            
+            topMenuService.showTopMenuTemplateLinks("default");
             viewManager.topMenuToHighlight(4);  
             
         }]

@@ -1,15 +1,39 @@
-<link rel="stylesheet" type="text/css" href="css/vn-templateStyle1.css">
 
 <div style="position:relative;">
-    <div class="btnStyle2" 
-         title="Product or page discussion with links as needed to pertinent information"
-         ng-click="$ctrl.moreless1()" 
-         style="font-weight:bold;
-                {{$ctrl.borderwidth1}};
-                {{$ctrl.rsReadAboutfontsize1}};
-               ">
-        {{$ctrl.morelessText1}}
-    </div>
+      <span class="">
+        <span class="textStyle4 topTemplateMenuHover" 
+              title="Product or page discussion with links as needed to pertinent information"
+              ng-click="$ctrl.moreless1()" 
+              style=  "text-align:center;
+                       {{$ctrl.rsTemplateTopMenufontsize1}};
+                      "
+              ng-bind-html="$ctrl.morelessText1">
+        </span>
+        <span>&nbsp;&nbsp;</span>
+        <span class="textStyle4 topTemplateMenuHover" 
+              ng-click="$ctrl.moreless2()"
+              title="Local menu of product information among these home pages"
+              style="text-align:center;
+                     margin-left:1%;
+                     {{$ctrl.rsTemplateTopMenufontsize1}};
+                    "
+              ng-bind-html="$ctrl.morelessText2">
+        </span>
+        <span ng-show="$ctrl.templateLinksToShow.ttdStoreFrontLink">&nbsp;&nbsp;</span>
+        <span ng-show="$ctrl.templateLinksToShow.ttdStoreFrontLink">
+        <span class="textStyle4 topTemplateMenuHover"
+              onclick="window.location.href='https://www.tarptiedown.com/TTD-Store-2018/'"
+              title="Go directly to the Tarp Tie Down store front"
+              style= "
+                      {{$ctrl.rsTemplateTopMenufontsize1}};
+                     ">
+              TTD STORE FRONT
+        </span>   
+        </span>  
+      </span>    
+
+
+  
     <div class="textBoxStyle1 textStyle3"
          ng-show="$ctrl.display1"
          style="position:absolute;
@@ -98,17 +122,6 @@
                     <a ui-sref="view40" class="btnStyle2" style="font-size:1.05em; line-height:150%; {{$ctrl.rsReadAboutwidth1}};"><b>Specs and info<span style="font-size:.85em; text-shadow:initial; float:right">K-1</span></b></a><br>
                     
                 </div>
-    </div>
-
-    <div class="btnStyle2" 
-         ng-click="$ctrl.moreless2()"
-         title="Local menu of product information among these home pages"
-         style="font-weight:bold;
-                margin-left:1%;
-                {{$ctrl.borderwidth1}};
-                {{$ctrl.rsNavfontsize1}};
-               ">
-        {{$ctrl.morelessText2}}
     </div>
 
     <div class="textBoxStyle2 textStyle3"
