@@ -189,15 +189,6 @@ color:#cccccc;
 color:black;    
 }
 
-.imageStyle1:hover
-{
-background-color:black; 
-border-radius:10px;
-box-shadow: 1px 1px 15px #CCEDF2, 1px -1px 15px #CCEDF2, -1px 1px 15px #CCEDF2, -1px -1px 15px #CCEDF2,
-            1px 1px 25px #EAE2BB, 1px -1px 25px #EAE2BB, -1px 1px 25px #EAE2BB, -1px -1px 25px #EAE2BB,
-            1px 1px 25px #EAE2BB, 1px -1px 25px #EAE2BB, -1px 1px 25px #EAE2BB, -1px -1px 25px #EAE2BB;
-}
-
 a
 {
 text-decoration:none;
