@@ -9,13 +9,8 @@
     <title>Grabbit Tarp Tie Downs: Our Mission: When tarp clips won't do</title>
     <link rel="SHORTCUT ICON" href="https://www.tarptiedown.com/resources/images/ttd-vn-icon-ttd-256x256.ico">
     
-    <!-- Updated: 07-15-2016 - this will now be version 2.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
     
-    
-    <!--[if IE]>
-    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  
 <style>
 .policy-btn
 {
@@ -38,33 +33,144 @@ text-decoration:none;
 </head>
 
 <body>
-
-    <div style="width:960px; margin-left:auto; margin-right:auto">	
-        <p style="text-align:center; font-size:30px; font-weight:bold;">Grabbit Tarp Tie Downs: When tarp clips won't do.</p>
-        <p style="text-align:left; font-size:20px;">We know you are out there. We know you like to turn your camp into a "tarp city." 
-                    Sometimes because you have no choice. Sun, wind, rain, and snow can turn a happy camper into an unhappy one 
-                    very quickly. You need to be able to set up your tarps quickly and reliably. <br>
-                    <br>
-                    There is a tool, a tarp tie down tool called the EZ Grabbit and unlike a "tarp clip," it is the only tarp 
-                    tie down that can perform all the tricks in the book. But you, yes you(!) and your imagination are the only 
-                    limitation to what you can do with the EZ Grabbit.<br>
-                    <br>
-                    So take a good look at the EZ Grabbit and related accessories and manage your tarps exactly the way you 
-                    want and expect. <br><br><span style="font-size:26px; font-weight:bold;">Thank You!</span> <br><br>
+    
+    <div id="pageWrapper"   style=" max-width:1170px; 
+                                    margin-left:auto; 
+                                    margin-right:auto; 
+                                    /*font-size*/ /* AR_1.00_0.70 */
+                                    ">
+        <table style="width:100%">
+            <tr>
+                <td style="width:10%; text-align:left;">
+                    <div style="margin-top:10px;">
+                        <a href="javascript:window.close();" 
+                           title="close privacy policy window" 
+                           class="policy-btn" 
+                           style="  padding:5px; 
+                                    font-size:2em;
+                           ">X
+                        </a>
+                    </div>
+                </td>
+                <td id="privacyTitle" 
+                    style= "text-align:center; 
+                            /*font-size:1.5em; */  /* AR_2.00_1.50 */
+                            font-weight:bold;
+                           ">Grabbit Tarp Tie Downs and Accessories:<br>When tarp clips won't do.
+                </td>
+                <td style="width:10%; text-align:right; ">
+                    <div style="margin-top:10px;">
+                        <a href="javascript:window.close();" 
+                           title="close privacy policy window" 
+                           class="policy-btn" 
+                           style="  padding:5px; 
+                                    font-size:2em
+                           ">X
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <hr><br>
+        
+        <p style="text-align:left; font-size:1.25em; margin:0px 20px;">
+          
+            If you're a "tarp city" camper or use tarps for any other purpose and need unrivaled management capability
+            of your tarps you've come to the right place.<br><br>
+            
+            If you need tarps to remain secure and intact during extreme wind, rain, and snow you've come to the
+            right place.<br><br>
+            
+            If you have tarps missing grommets, tarps that are too small, tarps that are too big, and still want
+            to use those tarps you've come to the right place.<br><br>
+            
+            If you want to attach tarps to buildings and trailers you've come to the right place.<br><br>
+            
+            Introducing the <b>Grabbit</b> family of tarp tie downs. They are unlike any "tarp clip." They allow you to perform all the 
+            tricks in the book to the limits of your imagination. 
+            <br><br>
+            So take a good look at the Grabbit family of tarp tie downs and related accessories so you can manage your tarps exactly the way you 
+            want and expect. After all, we've been through it all and have responded in kind by offering you the only line of tarp tie downs
+            you'll ever need or want!<br><br><span style="font-size:26px; font-weight:bold;">Thank You!</span> <br><br>
         </p>	
 
-        <div style="text-align:center">
-        <a href="mailto:info@tarptiedown.com" class="policy-btn" style="">Email us at: info@tarptiedown.com</a>
-        <a class="policy-btn">Call Brian at:   303-919-2307</a>
-        <a href="javascript:window.print();" class="policy-btn">Print this Page</a>
-        <a href="javascript:window.close();" class="policy-btn">Close This Page</a>
+        <div style="text-align:center; font-size:1.25em;">
+            <table style="width:100%">
+                <tr>
+                    <td style="width:50%;">
+                        <div class="policy-btn" style="float:right; width:80%;">Email us at: 
+                            <span id="emailAddress">info@tarptiedown.com</span>
+                        </div>
+                    </td>
+                    <td style="width:5%;">
+                        <button id="copyEmailBtn" 
+                            data-clipboard-action="copy"
+                            data-clipboard-target="#emailAddress"
+                            style=" margin-left:auto; 
+                                    margin-right:auto; 
+                                    border:2px solid black; 
+                                    border-radius:5px;
+                                   "> 
+                            <img src="https://clipboardjs.com/assets/images/clippy.svg" 
+                                 style="width:35px;" 
+                                 alt="Copy to clipboard">
+                        </button> 
+                    </td>
+                    <td style="width:45%;">
+                        <div style="text-indent:10px; 
+                                    float:left;
+                                    ">&#9668; Select to copy email</div>
+                    </td>
+                </tr>
+                <tr style="">
+                    <td style="width:50%;">
+                        <div class="policy-btn" 
+                             style="margin-top:20px; 
+                                    float:right; 
+                                    width:80%;
+                                   ">Call or text us at: 
+                                        <span id="phoneNumber">303-919-2307</span>
+                        </div>
+                    </td>
+                    <td style="width:5%;">
+                        <button id="copyPhoneNumBtn" 
+                            data-clipboard-action="copy"
+                            data-clipboard-target="#phoneNumber"
+                            style=" margin-left:auto; 
+                                    margin-right:auto; 
+                                    margin-top:20px; 
+                                    border:2px solid black; 
+                                    border-radius:5px;
+                                   "> 
+                            <img src="https://clipboardjs.com/assets/images/clippy.svg" 
+                                 style="width:35px;" 
+                                 alt="Copy to clipboard">
+                        </button> 
+                    </td>
+                    <td style="width:45%;">
+                        <div style="text-indent:10px; 
+                                    float:left; 
+                                    margin-top:20px;
+                                   ">&#9668; Select to copy phone number</div>
+                    </td>
+                </tr>
+            </table>
         </div> 
-        <p style="text-align:left; font-size:20px; color:blue;"><br>Email link trouble? Please Copy
-            <span style="font-size:30px; color:black;">&nbsp;&#187;&nbsp;&nbsp;&nbsp;&nbsp;info@tarptiedown.com&nbsp;&nbsp;&nbsp;&nbsp;&#171;&nbsp;</span>
-            and paste it into your email account
-        </p> 
-
     </div>	
+<script>
+    
+    new Clipboard("#copyEmailBtn");
+    new Clipboard("#copyPhoneNumBtn");
+    
 
+    var vpWidth = window.screen.availWidth;
+    if(vpWidth > 960) vpWidth = 960;
+    
+    document.getElementById("pageWrapper").style.fontSize = ((0.00037)*(vpWidth)+0.56667) + "em";   /* AR_1.00_0.70 */
+    document.getElementById("privacyTitle").style.fontSize = ((0.00062)*(vpWidth)+1.27778) + "em";  /* AR_2.00_1.50 */
+
+    console.log("size is: " + ((0.00037)*(vpWidth)+0.56667) + "em");
+
+</script>		
 </body>
 </html>
