@@ -47,19 +47,20 @@ text-shadow: 1px 1px 1px #ffffff, 1px -1px 1px #ffffff, -1px 1px 1px #ffffff, -1
 
 .topTemplateMenu
 { 
-background-image: linear-gradient(to bottom, rgba(128,128,128,.8), rgba(255,255,255,0)); 
+background-image: linear-gradient(to bottom, rgba(64,64,64,.8), rgba(255,255,255,0));
 color:white;
 padding:0.3vh 0 1.0vh 0;
 border-radius:7px;
 text-shadow:0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black;
 letter-spacing:0px;
+font-weight:bold; 
 }
 
 .topTemplateMenuHover:hover
 {
 cursor:pointer;
-color:red;
-text-shadow: 0px 0px 1px #ffffff, 0px 0px 1px #ffffff, 0px 0px 1px #ffffff, 0px 0px 1px #ffffff, 0px 0px 1px #ffffff, 0px 0px 1px #ffffff, 0px 0px 1px #ffffff, 0px 0px 1px #ffffff;  
+color:blue;
+text-shadow:none;
 }
 
 .homeButton
@@ -76,8 +77,6 @@ font-family:Futura, 'Trebuchet MS', Arial, sans-serif;
 text-align:center; 
 background-color:#00ff00;    
 }
-
-
 
 #interactBlockStyle1
 {
