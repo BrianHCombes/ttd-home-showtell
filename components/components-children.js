@@ -107,20 +107,38 @@ angular.module("viewNav")
                         break;
                         
                     case "intro":
-                        child1Self.readAboutHeaderText  = "Tarp Tie Down Home Page:";
-                        child1Self.readAboutBodyText    = " Welcome to Tarp Tie Down's home page \"vicinity.\" It's our product menu of Grabbit tarp tie downs \n\
-                                                            and accessories. \n\
-                                                            <br><br> \n\
-                                                            <span class='intro01'><b>GETTING AROUND:</b></span><br>\n\
-                                                            &nbsp;&#9679; Select <span class='intro01'><b>Buttons A, B, C</b></span> to show the product thumbnails. \n\
-                                                                          <span class='intro03'>(try button B now, for example)</span><br> \n\
-                                                            &nbsp;&#9679; Then select a product thumbnail image to display that product's information.<br> \n\
-                                                            &nbsp;&#9679; Then select the <span class='intro01'><b>INFO, THIS PAGE</b></span> for more details and \n\
-                                                            a link to full product information. \n\
-                                                            <br><br> \n\
-                                                            <span class='intro01'><b>NOTE:</b></span> Scroll down to see our policy links and merchant seals.\n\
-                                                            <br><br> \n\
-                                                            <a class='btnStyle2' href='#/transition'><b>We're under construction</b></a>";    
+                        child1Self.readAboutHeaderText  = " <div class='introStyle06'>Grabbit Tarp Tie Downs and Accessories<br> \n\
+                                                            <span class='introStyle07'>(When tarp clips won't do)</span></div><br><br>";
+                        child1Self.readAboutBodyText    = " <span class='introStyle08'>Welcome</span><br> \n\
+                                                            Welcome to the \n\
+                                                            <a class='introStyle09' href='#/view00'>&nbsp;EZ&nbsp;Grabbit,&nbsp;</a> \n\
+                                                            <a class='introStyle09' href='#/view02'>&nbsp;Mini&nbsp;Grabbit,&nbsp;</a> and \n\
+                                                            <a class='introStyle09' href='#/view01'>&nbsp;Long&nbsp;Grabbit&nbsp;</a> \n\
+                                                            family of premium tarp tie downs. Using patented tech called linear \n\
+                                                            grappling Grabbits are more reliable, \n\
+                                                            more versatile, and easier to use than other tarp holding devices.<br><br> \n\
+                                                            \n\
+                                                            <span class='introStyle08'>High Strength Hold</span><br> \n\
+                                                            With Grabbits you get a high strength hold for a safe and reliable grip on tarp, fabric, \n\
+                                                            plastic-sheet, and heavyweight materials such as canvas and vinyl.<br><br> \n\
+                                                            \n\
+                                                            <span class='introStyle08'>All Weather</span><br> \n\
+                                                            They are ideal for use in high wind and all weather conditions making them \n\
+                                                            perfect for camping, home project, construction, hay cover, storage, transportation and wherever \n\
+                                                            tarps are used.<br><br> \n\
+                                                            \n\
+                                                            <span class='introStyle08'>Accessories</span><br> \n\
+                                                            Look at the <a class='introStyle09' href='#/view04'>&nbsp;RockBuster&nbsp;Ground&nbsp;Stake&nbsp;</a> \n\
+                                                            and the <a class='introStyle09' href='#/view03'>&nbsp;EZ&nbsp;Adjust&nbsp;Rope&nbsp;Adjuster&nbsp;</a> \n\
+                                                            to compliment your tarp management needs. \n\
+                                                            So take a look at these and the other tarp management accesories we offer. \n\
+                                                            Select <a class='introStyle09' href='#/products'>&nbsp;Products&nbsp;</a> from the menu above to browse \n\
+                                                            our offereings<br><br> \n\
+                                                            \n\
+                                                            <a class='btnStyle2' href='#/transition'><b>We're under construction</b></a><br><br> \n\
+                                                            ";
+
+
                         child1Self.readAboutExtraStuff1 = false;
                         child1Self.readAboutExtraStuff2 = false;
                         child1Self.readAboutExtraStuff3 = false;

@@ -44,14 +44,15 @@
                 text-align:left;
                 {{$ctrl.rsReadAboutfontsize2}};
                 ">
-        <b><span ng-bind-html="$ctrl.readAboutHeaderText"></span></b>
         <span   class="closeText"
                 ng-click="$ctrl.moreless1()" 
                 style= "color:white;
                         float:right;
                        ">
             &nbsp;&nbsp;&nbsp;&#10062;
-        </span><br>
+        </span><br>        
+        <div ng-bind-html="$ctrl.readAboutHeaderText"></div>
+        
                 <span ng-bind-html="$ctrl.readAboutBodyText"></span><br>
 
                 <div ng-show="$ctrl.readAboutExtraStuff1">
