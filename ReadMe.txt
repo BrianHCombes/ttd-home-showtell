@@ -142,3 +142,18 @@ Process:
     Think I need to migrate to a single node_module source for the 
     angular-ui-router. So have uploaded Angular Node files to the root of
     < https://www.tarptiedown.com > so playing with that as of this date.
+
+03/22/2019
+    < MENU MANAGEMENT >
+    Gotta start finding best practices for easily updating common areas among
+    views like menus. Any one feature is easy but when you have numerous
+    features to update it can get hectic. Here's a link for ideas:
+    < http://www.menucool.com/ddmenu/one-menu-for-all-pages >.
+
+    It mostly has to do with the data in the form of JSON found in files like
+    < C:\xampp\htdocs\TTD-ViewNav-RB\ttd-vn-rb\components\component-services.js > 
+    and
+    < C:\xampp\htdocs\TTD-ViewNav-RB\ttd-vn-rb\components\components-children.js >
+    So far thinking going with a DataBase is best but still investigating.
+
+    Also think XML
