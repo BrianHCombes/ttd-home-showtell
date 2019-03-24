@@ -2,6 +2,8 @@ angular.module("viewNav")
 
     .factory("NavMenuFactory", [ function(){
             
+        var templateLinksToShow = {};  
+        
         return {
             
                 readAboutBtnText: function(){ 
@@ -58,7 +60,50 @@ angular.module("viewNav")
                 getBtnText: function(){
                     var btnText = {"showText":"LOCAL&nbsp;MENU", "hideText":"HIDE&nbsp;LOCAL&nbsp;MENU"};
                     return btnText;
+                },
+            
+                showTopMenuTemplateLinks: function(templatelinkstoshow){
+                  console.log("Being Called: condition = " + templatelinkstoshow);
+                  if(templatelinkstoshow === "buyprice"){
+                    templateLinksToShow.ttdStoreFrontLink = true;    
+                    console.log("showStoreFrontBtn is now = " + templateLinksToShow);
+                  }
+                  else{
+                    templateLinksToShow.ttdStoreFrontLink = false;
+                  }
+
+                  if(templatelinkstoshow === "default")
+                    console.log("templatelinkstoshow = '" + templatelinkstoshow + "' therefor show INFO and LOCAL links only");
+
+                },
+
+                getTemplateLinksToShow: function(){
+                    return templateLinksToShow;
                 }
+            
+                
+/*                 
+                showTopMenuTemplateLinks: function(templatelinkstoshow){
+                    console.log("Being Called: condition = " + templatelinkstoshow);
+                    if(templatelinkstoshow === "buyprice"){
+                      templateLinksToShow.ttdStoreFrontLink = true;    
+                      console.log("showStoreFrontBtn is now = " + templateLinksToShow);
+                    }
+                    else{
+                      templateLinksToShow.ttdStoreFrontLink = false;
+                    }
+
+                    if(templatelinkstoshow === "default")
+                      console.log("templatelinkstoshow = '" + templatelinkstoshow + "' therefor show INFO and LOCAL links only");
+
+                },
+            
+                getTemplateLinksToShow: function(){
+                    return templateLinksToShow;
+                }
+*/                
+          
+                
         };
     }]);
 

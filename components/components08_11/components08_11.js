@@ -24,7 +24,7 @@ angular.module('viewNav')
             self08.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";            /* AR_1.50_0.73 */
             self08.rs3margintop1 = "margin-top:" + ((0.03704)*(viewWidth)+11.66667) + "px";         /* AR_55.00_25.00 */
             
-            topMenuService.showTopMenuTemplateLinks("default");
+            NavMenuFactory.showTopMenuTemplateLinks("default");
             compFactory.logView(08);
         }]
     })
@@ -54,7 +54,7 @@ angular.module('viewNav')
             
             // Response Section 3 (Not needed for now)
 
-            topMenuService.showTopMenuTemplateLinks("default");
+            NavMenuFactory.showTopMenuTemplateLinks("default");
             compFactory.logView(09);
         }]
     })

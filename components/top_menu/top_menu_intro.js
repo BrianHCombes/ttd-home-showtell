@@ -3,7 +3,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/top_menu/intro/intro.html',
        
-        controller: ['GetSet', 'viewManager', 'topMenuService', function(GetSet, viewManager, topMenuService){
+        controller: ['GetSet', 'viewManager', 'NavMenuFactory', 'topMenuService', function(GetSet, viewManager, NavMenuFactory, topMenuService){
             var viewWidth = GetSet.getViewWidth();
                 
             var introSelf = this;
@@ -26,7 +26,7 @@ angular.module("viewNav")
             
             //console.log(introSelf.introClass1);
             
-            topMenuService.showTopMenuTemplateLinks("default");
+            NavMenuFactory.showTopMenuTemplateLinks("default");
             viewManager.topMenuToHighlight(0);    
             
         }]
