@@ -26,7 +26,7 @@ angular.module('viewNav')
             // Response Section 3
             self00.rs3fontsize1 = "font-size:" + ((0.00093)*(viewWidth)+0.41667) + "em";        /* AR_1.50_0.73 */
             
-            NavMenuFactory.showTopMenuTemplateLinks("default");
+            NavMenuFactory.setTemplateLinksToShow("view00");
             compFactory.logView(00);
         }]
     })
@@ -59,7 +59,7 @@ angular.module('viewNav')
             // Response Section 3
             self01.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
             
-            NavMenuFactory.showTopMenuTemplateLinks("default");
+            NavMenuFactory.setTemplateLinksToShow("default");
             compFactory.logView(01);
         }]
     })
@@ -92,7 +92,7 @@ angular.module('viewNav')
             // Response Section 4
             self02.rs4fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
             
-            NavMenuFactory.showTopMenuTemplateLinks("default");
+            NavMenuFactory.setTemplateLinksToShow("default");
             compFactory.logView(02);
         }]    
     })
@@ -120,7 +120,7 @@ angular.module('viewNav')
             // Response Section 3
             self03.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
          
-            NavMenuFactory.showTopMenuTemplateLinks("default");
+            NavMenuFactory.setTemplateLinksToShow("default");
             compFactory.logView(03);
         }]
     });

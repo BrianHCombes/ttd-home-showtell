@@ -2,7 +2,18 @@ angular.module("viewNav")
 
     .factory("NavMenuFactory", [ function(){
             
-        var templateLinksToShow = {};  
+        var templateLinksToShow = {
+          
+          templateLink01:true,
+          templateLink01Text:"Text01",
+          templateLink02:true,
+          templateLink02Text:"Text02",
+          templateLink03:false,
+          templateLink03Text:"Text03",
+          templateLink04:false,
+          templateLink04Text:"Text04",
+          
+        };  
         
         return {
             
@@ -62,48 +73,47 @@ angular.module("viewNav")
                     return btnText;
                 },
             
-                showTopMenuTemplateLinks: function(templatelinkstoshow){
+                setTemplateLinksToShow: function(templatelinkstoshow){
                   console.log("Being Called: condition = " + templatelinkstoshow);
-                  if(templatelinkstoshow === "buyprice"){
-                    templateLinksToShow.ttdStoreFrontLink = true;    
-                    console.log("showStoreFrontBtn is now = " + templateLinksToShow);
-                  }
-                  else{
-                    templateLinksToShow.ttdStoreFrontLink = false;
-                  }
-
-                  if(templatelinkstoshow === "default")
-                    console.log("templatelinkstoshow = '" + templatelinkstoshow + "' therefor show INFO and LOCAL links only");
-
+                  
+                  switch(templatelinkstoshow){
+                  
+                    case 'buyprice':
+                        templateLinksToShow.templateLink01 = true;
+                        templateLinksToShow.templateLink02 = true;
+                        templateLinksToShow.templateLink03 = false;  
+                        templateLinksToShow.templateLink04 = true;  
+                        templateLinksToShow.templateLink04Text = "<a  class='topTemplateMenuLink' \n\
+                                                                      title='Go directly to Tarp Tie Down store' \n\
+                                                                      href='https://www.tarptiedown.com/TTD-Store-2018/'> \n\
+                                                                      TTD STORE \n\
+                                                                  </a>";  
+                        break;
+                    
+                    case 'view00':
+                        templateLinksToShow.templateLink01 = true;
+                        templateLinksToShow.templateLink02 = true;
+                        templateLinksToShow.templateLink03 = false;  
+                        templateLinksToShow.templateLink04 = true;  
+                        templateLinksToShow.templateLink04Text = "<a  class='topTemplateMenuLink' \n\
+                                                                      title='Go directly to EZ Grabbit application pages' \n\
+                                                                      href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html'> \n\
+                                                                      EZG APP PAGES \n\
+                                                                  </a>";  
+                        break;
+                     
+                    case 'default':
+                        templateLinksToShow.templateLink01 = true;  
+                        templateLinksToShow.templateLink02 = true;  
+                        templateLinksToShow.templateLink03 = false;  
+                        templateLinksToShow.templateLink04 = false;  
+                        break;
+                  } 
                 },
 
                 getTemplateLinksToShow: function(){
                     return templateLinksToShow;
                 }
-            
-                
-/*                 
-                showTopMenuTemplateLinks: function(templatelinkstoshow){
-                    console.log("Being Called: condition = " + templatelinkstoshow);
-                    if(templatelinkstoshow === "buyprice"){
-                      templateLinksToShow.ttdStoreFrontLink = true;    
-                      console.log("showStoreFrontBtn is now = " + templateLinksToShow);
-                    }
-                    else{
-                      templateLinksToShow.ttdStoreFrontLink = false;
-                    }
-
-                    if(templatelinkstoshow === "default")
-                      console.log("templatelinkstoshow = '" + templatelinkstoshow + "' therefor show INFO and LOCAL links only");
-
-                },
-            
-                getTemplateLinksToShow: function(){
-                    return templateLinksToShow;
-                }
-*/                
-          
-                
         };
     }]);
 

@@ -30,7 +30,7 @@ angular.module("viewNav")
             ttdSelf.rs1width1 = "width:" + ((-0.04706)*(viewWidth)+115.05882) + "%";                  // AR_1170_60.00_320_100.00
             
             topMenuService.ttdRegionText(getText);
-            NavMenuFactory.showTopMenuTemplateLinks("default");
+            NavMenuFactory.setTemplateLinksToShow("default");
             viewManager.topMenuToHighlight(1);    
         }]
     })
@@ -109,7 +109,7 @@ angular.module("viewNav")
             
             buyPriceSelf.padding1 = "padding:" + ((0.00617)*(viewWidth)+2.77778) + "px 5px";            /* AR_10.00_5.00 */
             
-            NavMenuFactory.showTopMenuTemplateLinks("buyprice");
+            NavMenuFactory.setTemplateLinksToShow("buyprice");
             viewManager.topMenuToHighlight(2);  
             
         }]
@@ -190,7 +190,7 @@ angular.module("viewNav")
             productsSelf.margin1 = "margin:" + ((0.00617)*(viewWidth)+2.77778) + "px 0px";              // AR_1170_10.00_360_5.00
             productsSelf.fontweight1 = "font-weight:" + ((-0.98765)*(viewWidth)+1255.55556);            // AR_1170_100.01_360_900.00
             
-            NavMenuFactory.showTopMenuTemplateLinks("default");
+            NavMenuFactory.setTemplateLinksToShow("default");
             viewManager.topMenuToHighlight(3);  
             
         }]
@@ -211,7 +211,7 @@ angular.module("viewNav")
             reviewSelf.fontsize3 = "font-size:" + ((-0.00206)*(viewWidth)+2.40644) + "em";     // AR_1170_0.00_360_1.67
             
             
-            NavMenuFactory.showTopMenuTemplateLinks("default");
+            NavMenuFactory.setTemplateLinksToShow("default");
             viewManager.topMenuToHighlight(4);  
             
         }]
