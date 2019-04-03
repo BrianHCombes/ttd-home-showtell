@@ -22,7 +22,7 @@ angular.module("viewNav")
             child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  
             
             // templateLinksToShow is an object and the its properties determine what links to show on the template top menu
-            child1Self.templateLinksToShow = topMenuService.getTemplateLinksToShow();
+            child1Self.templateLinksToShow = NavMenuFactory.getTemplateLinksToShow();
             
             // Sets mode of the "NAVIGATE" button
             var btnText = NavMenuFactory.getBtnText();

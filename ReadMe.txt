@@ -144,7 +144,7 @@ Process:
     < https://www.tarptiedown.com > so playing with that as of this date.
 
 03/22/2019
-    < MENU MANAGEMENT >
+    < MENU MANAGEMENT - JSON and SQL>
     Gotta start finding best practices for easily updating common areas among
     views like menus. Any one feature is easy but when you have numerous
     features to update it can get hectic. Here's a link for ideas:
@@ -157,3 +157,9 @@ Process:
     So far thinking going with a DataBase is best but still investigating.
 
     Also think XML
+
+03/29/2019
+    < MENU MANAGEMENT - JSON and SQL >
+    Here's a microsoft link about how JSON and SQL can talk to each other
+    by using built in functions. Cool!!
+    < https://docs.microsoft.com/en-us/sql/relational-databases/json/json-data-sql-server?view=sql-server-2017 >
