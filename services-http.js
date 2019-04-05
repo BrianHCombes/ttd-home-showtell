@@ -38,7 +38,7 @@ angular.module("viewNav")
                         }
                       },
 
-        infoThisPage: function(infoThisPageCallBackRef, itemToPopulate){
+        btnConfig:    function(infoThisPageCallBackRef, itemToPopulate){
                         switch(itemToPopulate){
                           case "btnText":         return $http.get('json-info-this-page.json', { cache: true }).then(function(resp) {
                                                   //console.log("From the JSON file " + JSON.stringify(resp.data));
@@ -47,7 +47,20 @@ angular.module("viewNav")
                                                   });
                                                   break;
                         }
-                      }
+                      },
+                      
+        localMenuConfig:  function(localMenuCallBackRef, itemToConfigure){
+          
+                            switch(itemToConfigure){
+                              
+                              case  "localMenuBtnText":break;
+                              
+                              case  "localMenuHeaderText":break;
+                                
+                              case  "localMenuBodyText":break;
+                            }
+          
+                          }              
       };                 
                               
 }]);

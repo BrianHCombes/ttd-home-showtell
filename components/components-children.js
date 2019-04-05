@@ -102,7 +102,7 @@ angular.module("viewNav")
                     }
                 }; 
             }
-            NavMenuFactory.readAboutBtnText(getReadAboutBtnText);
+            NavMenuFactory.infoThisPageBtnText(getReadAboutBtnText);
             
             
                 
