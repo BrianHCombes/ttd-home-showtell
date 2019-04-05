@@ -17,7 +17,7 @@ angular.module("viewNav")
         
         return {
             
-                readAboutBtnText: function(getReadAboutBtnTextRef){ 
+                infoThisPageBtnText: function(getInfoThisPageBtnTextRef){ 
                         //var btnText = {"showText":"INFO&nbsp;THIS&nbsp;PAGE", "hideText":"HIDE&nbsp;INFO"};
                         //var btnTextJSON = {};
                         
@@ -25,9 +25,9 @@ angular.module("viewNav")
                           // btnTextJSON = data.infoThisPage.btnText
                           //console.log("From the services-http factory: " + JSON.stringify(btnTextJSON));
                           //console.log("From the services-http factory: " + btnTextJSON.showBtnText);
-                          getReadAboutBtnTextRef(btnText);
+                          getInfoThisPageBtnTextRef(btnText);
                         }
-                        VnData.infoThisPage(infoThisPageCallBack, "btnText");
+                        VnData.btnConfig(infoThisPageCallBack, "btnText");
                     
                     //return btnText;
                 },
