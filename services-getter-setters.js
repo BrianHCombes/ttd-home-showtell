@@ -53,7 +53,7 @@ angular.module("viewNav")
         };
         
         var btnCount = 0;
-        VnData.menuConfig(styleCallback, "menus");              // passes the reference of the 'styleCallback' function to the VnData service where HTTP calls are made.
+        VnData.menuConfig(styleCallback, "frameworkMenus");              // passes the reference of the 'styleCallback' function to the VnData service where HTTP calls are made.
         var screenMode = "screen1";
         var viewWidth;
         var vpWidth = window.screen.availWidth;

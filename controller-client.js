@@ -13,7 +13,7 @@ angular.module('viewNav')
             vn.picMenu2 = data.picMenu2;        // is array of hyper menu items
             vn.stateNAMES = data.stateNames;    // is array
         };
-        VnData.menuConfig(menuCallback, "menus");
+        VnData.menuConfig(menuCallback, "frameworkMenus");
 
 //***********************************************************************************************************************************************************
 // arrayIndexPre is called from the button mouseovers/clicks on the hyper menu presentation for viewport widths below 900px. 

@@ -1,9 +1,9 @@
 angular.module("viewNav")
 
-    .factory("NavMenuFactory", [ function(){
+    .factory("NavMenuFactory", [ "VnData", function(VnData){
             
         var templateLinksToShow = {
-          
+          // default
           templateLink01:true,
           templateLink01Text:"Text01",
           templateLink02:true,
@@ -17,10 +17,19 @@ angular.module("viewNav")
         
         return {
             
-                readAboutBtnText: function(){ 
-                        var btnText = {"showText":"INFO&nbsp;THIS&nbsp;PAGE", "hideText":"HIDE&nbsp;INFO"};
+                readAboutBtnText: function(getReadAboutBtnTextRef){ 
+                        //var btnText = {"showText":"INFO&nbsp;THIS&nbsp;PAGE", "hideText":"HIDE&nbsp;INFO"};
+                        //var btnTextJSON = {};
+                        
+                        infoThisPageCallBack = function(btnText){
+                          // btnTextJSON = data.infoThisPage.btnText
+                          //console.log("From the services-http factory: " + JSON.stringify(btnTextJSON));
+                          //console.log("From the services-http factory: " + btnTextJSON.showBtnText);
+                          getReadAboutBtnTextRef(btnText);
+                        }
+                        VnData.infoThisPage(infoThisPageCallBack, "btnText");
                     
-                    return btnText;
+                    //return btnText;
                 },
             
                 navMenuHeader:  function(){
@@ -28,44 +37,19 @@ angular.module("viewNav")
                     return header;
                 },    
 
-                getViewNav: function(location){
-
-                    var navMenu = 
-                    [   
-                        {"rowClass":"topMenuNav2",   "selection":"Top Menu",         "view":"",     "destination":""},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tarp Tie Down Home",         "view":"intro",     "destination":"TTD Home       "},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Help Getting Around",             "view":"ttd",       "destination":"Help      "},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Product&nbsp;pricing&nbsp;and&nbsp;shopping",        "view":"buyprice",  "destination":"Price/Buy"},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Overview of our 10 products ",         "view":"products",  "destination":"Products"},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Customer feedback",          "view":"reviews",   "destination":"Reviews         "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Tarp Tie Downs", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard EZ Grabbit ", "view":"view00",    "destination":"Button A Thumb 1    "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Classic EZ Grabbit", "view":"view09",    "destination":"Button C Thumb 2        "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Long Grabbit", "view":"view01",    "destination":"Button A Thumb 2              "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Mini Grabbit", "view":"view02",    "destination":"Button A Thumb 3              "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;The EZ Grabbit Keeper", "view":"view06",    "destination":"Button B Thumb 3     "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Rope Adjusters", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Adjust Rope Adjuster", "view":"view03",    "destination":" Button A Thumb 4   "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Ground Stakes", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;RockBuster Ground Stake", "view":"view04",    "destination":" Button B Thumb 1   "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Bag Handle", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Bag Grabbit Bag Handle", "view":"view05",    "destination":" Button B Thumb 2   "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Misc", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Carry/Duffle Bag", "view":"view07",    "destination":" Button B Thumb 4        "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tent Poles", "view":"view08",    "destination":" Button C Thumb 1               "},
-                    ];
-                    navMenu[location].rowClass = "youAreHere";
-                    return navMenu;
+                getViewNav: function(getNavMenuBodyRef, location){
+                    
+                    var navMenu = {};
+                    localMenuCallBack = function(data){
+                        //console.log("And the value is: " + JSON.stringify(navMenu));
+                        navMenu = data.navMenu;
+                        //console.log("And the value is: " + navMenu[0].rowClass);
+                        navMenu[location].rowClass = "youAreHere";
+                        //console.log("And the value is: " + navMenu[location].rowClass);
+                        getNavMenuBodyRef(navMenu);
+                    };
+                    VnData.menuConfig(localMenuCallBack, "localMenu");
+                    
                 },
                 
                 getBtnText: function(){
