@@ -70,28 +70,41 @@ angular.module("viewNav")
                     default:console.log("From components-children.js file: There is no view match"); break;
                 }
                     
-                child1Self.navMenuHeader = NavMenuFactory.navMenuHeader();
-                child1Self.navMenuBody = NavMenuFactory.getViewNav(locationHighlight); 
+            child1Self.navMenuHeader = NavMenuFactory.navMenuHeader();
+            // child1Self.navMenuBody = NavMenuFactory.getViewNav(locationHighlight); 
+             
+            function getNavMenuBody(navMenuBody){
+              child1Self.navMenuBody = navMenuBody;
+              console.log("At the controller the navMenuBody object is: " + JSON.stringify(child1Self.navMenuBody));
+            };
+            NavMenuFactory.getViewNav(getNavMenuBody, locationHighlight); 
+                
                 
             };
             
-            // Sets mode of the "READ ABOUT" button
-            var readAboutBtnText = NavMenuFactory.readAboutBtnText();
-            child1Self.display1 = false;
-            child1Self.morelessText1 = readAboutBtnText.showText;
-            child1Self.moreless1 = function(){
-                if(child1Self.morelessText1 === readAboutBtnText.showText){
-                    child1Self.morelessText1 = readAboutBtnText.hideText;
-                    child1Self.display1 = true;
-                    var urlString = document.URL;
-                    var queryParam = urlString.slice(urlString.search("#/")+2);
-                    readAboutText(queryParam);
-                } 
-                else {
-                    child1Self.morelessText1 = readAboutBtnText.showText;
-                    child1Self.display1 = false;
-                }
-            }; 
+            // Get "INFO THIS PAGE" button text. 
+            function getReadAboutBtnText(infoThisPageBtnText){
+            
+                child1Self.display1 = false;
+                child1Self.morelessText1 = infoThisPageBtnText.showBtnText;
+                console.log("Button text is: " + child1Self.morelessText1);
+                child1Self.moreless1 = function(){
+                    if(child1Self.morelessText1 === infoThisPageBtnText.showBtnText){
+                        child1Self.morelessText1 = infoThisPageBtnText.hideBtnText;
+                        child1Self.display1 = true;
+                        var urlString = document.URL;
+                        var queryParam = urlString.slice(urlString.search("#/")+2);
+                        readAboutText(queryParam);
+                    } 
+                    else {
+                        child1Self.morelessText1 = infoThisPageBtnText.showBtnText;
+                        child1Self.display1 = false;
+                    }
+                }; 
+            }
+            NavMenuFactory.readAboutBtnText(getReadAboutBtnText);
+            
+            
                 
             function readAboutText(queryParam){
                 
