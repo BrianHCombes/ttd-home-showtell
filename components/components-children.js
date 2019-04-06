@@ -69,18 +69,29 @@ angular.module("viewNav")
                     case "view11":  locationHighlight = 27; break;
                     default:console.log("From components-children.js file: There is no view match"); break;
                 }
-                    
-            child1Self.navMenuHeader = NavMenuFactory.navMenuHeader();
-            // child1Self.navMenuBody = NavMenuFactory.getViewNav(locationHighlight); 
-             
-            function getNavMenuBody(navMenuBody){
-              child1Self.navMenuBody = navMenuBody;
-              console.log("At the controller the navMenuBody object is: " + JSON.stringify(child1Self.navMenuBody));
-            };
-            NavMenuFactory.getViewNav(getNavMenuBody, locationHighlight); 
+              
+//***********************************************************************************************************************************************************              
+              
+                //console.log("2*************************************************************************************" + child1Self.morelessText1);  
+                function getLocalMenuHeader(localMenuHeader){
+                  child1Self.localMenuHeader = localMenuHeader;
+                  //console.log("READY FOR HTML: " + JSON.stringify(child1Self.localMenuHeader));
+                  // child1Self.navMenuBody = NavMenuFactory.getViewNav(locationHighlight); 
+                };
+                //console.log("1*************************************************************************************");
+                NavMenuFactory.getLocalMenuheader(getLocalMenuHeader);
+
+//***********************************************************************************************************************************************************
+
+
+                function getNavMenuBody(navMenuBody){
+                  child1Self.navMenuBody = navMenuBody;
+                  //console.log("At the controller the navMenuBody object is: " + JSON.stringify(child1Self.navMenuBody));
+                };
+                NavMenuFactory.getViewNav(getNavMenuBody, locationHighlight); 
                 
-                
             };
+            
             
             // Get "INFO THIS PAGE" button text. 
             function getReadAboutBtnText(infoThisPageBtnText){

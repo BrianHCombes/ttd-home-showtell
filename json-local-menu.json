@@ -37,7 +37,7 @@
                 {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tent Poles", "view":"view08",    "destination":" Button C Thumb 1               "}
               ],
               
-  "navMenuHeader": {
+  "localMenuHeader": {
                       "header": {"col1":"SELECTION", "col2":" LINK / BUTTON", "msg":"your current page is in red"}
   }            
 }                  
