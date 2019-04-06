@@ -163,3 +163,16 @@ Process:
     Here's a microsoft link about how JSON and SQL can talk to each other
     by using built in functions. Cool!!
     < https://docs.microsoft.com/en-us/sql/relational-databases/json/json-data-sql-server?view=sql-server-2017 >
+
+04/06/2019
+    For now have started to create JSON files for the menu management. In fact,
+    the objective is to move all dynamic data out of the framework code and
+    access it from JSON. This will make it much more manageable. In doing so,
+    the JSON data must be retrieved asynchronously with callbacks save for
+    the http request in the (now new) < services-http.js > file which uses
+    promises.
+
+    Still figuring out the practicality of storing the JSON data in a database
+    vs storing the data in JSON files. But for now just moving the data to JSON
+    files. Also wrestling with best way to structure the code to get the 
+    JSON data from the "server side" to the "front end"

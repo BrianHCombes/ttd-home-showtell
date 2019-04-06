@@ -15,6 +15,8 @@ angular.module("viewNav")
           
         };  
         
+        VnData.localMenuConfig();
+        
         return {
             
                 infoThisPageBtnText: function(getInfoThisPageBtnTextRef){ 
@@ -31,11 +33,22 @@ angular.module("viewNav")
                     
                     //return btnText;
                 },
-            
-                navMenuHeader:  function(){
-                    var header = {"col1":"SELECTION", "col2":" LINK / BUTTON", "msg":"your current page is in red"};
-                    return header;
+  
+//***********************************************************************************************************************************************************          
+                getLocalMenuheader: function(getLocalMenuHeaderRef){
+                    console.log("*************************************************************************************");
+                    var localMenuHeader = {};
+                    localMenuCallBack = function(data){
+                        // var header = {"col1":"SELECTION", "col2":" LINK / BUTTON", "msg":"your current page is in red"};
+                        // console.log("4*************************************************************************************");
+                        localMenuHeader = data;
+                        getLocalMenuHeaderRef(localMenuHeader);
+                    };
+                    //console.log("3*************************************************************************************");
+                    VnData.localMenuConfig(localMenuCallBack, "localMenuHeaderText");  
                 },    
+//***********************************************************************************************************************************************************                
+               
 
                 getViewNav: function(getNavMenuBodyRef, location){
                     
@@ -49,7 +62,6 @@ angular.module("viewNav")
                         getNavMenuBodyRef(navMenu);
                     };
                     VnData.menuConfig(localMenuCallBack, "localMenu");
-                    
                 },
                 
                 getBtnText: function(){

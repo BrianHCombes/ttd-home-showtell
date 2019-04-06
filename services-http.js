@@ -26,12 +26,12 @@ angular.module("viewNav")
 
         menuConfig:   function(menuCallbackRef, menuToPopulate){
                         switch(menuToPopulate){
-                          case "frameworkMenus":  return $http.get('json-client.json', { cache: true }).then(function(resp) {
+                          case "frameworkMenus":  $http.get('json-client.json', { cache: true }).then(function(resp) {
                                                   menuCallbackRef(resp.data);
                                                   });
                                                   break;
 
-                          case "localMenu":       return $http.get('json-local-menu.json', { cache: true }).then(function(resp) {
+                          case "localMenu":       $http.get('json-local-menu.json', { cache: true }).then(function(resp) {
                                                   menuCallbackRef(resp.data);
                                                   });
                                                   break;
@@ -40,7 +40,7 @@ angular.module("viewNav")
 
         btnConfig:    function(infoThisPageCallBackRef, itemToPopulate){
                         switch(itemToPopulate){
-                          case "btnText":         return $http.get('json-info-this-page.json', { cache: true }).then(function(resp) {
+                          case "btnText":         $http.get('json-info-this-page.json', { cache: true }).then(function(resp) {
                                                   //console.log("From the JSON file " + JSON.stringify(resp.data));
                                                   //console.log("A value is: " + resp.data.infoThisPage.btnText.showBtnText);
                                                   infoThisPageCallBackRef(resp.data.infoThisPage.btnText);
@@ -50,17 +50,33 @@ angular.module("viewNav")
                       },
                       
         localMenuConfig:  function(localMenuCallBackRef, itemToConfigure){
-          
-                            switch(itemToConfigure){
-                              
-                              case  "localMenuBtnText":break;
-                              
-                              case  "localMenuHeaderText":break;
-                                
-                              case  "localMenuBodyText":break;
-                            }
-          
-                          }              
-      };                 
+                            
+                            var localMenuConfigData = {};
+                            $http.get('json-local-menu.json', { cache: true }).then(function (resp){
+                                                                                      localMenuConfigData = resp.data;
+                                                                                      console.log("Local menu header: " + JSON.stringify(localMenuConfigData.localMenuHeader));
+                                                                                      // console.log("Response obj is: " + JSON.stringify(resp));
+                                                                                      responseData();
+                                                                                    },
+                                                                                    function (resp){
+                                                                                      console.log("ERROR! ERROR! is: " + JSON.stringify(resp));
+                                                                                    });
+                            
+                            function responseData(){
+                              switch(itemToConfigure){
+
+                                case  "localMenuBtnText":break;
+
+                                case  "localMenuHeaderText":
+                                                              localMenuCallBackRef(localMenuConfigData.localMenuHeader.header);
+                                                              console.log("Local menu header Text is: " + JSON.stringify(localMenuConfigData.localMenuHeader.header));
+                                                              break;
+
+
+                                case  "localMenuBodyText":break;
+                              };
+                            }  
+                          }
+    };                 
                               
 }]);
