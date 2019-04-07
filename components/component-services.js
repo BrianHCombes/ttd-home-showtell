@@ -34,35 +34,32 @@ angular.module("viewNav")
                     //return btnText;
                 },
   
-//***********************************************************************************************************************************************************          
                 getLocalMenuheader: function(getLocalMenuHeaderRef){
-                    console.log("*************************************************************************************");
                     var localMenuHeader = {};
-                    localMenuCallBack = function(data){
-                        // var header = {"col1":"SELECTION", "col2":" LINK / BUTTON", "msg":"your current page is in red"};
-                        // console.log("4*************************************************************************************");
-                        localMenuHeader = data;
+                    localMenuCallBack = function(localMenuHeader){
                         getLocalMenuHeaderRef(localMenuHeader);
                     };
-                    //console.log("3*************************************************************************************");
                     VnData.localMenuConfig(localMenuCallBack, "localMenuHeaderText");  
                 },    
-//***********************************************************************************************************************************************************                
-               
-
-                getViewNav: function(getNavMenuBodyRef, location){
+          
+                getLocalMenubody: function(getLocalMenuBodyRef, location){
                     
-                    var navMenu = {};
-                    localMenuCallBack = function(data){
-                        //console.log("And the value is: " + JSON.stringify(navMenu));
-                        navMenu = data.navMenu;
-                        //console.log("And the value is: " + navMenu[0].rowClass);
-                        navMenu[location].rowClass = "youAreHere";
-                        //console.log("And the value is: " + navMenu[location].rowClass);
-                        getNavMenuBodyRef(navMenu);
+                    localMenuCallBack = function(localMenuBody){
+                        localMenuBody[location].rowClass = "youAreHere";
+                        getLocalMenuBodyRef(localMenuBody);
                     };
-                    VnData.menuConfig(localMenuCallBack, "localMenu");
+                    VnData.localMenuConfig(localMenuCallBack, "localMenuBodyText");
                 },
+                
+                getLocalMenuHighLIGHT: function(getLocalMenuHighLightRef){
+                    
+                    localMenuCallBack = function(localMenuHighLight){
+                      getLocalMenuHighLightRef(localMenuHighLight);
+                    };
+                    VnData.localMenuConfig(localMenuCallBack, "localMenuItemHighLight");
+                },
+                
+                
                 
                 getBtnText: function(){
                     var btnText = {"showText":"LOCAL&nbsp;MENU", "hideText":"HIDE&nbsp;LOCAL&nbsp;MENU"};
