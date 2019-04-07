@@ -42,54 +42,31 @@ angular.module("viewNav")
                 }
             }; 
             
+            // all methods in the callMenu(queryParam) function are callback oriented.
             function callMenu(queryParam){
                 var locationHighlight;
-                switch(queryParam){
-                    case "intro":   locationHighlight = 1; break;
-                    case "ttd":     locationHighlight = 2; break;
-                    case "buyprice":locationHighlight = 3; break;
-                    case "products":locationHighlight = 4; break;
-                    case "reviews": locationHighlight = 5; break;    
-                    
-                    case "view00":  locationHighlight = 8; break; 
-                    case "view09":  locationHighlight = 9; break; 
-                    case "view01":  locationHighlight = 10; break; 
-                    case "view02":  locationHighlight = 11; break; 
-                    case "view06":  locationHighlight = 12; break;
-                    
-                    case "view03":  locationHighlight = 15; break;
-                    
-                    case "view04":  locationHighlight = 18; break;
-                    
-                    case "view05":  locationHighlight = 21; break;
-                    
-                    case "view07":  locationHighlight = 24; break;
-                    case "view08":  locationHighlight = 25; break;
-                    case "view10":  locationHighlight = 26; break;
-                    case "view11":  locationHighlight = 27; break;
-                    default:console.log("From components-children.js file: There is no view match"); break;
-                }
               
-//***********************************************************************************************************************************************************              
+                // Nested callbacks - first NavMenuFactory.getLocalMenuHighLIGHT(getLocalMenuHighLight) is called to get the HighLight object.
+                // Then when the high light object is returned the particular highlight value to use is determined with the queryParam value.
+                // Then that high light value is sent along with the NavMenuFactory.getLocalMenubody(getLocalMenuBody, locationHighlight) method
+                // to get the local menu body with the appropriately highlighted view (in red) on the menu when displayed.
+                function getLocalMenuHighLight(localMenuHighLight){
+                  
+                  locationHighlight = localMenuHighLight[queryParam];
+                  
+                  function getLocalMenuBody(localMenuBody){
+                    child1Self.navMenuBody = localMenuBody;
+                  };
+                  NavMenuFactory.getLocalMenubody(getLocalMenuBody, locationHighlight); // step 2: send highlight along with getLocalMenuBody callback 
+                  
+                };
+                NavMenuFactory.getLocalMenuHighLIGHT(getLocalMenuHighLight); // step 1: get highlight by sending getLocalMenuHighLight callback
+
               
-                //console.log("2*************************************************************************************" + child1Self.morelessText1);  
                 function getLocalMenuHeader(localMenuHeader){
                   child1Self.localMenuHeader = localMenuHeader;
-                  //console.log("READY FOR HTML: " + JSON.stringify(child1Self.localMenuHeader));
-                  // child1Self.navMenuBody = NavMenuFactory.getViewNav(locationHighlight); 
                 };
-                //console.log("1*************************************************************************************");
                 NavMenuFactory.getLocalMenuheader(getLocalMenuHeader);
-
-//***********************************************************************************************************************************************************
-
-
-                function getNavMenuBody(navMenuBody){
-                  child1Self.navMenuBody = navMenuBody;
-                  //console.log("At the controller the navMenuBody object is: " + JSON.stringify(child1Self.navMenuBody));
-                };
-                NavMenuFactory.getViewNav(getNavMenuBody, locationHighlight); 
-                
             };
             
             
