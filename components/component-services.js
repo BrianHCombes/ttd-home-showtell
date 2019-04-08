@@ -11,7 +11,7 @@ angular.module("viewNav")
           templateLink03:false,
           templateLink03Text:"Text03",
           templateLink04:false,
-          templateLink04Text:"Text04",
+          templateLink04Text:"Text04"
           
         };  
         
@@ -28,20 +28,21 @@ angular.module("viewNav")
                           //console.log("From the services-http factory: " + JSON.stringify(btnTextJSON));
                           //console.log("From the services-http factory: " + btnTextJSON.showBtnText);
                           getInfoThisPageBtnTextRef(btnText);
-                        }
+                        };
                         VnData.btnConfig(infoThisPageCallBack, "btnText");
                     
                     //return btnText;
                 },
   
+                // incoming and outgoing callbacks used here to retrieve local menu data from the services-http.js file and get it to the components-children.js file
                 getLocalMenuheader: function(getLocalMenuHeaderRef){
-                    var localMenuHeader = {};
                     localMenuCallBack = function(localMenuHeader){
                         getLocalMenuHeaderRef(localMenuHeader);
                     };
                     VnData.localMenuConfig(localMenuCallBack, "localMenuHeaderText");  
                 },    
           
+                // incoming and outgoing callbacks used here to retrieve local menu data from the services-http.js file and get it to the components-children.js file
                 getLocalMenubody: function(getLocalMenuBodyRef, location){
                     
                     localMenuCallBack = function(localMenuBody){
@@ -51,6 +52,7 @@ angular.module("viewNav")
                     VnData.localMenuConfig(localMenuCallBack, "localMenuBodyText");
                 },
                 
+                // incoming and outgoing callbacks used here to retrieve local menu data from the services-http.js file and get it to the components-children.js file
                 getLocalMenuHighLIGHT: function(getLocalMenuHighLightRef){
                     
                     localMenuCallBack = function(localMenuHighLight){
