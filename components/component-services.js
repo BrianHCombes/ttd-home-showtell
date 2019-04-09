@@ -46,7 +46,7 @@ angular.module("viewNav")
                 getLocalMenubody: function(getLocalMenuBodyRef, location){
                     
                     localMenuCallBack = function(localMenuBody){
-                        localMenuBody[location].rowClass = "youAreHere";
+                        localMenuBody[location].rowClass = "youAreHere"; // "youAreHere" is a CSS class
                         getLocalMenuBodyRef(localMenuBody);
                     };
                     VnData.localMenuConfig(localMenuCallBack, "localMenuBodyText");
