@@ -44,19 +44,25 @@ angular.module("viewNav")
                                                   //console.log("From the JSON file " + JSON.stringify(resp.data));
                                                   //console.log("A value is: " + resp.data.infoThisPage.btnText.showBtnText);
                                                   infoThisPageCallBackRef(resp.data.infoThisPage.btnText);
+                                                  //console.log("The WTF is: " + resp.data.infoThisPage.template.intro.infoThisPageHeaderText);
                                                   });
                                                   break;
                         }
                       },
                       
+        infoThisPageConfig: function(infoThisPageCallBackRef){
+                              $http.get('json-info-this-page.json', { cache: true }).then(function(resp) {
+                                        //console.log("From the JSON file " + JSON.stringify(resp.data));
+                                        //console.log("A value is: " + resp.data.infoThisPage.btnText.showBtnText);
+                                        infoThisPageCallBackRef(resp.data.infoThisPage);
+                                        //console.log("The WTF is: " + resp.data.infoThisPage.template.intro.infoThisPageHeaderText);
+                              });
+                            },
+                      
         localMenuConfig:  function(localMenuCallBackRef, itemToConfigure){
-                            //console.log("Item to configure is: " + itemToConfigure);
                             var localMenuConfigData = {};
                             $http.get('json-local-menu.json', { cache: true }).then(function (resp){
                                                                                       localMenuConfigData = resp.data;
-                                                                                      //console.log("Local menu header: " + JSON.stringify(localMenuConfigData.localMenuHeader));
-                                                                                      // console.log("Local menu body: " + JSON.stringify(localMenuConfigData.localMenuBody));
-                                                                                      // console.log("Response obj is: " + JSON.stringify(resp));
                                                                                       responseData();
                                                                                     },
                                                                                     function (resp){
@@ -64,29 +70,43 @@ angular.module("viewNav")
                                                                                     });
                             
                             function responseData(){
-                              console.log("Item to configure is: " + itemToConfigure);
                               switch(itemToConfigure){
 
-                                case  "localMenuBtnText":break;
+                                case  "localMenuBtnText":     localMenuCallBackRef(localMenuConfigData.btnText);
+                                                              break;
 
                                 case  "localMenuHeaderText":
                                                               localMenuCallBackRef(localMenuConfigData.localMenuHeader.header);
-                                                              //console.log("Local menu header Text is: " + JSON.stringify(localMenuConfigData.localMenuHeader.header));
                                                               break;
 
 
                                 case  "localMenuBodyText":
                                                               localMenuCallBackRef(localMenuConfigData.localMenuBody);
-                                                              //console.log("Local menu body Text is: " + JSON.stringify(localMenuConfigData.localMenuBody));
                                                               break;
                                                               
                                 case  "localMenuItemHighLight":
                                                               localMenuCallBackRef(localMenuConfigData.localMenuHighLight);
-                                                              //console.log("Local menu body highlight is: " + JSON.stringify(localMenuConfigData.localMenuHighLight));
                                                               break;
                               };
                             }  
-                          }
+                          },
+                          
+//  The setLinksToShow function calls the JSON file which has the configuration for what links to show at the top of each template/view page. INFO THIS PAGE and
+//  LOCAL MENU are the default links that are typically always shown. However,.
+        setLinksToShow:   function(templateLinksConfigDataRef){
+                            var templateLinksToShow = {};
+                            $http.get('json-template-menu-links.json', { cache: true }).then(function (resp){
+                              templateLinksToShow = resp.data;
+                              responseData();
+                            },
+                            function (resp){
+                              console.log("ERROR! ERROR!: Failed to access the json-template-menu-links.json file.");
+                            });
+                            
+                            function responseData(){
+                              templateLinksConfigDataRef(templateLinksToShow);  // templateLinksToShow
+                            }
+        }          
     };                 
                               
 }]);

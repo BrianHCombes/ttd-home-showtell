@@ -25,24 +25,32 @@ angular.module("viewNav")
             child1Self.templateLinksToShow = NavMenuFactory.getTemplateLinksToShow();
             
             // Sets mode of the "NAVIGATE" button
-            var btnText = NavMenuFactory.getBtnText();
-            child1Self.display2 = false;
-            child1Self.morelessText2 = btnText.showText;
-            child1Self.moreless2 = function(){
-                if(child1Self.morelessText2 === btnText.showText){
-                    child1Self.morelessText2 = btnText.hideText;
-                    child1Self.display2 = true;
-                    var urlString = document.URL;
-                    var queryParam = urlString.slice(urlString.search("#/")+2);
-                    callMenu(queryParam);
-                } 
-                else {
-                    child1Self.morelessText2 = btnText.showText;
-                    child1Self.display2 = false;
-                }
-            }; 
             
-            // all methods in the callMenu(queryParam) function are callback oriented.
+            // This method getLocalMenuBtnText(localMenuBtnText) uses callback architecture
+            function getLocalMenuBtnText(localMenuBtnText){
+              console.log("At the components-children.js file the btn text is: " + JSON.stringify(localMenuBtnText));
+              var btnText = localMenuBtnText; 
+              
+              console.log("At the components-children.js file ASSIGNMENTS the btn text is: " + JSON.stringify(btnText));
+              child1Self.display2 = false;
+              child1Self.morelessText2 = btnText.showText;
+              child1Self.moreless2 = function(){
+                  if(child1Self.morelessText2 === btnText.showText){
+                      child1Self.morelessText2 = btnText.hideText;
+                      child1Self.display2 = true;
+                      var urlString = document.URL;
+                      var queryParam = urlString.slice(urlString.search("#/")+2);
+                      callMenu(queryParam);
+                  } 
+                  else {
+                      child1Self.morelessText2 = btnText.showText;
+                      child1Self.display2 = false;
+                  }
+              }; 
+            };
+            NavMenuFactory.getLocalMenuBtnTEXT(getLocalMenuBtnText);
+            
+            // all methods in the callMenu(queryParam) function use callback architecture.
             function callMenu(queryParam){
                 var locationHighlight;
               
@@ -75,7 +83,7 @@ angular.module("viewNav")
             
                 child1Self.display1 = false;
                 child1Self.morelessText1 = infoThisPageBtnText.showBtnText;
-                console.log("Button text is: " + child1Self.morelessText1);
+                //console.log("Button text is: " + child1Self.morelessText1);
                 child1Self.moreless1 = function(){
                     if(child1Self.morelessText1 === infoThisPageBtnText.showBtnText){
                         child1Self.morelessText1 = infoThisPageBtnText.hideBtnText;
@@ -91,6 +99,7 @@ angular.module("viewNav")
                 }; 
             }
             NavMenuFactory.infoThisPageBtnText(getReadAboutBtnText);
+            NavMenuFactory.infoThisPageCONFIG();
             
             
                 

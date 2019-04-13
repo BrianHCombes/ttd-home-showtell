@@ -1,0 +1,24 @@
+{
+  "templatelinkstoshow": {
+                          "buyprice": { 
+                                      "templateLink01":false, "templateLink01Text":"",
+                                      "templateLink02":true, "templateLink02Text":"",
+                                      "templateLink03":true, "templateLink03Text":"",
+                                      "templateLink04":true, "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to Tarp Tie Down store' href='https://www.tarptiedown.com/TTD-Store-2018/'> TTD STORE </a>"
+                                    },
+    
+                          "view00": { 
+                                      "templateLink01":true, "templateLink01Text":"",
+                                      "templateLink02":true, "templateLink02Text":"",
+                                      "templateLink03":true, "templateLink03Text":"",
+                                      "templateLink04":true, "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to EZ Grabbit application pages' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html'> EZG APP PAGES </a>"
+                                    },
+                                            
+                          "default": { 
+                                      "templateLink01":true, "templateLink01Text":"",
+                                      "templateLink02":true, "templateLink02Text":"",
+                                      "templateLink03":true, "templateLink03Text":"",
+                                      "templateLink04":true, "templateLink04Text":""
+                                    }
+                          }
+}

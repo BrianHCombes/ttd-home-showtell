@@ -33,6 +33,22 @@ angular.module("viewNav")
                     
                     //return btnText;
                 },
+                
+                infoThisPageCONFIG: function(){ 
+                        //var btnText = {"showText":"INFO&nbsp;THIS&nbsp;PAGE", "hideText":"HIDE&nbsp;INFO"};
+                        //var btnTextJSON = {};
+                        
+                        infoThisPageCallBack = function(infoThisPageConfigData){
+                          // btnTextJSON = data.infoThisPage.btnText
+                          //console.log("From the services-http factory: " + JSON.stringify(infoThisPageConfigData));
+                          //console.log("From the services-http factory: " + btnTextJSON.showBtnText);
+                          //getInfoThisPageBtnTextRef(btnText);
+                        };
+                        VnData.infoThisPageConfig(infoThisPageCallBack);
+                    
+                    //return btnText;
+                },
+                
   
                 // incoming and outgoing callbacks used here to retrieve local menu data from the services-http.js file and get it to the components-children.js file
                 getLocalMenuheader: function(getLocalMenuHeaderRef){
@@ -62,21 +78,43 @@ angular.module("viewNav")
                 },
                 
                 
-                
-                getBtnText: function(){
-                    var btnText = {"showText":"LOCAL&nbsp;MENU", "hideText":"HIDE&nbsp;LOCAL&nbsp;MENU"};
-                    return btnText;
+                getLocalMenuBtnTEXT: function(getLocalMenuBtnTextRef){
+                  
+                    localMenuCallBack = function(localMenuBtnText){
+                      //console.log("From the services-http factory local menu " + JSON.stringify(localMenuBtnText));
+                      getLocalMenuBtnTextRef(localMenuBtnText);
+                    };
+                    // var btnText = {"showText":"LOCAL&nbsp;MENU", "hideText":"HIDE&nbsp;LOCAL&nbsp;MENU"};
+                    VnData.localMenuConfig(localMenuCallBack, "localMenuBtnText");
                 },
-            
+                
+                getTemplateLinksToShow: function(){
+                    return templateLinksToShow;
+                },
+          
+          
+          
+                // 
                 setTemplateLinksToShow: function(templatelinkstoshow){
                   console.log("Being Called: condition = " + templatelinkstoshow);
+                  
+                  setTemplateLinks = function(templateLinksConfigData){
+                    console.log("Template Links at component-services.js is: " + JSON.stringify(templateLinksConfigData));
+                  };
+                  VnData.setLinksToShow(setTemplateLinks);
+                  
+                  //console.log("Local menu body: " + JSON.stringify(linksToShow));
+                  
                   
                   switch(templatelinkstoshow){
                   
                     case 'buyprice':
                         templateLinksToShow.templateLink01 = true;
+                        templateLinksToShow.templateLink01Text = "";
                         templateLinksToShow.templateLink02 = true;
+                        templateLinksToShow.templateLink02Text = "";
                         templateLinksToShow.templateLink03 = false;  
+                        templateLinksToShow.templateLink03Text = "";
                         templateLinksToShow.templateLink04 = true;  
                         templateLinksToShow.templateLink04Text = "<a  class='topTemplateMenuLink' \n\
                                                                       title='Go directly to Tarp Tie Down store' \n\
@@ -87,8 +125,11 @@ angular.module("viewNav")
                     
                     case 'view00':
                         templateLinksToShow.templateLink01 = true;
+                        templateLinksToShow.templateLink01Text = "";
                         templateLinksToShow.templateLink02 = true;
-                        templateLinksToShow.templateLink03 = false;  
+                        templateLinksToShow.templateLink02Text = "";
+                        templateLinksToShow.templateLink03 = false;
+                        templateLinksToShow.templateLink03Text = "";
                         templateLinksToShow.templateLink04 = true;  
                         templateLinksToShow.templateLink04Text = "<a  class='topTemplateMenuLink' \n\
                                                                       title='Go directly to EZ Grabbit application pages' \n\
@@ -98,16 +139,16 @@ angular.module("viewNav")
                         break;
                      
                     case 'default':
-                        templateLinksToShow.templateLink01 = true;  
+                        templateLinksToShow.templateLink01 = true; 
+                        templateLinksToShow.templateLink01Text = "";
                         templateLinksToShow.templateLink02 = true;  
-                        templateLinksToShow.templateLink03 = false;  
-                        templateLinksToShow.templateLink04 = false;  
+                        templateLinksToShow.templateLink02Text = "";
+                        templateLinksToShow.templateLink03 = false; 
+                        templateLinksToShow.templateLink03Text = "";
+                        templateLinksToShow.templateLink04 = false; 
+                        templateLinksToShow.templateLink04Text = "";
                         break;
                   } 
-                },
-
-                getTemplateLinksToShow: function(){
-                    return templateLinksToShow;
                 }
         };
     }]);
