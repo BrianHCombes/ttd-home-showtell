@@ -3,6 +3,8 @@
                 {"comment2":"It is accessed by the components-children.js, component-services.js, services-http.js files and presented by the components-child_1.html file"}
               ],
               
+  "btnText": {"showText":"LOCAL&nbsp;MENU", "hideText":"HIDE&nbsp;LOCAL&nbsp;MENU"},            
+              
   "localMenuBody":  [   
                       {"rowClass":"topMenuNav2",   "selection":"Top Menu",         "view":"",     "destination":""},
                       {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tarp Tie Down Home",         "view":"intro",     "destination":"TTD Home       "},
