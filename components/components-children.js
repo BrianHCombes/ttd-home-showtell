@@ -21,7 +21,7 @@ angular.module("viewNav")
             child1Self.rsNavleft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
             child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  
             
-            // templateLinksToShow is an object and the its properties determine what links to show on the template top menu
+            // templateLinksToShow is an object and its properties determine what links to show on the template top menu
             child1Self.templateLinksToShow = NavMenuFactory.getTemplateLinksToShow();
             
             // Sets mode of the "NAVIGATE" button
@@ -85,6 +85,7 @@ angular.module("viewNav")
                 child1Self.morelessText1 = infoThisPageBtnText.showBtnText;
                 //console.log("Button text is: " + child1Self.morelessText1);
                 child1Self.moreless1 = function(){
+                    console.log("WTF");
                     if(child1Self.morelessText1 === infoThisPageBtnText.showBtnText){
                         child1Self.morelessText1 = infoThisPageBtnText.hideBtnText;
                         child1Self.display1 = true;

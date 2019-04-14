@@ -1,4 +1,4 @@
-
+<!--ng-bind-html="$ctrl.morelessText1"-->
 <div style="position:relative;">
       <span style="text-align:center;">
         <span ng-show="$ctrl.templateLinksToShow.templateLink01"
@@ -6,7 +6,7 @@
               title="Product or page discussion with links as needed to pertinent information"
               ng-click="$ctrl.moreless1()" 
               style="{{$ctrl.rsTemplateTopMenufontsize1}};"
-              ng-bind-html="$ctrl.morelessText1">
+              ng-bind-html="$ctrl.templateLinksToShow.templateLink01Text">
         </span>
         <span ng-show="$ctrl.templateLinksToShow.templateLink02" style="font-size:0.5em; vertical-align:middle;">&#9679;</span>
         <span ng-show="$ctrl.templateLinksToShow.templateLink02"

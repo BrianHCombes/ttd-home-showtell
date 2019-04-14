@@ -1,19 +1,19 @@
 angular.module("viewNav")
 
     .factory("NavMenuFactory", [ "VnData", function(VnData){
-            
+           
         var templateLinksToShow = {
-          // default
-          templateLink01:true,
-          templateLink01Text:"Text01",
-          templateLink02:true,
-          templateLink02Text:"Text02",
-          templateLink03:false,
-          templateLink03Text:"Text03",
-          templateLink04:false,
-          templateLink04Text:"Text04"
-          
-        };  
+                                    // default
+                                    templateLink01:true,
+                                    templateLink01Text:"Text01",
+                                    templateLink02:true,
+                                    templateLink02Text:"Text02",
+                                    templateLink03:false,
+                                    templateLink03Text:"Text03",
+                                    templateLink04:false,
+                                    templateLink04Text:"Text04"
+
+                                  };  
         
         VnData.localMenuConfig();
         
@@ -33,7 +33,7 @@ angular.module("viewNav")
                     
                     //return btnText;
                 },
-                
+          
                 infoThisPageCONFIG: function(){ 
                         //var btnText = {"showText":"INFO&nbsp;THIS&nbsp;PAGE", "hideText":"HIDE&nbsp;INFO"};
                         //var btnTextJSON = {};
@@ -88,24 +88,29 @@ angular.module("viewNav")
                     VnData.localMenuConfig(localMenuCallBack, "localMenuBtnText");
                 },
                 
-                getTemplateLinksToShow: function(){
+//***********************************************************************************************************************************************************                
+// This section deals with what template links to show on a given template. INFO THIS PAGE and LOCAL MENU links are considered default.
+
+          getTemplateLinksToShow: function(){
                     return templateLinksToShow;
                 },
-          
-          
           
                 // 
                 setTemplateLinksToShow: function(templatelinkstoshow){
                   console.log("Being Called: condition = " + templatelinkstoshow);
                   
+                  // Callback here
                   setTemplateLinks = function(templateLinksConfigData){
-                    console.log("Template Links at component-services.js is: " + JSON.stringify(templateLinksConfigData));
+                    //console.log("Template Links at component-services.js is: " + JSON.stringify(templateLinksConfigData));
+                    templateLinksToShow = templateLinksConfigData.templatelinkstoshow[templatelinkstoshow];
+                    console.log("Template Link accessed: " + templatelinkstoshow + " and content is: " + JSON.stringify(templateLinksConfigData.templatelinkstoshow[templatelinkstoshow]));
                   };
-                  VnData.setLinksToShow(setTemplateLinks);
+                  VnData.setLinksToShow(setTemplateLinks); // invoke http call
                   
                   //console.log("Local menu body: " + JSON.stringify(linksToShow));
                   
                   
+/*                   
                   switch(templatelinkstoshow){
                   
                     case 'buyprice':
@@ -148,7 +153,9 @@ angular.module("viewNav")
                         templateLinksToShow.templateLink04 = false; 
                         templateLinksToShow.templateLink04Text = "";
                         break;
-                  } 
+                  }
+                  
+*/
                 }
         };
     }]);

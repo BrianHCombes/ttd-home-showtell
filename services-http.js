@@ -97,16 +97,19 @@ angular.module("viewNav")
                             var templateLinksToShow = {};
                             $http.get('json-template-menu-links.json', { cache: true }).then(function (resp){
                               templateLinksToShow = resp.data;
-                              responseData();
+                              templateLinksConfigDataRef(templateLinksToShow);  // templateLinksToShow
+                              //responseData();
                             },
                             function (resp){
                               console.log("ERROR! ERROR!: Failed to access the json-template-menu-links.json file.");
                             });
                             
+/*                             
                             function responseData(){
                               templateLinksConfigDataRef(templateLinksToShow);  // templateLinksToShow
                             }
-        }          
+*/
+          }          
     };                 
                               
 }]);
