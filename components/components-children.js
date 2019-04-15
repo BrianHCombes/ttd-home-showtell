@@ -24,34 +24,23 @@ angular.module("viewNav")
             // templateLinksToShow is an object and its properties determine what links to show on the template top menu
             child1Self.templateLinksToShow = NavMenuFactory.getTemplateLinksToShow();
             
-            // Sets mode of the "NAVIGATE" button
+            // The localMENU method activates and configures the LOCAL MENU per the template being displayed
+            child1Self.display2 = false;
+            child1Self.localMENU = function(){
+                if(child1Self.display2 === false){
+                    child1Self.display2 = true;
+                    var urlString = document.URL;
+                    var queryParam = urlString.slice(urlString.search("#/")+2);
+                    localMenuConfig(queryParam);
+                } 
+                else {
+                    child1Self.display2 = false;
+                }
+            }; 
             
-            // This method getLocalMenuBtnText(localMenuBtnText) uses callback architecture
-            function getLocalMenuBtnText(localMenuBtnText){
-              console.log("At the components-children.js file the btn text is: " + JSON.stringify(localMenuBtnText));
-              var btnText = localMenuBtnText; 
-              
-              console.log("At the components-children.js file ASSIGNMENTS the btn text is: " + JSON.stringify(btnText));
-              child1Self.display2 = false;
-              child1Self.morelessText2 = btnText.showText;
-              child1Self.moreless2 = function(){
-                  if(child1Self.morelessText2 === btnText.showText){
-                      child1Self.morelessText2 = btnText.hideText;
-                      child1Self.display2 = true;
-                      var urlString = document.URL;
-                      var queryParam = urlString.slice(urlString.search("#/")+2);
-                      callMenu(queryParam);
-                  } 
-                  else {
-                      child1Self.morelessText2 = btnText.showText;
-                      child1Self.display2 = false;
-                  }
-              }; 
-            };
-            NavMenuFactory.getLocalMenuBtnTEXT(getLocalMenuBtnText);
-            
-            // all methods in the callMenu(queryParam) function use callback architecture.
-            function callMenu(queryParam){
+            // The localMenuConfig(queryParam) method is invoked by the child1Self.localMENU method and calls all methods used to configure the LOCAL MENU. 
+            // Note: This method uses callback architecture throughout.
+            function localMenuConfig(queryParam){
                 var locationHighlight;
               
                 // Nested callbacks - first NavMenuFactory.getLocalMenuHighLIGHT(getLocalMenuHighLight) is called to get the HighLight object.
@@ -59,17 +48,13 @@ angular.module("viewNav")
                 // Then that high light value is sent along with the NavMenuFactory.getLocalMenubody(getLocalMenuBody, locationHighlight) method
                 // to get the local menu body with the appropriately highlighted view (in red) on the menu when displayed.
                 function getLocalMenuHighLight(localMenuHighLight){
-                  
                   locationHighlight = localMenuHighLight[queryParam];
-                  
                   function getLocalMenuBody(localMenuBody){
                     child1Self.navMenuBody = localMenuBody;
                   };
                   NavMenuFactory.getLocalMenubody(getLocalMenuBody, locationHighlight); // step 2: send highlight along with getLocalMenuBody callback 
-                  
                 };
                 NavMenuFactory.getLocalMenuHighLIGHT(getLocalMenuHighLight); // step 1: get highlight by sending getLocalMenuHighLight callback
-
               
                 function getLocalMenuHeader(localMenuHeader){
                   child1Self.localMenuHeader = localMenuHeader;
@@ -78,31 +63,23 @@ angular.module("viewNav")
             };
             
             
-            // Get "INFO THIS PAGE" button text. 
-            function getReadAboutBtnText(infoThisPageBtnText){
+            child1Self.display1 = false;
+            child1Self.moreless1 = function(){
+                //console.log("Now button text is: " + child1Self.morelessText1);
+                if(child1Self.display1 === false){
+                    // child1Self.morelessText1 = infoThisPageBtnText.hideBtnText;
+                    child1Self.display1 = true;
+                    var urlString = document.URL;
+                    var queryParam = urlString.slice(urlString.search("#/")+2);
+                    readAboutText(queryParam);
+                } 
+                else {
+                    child1Self.display1 = false;
+                }
+            }; 
             
-                child1Self.display1 = false;
-                child1Self.morelessText1 = infoThisPageBtnText.showBtnText;
-                //console.log("Button text is: " + child1Self.morelessText1);
-                child1Self.moreless1 = function(){
-                    console.log("WTF");
-                    if(child1Self.morelessText1 === infoThisPageBtnText.showBtnText){
-                        child1Self.morelessText1 = infoThisPageBtnText.hideBtnText;
-                        child1Self.display1 = true;
-                        var urlString = document.URL;
-                        var queryParam = urlString.slice(urlString.search("#/")+2);
-                        readAboutText(queryParam);
-                    } 
-                    else {
-                        child1Self.morelessText1 = infoThisPageBtnText.showBtnText;
-                        child1Self.display1 = false;
-                    }
-                }; 
-            }
-            NavMenuFactory.infoThisPageBtnText(getReadAboutBtnText);
+            
             NavMenuFactory.infoThisPageCONFIG();
-            
-            
                 
             function readAboutText(queryParam){
                 

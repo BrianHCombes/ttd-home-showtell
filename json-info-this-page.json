@@ -1,9 +1,6 @@
 {
   "infoThisPage": 
-      { "btnText":
-          { "showBtnText":"INFO&nbsp;THIS&nbsp;PAGE", "hideBtnText":"HIDE&nbsp;INFO" },
-
-        "template":
+      { "template":
           { "intro":    {"infoThisPageHeaderText":"WhoDAT!", "infoThisPageBodyText":""},
             "ttd":      {"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
             "buyprice": {"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
