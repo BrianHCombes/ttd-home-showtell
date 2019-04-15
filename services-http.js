@@ -38,18 +38,6 @@ angular.module("viewNav")
                         }
                       },
 
-        btnConfig:    function(infoThisPageCallBackRef, itemToPopulate){
-                        switch(itemToPopulate){
-                          case "btnText":         $http.get('json-info-this-page.json', { cache: true }).then(function(resp) {
-                                                  //console.log("From the JSON file " + JSON.stringify(resp.data));
-                                                  //console.log("A value is: " + resp.data.infoThisPage.btnText.showBtnText);
-                                                  infoThisPageCallBackRef(resp.data.infoThisPage.btnText);
-                                                  //console.log("The WTF is: " + resp.data.infoThisPage.template.intro.infoThisPageHeaderText);
-                                                  });
-                                                  break;
-                        }
-                      },
-                      
         infoThisPageConfig: function(infoThisPageCallBackRef){
                               $http.get('json-info-this-page.json', { cache: true }).then(function(resp) {
                                         //console.log("From the JSON file " + JSON.stringify(resp.data));
