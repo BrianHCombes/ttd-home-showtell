@@ -78,8 +78,12 @@ angular.module("viewNav")
                 }
             }; 
             
-            
-            NavMenuFactory.infoThisPageCONFIG();
+            getInfoThisPage = function(getInfoThisPageData){
+                      child1Self.test1 = getInfoThisPageData.header;
+                      child1Self.test2 = getInfoThisPageData.body;
+            };
+            NavMenuFactory.infoThisPageCONFIG(getInfoThisPage);
+                
                 
             function readAboutText(queryParam){
                 

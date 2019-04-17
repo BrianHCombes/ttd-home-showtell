@@ -1,59 +1,228 @@
 {
-  "infoThisPage": 
-      { "template":
-          { "intro":    {"infoThisPageHeaderText":"WhoDAT!", "infoThisPageBodyText":""},
-            "ttd":      {"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "buyprice": {"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "products": {"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "reviews":  {"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view00":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view01":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view02":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view03":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view04":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view05":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view06":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view07":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view08":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view09":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view10":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view11":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view12":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view13":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view14":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view15":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view16":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view17":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view18":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view19":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view20":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view21":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view22":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view23":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view24":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view25":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view26":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view27":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view28":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view29":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view30":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view31":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view32":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view33":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view34":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view35":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view36":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view37":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view38":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view39":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view40":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view41":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view42":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view43":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view44":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view45":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view46":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""},
-            "view47":{"infoThisPageHeaderText":"", "infoThisPageBodyText":""}
-          }
+  "infoThisPage": {
+    "template": {
+      "intro": {
+        "infoThisPageHeaderText": "<div class='introStyle06'>Grabbit Tarp Tie Downs and Accessories<br> <span class='introStyle07'>(When tarp clips won't do)</span></div><br><br>",
+        "infoThisPageBodyText": " <span class='introStyle08'>Welcome</span><br> Welcome to the <a class='introStyle09' href='#/view00'>&nbsp;EZ&nbsp;Grabbit,&nbsp;</a> <a class='introStyle09' href='#/view02'>&nbsp;Mini&nbsp;Grabbit,&nbsp;</a> and <a    class='introStyle09' href='#/view01'>&nbsp;Long&nbsp;Grabbit&nbsp;</a> family of premium tarp tie downs. Using patented tech called linear grappling Grabbits are more reliable, more versatile, and easier to use than other tarp holding devices.<br><br><span class='introStyle08'>High Strength Hold</span><br>With Grabbits you get a high strength hold for a safe and reliable grip on tarp, fabric, plastic-sheet, and heavyweight materials such as canvas and vinyl.<br><br> <span class='introStyle08'>All Weather</span><br> They are ideal for use in high wind and all weather conditions making them perfect for camping, home project, construction, hay cover, storage, transportation and wherever tarps are used.<br><br> <span class='introStyle08'>Accessories</span><br> Look at the <a class='introStyle09' href='#/view04'>&nbsp;RockBuster&nbsp;Ground&nbsp;Stake&nbsp;</a> and the <a class='introStyle09' href='#/view03'>&nbsp;EZ&nbsp;Adjust&nbsp;Rope&nbsp;Adjuster&nbsp;</a> to compliment your tarp management needs. So take a look at these and the other tarp management accesories we offer. Select <a class='introStyle09' href='#/products'>&nbsp;Products&nbsp;</a> from the menu above to browse our offereings<br><br> <a class='btnStyle2' href='#/transition'><b>We're under construction</b></a><br><br>"
+		},
+      "ttd": {
+        "infoThisPageHeaderText": "<div class='introStyle06'>Grabbit Tarp Tie Downs and Accessories<br> <span class='introStyle07'>(When tarp clips won't do)</span></div><br><br>",
+        "infoThisPageBodyText": [ {"AA":"<span class='introStyle08'>Welcome1</span><br>"},
+								  {"AA":"<span class='introStyle08'>Welcome2</span><br>"},
+								  {"AA":"<span class='introStyle08'>Welcome3</span><br>"}
+								]
+      },
+      "buyprice": {
+        "infoThisPageHeaderText": "<div class='introStyle06'>Grabbit Tarp Tie Downs and Accessories<br> <span class='introStyle07'>(When tarp clips won't do)</span></div><br><br>",
+        "infoThisPageBodyText": [ "<span class='introStyle08'>Welcome BuyPrice1</span><br>",
+								  "<span class='introStyle08'>Welcome BuyPrice2</span><br>",
+								  "<span class='introStyle08'>Welcome BuyPrice3</span><br>"
+								]
+      },
+      "products": {
+        "infoThisPageHeaderText": "PRODUCTS WTF!",
+        "infoThisPageBodyText": [ 
+                                  "<div class='buyprice02'>&nbsp;</div>&nbsp;&#9679; Click on the <span class='buyprice01'><b>Quick Price</b></span> button for per device price ranges.<br>",
+                                  "<div class='buyprice02'>&nbsp;</div>&nbsp;&#9679; Select a product from the <span class='buyprice01'><b>Quick Price</b></span> menu or scroll down for the corresponding pack size details.<br>",
+								  "<div class='buyprice02'>&nbsp;</div>&nbsp;&#9679; Then select the <span class='buyprice01'><b>Shop...</b></span> button for the complete pack size table."
+                                ]
+      },
+      "reviews": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view00": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view01": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view02": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view03": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view04": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view05": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view06": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view07": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view08": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view09": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view10": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view11": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view12": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view13": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view14": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view15": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view16": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view17": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view18": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view19": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view20": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view21": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view22": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view23": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view24": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view25": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view26": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view27": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view28": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view29": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view30": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view31": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view32": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view33": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view34": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view35": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view36": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view37": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view38": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view39": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view40": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view41": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view42": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view43": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view44": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view45": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view46": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view47": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
       }
+    }
+  }
 }
