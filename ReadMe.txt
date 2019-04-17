@@ -180,14 +180,15 @@ Process:
 https://www.softpedia.com/get/Programming/Other-Programming-Files/JSONedit.shtml
 
 04/17/2019
-    Have been moving non framework related data into JSON. Ran into a "management" 
-    problem when adding large HTML snippets that are accessed for presentation 
+    Have been moving non framework related data into JSON. But had a 
+    "management" problem when adding large-ish HTML snippets that are accessed 
+    for presentation 
     in the "INFO THIS PAGE" button content. It was hard to organize the HTML 
     for easy edits because newline escapes are not allowed in JSON property 
     values. So searched for a nice JSON editor and found JSONedit offered by 
-    Softpedia that is nice but still cannot let me organize the HTML for easy 
-    editing. To solve this I decided to place small individual HTML snippets 
-    into JSON array format and then concatenate the strings to form an HTML 
+    Softpedia. It's nice but still cannot let me organize the HTML for easy 
+    editing. To solve this I decided to place small individual HTML fragments 
+    into JSON array format and then concatenate the fragments to form an HTML 
     block of which is then presented. Seems to work just fine while allowing 
     me to make a nice tidy, easily edited, HTML block when editing from the 
-    JSON file. This every new HTML segment is an array element in the JSON file.
+    JSON file. This every HTML fragment is an array element in the JSON file.

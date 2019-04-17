@@ -8,24 +8,24 @@ angular.module("viewNav")
         
         return {
             
-                infoThisPageCONFIG: function(getInfoThisPageRef){ 
+                // Incoming and outgoing callbacks used here to retrieve INFO THIS PAGE data from the services-http.js file and get it to the components-children.js file. 
+                // Note: The INFO THIS PAGE body text may consist of multiple HTML fragments which are kept in JSON array form, retrieved and assembled here into a single
+                // HTML string for delivery to the components-children.js file and subsequent presentation. 
+                infoThisPageCONFIG: function(getInfoThisPageRef, view){ 
                         
                         infoThisPageCallBack = function(infoThisPageConfigData){
                           var infoThisPage = {"header":"", "body":""};
                           var concatenatedHTMLStrings = "";
-                          for(i=0; i<infoThisPageConfigData.template.products.infoThisPageBodyText.length; i++){
-                            concatenatedHTMLStrings += infoThisPageConfigData.template.products.infoThisPageBodyText[i];
-                            console.log(concatenatedHTMLStrings);
-                            if(i === infoThisPageConfigData.template.products.infoThisPageBodyText.length-1){
-                              infoThisPage.header = infoThisPageConfigData.template.products.infoThisPageHeaderText;
+                          for(i=0; i<infoThisPageConfigData.template[view].infoThisPageBodyText.length; i++){
+                            concatenatedHTMLStrings += infoThisPageConfigData.template[view].infoThisPageBodyText[i];
+                            if(i === infoThisPageConfigData.template[view].infoThisPageBodyText.length-1){
+                              infoThisPage.header = infoThisPageConfigData.template[view].infoThisPageHeaderText;
                               infoThisPage.body = concatenatedHTMLStrings;
                               getInfoThisPageRef(infoThisPage);
                             }
                           }
                         };
                         VnData.infoThisPageConfig(infoThisPageCallBack);
-                    
-                    //return btnText;
                 },
                 
   
