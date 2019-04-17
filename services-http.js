@@ -30,22 +30,35 @@ angular.module("viewNav")
                                                   menuCallbackRef(resp.data);
                                                   });
                                                   break;
-
-                          case "localMenu":       $http.get('json-local-menu.json', { cache: true }).then(function(resp) {
-                                                  menuCallbackRef(resp.data);
-                                                  });
-                                                  break;
                         }
                       },
+
+
+
+
+
 
         infoThisPageConfig: function(infoThisPageCallBackRef){
                               $http.get('json-info-this-page.json', { cache: true }).then(function(resp) {
                                         //console.log("From the JSON file " + JSON.stringify(resp.data));
                                         //console.log("A value is: " + resp.data.infoThisPage.btnText.showBtnText);
                                         infoThisPageCallBackRef(resp.data.infoThisPage);
+                                        //var infoThisPage = resp.data.infoThisPage;
+                                        //console.log("infoThisPage equals: " + JSON.stringify(infoThisPage));
+                                        //console.log("infoThisPage.template.intro equals: " + JSON.stringify(infoThisPage.template.intro));
                                         //console.log("The WTF is: " + resp.data.infoThisPage.template.intro.infoThisPageHeaderText);
                               });
                             },
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                       
         localMenuConfig:  function(localMenuCallBackRef, itemToConfigure){
                             var localMenuConfigData = {};

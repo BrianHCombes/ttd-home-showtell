@@ -8,15 +8,20 @@ angular.module("viewNav")
         
         return {
             
-                infoThisPageCONFIG: function(){ 
-                        //var btnText = {"showText":"INFO&nbsp;THIS&nbsp;PAGE", "hideText":"HIDE&nbsp;INFO"};
-                        //var btnTextJSON = {};
+                infoThisPageCONFIG: function(getInfoThisPageRef){ 
                         
                         infoThisPageCallBack = function(infoThisPageConfigData){
-                          // btnTextJSON = data.infoThisPage.btnText
-                          //console.log("From the services-http factory: " + JSON.stringify(infoThisPageConfigData));
-                          //console.log("From the services-http factory: " + btnTextJSON.showBtnText);
-                          //getInfoThisPageBtnTextRef(btnText);
+                          var infoThisPage = {"header":"", "body":""};
+                          var concatenatedHTMLStrings = "";
+                          for(i=0; i<infoThisPageConfigData.template.products.infoThisPageBodyText.length; i++){
+                            concatenatedHTMLStrings += infoThisPageConfigData.template.products.infoThisPageBodyText[i];
+                            console.log(concatenatedHTMLStrings);
+                            if(i === infoThisPageConfigData.template.products.infoThisPageBodyText.length-1){
+                              infoThisPage.header = infoThisPageConfigData.template.products.infoThisPageHeaderText;
+                              infoThisPage.body = concatenatedHTMLStrings;
+                              getInfoThisPageRef(infoThisPage);
+                            }
+                          }
                         };
                         VnData.infoThisPageConfig(infoThisPageCallBack);
                     
@@ -55,7 +60,7 @@ angular.module("viewNav")
                 getLocalMenuBtnTEXT: function(getLocalMenuBtnTextRef){
                   
                     localMenuCallBack = function(localMenuBtnText){
-                      console.log("From the services-http factory local menu " + JSON.stringify(localMenuBtnText));
+                      //console.log("From the services-http factory local menu " + JSON.stringify(localMenuBtnText));
                       getLocalMenuBtnTextRef(localMenuBtnText);
                     };
                     // var btnText = {"showText":"LOCAL&nbsp;MENU", "hideText":"HIDE&nbsp;LOCAL&nbsp;MENU"};
