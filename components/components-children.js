@@ -81,8 +81,8 @@ angular.module("viewNav")
             function infoThisPageConfig(queryParam){
               
               getInfoThisPage = function(getInfoThisPageData){
-                        child1Self.readAboutHeaderText = getInfoThisPageData.header;
-                        child1Self.readAboutBodyText = getInfoThisPageData.body;
+                        child1Self.infoThisPageHeaderText = getInfoThisPageData.header;
+                        child1Self.infoThisPageBodyText = getInfoThisPageData.body;
               };
               NavMenuFactory.infoThisPageCONFIG(getInfoThisPage, queryParam);
               

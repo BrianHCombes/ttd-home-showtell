@@ -59,7 +59,7 @@ angular.module('viewNav')
             // Response Section 3
             self01.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
             
-            NavMenuFactory.setTemplateLinksToShow("default");
+            NavMenuFactory.setTemplateLinksToShow("view01");
             compFactory.logView(01);
         }]
     })
@@ -92,7 +92,7 @@ angular.module('viewNav')
             // Response Section 4
             self02.rs4fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
             
-            NavMenuFactory.setTemplateLinksToShow("default");
+            NavMenuFactory.setTemplateLinksToShow("view02");
             compFactory.logView(02);
         }]    
     })
@@ -120,7 +120,7 @@ angular.module('viewNav')
             // Response Section 3
             self03.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";        /* AR_1.50_0.73 */
          
-            NavMenuFactory.setTemplateLinksToShow("default");
+            NavMenuFactory.setTemplateLinksToShow("view03");
             compFactory.logView(03);
         }]
     });
