@@ -74,17 +74,42 @@ angular.module("viewNav")
                           return templateLinksToShow;
                       },
 
-                setTemplateLinksToShow: function(templatelinkstoshow){
-                  //console.log("Being Called: condition = " + templatelinkstoshow);
+                setTemplateLinksToShow: function(templatelinkstoshowTEST){
+                  console.log("view passed: = " + templatelinkstoshowTEST);
+                  
+                  // var templatelinkstoshow = "default";
+/*                   
+                  var templatelinkstoshow = templatelinkstoshowTEST;
+                  setTimeout(function(){
+                    var urlString = document.URL;
+                    var queryParam = urlString.slice(urlString.search("#/")+2);
+                    // templatelinkstoshow = queryParam;
+                    
+                    console.log("view queried: = " + templatelinkstoshow);
+                  },100);
+*/
+                  
+/*                   
+                  var templatelinkstoshow = templatelinkstoshowTEST;
+                    var urlString = document.URL;
+                    var queryParam = urlString.slice(urlString.search("#/")+2);
+                    templatelinkstoshow = queryParam;
+                    console.log("view queried: = " + templatelinkstoshow);
+*/
+                  var templatelinkstoshow = templatelinkstoshowTEST;
+                                
+                  
+                  
+                  
 
                   // Callback here
                   setTemplateLinks = function(templateLinksConfigData){
                     //console.log("Template Links at component-services.js is: " + JSON.stringify(templateLinksConfigData));
                     templateLinksToShow = templateLinksConfigData.templatelinkstoshow[templatelinkstoshow];
+                    console.log("timeout2!");
                     //console.log("Template Link accessed: " + templatelinkstoshow + " and content is: " + JSON.stringify(templateLinksConfigData.templatelinkstoshow[templatelinkstoshow]));
                   };
-                  VnData.setLinksToShow(setTemplateLinks); // invoke http call
-
+                    VnData.setLinksToShow(setTemplateLinks); // invoke http call
                 }
         };
     }]);

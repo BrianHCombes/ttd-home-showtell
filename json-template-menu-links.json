@@ -1,22 +1,384 @@
 {
+  "comments": {"comment1":"Need to set the view argument to pass in the respective template controller",
+               "comment2":"templateLink01 and templateLink02 are considered default"
+              },
+  
   "templatelinkstoshow": {
-                          "buyprice": { 
-                                      "templateLink01":true, "templateLink01Text":"INFO THIS PAGE",
-                                      "templateLink02":true, "templateLink02Text":"LOCAL MENU",
+                          "intro": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":true, "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to Tarp Tie Down store' href='https://www.tarptiedown.com/TTD-Store-2018/'> TTD STORE </a>"
+                                      "templateLink04":true,  "templateLink04Text":"WTF"
                                     },
+                          
+                          "ttd": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                    
+                          "buyprice": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":true,  "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to Tarp Tie Down store' href='https://www.tarptiedown.com/TTD-Store-2018/'> TTD STORE </a>"
+                                    },
+                          
+                          "products": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                          
+                          "reviews": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                          
     
                           "view00": { 
-                                      "templateLink01":true, "templateLink01Text":"INFO THIS PAGE",
-                                      "templateLink02":true, "templateLink02Text":"LOCAL MENU",
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":true, "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to EZ Grabbit application pages' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html'> EZG APP PAGES </a>"
+                                      "templateLink04":true,  "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to EZ Grabbit application pages' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html'> APP PAGES </a>"
                                     },
-                                            
+                                    
+                          "view01": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view02": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view03": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":true,  "templateLink04Text":"WHODAT"
+                                    },
+                                         
+                          "view04": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view05": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view06": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view07": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view08": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view09": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view10": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view11": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view12": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view13": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view14": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view15": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+
+					      "view16": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view17": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view18": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view19": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view20": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view21": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view22": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view23": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view24": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view25": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view26": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view27": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view28": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view29": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view30": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view31": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view32": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view33": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view34": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view35": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view36": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view37": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view38": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view39": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view40": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view41": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view42": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view43": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view44": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view45": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view46": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
+                          "view47": { 
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
+                                      "templateLink03":false, "templateLink03Text":"",
+                                      "templateLink04":false, "templateLink04Text":""
+                                    },
+                                         
                           "default": { 
-                                      "templateLink01":true, "templateLink01Text":"INFO THIS PAGE",
-                                      "templateLink02":true, "templateLink02Text":"LOCAL MENU",
+                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
                                       "templateLink04":false, "templateLink04Text":""
                                     }

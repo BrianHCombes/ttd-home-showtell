@@ -26,7 +26,7 @@ angular.module("viewNav")
             
             //console.log(introSelf.introClass1);
             
-            NavMenuFactory.setTemplateLinksToShow("default");
+            NavMenuFactory.setTemplateLinksToShow("intro");
             viewManager.topMenuToHighlight(0);    
             
         }]
