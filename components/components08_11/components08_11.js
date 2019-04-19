@@ -24,7 +24,6 @@ angular.module('viewNav')
             self08.rs3fontsize1 = "font-size:" + ((0.00095)*(viewWidth)+0.38778) + "em";            /* AR_1.50_0.73 */
             self08.rs3margintop1 = "margin-top:" + ((0.03704)*(viewWidth)+11.66667) + "px";         /* AR_55.00_25.00 */
             
-            NavMenuFactory.setTemplateLinksToShow("default");
             compFactory.logView(08);
         }]
     })
@@ -52,9 +51,6 @@ angular.module('viewNav')
             self09.rs2fontsize2 = "font-size:" + ((0.00154)*(viewWidth)+0.19444) + "em";
             self09.rs2fontsize3 = "font-size:" + ((0.00165)*(viewWidth) + 0.07294) + "em";
             
-            // Response Section 3 (Not needed for now)
-
-            NavMenuFactory.setTemplateLinksToShow("default");
             compFactory.logView(09);
         }]
     })

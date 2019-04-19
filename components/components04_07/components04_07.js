@@ -27,7 +27,6 @@ angular.module('viewNav')
             self04.rs4positiontop2 = "top:" + ((0.40741)*(viewWidth)-26.66667) + "px";      /* AR_450.00_120.00 */     
             self04.rs4fontsize5 = "font-size:" + ((0.00247)*(viewWidth)+0.11111) + "em";    
             
-            NavMenuFactory.setTemplateLinksToShow("default");
             compFactory.logView(04);
         }]
     })
@@ -57,7 +56,6 @@ angular.module('viewNav')
             self05.rs3positiontop2 = "top:" + ((0.43210)*(viewWidth)-5.55556) + "px"; 
             self05.rs3fontsize5 = "font-size:" + ((0.00162)*(viewWidth)+0.76511) + "em";    /* AR_2.66_1.35 */ /*relative to rs3fontsize1 */
             
-            NavMenuFactory.setTemplateLinksToShow("default");
             compFactory.logView(05);
         }]
     })
@@ -86,7 +84,6 @@ angular.module('viewNav')
             // AR Response Section 3
             self06.rs3top1 = "top:" + ((0.00309)*(viewWidth)-2.11111) + "vh";        /* AR_1.50_-1.00 */
             
-            NavMenuFactory.setTemplateLinksToShow("default"); 
             compFactory.logView(06);
         }]
     })
@@ -117,7 +114,6 @@ angular.module('viewNav')
             // AR Response Section 3
             self07.rs3top1 = "top:" + ((0.00247)*(viewWidth)-6.88889) + "vh";        /* AR_-4.00_-6.00 */
             
-            NavMenuFactory.setTemplateLinksToShow("default");
             compFactory.logView(07);
         }]
     });
