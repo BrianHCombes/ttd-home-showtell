@@ -4,7 +4,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/components-child_1.html',
        
-        controller: ['GetSet', 'NavMenuFactory', 'topMenuService', function(GetSet, NavMenuFactory, topMenuService){
+        controller: ['GetSet', 'NavMenuFactory', 'topMenuService', '$scope', function(GetSet, NavMenuFactory, topMenuService, $scope){
             var viewWidth = GetSet.getViewWidth();
                 
             var child1Self = this;
@@ -21,20 +21,58 @@ angular.module("viewNav")
             child1Self.rsNavleft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
             child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  
             
-            // templateLinksToShow is an object and its properties determine what links to show on the template top menu
-            child1Self.templateLinksToShow = NavMenuFactory.getTemplateLinksToShow();
             
-            // The localMENU method activates and configures the LOCAL MENU per the template being displayed
-            child1Self.display2 = false;
+//***********************************************************************************************************************************************************            
+// The getTemplateLinks method configures the links to show on the template (this is not the top menu) 
+
+            child1Self.templateLinksToShow = {};
+            getTemplateLinks = function(templateLinksToShow){
+              child1Self.templateLinksToShow = templateLinksToShow;
+              $scope.$apply(function(){child1Self.templateLinksToShow;});  // intiates a digest cycle
+            };
+            NavMenuFactory.getTemplateLinksToShow(getTemplateLinks);
+            
+  
+//***********************************************************************************************************************************************************            
+// The infoThisPageConfig method activates and configures the INFO THIS PAGE content per the template being displayed
+            
+            // The infoThisPageConfig method activates and configures the INFO THIS PAGE per the template being displayed.
+            // Configuration data is retrieved via $http requests to the json-info-this-page.json file using callback architecture.
+            child1Self.showInfoTHISPAGE = false;
+            child1Self.infoTHISPAGE = function(){
+                if(child1Self.showInfoTHISPAGE === false){
+                    child1Self.showInfoTHISPAGE = true;
+                    var urlString = document.URL;
+                    var queryParam = urlString.slice(urlString.search("#/")+2);
+                    infoThisPageConfig(queryParam);
+                } 
+                else {
+                    child1Self.showInfoTHISPAGE = false;
+                }
+            }; 
+            
+            function infoThisPageConfig(queryParam){
+              getInfoThisPage = function(getInfoThisPageData){
+                        child1Self.infoThisPageHeaderText = getInfoThisPageData.header;
+                        child1Self.infoThisPageBodyText = getInfoThisPageData.body;
+              };
+              NavMenuFactory.infoThisPageCONFIG(getInfoThisPage, queryParam);
+            };    
+            
+            
+//***********************************************************************************************************************************************************            
+// The localMENU method activates and configures the LOCAL MENU per the template being displayed
+
+            child1Self.showLocalMENU = false;
             child1Self.localMENU = function(){
-                if(child1Self.display2 === false){
-                    child1Self.display2 = true;
+                if(child1Self.showLocalMENU === false){
+                    child1Self.showLocalMENU = true;
                     var urlString = document.URL;
                     var queryParam = urlString.slice(urlString.search("#/")+2);
                     localMenuConfig(queryParam);
                 } 
                 else {
-                    child1Self.display2 = false;
+                    child1Self.showLocalMENU = false;
                 }
             }; 
             
@@ -61,32 +99,6 @@ angular.module("viewNav")
                 };
                 NavMenuFactory.getLocalMenuheader(getLocalMenuHeader);
             };
-            
-            
-            // The infoThisPageConfig method activates and configures the INFO THIS PAGE per the template being displayed.
-            // Configuration data is retrieved via $http requests to the json-info-this-page.json file using callback architecture.
-            child1Self.display1 = false;
-            child1Self.moreless1 = function(){
-                if(child1Self.display1 === false){
-                    child1Self.display1 = true;
-                    var urlString = document.URL;
-                    var queryParam = urlString.slice(urlString.search("#/")+2);
-                    infoThisPageConfig(queryParam);
-                } 
-                else {
-                    child1Self.display1 = false;
-                }
-            }; 
-            
-            function infoThisPageConfig(queryParam){
-              
-              getInfoThisPage = function(getInfoThisPageData){
-                        child1Self.infoThisPageHeaderText = getInfoThisPageData.header;
-                        child1Self.infoThisPageBodyText = getInfoThisPageData.body;
-              };
-              NavMenuFactory.infoThisPageCONFIG(getInfoThisPage, queryParam);
-              
-            }    
         }]
     });
     

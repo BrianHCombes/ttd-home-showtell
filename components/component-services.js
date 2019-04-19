@@ -27,7 +27,6 @@ angular.module("viewNav")
                         };
                         VnData.infoThisPageConfig(infoThisPageCallBack);
                 },
-                
   
                 // incoming and outgoing callbacks used here to retrieve local menu data from the services-http.js file and get it to the components-children.js file
                 getLocalMenuheader: function(getLocalMenuHeaderRef){
@@ -55,63 +54,25 @@ angular.module("viewNav")
                     };
                     VnData.localMenuConfig(localMenuCallBack, "localMenuItemHighLight");
                 },
-                
-                
-                getLocalMenuBtnTEXT: function(getLocalMenuBtnTextRef){
-                  
-                    localMenuCallBack = function(localMenuBtnText){
-                      //console.log("From the services-http factory local menu " + JSON.stringify(localMenuBtnText));
-                      getLocalMenuBtnTextRef(localMenuBtnText);
-                    };
-                    // var btnText = {"showText":"LOCAL&nbsp;MENU", "hideText":"HIDE&nbsp;LOCAL&nbsp;MENU"};
-                    VnData.localMenuConfig(localMenuCallBack, "localMenuBtnText");
-                },
+
                 
 //***********************************************************************************************************************************************************                
 // This section deals with what template links to show on a given template. INFO THIS PAGE and LOCAL MENU links are considered default.
 
-                getTemplateLinksToShow: function(){
-                          return templateLinksToShow;
-                      },
-
-                setTemplateLinksToShow: function(templatelinkstoshowTEST){
-                  console.log("view passed: = " + templatelinkstoshowTEST);
+                getTemplateLinksToShow: function(getTemplateLinksRef){
                   
-                  // var templatelinkstoshow = "default";
-/*                   
-                  var templatelinkstoshow = templatelinkstoshowTEST;
-                  setTimeout(function(){
-                    var urlString = document.URL;
-                    var queryParam = urlString.slice(urlString.search("#/")+2);
-                    // templatelinkstoshow = queryParam;
-                    
-                    console.log("view queried: = " + templatelinkstoshow);
-                  },100);
-*/
-                  
-/*                   
-                  var templatelinkstoshow = templatelinkstoshowTEST;
-                    var urlString = document.URL;
-                    var queryParam = urlString.slice(urlString.search("#/")+2);
-                    templatelinkstoshow = queryParam;
-                    console.log("view queried: = " + templatelinkstoshow);
-*/
-                  var templatelinkstoshow = templatelinkstoshowTEST;
-                                
-                  
-                  
-                  
-
-                  // Callback here
                   setTemplateLinks = function(templateLinksConfigData){
-                    //console.log("Template Links at component-services.js is: " + JSON.stringify(templateLinksConfigData));
-                    templateLinksToShow = templateLinksConfigData.templatelinkstoshow[templatelinkstoshow];
-                    console.log("timeout2!");
-                    //console.log("Template Link accessed: " + templatelinkstoshow + " and content is: " + JSON.stringify(templateLinksConfigData.templatelinkstoshow[templatelinkstoshow]));
+                    setTimeout(function(){                                      // setTimeout used to assure page URL is stable before reading
+                      var urlString = document.URL;
+                      var templateName = urlString.slice(urlString.search("#/")+2);
+                      templateLinksToShow = templateLinksConfigData.templatelinkstoshow[templateName];
+                      getTemplateLinksRef(templateLinksToShow);
+                    },100);
                   };
-                    VnData.setLinksToShow(setTemplateLinks); // invoke http call
+                  VnData.setLinksToShow(setTemplateLinks);                      // invoke http call 
                 }
-        };
+
+          };
     }]);
 
                         

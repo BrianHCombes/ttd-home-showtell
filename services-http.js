@@ -1,6 +1,6 @@
 angular.module("viewNav")
 
-// The factory service VnData retrieves menu configuration data from a local JSON file and image file names from MySQL DB
+// The factory service VnData retrieves menu and link configuration data from local JSON files and image file names from MySQL DB
 .factory('VnData', ['$http', function($http){
    
     return  {
@@ -33,32 +33,11 @@ angular.module("viewNav")
                         }
                       },
 
-
-
-
-
-
         infoThisPageConfig: function(infoThisPageCallBackRef){
                               $http.get('json-info-this-page.json', { cache: true }).then(function(resp) {
-                                        //console.log("From the JSON file " + JSON.stringify(resp.data));
-                                        //console.log("A value is: " + resp.data.infoThisPage.btnText.showBtnText);
                                         infoThisPageCallBackRef(resp.data.infoThisPage);
-                                        //var infoThisPage = resp.data.infoThisPage;
-                                        //console.log("infoThisPage equals: " + JSON.stringify(infoThisPage));
-                                        //console.log("infoThisPage.template.intro equals: " + JSON.stringify(infoThisPage.template.intro));
-                                        //console.log("The WTF is: " + resp.data.infoThisPage.template.intro.infoThisPageHeaderText);
                               });
                             },
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       
         localMenuConfig:  function(localMenuCallBackRef, itemToConfigure){
                             var localMenuConfigData = {};
@@ -93,24 +72,14 @@ angular.module("viewNav")
                           },
                           
 //  The setLinksToShow function calls the JSON file which has the configuration for what links to show at the top of each template/view page. INFO THIS PAGE and
-//  LOCAL MENU are the default links that are typically always shown. However,.
+//  LOCAL MENU are the default links that are typically always shown.
         setLinksToShow:   function(templateLinksConfigDataRef){
-                            var templateLinksToShow = {};
                             $http.get('json-template-menu-links.json', { cache: true }).then(function (resp){
-                              templateLinksToShow = resp.data;
-                              templateLinksConfigDataRef(templateLinksToShow);  // templateLinksToShow
-                              //responseData();
+                              templateLinksConfigDataRef(resp.data);  
                             },
                             function (resp){
-                              console.log("ERROR! ERROR!: Failed to access the json-template-menu-links.json file.");
+                              console.log("ERROR! ERROR!: Failed to access the json-template-menu-links.json file. Error: " + resp.status );
                             });
-                            
-/*                             
-                            function responseData(){
-                              templateLinksConfigDataRef(templateLinksToShow);  // templateLinksToShow
-                            }
-*/
-          }          
+                          }          
     };                 
-                              
 }]);

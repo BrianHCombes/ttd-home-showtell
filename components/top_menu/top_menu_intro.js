@@ -22,13 +22,7 @@ angular.module("viewNav")
             // AR Section 4
             introSelf.rs4fontsize1 = "font-size:" + ((0.00065)*(viewWidth)+0.49294) + "em";     /* AR_1.25_0.73 */
             
-            //introSelf.introClass1 = "introClass1{color:red}";
-            
-            //console.log(introSelf.introClass1);
-            
-            NavMenuFactory.setTemplateLinksToShow("intro");
             viewManager.topMenuToHighlight(0);    
-            
         }]
     })
     
