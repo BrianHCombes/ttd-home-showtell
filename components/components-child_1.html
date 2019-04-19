@@ -1,10 +1,9 @@
-<!--ng-bind-html="$ctrl.morelessText1"-->
 <div style="position:relative;">
       <span style="text-align:center;">
         <span ng-show="$ctrl.templateLinksToShow.templateLink01"
               class="textStyle4 topTemplateMenuHover" 
               title="Product or page discussion with links as needed to pertinent information"
-              ng-click="$ctrl.moreless1()" 
+              ng-click="$ctrl.infoTHISPAGE()" 
               style="{{$ctrl.rsTemplateTopMenufontsize1}};"
               ng-bind-html="$ctrl.templateLinksToShow.templateLink01Text">
         </span>
@@ -36,7 +35,7 @@
   
   <!--onclick="window.location.href='https://www.tarptiedown.com/TTD-Store-2018/'"-->
     <div class="textBoxStyle1 textStyle3"
-         ng-show="$ctrl.display1"
+         ng-show="$ctrl.showInfoTHISPAGE"
          style="position:absolute;
                 width:90%;
                 z-index:3;
@@ -46,7 +45,7 @@
                 {{$ctrl.rsReadAboutfontsize2}};
                 ">
         <span   class="closeText"
-                ng-click="$ctrl.moreless1()" 
+                ng-click="$ctrl.infoTHISPAGE()" 
                 style= "color:white;
                         float:right;
                        ">
@@ -127,7 +126,7 @@
     </div>
 
     <div class="textBoxStyle2 textStyle3"
-        ng-show="$ctrl.display2"
+        ng-show="$ctrl.showLocalMENU"
         style= "position:absolute;
                 top:10vh;
                 z-index:4;
