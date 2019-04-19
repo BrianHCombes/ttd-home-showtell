@@ -144,7 +144,7 @@ Process:
     < https://www.tarptiedown.com > so playing with that as of this date.
 
 03/22/2019
-    < MENU MANAGEMENT >
+    < MENU MANAGEMENT - JSON and SQL>
     Gotta start finding best practices for easily updating common areas among
     views like menus. Any one feature is easy but when you have numerous
     features to update it can get hectic. Here's a link for ideas:
@@ -157,3 +157,38 @@ Process:
     So far thinking going with a DataBase is best but still investigating.
 
     Also think XML
+
+03/29/2019
+    < MENU MANAGEMENT - JSON and SQL >
+    Here's a microsoft link about how JSON and SQL can talk to each other
+    by using built in functions. Cool!!
+    < https://docs.microsoft.com/en-us/sql/relational-databases/json/json-data-sql-server?view=sql-server-2017 >
+
+04/06/2019
+    For now have started to create JSON files for the menu management. In fact,
+    the objective is to move all dynamic data out of the framework code and
+    access it from JSON. This will make it much more manageable. In doing so,
+    the JSON data must be retrieved asynchronously with callbacks save for
+    the http request in the (now new) < services-http.js > file which uses
+    promises.
+
+    Still figuring out the practicality of storing the JSON data in a database
+    vs storing the data in JSON files. But for now just moving the data to JSON
+    files. Also wrestling with best way to structure the code to get the 
+    JSON data from the "server side" to the "front end"
+
+https://www.softpedia.com/get/Programming/Other-Programming-Files/JSONedit.shtml
+
+04/17/2019
+    Have been moving non framework related data into JSON. But had a 
+    "management" problem when adding large-ish HTML snippets that are accessed 
+    for presentation 
+    in the "INFO THIS PAGE" button content. It was hard to organize the HTML 
+    for easy edits because newline escapes are not allowed in JSON property 
+    values. So searched for a nice JSON editor and found JSONedit offered by 
+    Softpedia. It's nice but still cannot let me organize the HTML for easy 
+    editing. To solve this I decided to place small individual HTML fragments 
+    into JSON array format and then concatenate the fragments to form an HTML 
+    block of which is then presented. Seems to work just fine while allowing 
+    me to make a nice tidy, easily edited, HTML block when editing from the 
+    JSON file. This every HTML fragment is an array element in the JSON file.

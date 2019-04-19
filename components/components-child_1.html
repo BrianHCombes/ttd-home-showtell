@@ -1,41 +1,41 @@
-
 <div style="position:relative;">
-      <span class="">
-        <span class="textStyle4 topTemplateMenuHover" 
+      <span style="text-align:center;">
+        <span ng-show="$ctrl.templateLinksToShow.templateLink01"
+              class="textStyle4 topTemplateMenuHover" 
               title="Product or page discussion with links as needed to pertinent information"
-              ng-click="$ctrl.moreless1()" 
-              style=  "text-align:center;
-                       {{$ctrl.rsTemplateTopMenufontsize1}};
-                      "
-              ng-bind-html="$ctrl.morelessText1">
+              ng-click="$ctrl.infoTHISPAGE()" 
+              style="{{$ctrl.rsTemplateTopMenufontsize1}};"
+              ng-bind-html="$ctrl.templateLinksToShow.templateLink01Text">
         </span>
-        <span>&nbsp;&nbsp;</span>
-        <span class="textStyle4 topTemplateMenuHover" 
-              ng-click="$ctrl.moreless2()"
+        <span ng-show="$ctrl.templateLinksToShow.templateLink02" style="font-size:0.5em; vertical-align:middle;">&#9679;</span>
+        <span ng-show="$ctrl.templateLinksToShow.templateLink02"
+              class="textStyle4 topTemplateMenuHover" 
+              ng-click="$ctrl.localMENU()"
               title="Local menu of product information among these home pages"
-              style="text-align:center;
-                     margin-left:1%;
-                     {{$ctrl.rsTemplateTopMenufontsize1}};
-                    "
-              ng-bind-html="$ctrl.morelessText2">
+              style="{{$ctrl.rsTemplateTopMenufontsize1}};"
+              ng-bind-html="$ctrl.templateLinksToShow.templateLink02Text">
         </span>
-        <span ng-show="$ctrl.templateLinksToShow.ttdStoreFrontLink">&nbsp;&nbsp;</span>
-        <span ng-show="$ctrl.templateLinksToShow.ttdStoreFrontLink">
-        <span class="textStyle4 topTemplateMenuHover"
-              onclick="window.location.href='https://www.tarptiedown.com/TTD-Store-2018/'"
-              title="Go directly to the Tarp Tie Down store front"
-              style= "
-                      {{$ctrl.rsTemplateTopMenufontsize1}};
-                     ">
-              TTD STORE FRONT
+        <span ng-show="$ctrl.templateLinksToShow.templateLink03" style="font-size:0.5em; vertical-align:middle;">&#9679;</span>
+        <span ng-show="$ctrl.templateLinksToShow.templateLink03"
+              class="textStyle4 topTemplateMenuHover"
+              ng-click=""
+              title=""
+              style= "{{$ctrl.rsTemplateTopMenufontsize1}};"
+              ng-bind-html="$ctrl.templateLinksToShow.templateLink03Text">
         </span>   
-        </span>  
-      </span>    
-
-
+        <span ng-show="$ctrl.templateLinksToShow.templateLink04" style="font-size:0.5em; vertical-align:middle;">&#9679;</span>
+        <span ng-show="$ctrl.templateLinksToShow.templateLink04"
+              class="textStyle4 topTemplateMenuHover"
+              ng-click=""
+              title=""
+              style= "{{$ctrl.rsTemplateTopMenufontsize1}};"
+              ng-bind-html="$ctrl.templateLinksToShow.templateLink04Text">
+        </span>   
+      </span>   
   
+  <!--onclick="window.location.href='https://www.tarptiedown.com/TTD-Store-2018/'"-->
     <div class="textBoxStyle1 textStyle3"
-         ng-show="$ctrl.display1"
+         ng-show="$ctrl.showInfoTHISPAGE"
          style="position:absolute;
                 width:90%;
                 z-index:3;
@@ -45,15 +45,15 @@
                 {{$ctrl.rsReadAboutfontsize2}};
                 ">
         <span   class="closeText"
-                ng-click="$ctrl.moreless1()" 
+                ng-click="$ctrl.infoTHISPAGE()" 
                 style= "color:white;
                         float:right;
                        ">
             &nbsp;&nbsp;&nbsp;&#10062;
         </span><br>        
-        <div ng-bind-html="$ctrl.readAboutHeaderText"></div>
+        <div ng-bind-html="$ctrl.infoThisPageHeaderText"></div>
         
-                <span ng-bind-html="$ctrl.readAboutBodyText"></span><br>
+                <span ng-bind-html="$ctrl.infoThisPageBodyText"></span><br>
 
                 <div ng-show="$ctrl.readAboutExtraStuff1">
                     <div style="color:blue; margin-top:5px;">See applications:</div>
@@ -126,7 +126,7 @@
     </div>
 
     <div class="textBoxStyle2 textStyle3"
-        ng-show="$ctrl.display2"
+        ng-show="$ctrl.showLocalMENU"
         style= "position:absolute;
                 top:10vh;
                 z-index:4;
@@ -146,7 +146,7 @@
                            ">
                     Select here for items in this vicinity
                     <span class="closeText" 
-                          ng-click="$ctrl.moreless2()" 
+                          ng-click="$ctrl.localMENU()" 
                           style="color:white;
                                  float:right;
                                 ">
@@ -155,12 +155,12 @@
                 </th>
             </tr>   
             <tr><td colspan="2" style="font-size:0.4em;">&nbsp;</td></tr>
-            <tr style="line-height:170%;"><td><span ng-bind-html="$ctrl.navMenuHeader.col1"><u></u></span>
+            <tr style="line-height:170%;"><td><span ng-bind-html="$ctrl.localMenuHeader.col1"><u></u></span>
                     <span class="youAreHere2">
-                        &nbsp;&nbsp;{{$ctrl.navMenuHeader.msg}}&nbsp;&nbsp;
+                        &nbsp;&nbsp;{{$ctrl.localMenuHeader.msg}}&nbsp;&nbsp;
                     </span>
                 </td>
-                <td><u>{{$ctrl.navMenuHeader.col2}}</u></td>
+                <td><u>{{$ctrl.localMenuHeader.col2}}</u></td>
             </tr>
             <tr class="{{NAVMENU.rowClass}}" 
                 ng-repeat="NAVMENU in $ctrl.navMenuBody">  

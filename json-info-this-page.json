@@ -1,0 +1,340 @@
+{
+  "infoThisPage": {
+    "template": {
+      "intro": {
+        "infoThisPageHeaderText": 	"<div class='introStyle06'>Grabbit Tarp Tie Downs and Accessories<br> <span class='introStyle07'>(When tarp clips won't do)</span></div><br><br>",
+        "infoThisPageBodyText": [
+									"<span class='introStyle08'>Welcome</span><br>", 
+									"Welcome to the <a class='introStyle09' href='#/view00'>&nbsp;EZ&nbsp;Grabbit,&nbsp;</a>",
+									"<a class='introStyle09' href='#/view02'>&nbsp;Mini&nbsp;Grabbit,&nbsp;</a> and <a class='introStyle09' href='#/view01'>&nbsp;Long&nbsp;Grabbit&nbsp;</a>",
+									"family of premium tarp tie downs. Using patented tech called linear grappling Grabbits are more reliable, more versatile, and easier to use than other tarp holding devices.<br><br>",
+
+									"<span class='introStyle08'>High Strength Hold</span><br>",
+									"With Grabbits you get a high strength hold for a safe and reliable grip on tarp, fabric, plastic-sheet, and heavyweight materials such as canvas and vinyl.<br><br>",
+
+									"<span class='introStyle08'>All Weather</span><br>",
+									"They are ideal for use in high wind and all weather conditions making them perfect for camping, home project, construction, hay cover, storage, transportation and wherever tarps are used.<br><br>",
+							
+									"<span class='introStyle08'>Accessories</span><br>",
+									"Look at the <a class='introStyle09' href='#/view04'>&nbsp;RockBuster&nbsp;Ground&nbsp;Stake&nbsp;</a> and the <a class='introStyle09' href='#/view03'>&nbsp;EZ&nbsp;Adjust&nbsp;Rope&nbsp;Adjuster&nbsp;</a> to compliment your tarp management needs. So take a look at these and the other tarp management accesories we offer. Select <a class='introStyle09' href='#/products'>&nbsp;Products&nbsp;</a> from the menu above to browse our offereings<br><br>",
+
+									"<a class='btnStyle2' href='#/transition'><b>We're under construction</b></a><br><br>"
+								]
+		},
+      "ttd": {
+        "infoThisPageHeaderText": 	"The TTD Home Page Region:<br><br>",
+        "infoThisPageBodyText": [ 
+									"This page provides a brief overview about how to get around the home page region."
+								]
+      },
+      "buyprice": {
+        "infoThisPageHeaderText": 	"Pricing and Ordering:",
+        "infoThisPageBodyText": [ 	
+									"<div class='buyprice02'>&nbsp;</div>&nbsp;&#9679; Click on the <span class='btnStyle2'><b>Quick Product Price</b></span> button for per device price ranges.<br>",
+									"<div class='buyprice02'>&nbsp;</div>&nbsp;&#9679; Select a product from the <span class='btnStyle2'><b>Quick Product Price</b></span> menu or scroll down for the corresponding pack size details.<br>",
+									"<div class='buyprice02'>&nbsp;</div>&nbsp;&#9679; Then select the <span class='btnStyle2'><b>Shop...</b></span> button for the complete pack size table."
+								]
+      },
+      "products": {
+        "infoThisPageHeaderText": 	"Our Products:",
+        "infoThisPageBodyText": [ 
+									"<div class='products02'>&nbsp;</div>&nbsp;&#9679; Select the <span class='btnStyle2'><b>Quick Product Menu</b></span> button or scroll down for brief product overviews.<br>",
+									"<div class='products02'>&nbsp;</div>&nbsp;&#9679; Then select the <span class='btnStyle2'>More: Quick Info</span> button for a more indepth overview.",
+									"<div class='products02'>&nbsp;</div>&nbsp;&#9679; (or) Then select the <span class='btnStyle2'><b>Go To: App Pages</b></span> button for more detailed discussion, field applications, and specifications."
+                                ]
+      },
+      "reviews": {
+        "infoThisPageHeaderText": 	"Customer reviews:",
+        "infoThisPageBodyText": [
+									"These are the reviews we sometimes get. <b>They are unsolicited!</b>"
+								]
+      },
+      "view00": {
+        "infoThisPageHeaderText": 	"EZ Grabbit's main features:",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro'><b>Go To EZ Grabbit Pages</b></a><br>",
+									"This composite image shows the four feature capabilities of the standard EZ Grabbit. You can mount tarps to surfaces, connect tarps together, attach anywhere, and save and reuse damaged tarps.<br>"
+								]
+      },
+      "view01": {
+        "infoThisPageHeaderText": 	"Long Grabbit",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components00_03/tmpl_01/ttd-vn-lg-not-complete-msg.html'><b>Go To Long Grabbit Pages</b></a><br>",
+									"The Long Grabbit tarp tie down is our 20\" model. It is ideal for securing large spans of material subject to wind forces such as with overhead cover. ",
+									"It is also ideal for large \"flanking\" spans of material such as tarps over a haystack, etc. Long Grabbits are great for attachment to tarp corners, for ",
+									"forming a ridge line or peak on a tarp, and for attachment to any location where an extra strong hold is needed. And don't forget you can connect tarps ",
+									"together with Long Grabbit also. A mix of Long Grabbits and EZ Grabbits will assure you can create the ultimate tarp city or protective cover.<br>",
+									"<span class='viewTmpl_01CSS-A'><b>So when you go big, go Long Grabbit!</b>"
+								]
+      },
+      "view02": {
+        "infoThisPageHeaderText": 	"Mini Grabbit",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html'><b>Go To Mini Grabbit Pages</b></a><br>",
+									"The Mini Grabbit tarp tie down is a miniature version of EZ Grabbit. It's length is a mere 1.625\" (40mm) but its mini size has a mighty hold. It is ideal for ",
+									"lightweight tarp and tent shelters and is intended for recreational users who travel lightly. One Mini Grabbit device weighs about an ounce (28g) which includes the 6' ",
+									"(183cm) long 1/8\" (3mm) dia. rope. There's no mount capability, but you get all the other great features of the EZ Grabbit but only in a miniature version."
+								]
+      },
+      "view03": {
+        "infoThisPageHeaderText": 	"EZ Adjust Rope Adjuster",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-eza/index-eza.html'><b>Go To EZ Adjust Pages</b></a><br>",
+									"The EZ Adjust Rope Adjuster is perfect for use with ropes 1/8\" (3mm) diameter to 3/16\" (5mm) diameter. Use it to adjust lines on tents, canopies, tarps, tarp shelters, etc.",
+									"Its open end design allows you to secure lines around trees, poles, ground stakes, and irregular shaped tie down points. Remarkably strong, it can withstand almost any line",
+									"load a tent or a canopy would endure on a very windy day.<br>"
+								]
+      },
+      "view04": {
+        "infoThisPageHeaderText": 	"RockBuster Ground Stake:",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html'><b>Go To RockBuster Pages</b></a><br>",
+									"The RockBuster is a 12\" ground stake specifically designed to secure rope lines to tents, tarps, canopies, and all other situations where anchoring ground lines is important. Rugged ",
+									"and reliable the RockBuster's straight fluted design holds the ground tight even when large spans of material are being secured. So if you're securing your tents, tarps, and ",
+									"canopies with Grabbits then anchor your lines to the ground with RockBusters and make sure your anchor points are not the weak link.<br>"
+								]
+      },
+      "view05": {
+        "infoThisPageHeaderText": 	"Bag Grabbit",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_05/ttd-vn-bg-not-complete-msg.html'><b>Go To Bag Grabbit Pages</b></a><br>",
+									"<b>Close, carry and store bulky bags with ease!</b> <br>",
+									"<span class='textStyle5 viewTmpl_05CSS-A'>",
+										"&#9658; Works on all plastic bags and many multi-ply paper bags.<br>",
+										"&#9658; Ideal for garden materials, pet food, ice melt, and more!<br>",
+										"&#9658; Fold over top and attach handle for spill free storage.<br>",
+										"&#9658; Safe to 50lbs of continuous load. ideal for hanging.<br>",
+										"&#9658; Also works on tarps, plastic sheeting, and other materials.<br>",
+										"&#9658; Use again and again, lasts a lifetime.<br><br>",
+									"</span>",
+									"The Bag Grabbit is made possible by attaching a custom made handle to the mount features on the EZ Grabbit and voila, a bag handle. If you already know the stand alone capabilities of the EZ Grabbit ",
+									"than you know the Bag Grabbit is the real deal. Additionally, you can use the Bag Grabbit as a pull handle for a drag tarp."
+								]
+      },		
+      "view06": {
+        "infoThisPageHeaderText": 	"The Keeper:",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_06/ttd-vn-kpr-not-complete-msg.html'><b>Go To Keeper Pages</b></a><br>",
+									"The EZ Grabbit has two parts: the Dog Bone and Sleeve. The tarp is wrapped around the Dog Bone and the Sleeve is slid into place to engage. See instructions for both rope leader and surface mount ",
+									"applications. The Keeper adds an extra level of engagement by keeping the Dog Bone and Sleeve engaged regardless of circumstances or conditions. The Keeper comprises two engagement tabs ",
+									"connected by shock cord. The Keeper is stretched and inset into the ends of the EZ Grabbit between the Dog Bone and Sleeve. This keeps the Dog Bone and Sleeve engaged.."
+								]
+      },
+      "view07": {
+        "infoThisPageHeaderText": 	"Carry Bag:",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components04_07/tmpl_07/ttd-vn-cb-not-complete-msg.html'><b>Go To Carry Bag Pages</b></a><br>",
+									"<span class='textStyle5 viewTmpl_07CSS-A'>",
+										"&#9658; Carry all your Grabbits and accessories.<br>",
+										"&#9658; Carry any appropriate gear.<br>",
+										"&#9658; Rugged and reliable for use in the outdoors.<br>",
+										"&#9658; 1.17m (46\") long X 23cm (9\") wide - Tubular Shape.<br>",
+										"&#9658; Side Pocket for small items.<br><br>",
+									"</span>",
+									"Designed to carry heavy gear in the field."
+								]
+      },
+      "view08": {
+        "infoThisPageHeaderText": 	"Tent Poles:",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/components/components08_11/tmpl_08/ttd-vn-tp-not-complete-msg.html'><b>Go To Tent Pole Pages</b></a><br>",
+									"<span class='textStyle5 viewTmpl_08CSS-A'>",
+										"Qty 12 - 8mm dia. Tent Poles<br>", 
+										"&#9658; 10 tent poles with connectors.<br>", 
+										"&#9658; 2 tent poles without connectors.<br>", 
+										"&#9658; Poles are 24\" (60cm) long.<br>", 
+										"&#9658; Through holes in all poles for elastic cord.<br>", 
+										"&#9658; 24 feet (7.3m).<br><br>", 
+									"</span>", 
+									"These 8mm tent poles are great replacements but have additional uses when used in conjunction with our RockBuster ground stake among others.<br>Go to our store for ",
+									"<span class='textStyle5 viewTmpl_08CSS-A'><b><u>elastic cord.</u></b></span>"
+								]
+      },
+      "view09": {
+        "infoThisPageHeaderText": 	"Classic EZ Grabbit:",
+        "infoThisPageBodyText": [
+									"<br><a class='btnStyle2' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html#/intro'><b>Go To EZ Grabbit Pages</b></a><br>",
+									"The Classic EZ Gabbit is our non-mountable version. It does everything our standard EZ Grabbit does except it has no mounting points on the Dog Bone. ",
+									"Our non-mountable EZ Grabbits  were produced prior to our injection mold modification to produce our standard mountable EZ Grabbit. As always the ",
+									"performance of our non-mountable EZ Grabbit is as superior as our mountable EZ Grabbit."
+								]
+      },
+      "view10": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view11": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view12": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view13": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view14": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view15": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view16": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view17": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view18": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view19": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view20": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view21": {
+        "infoThisPageHeaderText": 	"",
+        "infoThisPageBodyText": [
+									""
+								]
+      },
+      "view22": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view23": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view24": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view25": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view26": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view27": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view28": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view29": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view30": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view31": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view32": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view33": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view34": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view35": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view36": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view37": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view38": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view39": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view40": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view41": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view42": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view43": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view44": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view45": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view46": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      },
+      "view47": {
+        "infoThisPageHeaderText": "",
+        "infoThisPageBodyText": ""
+      }
+    }
+  }
+}

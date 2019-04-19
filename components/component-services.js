@@ -1,65 +1,78 @@
 angular.module("viewNav")
 
-    .factory("NavMenuFactory", [ function(){
-            
+    .factory("NavMenuFactory", [ "VnData", function(VnData){
+           
+        var templateLinksToShow = {};
+        
+        VnData.localMenuConfig();
+        
         return {
             
-                readAboutBtnText: function(){ 
-                        var btnText = {"showText":"INFO&nbsp;THIS&nbsp;PAGE", "hideText":"HIDE&nbsp;INFO"};
-                    
-                    return btnText;
+                // Incoming and outgoing callbacks used here to retrieve INFO THIS PAGE data from the services-http.js file and get it to the components-children.js file. 
+                // Note: The INFO THIS PAGE body text may consist of multiple HTML fragments which are kept in JSON array form, retrieved and assembled here into a single
+                // HTML string for delivery to the components-children.js file and subsequent presentation. 
+                infoThisPageCONFIG: function(getInfoThisPageRef, view){ 
+                        
+                        infoThisPageCallBack = function(infoThisPageConfigData){
+                          var infoThisPage = {"header":"", "body":""};
+                          var concatenatedHTMLStrings = "";
+                          for(i=0; i<infoThisPageConfigData.template[view].infoThisPageBodyText.length; i++){
+                            concatenatedHTMLStrings += infoThisPageConfigData.template[view].infoThisPageBodyText[i];
+                            if(i === infoThisPageConfigData.template[view].infoThisPageBodyText.length-1){
+                              infoThisPage.header = infoThisPageConfigData.template[view].infoThisPageHeaderText;
+                              infoThisPage.body = concatenatedHTMLStrings;
+                              getInfoThisPageRef(infoThisPage);
+                            }
+                          }
+                        };
+                        VnData.infoThisPageConfig(infoThisPageCallBack);
                 },
-            
-                navMenuHeader:  function(){
-                    var header = {"col1":"SELECTION", "col2":" LINK / BUTTON", "msg":"your current page is in red"};
-                    return header;
+  
+                // incoming and outgoing callbacks used here to retrieve local menu data from the services-http.js file and get it to the components-children.js file
+                getLocalMenuheader: function(getLocalMenuHeaderRef){
+                    localMenuCallBack = function(localMenuHeader){
+                        getLocalMenuHeaderRef(localMenuHeader);
+                    };
+                    VnData.localMenuConfig(localMenuCallBack, "localMenuHeaderText");  
                 },    
-
-                getViewNav: function(location){
-
-                    var navMenu = 
-                    [   
-                        {"rowClass":"topMenuNav2",   "selection":"Top Menu",         "view":"",     "destination":""},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tarp Tie Down Home",         "view":"intro",     "destination":"TTD Home       "},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Help Getting Around",             "view":"ttd",       "destination":"Help      "},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Product&nbsp;pricing&nbsp;and&nbsp;shopping",        "view":"buyprice",  "destination":"Price/Buy"},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Overview of our 10 products ",         "view":"products",  "destination":"Products"},
-                        {"rowClass":"topMenuNav",    "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Customer feedback",          "view":"reviews",   "destination":"Reviews         "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Tarp Tie Downs", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Standard EZ Grabbit ", "view":"view00",    "destination":"Button A Thumb 1    "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Classic EZ Grabbit", "view":"view09",    "destination":"Button C Thumb 2        "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Long Grabbit", "view":"view01",    "destination":"Button A Thumb 2              "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Mini Grabbit", "view":"view02",    "destination":"Button A Thumb 3              "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;The EZ Grabbit Keeper", "view":"view06",    "destination":"Button B Thumb 3     "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Rope Adjusters", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;EZ Adjust Rope Adjuster", "view":"view03",    "destination":" Button A Thumb 4   "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Ground Stakes", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;RockBuster Ground Stake", "view":"view04",    "destination":" Button B Thumb 1   "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Bag Handle", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Bag Grabbit Bag Handle", "view":"view05",    "destination":" Button B Thumb 2   "},
-                        
-                        {"rowClass":"hyperMenuNav2", "selection":"", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav3", "selection":"Misc", "view":"",    "destination":""},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Carry/Duffle Bag", "view":"view07",    "destination":" Button B Thumb 4        "},
-                        {"rowClass":"hyperMenuNav",  "selection":"&nbsp;&nbsp;&nbsp;&#8680;&nbsp;&nbsp;Tent Poles", "view":"view08",    "destination":" Button C Thumb 1               "},
-                    ];
-                    navMenu[location].rowClass = "youAreHere";
-                    return navMenu;
+          
+                // incoming and outgoing callbacks used here to retrieve local menu data from the services-http.js file and get it to the components-children.js file
+                getLocalMenubody: function(getLocalMenuBodyRef, location){
+                    
+                    localMenuCallBack = function(localMenuBody){
+                        localMenuBody[location].rowClass = "youAreHere"; // "youAreHere" is a CSS class
+                        getLocalMenuBodyRef(localMenuBody);
+                    };
+                    VnData.localMenuConfig(localMenuCallBack, "localMenuBodyText");
                 },
                 
-                getBtnText: function(){
-                    var btnText = {"showText":"LOCAL&nbsp;MENU", "hideText":"HIDE&nbsp;LOCAL&nbsp;MENU"};
-                    return btnText;
+                // incoming and outgoing callbacks used here to retrieve local menu data from the services-http.js file and get it to the components-children.js file
+                getLocalMenuHighLIGHT: function(getLocalMenuHighLightRef){
+                    
+                    localMenuCallBack = function(localMenuHighLight){
+                      getLocalMenuHighLightRef(localMenuHighLight);
+                    };
+                    VnData.localMenuConfig(localMenuCallBack, "localMenuItemHighLight");
+                },
+
+                
+//***********************************************************************************************************************************************************                
+// This section deals with what template links to show on a given template. INFO THIS PAGE and LOCAL MENU links are considered default.
+
+                getTemplateLinksToShow: function(getTemplateLinksRef){
+                  
+                  setTemplateLinks = function(templateLinksConfigData){
+                    setTimeout(function(){                                      // setTimeout used to assure page URL is stable before reading
+                      var urlString = document.URL;
+                      var templateName = urlString.slice(urlString.search("#/")+2);
+                      templateLinksToShow = templateLinksConfigData.templatelinkstoshow[templateName];
+                      getTemplateLinksRef(templateLinksToShow);
+                    },100);
+                  };
+                  VnData.setLinksToShow(setTemplateLinks);                      // invoke http call 
                 }
-        };
+
+          };
     }]);
 
                         

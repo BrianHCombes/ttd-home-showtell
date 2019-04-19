@@ -44,7 +44,8 @@ $servername = "127.0.0.1";
 $username = "root";
 // $password = "tiggerC$0109#";     // (old password)
 // $password = "aisleDrone811";     // (old password as of 04/21/2017)
-$password = "algoResponse811";      // (new password as of 04/16/2018)
+// $password = "algoResponse811";      // (old password as of 04/16/2018)
+  $password = "amazon811$400K";      // (new password as of 04/11/2019)
 //$dbname = "ttd_product_rb_db";
 $dbname = "ttd_view_nav_db";
 
