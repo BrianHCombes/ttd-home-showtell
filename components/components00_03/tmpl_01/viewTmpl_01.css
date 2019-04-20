@@ -3,13 +3,3 @@
 color:blue;    
 }
 
-.topTemplateMenuLink
-{
-color:white;
-}  
-
-.topTemplateMenuLink:hover
-{
-color:blue;
-background-color:transparent;
-} 
