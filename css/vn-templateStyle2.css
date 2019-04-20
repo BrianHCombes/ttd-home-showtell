@@ -1,0 +1,12 @@
+.topTemplateMenuLink
+{
+color:white;
+text-decoration:none; 
+}  
+
+.topTemplateMenuLink:hover
+{
+color:blue;
+background-color:transparent;
+text-decoration:none; 
+} 
