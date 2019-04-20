@@ -32,14 +32,3 @@ border-radius:7px
 cursor:pointer;  
 box-shadow:0px 0px 10px yellow;
 }
-
-.topTemplateMenuLink
-{
-color:white;
-}  
-
-.topTemplateMenuLink:hover
-{
-color:blue;
-background-color:transparent;
-} 
