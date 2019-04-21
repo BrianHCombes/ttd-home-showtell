@@ -4,7 +4,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_04/viewTmpl_04.html',
        
-         controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
+         controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
 
             var self04 = this; 
@@ -37,7 +37,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_05/viewTmpl_05.html',
        
-        controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
+        controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
 
             var self05 = this; 
@@ -66,7 +66,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_06/viewTmpl_06.html',
        
-         controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
+         controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
 
             var self06 = this; 
@@ -94,7 +94,7 @@ angular.module('viewNav')
         
         templateUrl: 'components/components04_07/tmpl_07/viewTmpl_07.html',
        
-        controller: ['compFactory', 'GetSet', 'NavMenuFactory', 'topMenuService', function(compFactory, GetSet, NavMenuFactory, topMenuService){
+        controller: ['compFactory', 'GetSet', 'NavMenuFactory', function(compFactory, GetSet, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
 
             var self07 = this; 

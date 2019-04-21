@@ -4,7 +4,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/components-child_1.html',
        
-        controller: ['GetSet', 'NavMenuFactory', 'topMenuService', '$scope', function(GetSet, NavMenuFactory, topMenuService, $scope){
+        controller: ['GetSet', 'NavMenuFactory', '$scope', function(GetSet, NavMenuFactory, $scope){
             var viewWidth = GetSet.getViewWidth();
                 
             var child1Self = this;
