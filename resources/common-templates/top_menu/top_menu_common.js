@@ -39,7 +39,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/buy_price/buy_price.html',
         templateUrl: 'resources/common-templates/top_menu/buy_price/buy_price.html',
        
-        controller: ['GetSet', 'viewManager', 'NavMenuFactory', 'topMenuService', function(GetSet, viewManager, NavMenuFactory, topMenuService){
+        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
                 
             var buyPriceSelf = this;
@@ -118,7 +118,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/products/products.html',
         templateUrl: 'resources/common-templates/top_menu/products/products.html',
        
-        controller: ['GetSet', 'viewManager', 'NavMenuFactory', 'topMenuService', function(GetSet, viewManager, NavMenuFactory, topMenuService){
+        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
                 
             var productsSelf = this;
@@ -198,7 +198,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/reviews/testimonials.html',
         templateUrl: 'resources/common-templates/top_menu/reviews/testimonials.html',
         
-        controller: ['GetSet', 'viewManager', 'NavMenuFactory', 'topMenuService', function(GetSet, viewManager, NavMenuFactory, topMenuService){
+        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
             
             var reviewSelf = this;

@@ -3,7 +3,7 @@ angular.module("viewNav")
         
         templateUrl: 'components/top_menu/intro/intro.html',
        
-        controller: ['GetSet', 'viewManager', 'NavMenuFactory', 'topMenuService', function(GetSet, viewManager, NavMenuFactory, topMenuService){
+        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
             var viewWidth = GetSet.getViewWidth();
                 
             var introSelf = this;
