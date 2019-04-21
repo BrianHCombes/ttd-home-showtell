@@ -5,7 +5,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/ttd/ttd.html',
         templateUrl: 'resources/common-templates/top_menu/ttd/ttd.html',
        
-        controller: ['$scope', 'GetSet', 'viewManager', 'NavMenuFactory', 'topMenuService', '$sce', function($scope, GetSet, viewManager, NavMenuFactory, topMenuService, $sce){
+        controller: ['$scope', 'GetSet', 'viewManager', 'topMenuService', function($scope, GetSet, viewManager, topMenuService){
             var viewWidth = GetSet.getViewWidth();
                 
             var ttdSelf = this;
@@ -39,7 +39,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/buy_price/buy_price.html',
         templateUrl: 'resources/common-templates/top_menu/buy_price/buy_price.html',
        
-        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
+        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
                 
             var buyPriceSelf = this;
@@ -118,7 +118,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/products/products.html',
         templateUrl: 'resources/common-templates/top_menu/products/products.html',
        
-        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
+        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
                 
             var productsSelf = this;
@@ -198,7 +198,7 @@ angular.module("viewNav")
         // templateUrl: 'https://www.tarptiedown.com/resources/common-templates/top_menu/reviews/testimonials.html',
         templateUrl: 'resources/common-templates/top_menu/reviews/testimonials.html',
         
-        controller: ['GetSet', 'viewManager', 'NavMenuFactory', function(GetSet, viewManager, NavMenuFactory){
+        controller: ['GetSet', 'viewManager', function(GetSet, viewManager){
             var viewWidth = GetSet.getViewWidth();
             
             var reviewSelf = this;
