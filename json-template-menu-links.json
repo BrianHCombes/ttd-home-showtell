@@ -8,14 +8,14 @@
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false,  "templateLink04Text":"WTF intro"
+                                      "templateLink04":false,  "templateLink04Text":""
                                     },
                           
                           "ttd": { 
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":"WTF ttd"
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                                     
                           "buyprice": { 
@@ -29,14 +29,14 @@
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":"WTF products"
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                           
                           "reviews": { 
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":"WTF reviews"
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                           
     
@@ -51,7 +51,7 @@
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":"view01"
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                                          
                           "view02": { 
@@ -80,35 +80,35 @@
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":"view05"
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                                          
                           "view06": { 
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":"view06"
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                                          
                           "view07": { 
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":"view07"
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                                          
                           "view08": { 
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":"view08"
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                                          
                           "view09": { 
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":"view09"
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                                          
                           "view10": { 
