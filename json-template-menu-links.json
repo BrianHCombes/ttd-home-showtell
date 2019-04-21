@@ -8,7 +8,7 @@
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false,  "templateLink04Text":""
+                                      "templateLink04":false, "templateLink04Text":""
                                     },
                           
                           "ttd": { 
@@ -38,8 +38,7 @@
                                       "templateLink03":false, "templateLink03Text":"",
                                       "templateLink04":false, "templateLink04Text":""
                                     },
-                          
-    
+                              
                           "view00": { 
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
@@ -59,7 +58,6 @@
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
                                       "templateLink04":true,  "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to Mini Grabbit application pages' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-mg/index-mg.html'> APP PAGES </a>"
-                                      
                                     },
                                          
                           "view03": { 
@@ -73,7 +71,7 @@
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":true,  "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to RockBuster application pages' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html'> APP PAGES </a>"
+                                      "templateLink04":true,  "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to RockBuster application pages' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-ezg/index-ezg.html'> APP PAGES </a>"
                                     },
                                          
                           "view05": { 
@@ -108,7 +106,7 @@
                                       "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
-                                      "templateLink04":false, "templateLink04Text":""
+                                      "templateLink04":true,  "templateLink04Text":"<a class='topTemplateMenuLink' title='Go directly to EZ Grabbit application pages' href='https://www.tarptiedown.com/ttd-vn/ttd-vn-rb/index-rb.html'> APP PAGES </a>"
                                     },
                                          
                           "view10": { 
