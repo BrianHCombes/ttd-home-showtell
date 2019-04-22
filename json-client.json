@@ -77,9 +77,9 @@
     "styling":   [
                     {"marker1":"&#10004;", "downtriangle":"&#9660;"},
                     {"lefttriangle":"&#9664;",  "righttriangle":"&#9658;"}
-                 ]
+                 ],
     
-
+    "frameWorkBkColor": "background-color:white"
 
 
 }
