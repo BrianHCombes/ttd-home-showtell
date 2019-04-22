@@ -97,8 +97,9 @@
 <!--*****************************************************Begin Section screen1 and screen2 *********************************************************-->
 <!--************************************************************************************************************************************************-->
 <!-- Template View Section for screen1 and screen2. This is where the primary view takes place -->
+
     <div ng-show="vnCTRL.screen1 || vnCTRL.screen2" class="maxWidth" style="margin-top:2px;">
-        <div style="width:inherit; background:white; padding:0px; border:2px solid black; border-radius:7px;">
+        <div style="width:inherit; {{vnCTRL.frameBkColor}}; padding:0px; border:2px solid black; border-radius:7px;">
                 <div style="{{vnCTRL.response.height02}}; overflow:auto;">
                     <div style="padding:5px 5px 5px 5px;" ui-view="rootView">This is where the named root ui-view should show</div>
                 </div>
@@ -471,7 +472,7 @@
     <table ng-show="vnCTRL.screen3" class="maxWidth" style="width:100%;">
         <tr>    
             <td style="{{vnCTRL.response.width06}}; vertical-align:top;">  
-                <div style="width:inherit; background:white; padding:0px; border:2px solid black; border-radius:7px;">
+                <div style="width:inherit; {{vnCTRL.frameBkColor}};; padding:0px; border:2px solid black; border-radius:7px;">
                         <div style="{{vnCTRL.response.height08}}; overflow:auto;">
                             <div style="padding:5px 5px 5px 5px;" ui-view="rootView">This is where the named root ui-view should show</div>
                         </div>

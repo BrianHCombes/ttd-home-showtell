@@ -3,15 +3,16 @@ angular.module('viewNav')
 
         var vn = this;
         vn.hyperIndex;
-        
+    
 //***********************************************************************************************************************************************************
 // to see the loaded data brought in by function menuCallback see file: json-client.json Note: Name my change
 // for styling configuration see factory "GetSet"
         menuCallback = function(data){
-            vn.menuBar1 = data.menuBar1;        // is array
-            vn.picMenu1 = data.picMenu1;        // is array of hyper menu items
-            vn.picMenu2 = data.picMenu2;        // is array of hyper menu items
-            vn.stateNAMES = data.stateNames;    // is array
+            vn.menuBar1 = data.menuBar1;              // is array
+            vn.picMenu1 = data.picMenu1;              // is array of hyper menu items
+            vn.picMenu2 = data.picMenu2;              // is array of hyper menu items
+            vn.stateNAMES = data.stateNames;          // is array
+            vn.frameBkColor = data.frameWorkBkColor;  // is single property
         };
         VnData.menuConfig(menuCallback, "frameworkMenus");
 
