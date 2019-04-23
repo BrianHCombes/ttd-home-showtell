@@ -5,7 +5,7 @@
   
   "templatelinkstoshow": {
                           "intro": { 
-                                      "templateLink01":true,  "templateLink01Text":"INFO THIS PAGE",
+                                      "templateLink01":true, "templateLink01Text":"INFO THIS PAGE",
                                       "templateLink02":true,  "templateLink02Text":"LOCAL MENU",
                                       "templateLink03":false, "templateLink03Text":"",
                                       "templateLink04":false, "templateLink04Text":""

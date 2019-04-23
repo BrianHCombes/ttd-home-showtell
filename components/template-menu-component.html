@@ -1,0 +1,109 @@
+<div style="position:relative;">
+  
+<!--************************************************************************************************************************************************-->
+<!--This HTML block is the foundation for the INFO THIS PAGE, LOCAL MENU, and two additional links to be displayed at the top of the template/view-->  
+      <span style="text-align:center;">
+        <span ng-show="$ctrl.templateLinksToShow.templateLink01"
+              class="textStyle4 topTemplateMenuHover" 
+              title="Product or page discussion with links as needed to pertinent information"
+              ng-click="$ctrl.infoTHISPAGE()" 
+              style="{{$ctrl.rsTemplateTopMenufontsize1}};"
+              ng-bind-html="$ctrl.templateLinksToShow.templateLink01Text">
+        </span>
+        <span ng-show="$ctrl.templateLinksToShow.templateLink02" style="font-size:0.5em; vertical-align:middle;">&#9679;</span>
+        <span ng-show="$ctrl.templateLinksToShow.templateLink02"
+              class="textStyle4 topTemplateMenuHover" 
+              ng-click="$ctrl.localMENU()"
+              title="Local menu of product information among these home pages"
+              style="{{$ctrl.rsTemplateTopMenufontsize1}};"
+              ng-bind-html="$ctrl.templateLinksToShow.templateLink02Text">
+        </span>
+        <span ng-show="$ctrl.templateLinksToShow.templateLink03" style="font-size:0.5em; vertical-align:middle;">&#9679;</span>
+        <span ng-show="$ctrl.templateLinksToShow.templateLink03"
+              class="textStyle4 topTemplateMenuHover"
+              ng-click=""
+              title=""
+              style= "{{$ctrl.rsTemplateTopMenufontsize1}};"
+              ng-bind-html="$ctrl.templateLinksToShow.templateLink03Text">
+        </span>   
+        <span ng-show="$ctrl.templateLinksToShow.templateLink04" style="font-size:0.5em; vertical-align:middle;">&#9679;</span>
+        <span ng-show="$ctrl.templateLinksToShow.templateLink04"
+              class="textStyle4 topTemplateMenuHover"
+              ng-click=""
+              title=""
+              style= "{{$ctrl.rsTemplateTopMenufontsize1}};"
+              ng-bind-html="$ctrl.templateLinksToShow.templateLink04Text">
+        </span>   
+      </span>   
+
+<!--************************************************************************************************************************************************-->
+<!--This HTML block is the foundation for the INFO THIS PAGE button/link content-->
+    <div class="textBoxStyle1 textStyle3"
+         ng-show="$ctrl.showInfoTHISPAGE"
+         style="position:absolute;
+                width:90%;
+                z-index:3;
+                padding-top:10px;
+                box-shadow:8px 8px 45px;
+                text-align:left;
+                {{$ctrl.rsReadAboutfontsize2}};
+                ">
+        <span   class="closeText"
+                ng-click="$ctrl.infoTHISPAGE()" 
+                style= "color:white;
+                        float:right;
+                       ">
+            &nbsp;&nbsp;&nbsp;&#10062;
+        </span><br>        
+        <div ng-bind-html="$ctrl.infoThisPageHeaderText"></div>
+        <span ng-bind-html="$ctrl.infoThisPageBodyText"></span><br>
+    </div>
+
+<!--************************************************************************************************************************************************-->
+<!--This HTML block is the foundation for the LOCAL MENU button/link content-->
+    <div class="textBoxStyle2 textStyle3"
+        ng-show="$ctrl.showLocalMENU"
+        style= "position:absolute;
+                top:10vh;
+                z-index:4;
+                text-align:center;
+                box-shadow:4px 4px 45px black;
+                {{$ctrl.rsNavwidth1}};
+                {{$ctrl.rsNavfontsize2}};
+                {{$ctrl.rsNavleft1}};
+               ">
+        <table  style= "width:100%;
+                        text-align:left;">
+            <tr><th colspan="2" 
+                    style= "text-align:center;
+                            padding:1vh 0;
+                            border-bottom:1px solid white;
+                            
+                           ">
+                    Select here for items in this vicinity
+                    <span class="closeText" 
+                          ng-click="$ctrl.localMENU()" 
+                          style="color:white;
+                                 float:right;
+                                ">
+                                &nbsp;&nbsp;&nbsp;&#10062;
+                    </span>
+                </th>
+            </tr>   
+            <tr><td colspan="2" style="font-size:0.4em;">&nbsp;</td></tr>
+            <tr style="line-height:170%;"><td><span ng-bind-html="$ctrl.localMenuHeader.col1"><u></u></span>
+                    <span class="youAreHere2">
+                        &nbsp;&nbsp;{{$ctrl.localMenuHeader.msg}}&nbsp;&nbsp;
+                    </span>
+                </td>
+                <td><u>{{$ctrl.localMenuHeader.col2}}</u></td>
+            </tr>
+            <tr class="{{NAVMENU.rowClass}}" 
+                ng-repeat="NAVMENU in $ctrl.navMenuBody">  
+                    <td><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.selection"></a></td>
+                    <td><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.destination"></a></td>
+            </tr>
+        </table>
+    </div> 
+
+</div>
