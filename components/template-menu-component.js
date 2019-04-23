@@ -2,7 +2,7 @@ angular.module("viewNav")
 
     .component('child1', {
         
-        templateUrl: 'components/components-child_1.html',
+        templateUrl: 'components/template-menu-component.html',
        
         controller: ['GetSet', 'NavMenuFactory', '$scope', function(GetSet, NavMenuFactory, $scope){
             var viewWidth = GetSet.getViewWidth();
@@ -23,7 +23,7 @@ angular.module("viewNav")
             
             
 //***********************************************************************************************************************************************************            
-// The getTemplateLinks method configures the links to show on the template (this is not the top menu) 
+// The getTemplateLinks method configures the links to show on the top of the template (this is not the top (of the frame) menu) 
 
             child1Self.templateLinksToShow = {};
             getTemplateLinks = function(templateLinksToShow){
