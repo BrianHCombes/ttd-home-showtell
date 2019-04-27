@@ -368,7 +368,7 @@ angular.module('viewNav')
                                 fontsize01: "font-size:" + ((0.00494)*(vpWidth) + 10.22222)+"px",
                                 fontsize02: "font-size:" + ((0.00046)*(vpWidth) + 0.95833)+"em",
                                 fontsize03: "font-size:" + ((0.00025)*(vpWidth) + 0.91111)+"em",
-                                fontsize04: "font-size:" + ((0.01605)*(vpWidth) + 5.22222)+"px",
+                                fontsize04: "font-size:" + ((0.00706)*(vpWidth)+7.74118)+"px",
                                 fontsize05: "font-size:" + ((0.00043)*(vpWidth) + 0.64444)+"em",
 
                                 margin01:   "margin:0px " + ((0.00370)*(vpWidth) - 1.33333)+"px",
@@ -378,7 +378,6 @@ angular.module('viewNav')
                                 padding03:  "padding:" + "0px " + ((0.00617)*(vpWidth) + 2.77778)+"px",
                                 padding04:  "padding:" + ((0.00494)*(vpWidth) + -1.77778) + "px" + " 2px",
                                 padding05:  "padding:" + "0px " + ((0.00617)*(vpWidth) + 2.77778)+"px" + " 0px " + ((0.01235)*(vpWidth) + -4.44444)+"px",
-                                padding06:  "padding:" + "0px " + ((0.00824)*(vpWidth) + 0.36471)  + "px",
                                 padding07:  "padding:" + ((0.01111)*(vpWidth) + -8.00000)+"px" + " 0px",    // 5 at 1170, 2 at 900 // for screen1
                                 padding08:  "padding:" + ((0.03971)*(vpHeight) + -14.82671)+"px" + " 0px",  // 9 at 600, 20 at 877 // for screen3 height
 
@@ -389,7 +388,6 @@ angular.module('viewNav')
                                 width05:    "width:" + ((0.31769)*(vpHeight) + -8.61372)+"px",              // 204 at 600, 270 at 877 // <td> width for thumbnail column for screen3
                                 width06:    "width:" + ((-0.31769)*(vpHeight) + 991.61372)+"px",            // 713 at 877, 801 at 600 // <td> width of view template as a function of height // used in screen 3
 
-                                height01:   "height:" + ((0.01852)*(vpWidth) + 6.33333)+"px",               // 28 at 1170, 13 at 360  // Top Menu
                                 height02:   "height:" + (function(){        
                                                             if(vpWidth >= 900){
                                                                 return vpHeight - ((0.01852)*(vpWidth) + 6.33333) 

@@ -46,7 +46,7 @@
                 padding-top:10px;
                 box-shadow:8px 8px 45px;
                 text-align:left;
-                {{$ctrl.rsReadAboutfontsize2}};
+                {{$ctrl.rsInfoThisPagefontsize2}};
                 ">
         <span   class="closeText"
                 ng-click="$ctrl.infoTHISPAGE()" 
@@ -68,9 +68,9 @@
                 z-index:4;
                 text-align:center;
                 box-shadow:4px 4px 45px black;
-                {{$ctrl.rsNavwidth1}};
-                {{$ctrl.rsNavfontsize2}};
-                {{$ctrl.rsNavleft1}};
+                {{$ctrl.rsLocalMenuWidth1}};
+                {{$ctrl.rsLocalMenuFontsize2}};
+                {{$ctrl.rsLocalMenuLeft1}};
                ">
         <table  style= "width:100%;
                         text-align:left;">
@@ -98,10 +98,10 @@
                 </td>
                 <td><u>{{$ctrl.localMenuHeader.col2}}</u></td>
             </tr>
-            <tr class="{{NAVMENU.rowClass}}" 
-                ng-repeat="NAVMENU in $ctrl.navMenuBody">  
-                    <td><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.selection"></a></td>
-                    <td><a ui-sref="{{NAVMENU.view}}" class="tdStyle" ng-bind-html="NAVMENU.destination"></a></td>
+            <tr class="{{localMENU.rowClass}}" 
+                ng-repeat="localMENU in $ctrl.localMenuBody">  
+                    <td><a ui-sref="{{localMENU.view}}" class="tdStyle" ng-bind-html="localMENU.selection"></a></td>
+                    <td><a ui-sref="{{localMENU.view}}" class="tdStyle" ng-bind-html="localMENU.destination"></a></td>
             </tr>
         </table>
     </div> 

@@ -10,16 +10,15 @@ angular.module("viewNav")
             var child1Self = this;
                     
             // Template top menu font size
-            child1Self.rsTemplateTopMenufontsize1 = "font-size:" + ((0.00071)*(viewWidth)+0.42412) + "em";  // AR_1170_1.25_320_0.65
+            child1Self.rsTemplateTopMenufontsize1 = "font-size:" + ((0.00041)*(viewWidth)+0.51824) + "em";    // AR_1170_1.00_320_0.65 
             
-            // Response 'read about' button and text box
-            child1Self.rsReadAboutfontsize2 = "font-size:" + ((0.00064)*(viewWidth)+0.49889) + "em";    // AR_1170_1.25_360_0.73
-            child1Self.rsReadAboutwidth1 = "width:" + ((-0.01605)*(viewWidth)+48.77778) + "%";          /* AR_40.00_60.00 */
+            // Response 'Info This Page' button and text box
+            child1Self.rsInfoThisPagefontsize2 = "font-size:" + ((0.00037)*(viewWidth)+0.56667) + "em";       // AR_1170_1.00_360_0.70
             
             // Response 'Menu' button and text box
-            child1Self.rsNavfontsize2 = "font-size:" + ((0.00068)*(viewWidth)+0.45556) + "em";          // AR_1170_1.25_360_0.70
-            child1Self.rsNavleft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
-            child1Self.rsNavwidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  
+            child1Self.rsLocalMenuFontsize2 = "font-size:" + ((0.00022)*(viewWidth)+0.59722) + "em";          // AR_1170_0.85_360_0.70
+            child1Self.rsLocalMenuLeft1 = "left:" + ((0.02824)*(viewWidth)-8.03529) + "%";                    // AR_1170_25.00_320_1.00
+            child1Self.rsLocalMenuWidth1 = "width:" + ((-0.05309)*(viewWidth)+112.11111) + "%";               // AR_1170_50.00_360_93.00  
             
             
 //***********************************************************************************************************************************************************            
@@ -88,7 +87,7 @@ angular.module("viewNav")
                 function getLocalMenuHighLight(localMenuHighLight){
                   locationHighlight = localMenuHighLight[queryParam];
                   function getLocalMenuBody(localMenuBody){
-                    child1Self.navMenuBody = localMenuBody;
+                    child1Self.localMenuBody = localMenuBody;
                   };
                   NavMenuFactory.getLocalMenubody(getLocalMenuBody, locationHighlight); // step 2: send highlight along with getLocalMenuBody callback 
                 };
